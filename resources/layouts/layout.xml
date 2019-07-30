@@ -1,0 +1,12 @@
+<layout id="WatchFace">
+	
+	<label id="dayOfWeek1" x="1" y="100" font="Graphics.FONT_XTINY" color="Graphics.COLOR_DK_GRAY"/>
+	<label id="dayOfWeek2" x="1" y="115" font="Graphics.FONT_XTINY" color="Graphics.COLOR_BLUE"/>
+	<label id="dayOfWeek3" x="4" y="130" font="Graphics.FONT_XTINY" color="Graphics.COLOR_BLUE"/>
+	<label id="dayOfWeek4" x="7" y="145" font="Graphics.FONT_XTINY" color="Graphics.COLOR_BLUE"/>
+	<label id="dayOfWeek5" x="13" y="160" font="Graphics.FONT_XTINY" color="Graphics.COLOR_BLUE"/>
+	<label id="dayOfWeek6" x="24" y="175" font="Graphics.FONT_XTINY" color="Graphics.COLOR_BLUE"/>
+	<label id="dayOfWeek7" x="35" y="190" font="Graphics.FONT_XTINY" color="Graphics.COLOR_BLUE"/>
+	
+    <label id="TimeLabel" x="center" y="10" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLUE" />
+</layout>
