@@ -2,6 +2,7 @@ using Toybox.WatchUi;
 using Toybox.Graphics;
 using Toybox.System;
 using Toybox.Lang;
+using Toybox.ActivityMonitor;
 
 using Toybox.Time;
 using Toybox.Time.Gregorian;
@@ -31,9 +32,13 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         var timeString = Lang.format("$1$:$2$:$3$", [clockTime.hour, clockTime.min.format("%02d"),clockTime.sec]);
         var view = View.findDrawableById("TimeLabel");
         view.setText(timeString);
-        
-        //var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT).day_of_week;
-        var today = 3;	
+
+		var t = ActivityMonitor.getInfo();
+        var stepsGoal = t.stepGoal;
+        var steps = t.steps;
+        View.findDrawableById("steps").setText(Lang.format("$1$\n$2$/$3$",["steps",steps,stepsGoal]));
+             
+        var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT).day_of_week;	
         for(var weekDay=1; weekDay<=7; weekDay++){
         	var day = null;
         	var st = "";
