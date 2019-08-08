@@ -1,7 +1,6 @@
 using Toybox.WatchUi;
 using Toybox.Graphics;
 using Toybox.System;
-using Toybox.System;
 using Toybox.Lang;
 using Toybox.ActivityMonitor;
 
@@ -14,12 +13,14 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 
     function initialize() {
         WatchFace.initialize();
-        System.println("initialize");
+        prevWatchHash = "";
+        System.println("initialize");			
     }
 
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.WatchFace(dc));
+        prevWatchHash = "";
         System.println("onLayout");
     }
 
@@ -35,16 +36,19 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
     // state of this View here. This includes freeing resources from
     // memory.
     function onHide() {
-    System.println("onShow");
+    	prevWatchHash = "";
+    	System.println("onShow");
     }
 
     // The user has just looked at their watch. Timers and animations may be started here.
     function onExitSleep() {
+    prevWatchHash = "";
     	System.println("onExitSleep");
     }
 
     // Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
+    	prevWatchHash = "";
     	System.println("onEnterSleep");
     }
 
@@ -74,25 +78,28 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         var minutes = clockTime.min.format("%02d");
         var connected = System.getDeviceSettings().phoneConnected;
         var watchHash = minutes + "m" + connected + "p";
+
         if(!watchHash.equals(prevWatchHash)) {
         	prevWatchHash = watchHash+"";
         	
+        	var date = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
 	        var stepsGoal = ActivityMonitor.getInfo().stepGoal;
 	        var steps = ActivityMonitor.getInfo().steps;
-	        var battery = System.getSystemStats().battery.format("%d")+"%";
-	        var month = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM).month.toLower();
+	        var battery = Lang.format("$1$ $2$",["battery",System.getSystemStats().battery.format("%d")+"%"]);
+	        var topLabel = Lang.format("$1$ $2$ $3$",[date.day,date.month.toLower(),date.year]);	        
 	        var hours = clockTime.hour.format("%02d");
-	        
-	        View.findDrawableById("topLabel").setText(connected?"BLE+":"BLE-");
+	
+			View.findDrawableById("toplabel").setText(topLabel);
+	
+			View.findDrawableById("bluetooth").setBitmap(connected?Rez.Drawables.BluetoothOn:Rez.Drawables.BluetoothOff);
 	        View.findDrawableById("battery").setText(battery);
-		    View.findDrawableById("steps").setText(Lang.format("$1$/$2$",[steps,stepsGoal]));
 		    
 	        View.findDrawableById("hours").setText(hours);
 	        View.findDrawableById("minutes").setText(minutes);
 		         
-	        View.findDrawableById("month1").setText(month);
+	        View.findDrawableById("steps").setText(Lang.format("$1$ $2$",["steps",steps]));
 	        
-	        drawWeekDay(0,-4);
+//	        drawWeekDay(0,-4);
 	        drawWeekDay(1,-3);
 	        drawWeekDay(2,-2);
 	        drawWeekDay(3,-1);
@@ -100,11 +107,12 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	        drawWeekDay(5,1l);
 	        drawWeekDay(6,2);
 	        drawWeekDay(7,3);
-	        drawWeekDay(8,4);
+//	        drawWeekDay(8,4);
 	
 	        // Call the parent onUpdate function to redraw the layout
-	        View.onUpdate(dc);
+	    	View.onUpdate(dc);    
         }
+        
     }
 
 }

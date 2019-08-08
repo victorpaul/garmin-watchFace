@@ -1,98 +1,98 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <debugInfo>
 <pcToLineNum>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="3" lineNum="15" pc="268435456" symbol="initialize"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="3" lineNum="16" pc="268435460" symbol="initialize"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="3" lineNum="17" pc="268435478" symbol="initialize"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="4" lineNum="21" pc="268435500" symbol="onLayout"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="4" lineNum="22" pc="268435504" symbol="onLayout"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="4" lineNum="23" pc="268435541" symbol="onLayout"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="5" lineNum="29" pc="268435563" symbol="onShow"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="5" lineNum="30" pc="268435567" symbol="onShow"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="5" lineNum="31" pc="268435580" symbol="onShow"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="6" lineNum="37" pc="268435602" symbol="onHide"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="6" lineNum="38" pc="268435606" symbol="onHide"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="7" lineNum="42" pc="268435628" symbol="onExitSleep"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="7" lineNum="43" pc="268435632" symbol="onExitSleep"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="8" lineNum="47" pc="268435654" symbol="onEnterSleep"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="8" lineNum="48" pc="268435658" symbol="onEnterSleep"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="51" pc="268435680" symbol="drawWeekDay"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="52" pc="268435684" symbol="drawWeekDay"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="53" pc="268435687" symbol="drawWeekDay"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="54" pc="268435698" symbol="drawWeekDay"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="55" pc="268435718" symbol="drawWeekDay"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="56" pc="268435729" symbol="drawWeekDay"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="57" pc="268435798" symbol="drawWeekDay"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="58" pc="268435809" symbol="drawWeekDay"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="60" pc="268435872" symbol="drawWeekDay"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="61" pc="268435903" symbol="drawWeekDay"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="62" pc="268435930" symbol="drawWeekDay"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="72" pc="268436062" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="73" pc="268436066" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="74" pc="268436083" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="75" pc="268436107" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="76" pc="268436130" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="77" pc="268436149" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="78" pc="268436172" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="80" pc="268436188" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="81" pc="268436211" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="82" pc="268436234" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="83" pc="268436277" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="84" pc="268436336" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="86" pc="268436360" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="87" pc="268436410" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="88" pc="268436444" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="90" pc="268436522" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="91" pc="268436556" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="93" pc="268436590" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="95" pc="268436624" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="96" pc="268436646" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="97" pc="268436668" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="98" pc="268436690" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="99" pc="268436712" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="100" pc="268436734" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="101" pc="268436760" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="102" pc="268436782" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="103" pc="268436804" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="106" pc="268436826" symbol="onUpdate"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQApp.mc" id="12" lineNum="5" pc="268436850" symbol="initialize"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQApp.mc" id="12" lineNum="6" pc="268436854" symbol="initialize"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQApp.mc" id="13" lineNum="10" pc="268436873" symbol="onStart"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQApp.mc" id="14" lineNum="14" pc="268436878" symbol="onStop"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQApp.mc" id="15" lineNum="18" pc="268436883" symbol="getInitialView"/>
-<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQApp.mc" id="15" lineNum="19" pc="268436887" symbol="getInitialView"/>
-<entry filename="Rez" id="22" lineNum="21" pc="268436925" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="25" pc="268436937" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="26" pc="268437038" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="27" pc="268437194" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="28" pc="268437227" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="29" pc="268437279" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="30" pc="268437420" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="31" pc="268437576" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="32" pc="268437609" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="33" pc="268437661" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="34" pc="268437782" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="35" pc="268437903" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="36" pc="268438024" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="37" pc="268438145" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="38" pc="268438266" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="39" pc="268438387" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="40" pc="268438508" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="41" pc="268438629" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="42" pc="268438750" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="43" pc="268438871" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="44" pc="268439027" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="45" pc="268439060" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="46" pc="268439112" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="47" pc="268439268" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="48" pc="268439301" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="51" pc="268439353" symbol="WatchFace"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="3" lineNum="14" pc="268435456" symbol="initialize"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="3" lineNum="15" pc="268435460" symbol="initialize"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="3" lineNum="16" pc="268435478" symbol="initialize"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="3" lineNum="17" pc="268435491" symbol="initialize"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="4" lineNum="21" pc="268435513" symbol="onLayout"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="4" lineNum="22" pc="268435517" symbol="onLayout"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="4" lineNum="23" pc="268435554" symbol="onLayout"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="4" lineNum="24" pc="268435567" symbol="onLayout"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="5" lineNum="30" pc="268435589" symbol="onShow"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="5" lineNum="31" pc="268435593" symbol="onShow"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="5" lineNum="32" pc="268435606" symbol="onShow"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="6" lineNum="38" pc="268435628" symbol="onHide"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="6" lineNum="39" pc="268435632" symbol="onHide"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="6" lineNum="40" pc="268435645" symbol="onHide"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="7" lineNum="44" pc="268435667" symbol="onExitSleep"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="7" lineNum="45" pc="268435671" symbol="onExitSleep"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="7" lineNum="46" pc="268435684" symbol="onExitSleep"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="8" lineNum="50" pc="268435706" symbol="onEnterSleep"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="8" lineNum="51" pc="268435710" symbol="onEnterSleep"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="8" lineNum="52" pc="268435723" symbol="onEnterSleep"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="55" pc="268435745" symbol="drawWeekDay"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="56" pc="268435749" symbol="drawWeekDay"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="57" pc="268435752" symbol="drawWeekDay"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="58" pc="268435763" symbol="drawWeekDay"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="59" pc="268435783" symbol="drawWeekDay"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="60" pc="268435794" symbol="drawWeekDay"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="61" pc="268435863" symbol="drawWeekDay"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="62" pc="268435874" symbol="drawWeekDay"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="64" pc="268435937" symbol="drawWeekDay"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="65" pc="268435968" symbol="drawWeekDay"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="9" lineNum="66" pc="268435995" symbol="drawWeekDay"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="76" pc="268436127" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="77" pc="268436131" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="78" pc="268436148" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="79" pc="268436172" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="80" pc="268436195" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="82" pc="268436214" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="83" pc="268436237" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="85" pc="268436253" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="86" pc="268436297" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="87" pc="268436320" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="88" pc="268436343" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="89" pc="268436433" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="90" pc="268436518" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="92" pc="268436542" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="94" pc="268436576" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="95" pc="268436656" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="97" pc="268436690" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="98" pc="268436724" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="100" pc="268436758" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="103" pc="268436839" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="104" pc="268436861" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="105" pc="268436883" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="106" pc="268436905" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="107" pc="268436927" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="108" pc="268436953" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="109" pc="268436975" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQView.mc" id="10" lineNum="113" pc="268436997" symbol="onUpdate"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQApp.mc" id="12" lineNum="5" pc="268437021" symbol="initialize"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQApp.mc" id="12" lineNum="6" pc="268437025" symbol="initialize"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQApp.mc" id="13" lineNum="10" pc="268437044" symbol="onStart"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQApp.mc" id="14" lineNum="14" pc="268437049" symbol="onStop"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQApp.mc" id="15" lineNum="18" pc="268437054" symbol="getInitialView"/>
+<entry filename="C:\\Users\\victor\\eclipse-workspace\\phoneBatteryIQ\\source\\phoneBatteryIQApp.mc" id="15" lineNum="19" pc="268437058" symbol="getInitialView"/>
+<entry filename="Rez" id="22" lineNum="24" pc="268437096" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="28" pc="268437108" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="29" pc="268437264" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="30" pc="268437297" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="31" pc="268437349" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="32" pc="268437450" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="33" pc="268437551" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="34" pc="268437672" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="35" pc="268437793" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="36" pc="268437914" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="37" pc="268438035" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="38" pc="268438156" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="39" pc="268438277" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="40" pc="268438398" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="41" pc="268438554" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="42" pc="268438587" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="43" pc="268438639" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="44" pc="268438795" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="45" pc="268438828" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="46" pc="268438880" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="47" pc="268439021" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="50" pc="268439162" symbol="WatchFace"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8388644" module="true" symbol="System"/>
 <entry id="8389124" method="true" symbol="onUpdate"/>
 <entry id="8389349" symbol="justification"/>
-<entry field="true" id="15" symbol="myBitmap1"/>
+<entry field="true" id="8390485" symbol="bluetooth"/>
 <entry field="true" id="8388611" module="true" symbol="Toybox"/>
 <entry id="8388645" module="true" symbol="Time"/>
 <entry id="8388770" module="true" object="true" symbol="Strings"/>
@@ -104,10 +104,11 @@
 <entry id="8389123" method="true" symbol="onShow"/>
 <entry id="8388924" module="true" symbol="Gregorian"/>
 <entry id="8388702" method="true" symbol="initialize"/>
-<entry field="true" id="17" symbol="AppName"/>
+<entry field="true" id="19" symbol="AppName"/>
+<entry field="true" id="15" symbol="BluetoothOff"/>
 <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
 <entry id="12" method="true" symbol="drawWeekDay"/>
-<entry field="true" id="16" symbol="LauncherIcon"/>
+<entry field="true" id="18" symbol="LauncherIcon"/>
 <entry id="10" object="true" symbol="phoneBatteryIQApp"/>
 <entry id="8388648" module="true" symbol="WatchUi"/>
 <entry id="8389281" method="true" symbol="onStop"/>
@@ -122,8 +123,10 @@
 <entry id="9" object="true" symbol="phoneBatteryIQView"/>
 <entry id="14" module="true" symbol="Layouts"/>
 <entry id="8389125" method="true" symbol="onHide"/>
+<entry field="true" id="17" symbol="myLove"/>
 <entry id="8389345" symbol="rezId"/>
 <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+<entry field="true" id="16" symbol="BluetoothOn"/>
 <entry field="true" id="8389063" symbol="identifier"/>
 <entry id="13" module="true" symbol="Menus"/>
 <entry field="true" id="11" symbol="prevWatchHash"/>
@@ -132,45 +135,43 @@
 <entry id="8388635" module="true" symbol="Application"/>
 </symbolTable>
 <localVars>
-<entry endPc="268435563" name="dc" stackId="1" startPc="268435500"/>
-<entry endPc="268436061" name="weekDayView" stackId="5" startPc="268435684"/>
-<entry endPc="268436061" name="day" stackId="4" startPc="268435684"/>
-<entry endPc="268436061" name="time" stackId="3" startPc="268435684"/>
-<entry endPc="268436062" name="position" stackId="1" startPc="268435680"/>
-<entry endPc="268436062" name="offset" stackId="2" startPc="268435680"/>
-<entry endPc="268436846" name="battery" stackId="8" startPc="268436172"/>
-<entry endPc="268436846" name="hours" stackId="10" startPc="268436172"/>
-<entry endPc="268436846" name="steps" stackId="7" startPc="268436172"/>
-<entry endPc="268436846" name="stepsGoal" stackId="6" startPc="268436172"/>
-<entry endPc="268436846" name="month" stackId="9" startPc="268436172"/>
-<entry endPc="268436849" name="watchHash" stackId="5" startPc="268436066"/>
-<entry endPc="268436849" name="minutes" stackId="3" startPc="268436066"/>
-<entry endPc="268436849" name="connected" stackId="4" startPc="268436066"/>
-<entry endPc="268436849" name="clockTime" stackId="2" startPc="268436066"/>
-<entry endPc="268436850" name="dc" stackId="1" startPc="268436062"/>
-<entry endPc="268436878" name="state" stackId="1" startPc="268436873"/>
-<entry endPc="268436883" name="state" stackId="1" startPc="268436878"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_dayOfWeek4" stackId="13" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_dayOfWeek3" stackId="12" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_dayOfWeek2" stackId="11" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_dayOfWeek1" stackId="10" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_dayOfWeek0" stackId="9" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_steps_fontHeight" stackId="7" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_myBitmap1" stackId="2" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_topLabel" stackId="3" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_topLabel_fontHeight" stackId="4" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_minutes_fontHeight" stackId="21" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_hours" stackId="18" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_steps" stackId="6" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_month1" stackId="8" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_battery" stackId="5" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_hours_fontHeight" stackId="19" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_dayOfWeek8" stackId="17" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_minutes" stackId="20" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_dayOfWeek7" stackId="16" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_dayOfWeek6" stackId="15" startPc="268436937"/>
-<entry endPc="268439520" name="rez_cmp_local_bitmap_dayOfWeek5" stackId="14" startPc="268436937"/>
-<entry endPc="268439521" name="dc" stackId="1" startPc="268436925"/>
+<entry endPc="268435589" name="dc" stackId="1" startPc="268435513"/>
+<entry endPc="268436126" name="weekDayView" stackId="5" startPc="268435749"/>
+<entry endPc="268436126" name="day" stackId="4" startPc="268435749"/>
+<entry endPc="268436126" name="time" stackId="3" startPc="268435749"/>
+<entry endPc="268436127" name="position" stackId="1" startPc="268435745"/>
+<entry endPc="268436127" name="offset" stackId="2" startPc="268435745"/>
+<entry endPc="268437017" name="battery" stackId="9" startPc="268436237"/>
+<entry endPc="268437017" name="hours" stackId="11" startPc="268436237"/>
+<entry endPc="268437017" name="steps" stackId="8" startPc="268436237"/>
+<entry endPc="268437017" name="date" stackId="6" startPc="268436237"/>
+<entry endPc="268437017" name="topLabel" stackId="10" startPc="268436237"/>
+<entry endPc="268437017" name="stepsGoal" stackId="7" startPc="268436237"/>
+<entry endPc="268437020" name="watchHash" stackId="5" startPc="268436131"/>
+<entry endPc="268437020" name="minutes" stackId="3" startPc="268436131"/>
+<entry endPc="268437020" name="connected" stackId="4" startPc="268436131"/>
+<entry endPc="268437020" name="clockTime" stackId="2" startPc="268436131"/>
+<entry endPc="268437021" name="dc" stackId="1" startPc="268436127"/>
+<entry endPc="268437049" name="state" stackId="1" startPc="268437044"/>
+<entry endPc="268437054" name="state" stackId="1" startPc="268437049"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_hours_fontHeight" stackId="14" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_dayOfWeek5" stackId="10" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_dayOfWeek4" stackId="9" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_bluetooth" stackId="4" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_dayOfWeek3" stackId="8" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_toplabel_fontHeight" stackId="3" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_dayOfWeek2" stackId="7" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_dayOfWeek1" stackId="6" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_myLove" stackId="5" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_steps" stackId="18" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_minutes_fontHeight" stackId="16" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_hours" stackId="13" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_minutes" stackId="15" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_battery" stackId="17" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_dayOfWeek7" stackId="12" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_dayOfWeek6" stackId="11" startPc="268437108"/>
+<entry endPc="268439309" name="rez_cmp_local_bitmap_toplabel" stackId="2" startPc="268437108"/>
+<entry endPc="268439310" name="dc" stackId="1" startPc="268437096"/>
 </localVars>
 <annotations/>
 <functions>
@@ -226,11 +227,11 @@
 <dataEntry offset="166" parentId="globals" symbolId="phoneBatteryIQView" type="class"/>
 <dataEntry offset="277" parentId="globals" symbolId="Rez" type="module"/>
 <dataEntry offset="356" parentId="Rez" symbolId="Drawables" type="module"/>
-<dataEntry offset="403" parentId="Rez" symbolId="Menus" type="module"/>
-<dataEntry offset="434" parentId="Rez" symbolId="Fonts" type="module"/>
-<dataEntry offset="465" parentId="Rez" symbolId="JsonData" type="module"/>
-<dataEntry offset="496" parentId="Rez" symbolId="Layouts" type="module"/>
-<dataEntry offset="535" parentId="Rez" symbolId="Strings" type="module"/>
-<dataEntry offset="574" parentId="globals" symbolId="phoneBatteryIQApp" type="class"/>
+<dataEntry offset="427" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry offset="458" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry offset="489" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry offset="520" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry offset="559" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry offset="598" parentId="globals" symbolId="phoneBatteryIQApp" type="class"/>
 </dataEntryOffsetMappings>
 </debugInfo>

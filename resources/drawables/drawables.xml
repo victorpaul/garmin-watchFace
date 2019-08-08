@@ -1,3 +1,5 @@
 <drawables>
     <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+    <bitmap id="BluetoothOff" filename="bluetooth-disabled-button.png" />
+    <bitmap id="BluetoothOn" filename="bluetooth-connected.png" />
 </drawables>
