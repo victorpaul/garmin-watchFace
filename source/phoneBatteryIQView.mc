@@ -10,7 +10,7 @@ using Toybox.Time.Gregorian;
 class phoneBatteryIQView extends WatchUi.WatchFace {
 
 	var prevWatchHash;
-
+	
     function initialize() {
         WatchFace.initialize();
         prevWatchHash = "";
@@ -86,7 +86,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	        var stepsGoal = ActivityMonitor.getInfo().stepGoal;
 	        var steps = ActivityMonitor.getInfo().steps;
 	        var battery = Lang.format("$1$ $2$",["battery",System.getSystemStats().battery.format("%d")+"%"]);
-	        var topLabel = Lang.format("$1$ $2$ $3$",[date.day,date.month.toLower(),date.year]);	        
+	        var topLabel = Lang.format("$1$ $2$",[date.month,date.year]);	        
 	        var hours = clockTime.hour.format("%02d");
 	
 			View.findDrawableById("toplabel").setText(topLabel);
@@ -110,8 +110,12 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 //	        drawWeekDay(8,4);
 	
 	        // Call the parent onUpdate function to redraw the layout
-	    	View.onUpdate(dc);    
+	    	View.onUpdate(dc);
         }
+
+		for(var i=0;i<10;i++){
+			dc.drawArc(70, 20+i*22, 8, Graphics.ARC_CLOCKWISE,  (90-i*36),90);
+		}
         
     }
 

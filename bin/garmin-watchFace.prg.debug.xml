@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<pcToLineNum>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQApp.mc" id="3" lineNum="5" pc="268435456" symbol="initialize"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQApp.mc" id="3" lineNum="6" pc="268435460" symbol="initialize"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQApp.mc" id="4" lineNum="10" pc="268435479" symbol="onStart"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQApp.mc" id="5" lineNum="14" pc="268435484" symbol="onStop"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQApp.mc" id="6" lineNum="18" pc="268435489" symbol="getInitialView"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQApp.mc" id="6" lineNum="19" pc="268435493" symbol="getInitialView"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="8" lineNum="14" pc="268435531" symbol="initialize"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="8" lineNum="15" pc="268435535" symbol="initialize"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="8" lineNum="16" pc="268435553" symbol="initialize"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="8" lineNum="17" pc="268435566" symbol="initialize"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="9" lineNum="21" pc="268435588" symbol="onLayout"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="9" lineNum="22" pc="268435592" symbol="onLayout"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="9" lineNum="23" pc="268435629" symbol="onLayout"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="9" lineNum="24" pc="268435642" symbol="onLayout"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="10" lineNum="30" pc="268435664" symbol="onShow"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="10" lineNum="31" pc="268435668" symbol="onShow"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="10" lineNum="32" pc="268435681" symbol="onShow"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="11" lineNum="38" pc="268435703" symbol="onHide"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="11" lineNum="39" pc="268435707" symbol="onHide"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="11" lineNum="40" pc="268435720" symbol="onHide"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="12" lineNum="44" pc="268435742" symbol="onExitSleep"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="12" lineNum="45" pc="268435746" symbol="onExitSleep"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="12" lineNum="46" pc="268435759" symbol="onExitSleep"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="13" lineNum="50" pc="268435781" symbol="onEnterSleep"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="13" lineNum="51" pc="268435785" symbol="onEnterSleep"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="13" lineNum="52" pc="268435798" symbol="onEnterSleep"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="14" lineNum="55" pc="268435820" symbol="drawWeekDay"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="14" lineNum="56" pc="268435824" symbol="drawWeekDay"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="14" lineNum="57" pc="268435827" symbol="drawWeekDay"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="14" lineNum="58" pc="268435838" symbol="drawWeekDay"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="14" lineNum="59" pc="268435858" symbol="drawWeekDay"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="14" lineNum="60" pc="268435869" symbol="drawWeekDay"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="14" lineNum="61" pc="268435938" symbol="drawWeekDay"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="14" lineNum="62" pc="268435949" symbol="drawWeekDay"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="14" lineNum="64" pc="268436012" symbol="drawWeekDay"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="14" lineNum="65" pc="268436043" symbol="drawWeekDay"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="14" lineNum="66" pc="268436070" symbol="drawWeekDay"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="76" pc="268436202" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="77" pc="268436206" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="78" pc="268436223" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="79" pc="268436247" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="80" pc="268436270" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="82" pc="268436289" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="83" pc="268436312" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="85" pc="268436328" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="86" pc="268436372" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="87" pc="268436395" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="88" pc="268436418" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="89" pc="268436508" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="90" pc="268436568" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="92" pc="268436592" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="94" pc="268436626" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="95" pc="268436706" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="97" pc="268436740" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="98" pc="268436774" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="100" pc="268436808" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="103" pc="268436889" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="104" pc="268436911" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="105" pc="268436933" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="106" pc="268436955" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="107" pc="268436977" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="108" pc="268437003" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="109" pc="268437025" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="113" pc="268437047" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="116" pc="268437070" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="15" lineNum="117" pc="268437088" symbol="onUpdate"/>
+<entry filename="Rez" id="22" lineNum="24" pc="268437169" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="28" pc="268437181" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="29" pc="268437337" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="30" pc="268437370" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="31" pc="268437422" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="32" pc="268437523" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="33" pc="268437624" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="34" pc="268437745" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="35" pc="268437866" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="36" pc="268437987" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="37" pc="268438108" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="38" pc="268438229" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="39" pc="268438350" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="40" pc="268438471" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="41" pc="268438627" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="42" pc="268438660" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="43" pc="268438712" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="44" pc="268438868" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="45" pc="268438901" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="46" pc="268438953" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="47" pc="268439109" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="48" pc="268439142" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="49" pc="268439194" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="50" pc="268439350" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="51" pc="268439383" symbol="WatchFace"/>
+<entry filename="Rez" id="22" lineNum="54" pc="268439435" symbol="WatchFace"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8388644" module="true" symbol="System"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="8389349" symbol="justification"/>
+<entry field="true" id="8390485" symbol="bluetooth"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry id="8388645" module="true" symbol="Time"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389377" method="true" symbol="onExitSleep"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry id="8388924" module="true" symbol="Gregorian"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry field="true" id="19" symbol="AppName"/>
+<entry field="true" id="15" symbol="BluetoothOff"/>
+<entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+<entry id="12" method="true" symbol="drawWeekDay"/>
+<entry field="true" id="18" symbol="LauncherIcon"/>
+<entry id="9" object="true" symbol="phoneBatteryIQApp"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry field="true" id="8389065" symbol="locY"/>
+<entry field="true" id="8389064" symbol="locX"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry id="8389376" method="true" symbol="onEnterSleep"/>
+<entry id="8389348" symbol="font"/>
+<entry id="8389347" symbol="color"/>
+<entry id="10" object="true" symbol="phoneBatteryIQView"/>
+<entry id="14" module="true" symbol="Layouts"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry field="true" id="17" symbol="myLove"/>
+<entry id="8389345" symbol="rezId"/>
+<entry id="8390088" module="true" object="true" symbol="JsonData"/>
+<entry field="true" id="16" symbol="BluetoothOn"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry id="13" module="true" symbol="Menus"/>
+<entry field="true" id="11" symbol="prevWatchHash"/>
+<entry id="8388772" module="true" object="true" symbol="Fonts"/>
+<entry id="8388633" module="true" symbol="ActivityMonitor"/>
+<entry id="8388635" module="true" symbol="Application"/>
+</symbolTable>
+<localVars>
+<entry endPc="268435484" name="state" stackId="1" startPc="268435479"/>
+<entry endPc="268435489" name="state" stackId="1" startPc="268435484"/>
+<entry endPc="268435664" name="dc" stackId="1" startPc="268435588"/>
+<entry endPc="268436201" name="weekDayView" stackId="5" startPc="268435824"/>
+<entry endPc="268436201" name="day" stackId="4" startPc="268435824"/>
+<entry endPc="268436201" name="time" stackId="3" startPc="268435824"/>
+<entry endPc="268436202" name="position" stackId="1" startPc="268435820"/>
+<entry endPc="268436202" name="offset" stackId="2" startPc="268435820"/>
+<entry endPc="268437067" name="battery" stackId="9" startPc="268436312"/>
+<entry endPc="268437067" name="hours" stackId="11" startPc="268436312"/>
+<entry endPc="268437067" name="steps" stackId="8" startPc="268436312"/>
+<entry endPc="268437067" name="date" stackId="6" startPc="268436312"/>
+<entry endPc="268437067" name="topLabel" stackId="10" startPc="268436312"/>
+<entry endPc="268437067" name="stepsGoal" stackId="7" startPc="268436312"/>
+<entry endPc="268437168" name="i" stackId="12" startPc="268437088"/>
+<entry endPc="268437168" name="watchHash" stackId="5" startPc="268436206"/>
+<entry endPc="268437168" name="minutes" stackId="3" startPc="268436206"/>
+<entry endPc="268437168" name="connected" stackId="4" startPc="268436206"/>
+<entry endPc="268437168" name="clockTime" stackId="2" startPc="268436206"/>
+<entry endPc="268437169" name="dc" stackId="1" startPc="268436202"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_dayOfWeek4" stackId="9" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_dayOfWeek3" stackId="8" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_dayOfWeek2" stackId="7" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_battery_fontHeight" stackId="18" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_dayOfWeek1" stackId="6" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_steps_fontHeight" stackId="20" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_toplabel" stackId="2" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_minutes_fontHeight" stackId="16" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_steps" stackId="19" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_hours" stackId="13" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_myLove" stackId="5" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_battery" stackId="17" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_hours_fontHeight" stackId="14" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_toplabel_fontHeight" stackId="3" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_bluetooth" stackId="4" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_dayOfWeek7" stackId="12" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_minutes" stackId="15" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_dayOfWeek6" stackId="11" startPc="268437181"/>
+<entry endPc="268439582" name="rez_cmp_local_bitmap_dayOfWeek5" stackId="10" startPc="268437181"/>
+<entry endPc="268439583" name="dc" stackId="1" startPc="268437169"/>
+</localVars>
+<annotations/>
+<functions>
+<functionEntry accessMode="public" name="initialize" parent="phoneBatteryIQApp">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onStart" parent="phoneBatteryIQApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onStop" parent="phoneBatteryIQApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="getInitialView" parent="phoneBatteryIQApp">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="phoneBatteryIQView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onLayout" parent="phoneBatteryIQView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onShow" parent="phoneBatteryIQView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onHide" parent="phoneBatteryIQView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onExitSleep" parent="phoneBatteryIQView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onEnterSleep" parent="phoneBatteryIQView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="drawWeekDay" parent="phoneBatteryIQView">
+<param id="position"/>
+<param id="offset"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onUpdate" parent="phoneBatteryIQView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="WatchFace" parent="Layouts">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Draw the layout<br/> param The context<br/></div>]]></documentation>
+</functionEntry>
+</functions>
+<dataEntryOffsetMappings>
+<dataEntry offset="87" parentId="" symbolId="globals" type="module"/>
+<dataEntry offset="166" parentId="globals" symbolId="phoneBatteryIQView" type="class"/>
+<dataEntry offset="277" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry offset="356" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry offset="427" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry offset="458" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry offset="489" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry offset="520" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry offset="559" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry offset="598" parentId="globals" symbolId="phoneBatteryIQApp" type="class"/>
+</dataEntryOffsetMappings>
+</debugInfo>

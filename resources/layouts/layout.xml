@@ -6,20 +6,20 @@
 
 	<bitmap id="myLove" filename="../drawables/nata.png" x="160" y="70"/>
 
-	<label id="dayOfWeek1" x="20" y="50" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
+	<label id="dayOfWeek1" x="25" y="50" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
 	<label id="dayOfWeek2" x="20" y="70" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
-	<label id="dayOfWeek3" x="20" y="90" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
+	<label id="dayOfWeek3" x="15" y="90" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
 	
-	<label id="dayOfWeek4" x="20" y="110" font="Graphics.FONT_TINY" color="Graphics.COLOR_BLUE"/>
+	<label id="dayOfWeek4" x="10" y="109" font="Graphics.FONT_SMALL" color="Graphics.COLOR_BLUE"/>
 	
-	<label id="dayOfWeek5" x="20" y="130" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
+	<label id="dayOfWeek5" x="15" y="130" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
 	<label id="dayOfWeek6" x="20" y="150" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
-	<label id="dayOfWeek7" x="20" y="170" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
+	<label id="dayOfWeek7" x="25" y="170" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
 	
 	
     <label id="hours" x="center" y="35" font="Graphics.FONT_NUMBER_THAI_HOT" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
     <label id="minutes" x="center" y="105" font="Graphics.FONT_NUMBER_THAI_HOT" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
     
-    <label id="battery" x="80" y="195" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
-    <label id="steps" x="90" y="210" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+    <label id="battery" x="center" y="195" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
+    <label id="steps" x="center" y="210" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
 </layout>
