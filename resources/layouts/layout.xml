@@ -1,19 +1,19 @@
 <layout id="WatchFace">
 	
-	<label id="toplabel" x="center" y="15" font="Graphics.FONT_SMALL" color="Graphics.COLOR_BLUE" justification="Graphics.TEXT_JUSTIFY_CENTER"/>
+	<label id="toplabel" x="center" y="15" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER"/>
 	
 	<bitmap id="bluetooth" x="175" y="195" filename="../drawables/bluetooth-connected.png" />
 
 	<bitmap id="myLove" filename="../drawables/nata.png" x="160" y="70"/>
 
 	<label id="dayOfWeek1" x="25" y="50" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
-	<label id="dayOfWeek2" x="20" y="70" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
-	<label id="dayOfWeek3" x="15" y="90" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
+	<label id="dayOfWeek2" x="25" y="70" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
+	<label id="dayOfWeek3" x="25" y="90" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
 	
-	<label id="dayOfWeek4" x="10" y="109" font="Graphics.FONT_SMALL" color="Graphics.COLOR_BLUE"/>
+	<label id="dayOfWeek4" x="25" y="110" font="Graphics.FONT_TINY" color="Graphics.COLOR_WHITE"/>
 	
-	<label id="dayOfWeek5" x="15" y="130" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
-	<label id="dayOfWeek6" x="20" y="150" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
+	<label id="dayOfWeek5" x="25" y="130" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
+	<label id="dayOfWeek6" x="25" y="150" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
 	<label id="dayOfWeek7" x="25" y="170" font="Graphics.FONT_TINY" color="Graphics.COLOR_DK_GRAY"/>
 	
 	

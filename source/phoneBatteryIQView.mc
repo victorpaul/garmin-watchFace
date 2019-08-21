@@ -113,9 +113,9 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	    	View.onUpdate(dc);
         }
 
-		for(var i=0;i<10;i++){
-			dc.drawArc(70, 20+i*22, 8, Graphics.ARC_CLOCKWISE,  (90-i*36),90);
-		}
+//		for(var i=0;i<10;i++){
+//			dc.drawArc(70, 20+i*22, 8, Graphics.ARC_CLOCKWISE,  (90-i*36),90);
+//		}
         
     }
 
