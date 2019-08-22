@@ -71,10 +71,9 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 			    ]
 			));	
 	}
-
-    // Update the view
-    function onUpdate(dc) {
-        var clockTime = System.getClockTime();
+	
+	function drawWatch(dc) {
+		var clockTime = System.getClockTime();
         var minutes = clockTime.min.format("%02d");
         var connected = System.getDeviceSettings().phoneConnected;
         var watchHash = minutes + "m" + connected + "p";
@@ -108,15 +107,30 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	        drawWeekDay(6,2);
 	        drawWeekDay(7,3);
 //	        drawWeekDay(8,4);
-	
-	        // Call the parent onUpdate function to redraw the layout
+	    	
 	    	View.onUpdate(dc);
         }
 
 //		for(var i=0;i<10;i++){
 //			dc.drawArc(70, 20+i*22, 8, Graphics.ARC_CLOCKWISE,  (90-i*36),90);
 //		}
-        
+	}
+
+	function draw(x,y,fontres){
+		
+	}
+    // Update the view
+    function onUpdate(dc) {
+        //drawWatch(dc);
+        // Call the parent onUpdate function to redraw the layout
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+	        
+        var font = WatchUi.loadResource(Rez.Fonts.fnt4);
+		dc.drawText(30,30, font, "59", Graphics.TEXT_JUSTIFY_CENTER);
+		dc.drawText(180,120, font, "35", Graphics.TEXT_JUSTIFY_CENTER);
+
+		
+	        
     }
 
 }
