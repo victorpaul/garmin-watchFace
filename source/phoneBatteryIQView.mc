@@ -162,29 +162,29 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	        
 	        //dc.drawText(135,50, fontSmall, steps, Graphics.TEXT_JUSTIFY_LEFT);
 	        //dc.drawText(135,80, fontSmall, battery, Graphics.TEXT_JUSTIFY_LEFT);
-	        drawWeekDay2(dc,140,30,0);
-	        drawWeekDay2(dc,140,50,1);
-	        drawWeekDay2(dc,140,70,2);
-	        drawWeekDay2(dc,140,90,3);
+	        drawWeekDay2(dc,145,35,0);
+	        drawWeekDay2(dc,145,55,1);
+	        drawWeekDay2(dc,145,75,2);
+	        drawWeekDay2(dc,145,95,3);
 	      
-	        dc.drawText(50,-30, font, hours[0], Graphics.TEXT_JUSTIFY_CENTER);
-	        dc.drawText(105,-30, font, hours[1], Graphics.TEXT_JUSTIFY_CENTER);
+	        dc.drawText(55,-5, font, hours[0], Graphics.TEXT_JUSTIFY_CENTER);
+	        dc.drawText(105,5, font, hours[1], Graphics.TEXT_JUSTIFY_CENTER);
 	        
-//	        for(var t=0;t<=5;t++){dc.drawText(50,-30, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
-//	    	for(var t=0;t<=9;t++){dc.drawText(105,-30, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+//	        for(var t=0;t<=5;t++){dc.drawText(55,-5, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+//	    	for(var t=0;t<=9;t++){dc.drawText(105,5, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
 	    	
-	    	dc.drawText(130,50, font, minutes[0], Graphics.TEXT_JUSTIFY_CENTER);
-	    	dc.drawText(190,40, font, minutes[1], Graphics.TEXT_JUSTIFY_CENTER);
+	    	dc.drawText(130,95, font, minutes[0], Graphics.TEXT_JUSTIFY_CENTER);
+	    	dc.drawText(190,75, font, minutes[1], Graphics.TEXT_JUSTIFY_CENTER);
 	    	
-//	    	for(var t=0;t<=5;t++){dc.drawText(130,50, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
-//	    	for(var t=0;t<=9;t++){dc.drawText(190,40, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+//	    	for(var t=0;t<=5;t++){dc.drawText(130,95, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+//	    	for(var t=0;t<=9;t++){dc.drawText(190,75, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
 	    	
-	        dc.drawText(103,140, fontSmall, battery, Graphics.TEXT_JUSTIFY_RIGHT);
-	        dc.drawText(103,160, fontSmall, steps, Graphics.TEXT_JUSTIFY_RIGHT);
-	        dc.drawText(100,185, fontSmall, "B", Graphics.TEXT_JUSTIFY_RIGHT);
+	        dc.drawText(95,145, fontSmall, battery, Graphics.TEXT_JUSTIFY_RIGHT);
+	        dc.drawText(95,165, fontSmall, steps, Graphics.TEXT_JUSTIFY_RIGHT);
+	        dc.drawText(95,190, fontSmall, "B", Graphics.TEXT_JUSTIFY_RIGHT);
 	        
 	        if(!connected){
-	        	dc.drawText(95,180, fontSmall, "X", Graphics.TEXT_JUSTIFY_RIGHT);	
+	        	dc.drawText(90,185, fontSmall, "X", Graphics.TEXT_JUSTIFY_RIGHT);	
 	        }
 	        //dc.drawBitmap(85, 185, connected?Rez.Drawables.BluetoothOn:Rez.Drawables.BluetoothOff)	        
 	    	
