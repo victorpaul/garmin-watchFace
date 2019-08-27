@@ -10,9 +10,12 @@ using Toybox.Time.Gregorian;
 class phoneBatteryIQView extends WatchUi.WatchFace {
 
 	var prevWatchHash;
+	var font,fontSmall;
 	
     function initialize() {
         WatchFace.initialize();
+        font = WatchUi.loadResource(Rez.Fonts.fnt1);
+        fontSmall = WatchUi.loadResource(Rez.Fonts.fnt3);
         prevWatchHash = "";
         System.println("initialize");			
     }
@@ -90,11 +93,11 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	
 			View.findDrawableById("toplabel").setText(topLabel);
 	
-			View.findDrawableById("bluetooth").setBitmap(connected?Rez.Drawables.BluetoothOn:Rez.Drawables.BluetoothOff);
+			//View.findDrawableById("bluetooth").setBitmap(connected?Rez.Drawables.BluetoothOn:Rez.Drawables.BluetoothOff);
 	        View.findDrawableById("battery").setText(battery);
 		    
-	        View.findDrawableById("hours").setText(hours);
-	        View.findDrawableById("minutes").setText(minutes);
+	        //View.findDrawableById("hours").setText(hours);
+	        //View.findDrawableById("minutes").setText(minutes);
 		         
 	        View.findDrawableById("steps").setText(Lang.format("$1$ $2$",["steps",steps]));
 	        
@@ -109,28 +112,98 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 //	        drawWeekDay(8,4);
 	    	
 	    	View.onUpdate(dc);
+	    	
         }
 
-//		for(var i=0;i<10;i++){
-//			dc.drawArc(70, 20+i*22, 8, Graphics.ARC_CLOCKWISE,  (90-i*36),90);
-//		}
 	}
-
-	function draw(x,y,fontres){
-		
+	
+	function drawWeekDay2(dc,x,y,offset){
+		var time = null;
+		if(offset==0){
+			time = Time.now();
+		}else if (offset<0){
+			time = Time.now().subtract(new Time.Duration(3600 *24 * (-offset)));
+		}else if (offset>0){
+			time = Time.now().add(new Time.Duration(3600 *24 * offset));
+		}       	
+    	var day = Gregorian.info(time, Time.FORMAT_LONG);    	
+    	
+    	dc.drawText(x,y, fontSmall, Lang.format(
+	    	"$1$ $2$ ",
+		    	[
+			        day.day_of_week,
+			        day.day.format("%02d")
+			        
+			    ]
+			), Graphics.TEXT_JUSTIFY_LEFT);
 	}
+	
+	function drawHugeWatches(dc){
+		var clockTime = System.getClockTime();
+        var minutes = clockTime.min.format("%02d").toCharArray();
+        var connected = System.getDeviceSettings().phoneConnected;
+        var watchHash = minutes + "m" + connected + "p";
+    
+    	if(!watchHash.equals(prevWatchHash)) {
+        	prevWatchHash = watchHash+"";
+        	
+        	var date = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
+	        var stepsGoal = ActivityMonitor.getInfo().stepGoal;
+	        var steps = Lang.format("$1$ $2$",[ActivityMonitor.getInfo().steps,"steps"]);
+	        var battery = Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", "battery"]);
+	        var topLabel = Lang.format("$1$ $2$",[date.month,date.year]);	        
+	        var hours = clockTime.hour.format("%02d").toCharArray();
+        	
+        	dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+	    	dc.clear();
+	    	dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+	        
+	        dc.drawText(110,10, fontSmall, topLabel, Graphics.TEXT_JUSTIFY_CENTER);
+	        
+	        //dc.drawText(135,50, fontSmall, steps, Graphics.TEXT_JUSTIFY_LEFT);
+	        //dc.drawText(135,80, fontSmall, battery, Graphics.TEXT_JUSTIFY_LEFT);
+	        drawWeekDay2(dc,140,30,0);
+	        drawWeekDay2(dc,140,50,1);
+	        drawWeekDay2(dc,140,70,2);
+	        drawWeekDay2(dc,140,90,3);
+	      
+	        dc.drawText(50,-30, font, hours[0], Graphics.TEXT_JUSTIFY_CENTER);
+	        dc.drawText(105,-30, font, hours[1], Graphics.TEXT_JUSTIFY_CENTER);
+	        
+//	        for(var t=0;t<=5;t++){dc.drawText(50,-30, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+//	    	for(var t=0;t<=9;t++){dc.drawText(105,-30, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+	    	
+	    	dc.drawText(130,50, font, minutes[0], Graphics.TEXT_JUSTIFY_CENTER);
+	    	dc.drawText(190,40, font, minutes[1], Graphics.TEXT_JUSTIFY_CENTER);
+	    	
+//	    	for(var t=0;t<=5;t++){dc.drawText(130,50, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+//	    	for(var t=0;t<=9;t++){dc.drawText(190,40, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+	    	
+	        dc.drawText(103,140, fontSmall, battery, Graphics.TEXT_JUSTIFY_RIGHT);
+	        dc.drawText(103,160, fontSmall, steps, Graphics.TEXT_JUSTIFY_RIGHT);
+	        dc.drawText(100,185, fontSmall, "B", Graphics.TEXT_JUSTIFY_RIGHT);
+	        
+	        if(!connected){
+	        	dc.drawText(95,180, fontSmall, "X", Graphics.TEXT_JUSTIFY_RIGHT);	
+	        }
+	        //dc.drawBitmap(85, 185, connected?Rez.Drawables.BluetoothOn:Rez.Drawables.BluetoothOff)	        
+	    	
+	//    	for(var t=0;t<=23;t++){
+	    		//dc.drawText(130,-20, font, hours, Graphics.TEXT_JUSTIFY_CENTER);	
+	//    		dc.drawText(75,-30, font, t.format("%02d"), Graphics.TEXT_JUSTIFY_CENTER);
+	//    	}
+	    	//dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
+	//    	for(var t=0;t<=59;t++){
+				//dc.drawText(175,30, font, minutes, Graphics.TEXT_JUSTIFY_CENTER);
+	//			dc.drawText(150,40, font, t.format("%02d"), Graphics.TEXT_JUSTIFY_CENTER);
+	//		}	
+    	}
+	}
+	
     // Update the view
     function onUpdate(dc) {
         //drawWatch(dc);
-        // Call the parent onUpdate function to redraw the layout
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-	        
-        var font = WatchUi.loadResource(Rez.Fonts.fnt4);
-		dc.drawText(30,30, font, "59", Graphics.TEXT_JUSTIFY_CENTER);
-		dc.drawText(180,120, font, "35", Graphics.TEXT_JUSTIFY_CENTER);
-
-		
-	        
+        drawHugeWatches(dc);
     }
 
 }

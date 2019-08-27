@@ -1,7 +1,4 @@
 <resources>
-    <font id="fnt1" filename="fnt1.fnt" antialias="true" filter="0123456789:"/>
-    <font id="fnt2" filename="fnt2.fnt" antialias="true" filter="0123456789:"/>
-    <font id="fnt3" filename="fnt3.fnt" antialias="true" filter="0123456789:"/>
-    <font id="fnt4" filename="fnt4.fnt" antialias="true" filter="0123456789:"/>
-    <font id="fnt5" filename="fnt5.fnt" antialias="true" filter="0123456789: "/>
+    <font id="fnt1" filename="fnt1.fnt" antialias="true"/>
+    <font id="fnt3" filename="fnt3.fnt" antialias="true"/>
 </resources>
