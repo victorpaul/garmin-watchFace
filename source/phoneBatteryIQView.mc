@@ -22,7 +22,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 
     // Load your resources here
     function onLayout(dc) {
-        setLayout(Rez.Layouts.WatchFace(dc));
+//        setLayout(Rez.Layouts.WatchFace(dc));
         prevWatchHash = "";
         System.println("onLayout");
     }
