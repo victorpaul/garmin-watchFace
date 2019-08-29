@@ -3,6 +3,7 @@ using Toybox.Graphics;
 using Toybox.System;
 using Toybox.Lang;
 using Toybox.ActivityMonitor;
+using Toybox.Application;
 
 using Toybox.Time;
 using Toybox.Time.Gregorian;
@@ -155,7 +156,9 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		var clockTime = System.getClockTime();
         var minutes = clockTime.min.format("%02d").toCharArray();
         var connected = System.getDeviceSettings().phoneConnected;
-        var watchHash = minutes + "m" + connected + "p";
+        var bgColor = Application.getApp().getProperty("BackgroundColor");
+        var fgColor = Application.getApp().getProperty("ForegroundColor");
+        var watchHash = minutes + "m" + connected + "p" + bgColor + fgColor;
     
     	if(!watchHash.equals(prevWatchHash)) {
         	prevWatchHash = watchHash+"";
@@ -167,10 +170,9 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	        var topLabel = Lang.format("$1$ $2$",[date.month,date.year]);	        
 	        var hours = clockTime.hour.format("%02d").toCharArray();
         	
-        	dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        	dc.setColor(Graphics.COLOR_TRANSPARENT, bgColor);
 	    	dc.clear();
-	    	dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-	        
+	    	dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
 	        
 	        dc.drawText(110,10, fontSmall, topLabel, Graphics.TEXT_JUSTIFY_CENTER);
 			
