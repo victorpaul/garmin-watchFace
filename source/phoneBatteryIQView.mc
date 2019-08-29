@@ -117,6 +117,19 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 
 	}
 	
+	function getWeekdayName(number){
+		System.print(number);
+		switch(number){
+			case 1: return "Sun";
+			case 2: return "Mon";
+			case 3: return "Tue";
+			case 4: return "Wed";
+			case 5: return "Thu";
+			case 6: return "Fri";
+			case 7: return "Sat";			
+		}
+	}
+	
 	function drawWeekDay2(dc,x,y,offset){
 		var time = null;
 		if(offset==0){
@@ -126,12 +139,12 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		}else if (offset>0){
 			time = Time.now().add(new Time.Duration(3600 *24 * offset));
 		}       	
-    	var day = Gregorian.info(time, Time.FORMAT_LONG);    	
-    	
+    	var day = Gregorian.info(time, Time.FORMAT_SHORT);    	
+
     	dc.drawText(x,y, fontSmall, Lang.format(
-	    	"$1$ $2$ ",
+	    	"$1$ $2$",
 		    	[
-			        day.day_of_week,
+			        getWeekdayName(day.day_of_week),
 			        day.day.format("%02d")
 			        
 			    ]
