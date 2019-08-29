@@ -99,46 +99,54 @@
 <entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="170" pc="268437983" symbol="drawHugeWatches"/>
 <entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="171" pc="268438019" symbol="drawHugeWatches"/>
 <entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="172" pc="268438031" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="174" pc="268438067" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="178" pc="268438111" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="179" pc="268438140" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="180" pc="268438169" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="181" pc="268438198" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="183" pc="268438227" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="184" pc="268438277" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="189" pc="268438327" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="190" pc="268438377" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="195" pc="268438427" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="196" pc="268438471" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="197" pc="268438515" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="199" pc="268438562" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="200" pc="268438568" symbol="drawHugeWatches"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="19" lineNum="217" pc="268438622" symbol="onUpdate"/>
-<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="19" lineNum="219" pc="268438626" symbol="onUpdate"/>
-<entry filename="Rez" id="26" lineNum="22" pc="268438641" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="26" pc="268438653" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="27" pc="268438809" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="28" pc="268438842" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="29" pc="268438894" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="30" pc="268439015" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="31" pc="268439136" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="32" pc="268439257" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="33" pc="268439378" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="34" pc="268439499" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="35" pc="268439620" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="36" pc="268439741" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="37" pc="268439897" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="38" pc="268439930" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="39" pc="268439982" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="40" pc="268440138" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="41" pc="268440171" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="42" pc="268440223" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="43" pc="268440379" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="44" pc="268440412" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="45" pc="268440464" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="46" pc="268440620" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="47" pc="268440653" symbol="WatchFace"/>
-<entry filename="Rez" id="26" lineNum="50" pc="268440705" symbol="WatchFace"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="175" pc="268438067" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="177" pc="268438111" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="178" pc="268438118" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="180" pc="268438125" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="181" pc="268438132" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="182" pc="268438139" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="183" pc="268438146" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="185" pc="268438153" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="186" pc="268438160" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="188" pc="268438167" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="189" pc="268438190" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="190" pc="268438219" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="191" pc="268438248" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="193" pc="268438277" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="194" pc="268438321" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="199" pc="268438377" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="200" pc="268438421" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="205" pc="268438477" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="206" pc="268438515" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="207" pc="268438559" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="209" pc="268438606" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="18" lineNum="210" pc="268438612" symbol="drawHugeWatches"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="19" lineNum="227" pc="268438672" symbol="onUpdate"/>
+<entry filename="/home/victor/eclipse-workspace/garmin-watchFace/source/phoneBatteryIQView.mc" id="19" lineNum="229" pc="268438676" symbol="onUpdate"/>
+<entry filename="Rez" id="26" lineNum="22" pc="268438691" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="26" pc="268438703" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="27" pc="268438859" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="28" pc="268438892" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="29" pc="268438944" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="30" pc="268439065" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="31" pc="268439186" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="32" pc="268439307" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="33" pc="268439428" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="34" pc="268439549" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="35" pc="268439670" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="36" pc="268439791" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="37" pc="268439947" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="38" pc="268439980" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="39" pc="268440032" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="40" pc="268440188" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="41" pc="268440221" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="42" pc="268440273" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="43" pc="268440429" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="44" pc="268440462" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="45" pc="268440514" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="46" pc="268440670" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="47" pc="268440703" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="50" pc="268440755" symbol="WatchFace"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8388644" module="true" symbol="System"/>
@@ -215,36 +223,44 @@
 <entry endPc="268437528" name="dc" stackId="1" startPc="268437185"/>
 <entry endPc="268437528" name="offset" stackId="4" startPc="268437185"/>
 <entry endPc="268437528" name="y" stackId="3" startPc="268437185"/>
-<entry endPc="268438618" name="battery" stackId="9" startPc="268437647"/>
-<entry endPc="268438618" name="hours" stackId="11" startPc="268437647"/>
-<entry endPc="268438618" name="steps" stackId="8" startPc="268437647"/>
-<entry endPc="268438618" name="date" stackId="6" startPc="268437647"/>
-<entry endPc="268438618" name="topLabel" stackId="10" startPc="268437647"/>
-<entry endPc="268438618" name="stepsGoal" stackId="7" startPc="268437647"/>
-<entry endPc="268438621" name="watchHash" stackId="5" startPc="268437532"/>
-<entry endPc="268438621" name="minutes" stackId="3" startPc="268437532"/>
-<entry endPc="268438621" name="connected" stackId="4" startPc="268437532"/>
-<entry endPc="268438621" name="clockTime" stackId="2" startPc="268437532"/>
-<entry endPc="268438622" name="dc" stackId="1" startPc="268437528"/>
-<entry endPc="268438641" name="dc" stackId="1" startPc="268438622"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_hours_fontHeight" stackId="12" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_dayOfWeek5" stackId="8" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_dayOfWeek4" stackId="7" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_dayOfWeek3" stackId="6" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_steps_fontHeight" stackId="18" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_toplabel_fontHeight" stackId="3" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_dayOfWeek2" stackId="5" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_dayOfWeek1" stackId="4" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_steps" stackId="17" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_minutes_fontHeight" stackId="14" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_hours" stackId="11" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_battery_fontHeight" stackId="16" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_minutes" stackId="13" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_battery" stackId="15" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_dayOfWeek7" stackId="10" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_toplabel" stackId="2" startPc="268438653"/>
-<entry endPc="268440832" name="rez_cmp_local_bitmap_dayOfWeek6" stackId="9" startPc="268438653"/>
-<entry endPc="268440833" name="dc" stackId="1" startPc="268438641"/>
+<entry endPc="268438668" name="stepsGoal" stackId="7" startPc="268437647"/>
+<entry endPc="268438668" name="date" stackId="6" startPc="268437647"/>
+<entry endPc="268438668" name="topLabel" stackId="10" startPc="268437647"/>
+<entry endPc="268438668" name="leftBottomY" stackId="19" startPc="268437647"/>
+<entry endPc="268438668" name="leftBottomX" stackId="18" startPc="268437647"/>
+<entry endPc="268438668" name="minuteY" stackId="17" startPc="268437647"/>
+<entry endPc="268438668" name="minuteX" stackId="16" startPc="268437647"/>
+<entry endPc="268438668" name="battery" stackId="9" startPc="268437647"/>
+<entry endPc="268438668" name="rightTopY" stackId="13" startPc="268437647"/>
+<entry endPc="268438668" name="rightTopX" stackId="12" startPc="268437647"/>
+<entry endPc="268438668" name="steps" stackId="8" startPc="268437647"/>
+<entry endPc="268438668" name="hours" stackId="11" startPc="268437647"/>
+<entry endPc="268438668" name="hourY" stackId="15" startPc="268437647"/>
+<entry endPc="268438668" name="hourX" stackId="14" startPc="268437647"/>
+<entry endPc="268438671" name="watchHash" stackId="5" startPc="268437532"/>
+<entry endPc="268438671" name="minutes" stackId="3" startPc="268437532"/>
+<entry endPc="268438671" name="connected" stackId="4" startPc="268437532"/>
+<entry endPc="268438671" name="clockTime" stackId="2" startPc="268437532"/>
+<entry endPc="268438672" name="dc" stackId="1" startPc="268437528"/>
+<entry endPc="268438691" name="dc" stackId="1" startPc="268438672"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_hours_fontHeight" stackId="12" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_dayOfWeek5" stackId="8" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_dayOfWeek4" stackId="7" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_dayOfWeek3" stackId="6" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_steps_fontHeight" stackId="18" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_toplabel_fontHeight" stackId="3" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_dayOfWeek2" stackId="5" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_dayOfWeek1" stackId="4" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_steps" stackId="17" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_minutes_fontHeight" stackId="14" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_hours" stackId="11" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_battery_fontHeight" stackId="16" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_minutes" stackId="13" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_battery" stackId="15" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_dayOfWeek7" stackId="10" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_toplabel" stackId="2" startPc="268438703"/>
+<entry endPc="268440882" name="rez_cmp_local_bitmap_dayOfWeek6" stackId="9" startPc="268438703"/>
+<entry endPc="268440883" name="dc" stackId="1" startPc="268438691"/>
 </localVars>
 <annotations/>
 <functions>
