@@ -180,7 +180,73 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
     	}
 	}
 	
-	function drawSimpleWatches(dc){
+	function draw_fr45(dc){
+		var clockTime = System.getClockTime();
+        var minutes = clockTime.min.format("%02d").toCharArray();
+        var connected = System.getDeviceSettings().phoneConnected;
+        var notifications = System.getDeviceSettings().notificationCount;
+        //var alarms = System.getDeviceSettings().alarmCount;
+        var bgColor = Application.getApp().getProperty("BackgroundColor");
+        var fgColor = Application.getApp().getProperty("ForegroundColor");
+        var watchHash = minutes + "m" + connected + "p" + bgColor + fgColor + notifications;
+    
+    	if(!watchHash.equals(prevWatchHash)) {
+        	prevWatchHash = watchHash+"";
+        	
+        	var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+	        var battery = Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", "battr"]);
+	        var steps = Lang.format("$1$/$2$",[ActivityMonitor.getInfo().steps,ActivityMonitor.getInfo().stepGoal]);
+	        var topLabel = Lang.format("$1$ $2$",[getMonthName(date.month),date.year]);	        
+	        var hours = clockTime.hour.format("%02d").toCharArray();
+        	
+        	dc.setColor(Graphics.COLOR_TRANSPARENT, bgColor);
+	    	dc.clear();
+	    	dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
+	        
+	        var topX = 110;
+	        var topY = 5;
+			
+			var rightTopX = 118;
+	      	var rightTopY = 28;
+	      	
+			var hourX = 35;
+			var hourY = -2;
+			var minuteX = 120;
+			var minuteY = 70;
+
+	      	var leftBottomX = 90;
+	      	var leftBottomY = 135;
+	        
+	        dc.drawText(topX,topY, fontSmall, topLabel, Graphics.TEXT_JUSTIFY_CENTER);
+	        //for(var t=1;t<=12;t++){dc.drawText(topX,topY, fontMedium, Lang.format("$1$ $2$",[getMonthName(t),date.year]), Graphics.TEXT_JUSTIFY_CENTER);}
+	        
+	        drawWeekDay2(dc,rightTopX,rightTopY,0);
+	        drawWeekDay2(dc,rightTopX,rightTopY+20,1);
+	        drawWeekDay2(dc,rightTopX,rightTopY+40,2);
+//	        drawWeekDay2(dc,rightTopX,rightTopY+60,3);
+	      	
+	        dc.drawText(hourX,hourY, font, hours[0], Graphics.TEXT_JUSTIFY_CENTER);
+	        dc.drawText(hourX+45,hourY, font, hours[1], Graphics.TEXT_JUSTIFY_CENTER);
+	        
+//	        for(var t=0;t<=2;t++){dc.drawText(hourX,hourY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+//	    	for(var t=0;t<=9;t++){dc.drawText(hourX+45,hourY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+	    	
+	    	dc.drawText(minuteX,minuteY, font, minutes[0], Graphics.TEXT_JUSTIFY_CENTER);
+	    	dc.drawText(minuteX+45,minuteY-20, font, minutes[1], Graphics.TEXT_JUSTIFY_CENTER);
+	    	
+//	    	for(var t=0;t<=5;t++){dc.drawText(minuteX,minuteY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+//	    	for(var t=0;t<=9;t++){dc.drawText(minuteX+45,minuteY-20, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+
+	        dc.drawText(leftBottomX+2,leftBottomY, fontSmall,steps,Graphics.TEXT_JUSTIFY_RIGHT);
+	        dc.drawText(leftBottomX,leftBottomY+18, fontSmall,battery, Graphics.TEXT_JUSTIFY_RIGHT);
+	        if(notifications>0){
+	        	dc.drawText(leftBottomX+1,leftBottomY+36, fontSmall, notifications + " messgs", Graphics.TEXT_JUSTIFY_RIGHT);
+	        }
+	        	
+    	}
+	}
+	
+	function draw_fr230_fr235(dc){
 		var clockTime = System.getClockTime();
         var minutes = clockTime.min.format("%02d").toCharArray();
         var connected = System.getDeviceSettings().phoneConnected;
@@ -263,7 +329,11 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		System.println(System.getDeviceSettings().screenShape);
 			
 		if(ifScreen(215,180,2)){
-			drawSimpleWatches(dc);	
+			draw_fr230_fr235(dc);	
+			return;
+		}
+		if(ifScreen(208,208,1)){
+			draw_fr45(dc);	
 			return;
 		}
 
