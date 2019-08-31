@@ -1,7 +1,7 @@
 <properties>
 
-    <property id="BackgroundColor" type="number">0x000000</property>
-    <property id="ForegroundColor" type="number">0xFFFFFF</property>
+    <property id="BackgroundColor" type="number">0xFFFFFF</property>
+    <property id="ForegroundColor" type="number">0x000000</property>
     <!--<property id="UseMilitaryFormat" type="boolean">false</property> -->
 
 </properties>
