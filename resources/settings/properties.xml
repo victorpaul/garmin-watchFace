@@ -2,6 +2,9 @@
 
     <property id="BackgroundColor" type="number">0xFFFFFF</property>
     <property id="ForegroundColor" type="number">0x000000</property>
-    <!--<property id="UseMilitaryFormat" type="boolean">false</property> -->
+    <property id="Use12Hours" type="boolean">false</property>
+    <property id="ShowDays" type="boolean">true</property>
+    <property id="ShowBottomLeft" type="boolean">true</property>
+    <property id="UseBrushFontForInfo" type="boolean">true</property>
 
 </properties>
