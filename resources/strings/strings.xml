@@ -3,6 +3,10 @@
     
     <string id="BackgroundColorTitle">Background Color</string>
     <string id="ForegroundColorTitle">Foreground Color</string>
+    <string id="Use12Hours">12 hours format</string>
+    <string id="ShowDays">Show top right info</string>
+    <string id="ShowBottomLeft">Show bottom left info</string>
+    <string id="UseBrushFontForInfo">Use brush font for small text</string>
 
     <string id="ColorBlack">Black</string>
     <string id="ColorDarkGray">Dark Gray</string>

@@ -22,9 +22,19 @@
         </settingConfig>
     </setting>
 
-    <!--<setting propertyKey="@Properties.UseMilitaryFormat" title="@Strings.MilitaryFormatTitle">
+    <setting propertyKey="@Properties.Use12Hours" title="@Strings.Use12Hours">
         <settingConfig type="boolean" />
     </setting>
-    -->
+    <setting propertyKey="@Properties.ShowDays" title="@Strings.ShowDays">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.ShowBottomLeft" title="@Strings.ShowBottomLeft">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.UseBrushFontForInfo" title="@Strings.UseBrushFontForInfo">
+        <settingConfig type="boolean" />
+    </setting>
+    
+    
 
 </settings>
