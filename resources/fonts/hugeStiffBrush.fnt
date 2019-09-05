@@ -1,0 +1,15 @@
+info face="Stiff Brush JK" size=180 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=180 base=134 scaleW=256 scaleH=256 pages=2 packed=0 alphaChnl=0 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="hugeStiffBrush_0.png"
+page id=1 file="hugeStiffBrush_1.png"
+chars count=10
+char id=48   x=148   y=102   width=55    height=94    xoffset=10    yoffset=49    xadvance=73    page=0  chnl=15
+char id=49   x=131   y=0     width=29    height=101   xoffset=20    yoffset=50    xadvance=73    page=0  chnl=15
+char id=50   x=145   y=0     width=68    height=86    xoffset=1     yoffset=51    xadvance=73    page=1  chnl=15
+char id=51   x=75    y=102   width=72    height=94    xoffset=-4    yoffset=52    xadvance=73    page=0  chnl=15
+char id=52   x=0     y=0     width=65    height=102   xoffset=3     yoffset=47    xadvance=73    page=0  chnl=15
+char id=53   x=63    y=0     width=81    height=89    xoffset=-5    yoffset=50    xadvance=73    page=1  chnl=15
+char id=54   x=161   y=0     width=70    height=95    xoffset=4     yoffset=45    xadvance=73    page=0  chnl=15
+char id=55   x=0     y=0     width=62    height=93    xoffset=7     yoffset=51    xadvance=73    page=1  chnl=15
+char id=56   x=0     y=103   width=74    height=94    xoffset=3     yoffset=49    xadvance=73    page=0  chnl=15
+char id=57   x=66    y=0     width=64    height=101   xoffset=6     yoffset=43    xadvance=73    page=0  chnl=15

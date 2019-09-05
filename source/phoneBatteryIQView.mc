@@ -15,9 +15,21 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	
     function initialize() {
         WatchFace.initialize();
-        font = WatchUi.loadResource(Rez.Fonts.fnt1);
-        fontMedium = WatchUi.loadResource(Rez.Fonts.fnt2);
-        fontSmall = WatchUi.loadResource(Rez.Fonts.fnt3);
+        font = WatchUi.loadResource(Rez.Fonts.fntHuge);
+        //fontMedium = WatchUi.loadResource(Rez.Fonts.fntMedium);
+        //fontSmall = WatchUi.loadResource(Rez.Fonts.fntSmall);
+
+		//font = WatchUi.loadResource(Rez.Fonts.hugeJannScript); // 160px
+        fontMedium = WatchUi.loadResource(Rez.Fonts.mediumJannScript); // 36px
+        fontSmall = WatchUi.loadResource(Rez.Fonts.smallJannScript); // 26px
+
+        //font = WatchUi.loadResource(Rez.Fonts.hugeStiffBrush); // 180px
+        //fontMedium = WatchUi.loadResource(Rez.Fonts.mediumStiffBrush); // 35px
+        //fontSmall = WatchUi.loadResource(Rez.Fonts.smallStiffBrush); // 26px
+        
+        //font = WatchUi.loadResource(Rez.Fonts.hugeKeyVirtue); // 180px
+        //fontMedium = WatchUi.loadResource(Rez.Fonts.mediumKeyVirtue); // 35px
+        //fontSmall = WatchUi.loadResource(Rez.Fonts.smallKeyVirtue); // 26px
 			
         prevWatchHash = "";
         System.println("initialize");			
@@ -222,13 +234,9 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         	
     	var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         var battery = Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", "battr"]);
-        var steps = Lang.format("$1$/$2$",[ActivityMonitor.getInfo().steps,ActivityMonitor.getInfo().stepGoal]);
+        var steps = Lang.format("$1$ $2$",[ActivityMonitor.getInfo().steps,"steps"]);
         var topLabel = Lang.format("$1$ $2$",[getMonthName(date.month),date.year]);	        
-<<<<<<< HEAD
-        var hours = clockTime.hour.format("%02d").toCharArray();
-=======
         var hours = getHours();
->>>>>>> 82b768e2b524e4d927303aaa7be871dfbbd34e94
     	
     	dc.setColor(Graphics.COLOR_TRANSPARENT, bgColor);
     	dc.clear();
@@ -245,18 +253,9 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		var minuteX = 120;
 		var minuteY = 70;
 
-      	var leftBottomX = 90;
+      	var leftBottomX = 95;
       	var leftBottomY = 135;
         
-<<<<<<< HEAD
-        dc.drawText(topX,topY, fontSmall, topLabel, Graphics.TEXT_JUSTIFY_CENTER);
-        //for(var t=1;t<=12;t++){dc.drawText(topX,topY, fontMedium, Lang.format("$1$ $2$",[getMonthName(t),date.year]), Graphics.TEXT_JUSTIFY_CENTER);}
-        
-        drawWeekDay2(dc,rightTopX,rightTopY,0);
-        drawWeekDay2(dc,rightTopX,rightTopY+20,1);
-        drawWeekDay2(dc,rightTopX,rightTopY+40,2);
-//	        drawWeekDay2(dc,rightTopX,rightTopY+60,3);
-=======
         dc.drawText(topX,topY, getSmallFont(), topLabel, Graphics.TEXT_JUSTIFY_CENTER);
         //for(var t=1;t<=12;t++){dc.drawText(topX,topY, fontMedium, Lang.format("$1$ $2$",[getMonthName(t),date.year]), Graphics.TEXT_JUSTIFY_CENTER);}
         
@@ -266,8 +265,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	        drawWeekDay2(dc,rightTopX,rightTopY+40,2);
         }
 //	        drawWeekDay2(dc,rightTopX,rightTopY+60,3);
-
->>>>>>> 82b768e2b524e4d927303aaa7be871dfbbd34e94
       	
         dc.drawText(hourX,hourY, font, hours[0], Graphics.TEXT_JUSTIFY_CENTER);
         dc.drawText(hourX+45,hourY, font, hours[1], Graphics.TEXT_JUSTIFY_CENTER);
@@ -281,13 +278,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 //	    	for(var t=0;t<=5;t++){dc.drawText(minuteX,minuteY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
 //	    	for(var t=0;t<=9;t++){dc.drawText(minuteX+45,minuteY-20, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
 
-<<<<<<< HEAD
-        dc.drawText(leftBottomX+2,leftBottomY, fontSmall,steps,Graphics.TEXT_JUSTIFY_RIGHT);
-        dc.drawText(leftBottomX,leftBottomY+18, fontSmall,battery, Graphics.TEXT_JUSTIFY_RIGHT);
-//	        if(notifications>0){
-//	        	dc.drawText(leftBottomX+1,leftBottomY+36, fontSmall, notifications + " messgs", Graphics.TEXT_JUSTIFY_RIGHT);
-//	        }
-=======
 		if(showBottomLeft()){
 	        dc.drawText(leftBottomX+2,leftBottomY, getSmallFont(),steps,Graphics.TEXT_JUSTIFY_RIGHT);
 	        dc.drawText(leftBottomX,leftBottomY+18, getSmallFont(),battery, Graphics.TEXT_JUSTIFY_RIGHT);
@@ -296,7 +286,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	        }
         }
 	
->>>>>>> 82b768e2b524e4d927303aaa7be871dfbbd34e94
 	}
 	
 	function draw_fr230_fr235(dc){
@@ -313,7 +302,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         	prevWatchHash = watchHash+"";
         	
         	var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-	        var topLabel = Lang.format("$1$ $2$",[getMonthName(date.month),date.year]);	        
+	        var topLabel = Lang.format("$1$$2$",[getMonthName(date.month),date.year]);	        
 	        var hours = getHours();
 
 			var battery = Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", "battr"]);
@@ -323,7 +312,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	    	dc.clear();
 	    	dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
 	        
-	        var topX = 119;
+	        var topX = 115;
 	        var topY = 3;
 			
 			var rightTopX = 135;
@@ -378,17 +367,10 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
     function onUpdate(dc) {
         //drawWatch(dc);
 
-<<<<<<< HEAD
-//		System.println(System.getDeviceSettings().screenWidth);
-//		System.println(System.getDeviceSettings().screenHeight);
-		//System.println(System.getDeviceSettings().screenShape);
-			
-=======
 		//System.println(System.getDeviceSettings().screenWidth);
 		//System.println(System.getDeviceSettings().screenHeight);
 		//System.println(System.getDeviceSettings().screenShape);
 		
->>>>>>> 82b768e2b524e4d927303aaa7be871dfbbd34e94
 		if(ifScreen(215,180,2)){
 			draw_fr230_fr235(dc);	
 			return;
