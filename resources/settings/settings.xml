@@ -21,6 +21,15 @@
             <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
         </settingConfig>
     </setting>
+    
+    <setting propertyKey="@Properties.Font" title="@Strings.Font">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.Font1</listEntry>
+            <listEntry value="2">@Strings.Font2</listEntry>
+            <listEntry value="3">@Strings.Font3</listEntry>
+            <listEntry value="4">@Strings.Font4</listEntry>
+        </settingConfig>
+    </setting>
 
     <setting propertyKey="@Properties.Use12Hours" title="@Strings.Use12Hours">
         <settingConfig type="boolean" />
@@ -31,9 +40,7 @@
     <setting propertyKey="@Properties.ShowBottomLeft" title="@Strings.ShowBottomLeft">
         <settingConfig type="boolean" />
     </setting>
-    <setting propertyKey="@Properties.UseBrushFontForInfo" title="@Strings.UseBrushFontForInfo">
-        <settingConfig type="boolean" />
-    </setting>
+    
     
     
 

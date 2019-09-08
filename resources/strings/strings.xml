@@ -15,4 +15,10 @@
     <string id="ColorBlue">Blue</string>
     <string id="ColorRed">Red</string>
     
+    <string id="Font">Small text font</string>
+    <string id="Font1">font 1</string>
+    <string id="Font2">font 2</string>
+    <string id="Font3">font 3</string>
+    <string id="Font4">font 4</string>
+    
 </strings>
