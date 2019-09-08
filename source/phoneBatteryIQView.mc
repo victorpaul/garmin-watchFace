@@ -10,7 +10,7 @@ using Toybox.Time.Gregorian;
 
 class phoneBatteryIQView extends WatchUi.WatchFace {
 
-	var prevWatchHash;
+	//var prevWatchHash;
 	var fontSmall,fontMedium,font;
 	
     function initialize() {
@@ -31,43 +31,43 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         //fontMedium = WatchUi.loadResource(Rez.Fonts.mediumKeyVirtue); // 35px
         //fontSmall = WatchUi.loadResource(Rez.Fonts.smallKeyVirtue); // 26px
 			
-        prevWatchHash = "";
-        System.println("initialize");			
+//        prevWatchHash = "";
+//        System.println("initialize");			
     }
 
     // Load your resources here
     function onLayout(dc) {
 //        setLayout(Rez.Layouts.WatchFace(dc));
-        prevWatchHash = "";
-        System.println("onLayout");
+        //prevWatchHash = "";
+        //System.println("onLayout");
     }
 
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() {
-    	prevWatchHash = "";
-    	System.println("onShow");
+    	//prevWatchHash = "";
+    	//System.println("onShow");
     }
     
     // Called when this View is removed from the screen. Save the
     // state of this View here. This includes freeing resources from
     // memory.
     function onHide() {
-    	prevWatchHash = "";
-    	System.println("onShow");
+    //	prevWatchHash = "";
+    	//System.println("onShow");
     }
 
     // The user has just looked at their watch. Timers and animations may be started here.
     function onExitSleep() {
-    prevWatchHash = "";
-    	System.println("onExitSleep");
+  //  prevWatchHash = "";
+    	//System.println("onExitSleep");
     }
 
     // Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
-    	prevWatchHash = "";
-    	System.println("onEnterSleep");
+//    	prevWatchHash = "";
+    	//System.println("onEnterSleep");
     }
 	
 	function getHours() {
@@ -157,10 +157,10 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         //var alarms = System.getDeviceSettings().alarmCount;
         var bgColor = Application.getApp().getProperty("BackgroundColor");
         var fgColor = Application.getApp().getProperty("ForegroundColor");
-        var watchHash = minutes + "m" + "p" + bgColor + fgColor + notifications + useBrushFont() + showBottomLeft() + showDays();
-    
-    	if(!watchHash.equals(prevWatchHash)) {
-        	prevWatchHash = watchHash+"";
+//        var watchHash = minutes + "m" + "p" + bgColor + fgColor + notifications + useBrushFont() + showBottomLeft() + showDays();
+//    
+//    	if(!watchHash.equals(prevWatchHash)) {
+//        	prevWatchHash = watchHash+"";
         	
         	var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 	        var battery = Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", "battr"]);
@@ -216,11 +216,11 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		        dc.drawText(leftBottomX+2,leftBottomY, getSmallFont(),steps,Graphics.TEXT_JUSTIFY_RIGHT);
 		        dc.drawText(leftBottomX,leftBottomY+20, getSmallFont(),battery, Graphics.TEXT_JUSTIFY_RIGHT);
 		        if(notifications>0){
-		        	dc.drawText(leftBottomX+1,leftBottomY+40, getSmallFont(), notifications + " messages", Graphics.TEXT_JUSTIFY_RIGHT);
+		        	dc.drawText(leftBottomX+1,leftBottomY+40, getSmallFont(), notifications + " msgs", Graphics.TEXT_JUSTIFY_RIGHT);
 		        }
 	        }
 	        	
-    	}
+//    	}
 	}
 	
 	function draw_fr45(dc){
@@ -282,7 +282,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	        dc.drawText(leftBottomX+2,leftBottomY, getSmallFont(),steps,Graphics.TEXT_JUSTIFY_RIGHT);
 	        dc.drawText(leftBottomX,leftBottomY+18, getSmallFont(),battery, Graphics.TEXT_JUSTIFY_RIGHT);
 	        if(notifications>0){
-	        	dc.drawText(leftBottomX+1,leftBottomY+36, getSmallFont(), notifications + " messgs", Graphics.TEXT_JUSTIFY_RIGHT);
+	        	dc.drawText(leftBottomX+1,leftBottomY+36, getSmallFont(), notifications + " msgs", Graphics.TEXT_JUSTIFY_RIGHT);
 	        }
         }
 	
@@ -296,10 +296,10 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         //var alarms = System.getDeviceSettings().alarmCount;
         var bgColor = Application.getApp().getProperty("BackgroundColor");
         var fgColor = Application.getApp().getProperty("ForegroundColor");
-        var watchHash = minutes + "m" + "p" + bgColor + fgColor + notifications + useBrushFont() + showBottomLeft() + showDays();
-    
-    	if(!watchHash.equals(prevWatchHash)) {
-        	prevWatchHash = watchHash+"";
+//        var watchHash = minutes + "m" + "p" + bgColor + fgColor + notifications + useBrushFont() + showBottomLeft() + showDays();
+//    
+//    	if(!watchHash.equals(prevWatchHash)) {
+//        	prevWatchHash = watchHash+"";
         	
         	var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 	        var topLabel = Lang.format("$1$$2$",[getMonthName(date.month),date.year]);	        
@@ -312,7 +312,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	    	dc.clear();
 	    	dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
 	        
-	        var topX = 115;
+	        var topX = 110;
 	        var topY = 3;
 			
 			var rightTopX = 135;
@@ -349,11 +349,11 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		        dc.drawText(leftBottomX,leftBottomY, getSmallFont(),battery,Graphics.TEXT_JUSTIFY_RIGHT);
 		        dc.drawText(leftBottomX,leftBottomY+16, getSmallFont(),steps,Graphics.TEXT_JUSTIFY_RIGHT);
 		        if(notifications>0){
-		        	dc.drawText(leftBottomX+10,leftBottomY+32, getSmallFont(), notifications + " message", Graphics.TEXT_JUSTIFY_RIGHT);
+		        	dc.drawText(leftBottomX+10,leftBottomY+32, getSmallFont(), notifications + " msgs", Graphics.TEXT_JUSTIFY_RIGHT);
 		        }
 	        }
 
-    	}
+//    	}
 	}
 	
 	function ifScreen(screenWidth,screenHeight,screenShape){
