@@ -247,6 +247,131 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 //    	}
 	}
 	
+	function draw_fenix6(dc){
+		var clockTime = System.getClockTime();
+        var minutes = clockTime.min.format("%02d").toCharArray();
+        var notifications = System.getDeviceSettings().notificationCount;
+        var bgColor = Application.getApp().getProperty("BackgroundColor");
+        var fgColor = Application.getApp().getProperty("ForegroundColor");
+  	
+    	var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        var battery = Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", "battery"]);
+        var steps = Lang.format("$1$/$2$",[ActivityMonitor.getInfo().steps,ActivityMonitor.getInfo().stepGoal]);
+        var topLabel = Lang.format("$1$ $2$",[getMonthName(date.month),date.year]);	        
+        var hours = getHours();
+    	
+    	dc.setColor(Graphics.COLOR_TRANSPARENT, bgColor);
+    	dc.clear();
+    	dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
+        
+        var topX = 115;
+        var topY = 5;
+		
+		var rightTopX = 130;
+      	var rightTopY = 40;
+      	
+		var hourX = 45;
+		var hourY = 15;
+		var minuteX = 170;
+		var minuteY = 100;
+
+      	var leftBottomX = 135;
+      	var leftBottomY = 165;
+        
+       
+        dc.drawText(topX,topY, fontMedium, topLabel, Graphics.TEXT_JUSTIFY_CENTER);
+        //for(var t=1;t<=12;t++){dc.drawText(topX,topY, fontMedium, Lang.format("$1$ $2$",[getMonthName(t),date.year]), Graphics.TEXT_JUSTIFY_CENTER);}
+        
+        if(showDays()){
+	        drawWeekDay2(dc,rightTopX,rightTopY,0);
+	        drawWeekDay2(dc,rightTopX,rightTopY+20,1);
+	        drawWeekDay2(dc,rightTopX,rightTopY+40,2);
+	        drawWeekDay2(dc,rightTopX,rightTopY+60,3);
+		}
+      	
+        dc.drawText(hourX,hourY, font, hours[0], Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(hourX+45,hourY, font, hours[1], Graphics.TEXT_JUSTIFY_CENTER);
+        
+//	        for(var t=0;t<=2;t++){dc.drawText(hourX,hourY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+//	    	for(var t=0;t<=9;t++){dc.drawText(hourX+45,hourY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+    	
+    	dc.drawText(minuteX,minuteY, font, minutes[0], Graphics.TEXT_JUSTIFY_CENTER);
+    	dc.drawText(minuteX+45,minuteY-20, font, minutes[1], Graphics.TEXT_JUSTIFY_CENTER);
+    	
+//	    	for(var t=0;t<=5;t++){dc.drawText(minuteX,minuteY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+//	    	for(var t=0;t<=9;t++){dc.drawText(minuteX+45,minuteY-20, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+
+		if(showBottomLeft()){
+	        dc.drawText(leftBottomX,leftBottomY, getSmallFont(),battery, Graphics.TEXT_JUSTIFY_RIGHT);
+	        
+	        dc.drawText(leftBottomX+1,leftBottomY+20, getSmallFont(), notifications + " messages", Graphics.TEXT_JUSTIFY_RIGHT);
+	        dc.drawText(leftBottomX+2,leftBottomY+40, getSmallFont(),steps,Graphics.TEXT_JUSTIFY_RIGHT);
+        }
+	}
+	
+	function draw_fenix6xpro(dc){
+		var clockTime = System.getClockTime();
+        var minutes = clockTime.min.format("%02d").toCharArray();
+        var notifications = System.getDeviceSettings().notificationCount;
+        var bgColor = Application.getApp().getProperty("BackgroundColor");
+        var fgColor = Application.getApp().getProperty("ForegroundColor");
+  	
+    	var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        var battery = Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", "battery"]);
+        var steps = Lang.format("$1$/$2$",[ActivityMonitor.getInfo().steps,ActivityMonitor.getInfo().stepGoal]);
+        var topLabel = Lang.format("$1$ $2$",[getMonthName(date.month),date.year]);	        
+        var hours = getHours();
+    	
+    	dc.setColor(Graphics.COLOR_TRANSPARENT, bgColor);
+    	dc.clear();
+    	dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
+        
+        var topX = 125;
+        var topY = 10;
+		
+		var rightTopX = 140;
+      	var rightTopY = 40;
+      	
+		var hourX = 45;
+		var hourY = 15;
+		var minuteX = 185;
+		var minuteY = 120;
+
+      	var leftBottomX = 145;
+      	var leftBottomY = 170;
+        
+       
+        dc.drawText(topX,topY, fontMedium, topLabel, Graphics.TEXT_JUSTIFY_CENTER);
+        //for(var t=1;t<=12;t++){dc.drawText(topX,topY, fontMedium, Lang.format("$1$ $2$",[getMonthName(t),date.year]), Graphics.TEXT_JUSTIFY_CENTER);}
+        
+        if(showDays()){
+	        drawWeekDay2(dc,rightTopX,rightTopY,0);
+	        drawWeekDay2(dc,rightTopX,rightTopY+20,1);
+	        drawWeekDay2(dc,rightTopX,rightTopY+40,2);
+	        drawWeekDay2(dc,rightTopX,rightTopY+60,3);
+	        drawWeekDay2(dc,rightTopX,rightTopY+80,4);
+		}
+      	
+        dc.drawText(hourX,hourY, font, hours[0], Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(hourX+45,hourY, font, hours[1], Graphics.TEXT_JUSTIFY_CENTER);
+        
+//	        for(var t=0;t<=2;t++){dc.drawText(hourX,hourY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+//	    	for(var t=0;t<=9;t++){dc.drawText(hourX+45,hourY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+    	
+    	dc.drawText(minuteX,minuteY, font, minutes[0], Graphics.TEXT_JUSTIFY_CENTER);
+    	dc.drawText(minuteX+45,minuteY-20, font, minutes[1], Graphics.TEXT_JUSTIFY_CENTER);
+    	
+//	    	for(var t=0;t<=5;t++){dc.drawText(minuteX,minuteY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+//	    	for(var t=0;t<=9;t++){dc.drawText(minuteX+45,minuteY-20, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+
+		if(showBottomLeft()){
+	        dc.drawText(leftBottomX,leftBottomY, getSmallFont(),battery, Graphics.TEXT_JUSTIFY_RIGHT);
+	        
+	        dc.drawText(leftBottomX+1,leftBottomY+20, getSmallFont(), notifications + " messages", Graphics.TEXT_JUSTIFY_RIGHT);
+	        dc.drawText(leftBottomX+2,leftBottomY+40, getSmallFont(),steps,Graphics.TEXT_JUSTIFY_RIGHT);
+        }
+	}
+	
 	function draw_fr45(dc){
 		var clockTime = System.getClockTime();
         var minutes = clockTime.min.format("%02d").toCharArray();
@@ -402,6 +527,14 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		}
 		if(ifScreen(208,208,1)){
 			draw_fr45(dc);	
+			return;
+		}
+		if(ifScreen(260,260,1)){
+			draw_fenix6(dc);	
+			return;
+		}
+		if(ifScreen(280,280,1)){
+			draw_fenix6xpro(dc);	
 			return;
 		}
 
