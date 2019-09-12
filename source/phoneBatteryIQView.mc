@@ -257,7 +257,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         var fgColor = Application.getApp().getProperty("ForegroundColor");
         	
     	var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        var battery = Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", "battr"]);
+        var battery = Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", ""]);
         var steps = Lang.format("$1$ $2$",[ActivityMonitor.getInfo().steps,"steps"]);
         var topLabel = Lang.format("$1$ $2$",[getMonthName(date.month),date.year]);	        
         var hours = getHours();
@@ -304,10 +304,11 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 
 		if(showBottomLeft()){
 	        dc.drawText(leftBottomX+2,leftBottomY, getSmallFont(),steps,Graphics.TEXT_JUSTIFY_RIGHT);
-	        dc.drawText(leftBottomX,leftBottomY+18, getSmallFont(),battery, Graphics.TEXT_JUSTIFY_RIGHT);
-	        if(notifications>0){
-	        	dc.drawText(leftBottomX+1,leftBottomY+36, getSmallFont(), notifications + " msgs", Graphics.TEXT_JUSTIFY_RIGHT);
-	        }
+	        dc.drawText(leftBottomX+1,leftBottomY+18, getSmallFont(), notifications + " msgs", Graphics.TEXT_JUSTIFY_RIGHT);
+	        dc.drawText(leftBottomX,leftBottomY+36, getSmallFont(),battery, Graphics.TEXT_JUSTIFY_RIGHT);
+//	        if(notifications>0){
+//	        	
+//	        }
         }
 	
 	}
