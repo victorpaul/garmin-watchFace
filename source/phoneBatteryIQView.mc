@@ -59,9 +59,9 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         			fontSmall = WatchUi.loadResource(Rez.Fonts.smallKeyVirtue); // 26px
         			break;
 			}
-			System.println("new font loaded");
+			//System.println("new font loaded");
     	}else{
-    		System.println("no need to load font");
+    		//System.println("no need to load font");
     	}
 	}
 	
