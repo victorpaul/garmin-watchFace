@@ -5,7 +5,7 @@
     <property id="Use12Hours" type="boolean">false</property>
     <property id="ShowDays" type="boolean">true</property>
     <property id="ShowBottomLeft" type="boolean">true</property>
-    
+    <property id="ShowMonthYear" type="boolean">true</property>
     <property id="Font" type="number">3</property>
 
 </properties>

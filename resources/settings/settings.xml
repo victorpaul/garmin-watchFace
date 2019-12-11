@@ -44,6 +44,9 @@
     <setting propertyKey="@Properties.ShowBottomLeft" title="@Strings.ShowBottomLeft">
         <settingConfig type="boolean" />
     </setting>
+    <setting propertyKey="@Properties.ShowMonthYear" title="@Strings.ShowMonthYear">
+        <settingConfig type="boolean" />
+    </setting>
     
     
     

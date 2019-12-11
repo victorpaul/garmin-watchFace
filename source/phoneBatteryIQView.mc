@@ -117,6 +117,10 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		return Application.getApp().getProperty("ShowDays");
 	}
 	
+	function showMonthYear(){
+		return Application.getApp().getProperty("ShowMonthYear");
+	}
+	
 	function showBottomLeft(){
 		return Application.getApp().getProperty("ShowBottomLeft");
 	}	
@@ -214,8 +218,10 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 //    			dc.drawText(115,135, fontSmall, "B", Graphics.TEXT_JUSTIFY_RIGHT);
 //	        }
 	        
-	        dc.drawText(topX,topY, fontMedium, topLabel, Graphics.TEXT_JUSTIFY_CENTER);
-	        //for(var t=1;t<=12;t++){dc.drawText(topX,topY, fontMedium, Lang.format("$1$ $2$",[getMonthName(t),date.year]), Graphics.TEXT_JUSTIFY_CENTER);}
+	        if(showMonthYear()){
+	        	dc.drawText(topX,topY, fontMedium, topLabel, Graphics.TEXT_JUSTIFY_CENTER);
+	        	//for(var t=1;t<=12;t++){dc.drawText(topX,topY, fontMedium, Lang.format("$1$ $2$",[getMonthName(t),date.year]), Graphics.TEXT_JUSTIFY_CENTER);}
+	        }
 	        
 	        if(showDays()){
 		        drawWeekDay2(dc,rightTopX,rightTopY,0);
@@ -278,10 +284,11 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
       	var leftBottomX = 135;
       	var leftBottomY = 165;
         
-       
-        dc.drawText(topX,topY, fontMedium, topLabel, Graphics.TEXT_JUSTIFY_CENTER);
-        //for(var t=1;t<=12;t++){dc.drawText(topX,topY, fontMedium, Lang.format("$1$ $2$",[getMonthName(t),date.year]), Graphics.TEXT_JUSTIFY_CENTER);}
-        
+        if(showMonthYear()){
+        	dc.drawText(topX,topY, fontMedium, topLabel, Graphics.TEXT_JUSTIFY_CENTER);
+        	//for(var t=1;t<=12;t++){dc.drawText(topX,topY, fontMedium, Lang.format("$1$ $2$",[getMonthName(t),date.year]), Graphics.TEXT_JUSTIFY_CENTER);}
+        }
+               
         if(showDays()){
 	        drawWeekDay2(dc,rightTopX,rightTopY,0);
 	        drawWeekDay2(dc,rightTopX,rightTopY+20,1);
@@ -341,8 +348,10 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
       	var leftBottomY = 170;
         
        
-        dc.drawText(topX,topY, fontMedium, topLabel, Graphics.TEXT_JUSTIFY_CENTER);
-        //for(var t=1;t<=12;t++){dc.drawText(topX,topY, fontMedium, Lang.format("$1$ $2$",[getMonthName(t),date.year]), Graphics.TEXT_JUSTIFY_CENTER);}
+        if(showMonthYear()){
+        	dc.drawText(topX,topY, fontMedium, topLabel, Graphics.TEXT_JUSTIFY_CENTER);
+        	//for(var t=1;t<=12;t++){dc.drawText(topX,topY, fontMedium, Lang.format("$1$ $2$",[getMonthName(t),date.year]), Graphics.TEXT_JUSTIFY_CENTER);}
+        }
         
         if(showDays()){
 	        drawWeekDay2(dc,rightTopX,rightTopY,0);
@@ -405,8 +414,10 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
       	var leftBottomX = 95;
       	var leftBottomY = 135;
         
-        dc.drawText(topX,topY, getSmallFont(), topLabel, Graphics.TEXT_JUSTIFY_CENTER);
-        //for(var t=1;t<=12;t++){dc.drawText(topX,topY, fontMedium, Lang.format("$1$ $2$",[getMonthName(t),date.year]), Graphics.TEXT_JUSTIFY_CENTER);}
+        if(showMonthYear()){
+        	dc.drawText(topX,topY, getSmallFont(), topLabel, Graphics.TEXT_JUSTIFY_CENTER);
+        	//for(var t=1;t<=12;t++){dc.drawText(topX,topY, fontMedium, Lang.format("$1$ $2$",[getMonthName(t),date.year]), Graphics.TEXT_JUSTIFY_CENTER);}
+        }
         
         if(showDays()){
 	        drawWeekDay2(dc,rightTopX,rightTopY,0);
@@ -476,8 +487,10 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	      	var leftBottomX = 90;
 	      	var leftBottomY = 120;
 	       
+	        if(showMonthYear()){
+	       		dc.drawText(topX,topY, getSmallFont(), topLabel, Graphics.TEXT_JUSTIFY_LEFT);
+	        }
 	        
-	        dc.drawText(topX,topY, getSmallFont(), topLabel, Graphics.TEXT_JUSTIFY_LEFT);
 	        if(showDays()){
 	        	drawWeekDay2(dc,topX,topY+16,0);
 	        	drawWeekDay2(dc,topX,topY+31,1);
@@ -517,9 +530,9 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
     function onUpdate(dc) {
         //drawWatch(dc);
 
-		System.println(System.getDeviceSettings().screenWidth);
-		System.println(System.getDeviceSettings().screenHeight);
-		System.println(System.getDeviceSettings().screenShape);
+		//System.println(System.getDeviceSettings().screenWidth);
+		//System.println(System.getDeviceSettings().screenHeight);
+		//System.println(System.getDeviceSettings().screenShape);
 		
 		if(ifScreen(215,180,2)){
 			draw_fr230_fr235(dc);	
