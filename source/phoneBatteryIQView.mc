@@ -418,8 +418,8 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         dc.drawText(hourX,hourY, font, hours[0], Graphics.TEXT_JUSTIFY_CENTER);
         dc.drawText(hourX+45,hourY, font, hours[1], Graphics.TEXT_JUSTIFY_CENTER);
         
-//	        for(var t=0;t<=2;t++){dc.drawText(hourX,hourY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
-//	    	for(var t=0;t<=9;t++){dc.drawText(hourX+45,hourY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+	        for(var t=0;t<=2;t++){dc.drawText(hourX,hourY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+	    	for(var t=0;t<=9;t++){dc.drawText(hourX+45,hourY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
     	
     	dc.drawText(minuteX,minuteY, font, minutes[0], Graphics.TEXT_JUSTIFY_CENTER);
     	dc.drawText(minuteX+45,minuteY-20, font, minutes[1], Graphics.TEXT_JUSTIFY_CENTER);
