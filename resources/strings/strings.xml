@@ -6,6 +6,7 @@
     <string id="Use12Hours">12 hours format</string>
     <string id="ShowDays">Show top right info</string>
     <string id="ShowBottomLeft">Show bottom left info</string>
+    <string id="ShowMonthYear">Show top centered info</string>
     <string id="UseBrushFontForInfo">Use brush font for small text</string>
 
     <string id="ColorBlack">Black</string>
