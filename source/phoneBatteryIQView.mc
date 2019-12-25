@@ -10,32 +10,14 @@ using Toybox.Time.Gregorian;
 
 class phoneBatteryIQView extends WatchUi.WatchFace {
 
-	//var prevWatchHash;
 	var fontSmall,fontMedium,font;
 	var selectedFont; 
 	
     function initialize() {
         WatchFace.initialize();
         font = WatchUi.loadResource(Rez.Fonts.fntHuge);
-        
-        //fontMedium = WatchUi.loadResource(Rez.Fonts.fntMedium);
-        //fontSmall = WatchUi.loadResource(Rez.Fonts.fntSmall);
-
-		//font = WatchUi.loadResource(Rez.Fonts.hugeJannScript); // 160px
-        //fontMedium = WatchUi.loadResource(Rez.Fonts.mediumJannScript); // 36px
-        //fontSmall = WatchUi.loadResource(Rez.Fonts.smallJannScript); // 26px
-
-        //font = WatchUi.loadResource(Rez.Fonts.hugeStiffBrush); // 180px
-        //fontMedium = WatchUi.loadResource(Rez.Fonts.mediumStiffBrush); // 35px
-        //fontSmall = WatchUi.loadResource(Rez.Fonts.smallStiffBrush); // 26px
-        
-        //font = WatchUi.loadResource(Rez.Fonts.hugeKeyVirtue); // 180px
-        //fontMedium = WatchUi.loadResource(Rez.Fonts.mediumKeyVirtue); // 35px
-        //fontSmall = WatchUi.loadResource(Rez.Fonts.smallKeyVirtue); // 26px
-
-//        prevWatchHash = "";
-
-	loadFont();
+		
+		loadFont();
     }
 	
 	function loadFont(){
@@ -59,9 +41,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         			fontSmall = WatchUi.loadResource(Rez.Fonts.smallKeyVirtue); // 26px
         			break;
 			}
-			//System.println("new font loaded");
-    	}else{
-    		//System.println("no need to load font");
     	}
 	}
 	
@@ -449,6 +428,74 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	
 	}
 	
+	function draw_fenix3(dc){
+		var clockTime = System.getClockTime();
+        var minutes = clockTime.min.format("%02d").toCharArray();
+        //var connected = System.getDeviceSettings().phoneConnected;
+        var notifications = System.getDeviceSettings().notificationCount;
+        //var alarms = System.getDeviceSettings().alarmCount;
+        var bgColor = Application.getApp().getProperty("BackgroundColor");
+        var fgColor = Application.getApp().getProperty("ForegroundColor");
+        	
+    	var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        var battery = Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", ""]);
+        var steps = Lang.format("$1$ $2$",[ActivityMonitor.getInfo().steps,"steps"]);
+        var topLabel = Lang.format("$1$ $2$",[getMonthName(date.month),date.year]);	        
+        var hours = getHours();
+    	
+    	
+    	dc.setColor(Graphics.COLOR_TRANSPARENT, bgColor);
+    	dc.clear();
+    	dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
+        
+        var topX = 110;
+        var topY = 5;
+		
+		var rightTopX = 118;
+      	var rightTopY = 28;
+      	
+		var hourX = 35;
+		var hourY = -2;
+		var minuteX = 130;
+		var minuteY = 75;
+
+      	var leftBottomX = 103;
+      	var leftBottomY = 135;
+        
+        if(showMonthYear()){
+        	dc.drawText(topX,topY, getSmallFont(), topLabel, Graphics.TEXT_JUSTIFY_CENTER);
+        	//for(var t=1;t<=12;t++){dc.drawText(topX,topY, fontMedium, Lang.format("$1$ $2$",[getMonthName(t),date.year]), Graphics.TEXT_JUSTIFY_CENTER);}
+        }
+        
+        if(showDays()){
+	        drawWeekDay2(dc,rightTopX,rightTopY,0);
+	        drawWeekDay2(dc,rightTopX,rightTopY+20,1);
+	        drawWeekDay2(dc,rightTopX,rightTopY+40,2);
+        }
+
+        dc.drawText(hourX,hourY, font, hours[0], Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(hourX+45,hourY, font, hours[1], Graphics.TEXT_JUSTIFY_CENTER);
+        
+//	        for(var t=0;t<=2;t++){dc.drawText(hourX,hourY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+//	    	for(var t=0;t<=9;t++){dc.drawText(hourX+45,hourY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+    	
+    	dc.drawText(minuteX,minuteY, font, minutes[0], Graphics.TEXT_JUSTIFY_CENTER);
+    	dc.drawText(minuteX+45,minuteY-20, font, minutes[1], Graphics.TEXT_JUSTIFY_CENTER);
+    	
+//	    	for(var t=0;t<=5;t++){dc.drawText(minuteX,minuteY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+//	    	for(var t=0;t<=9;t++){dc.drawText(minuteX+45,minuteY-20, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+
+		if(showBottomLeft()){
+	        dc.drawText(leftBottomX+2,leftBottomY, getSmallFont(),steps,Graphics.TEXT_JUSTIFY_RIGHT);
+	        dc.drawText(leftBottomX+1,leftBottomY+18, getSmallFont(), notifications + " msgs", Graphics.TEXT_JUSTIFY_RIGHT);
+	        dc.drawText(leftBottomX,leftBottomY+36, getSmallFont(),battery, Graphics.TEXT_JUSTIFY_RIGHT);
+//	        if(notifications>0){
+//	        	
+//	        }
+        }
+	
+	}
+	
 	function draw_fr230_fr235(dc){
 		var clockTime = System.getClockTime();
         var minutes = clockTime.min.format("%02d").toCharArray();
@@ -530,9 +577,13 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
     function onUpdate(dc) {
         //drawWatch(dc);
 
-		//System.println(System.getDeviceSettings().screenWidth);
-		//System.println(System.getDeviceSettings().screenHeight);
-		//System.println(System.getDeviceSettings().screenShape);
+		System.println(System.getDeviceSettings().screenWidth);
+		System.println(System.getDeviceSettings().screenHeight);
+		System.println(System.getDeviceSettings().screenShape);
+		
+		// var hrIterator = ActivityMonitor.getHeartRateHistory(null,true);
+		// System.println(hrIterator.next().heartRate);
+		
 		
 		if(ifScreen(215,180,2)){
 			draw_fr230_fr235(dc);	
@@ -540,6 +591,10 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		}
 		if(ifScreen(208,208,1)){
 			draw_fr45(dc);	
+			return;
+		}
+		if(ifScreen(218,218,1)){
+			draw_fenix3(dc);	
 			return;
 		}
 		if(ifScreen(260,260,1)){
