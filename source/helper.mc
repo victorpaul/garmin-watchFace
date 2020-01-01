@@ -14,6 +14,10 @@ class helper {
 	var fontSmall,fontMedium,font;
 	var selectedFont; 
 	
+	function initialize(){
+		font = WatchUi.loadResource(Rez.Fonts.fntHuge); 
+		loadFont();
+	}
 	
 	function loadFont(){
 		if(selectedFont != Application.getApp().getProperty("Font")){
