@@ -8,24 +8,12 @@ using Toybox.Application;
 using Toybox.Time;
 using Toybox.Time.Gregorian;
 
-class phoneBatteryIQView extends WatchUi.WatchFace {
+class helper {
 
 	var debug,debugDate;
 	var fontSmall,fontMedium,font;
-	var selectedFont;
-	// var uiHelper;
+	var selectedFont; 
 	
-    function initialize() {
-        WatchFace.initialize();
-        font = WatchUi.loadResource(Rez.Fonts.fntHuge);
-		
-		// uiHelper = new helper();
-		loadFont();
-		debug = false;
-		debugDate = false;
-		
-		
-    }
 	
 	function loadFont(){
 		if(selectedFont != Application.getApp().getProperty("Font")){
@@ -237,101 +225,12 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	        }
         }
 	}
-	
-	function draw_fr230_fr235(dc){
-      	drawTopLeft(dc,107,0);
-    	drawTopRight(dc,110,19,15,1,true);
-  		drawHours(dc,35,-20,40,0);
-		drawMinutes(dc,130,25,50,0);
-		drawBottomLeft(dc,92,120,18,false);
-	}
-	
-	function draw_fenix3(dc){
-        drawTop(dc,110,5);
-        drawTopRight(dc,118,28,20,3,false);
-      	drawHours(dc,35,-2,45,0);
-    	drawMinutes(dc,130,75,45,-20);
-		drawBottomLeft(dc,95,135,16,true);
-	}
-	
-	function draw_fr45(dc){	       
-        drawTop(dc,110,5);
-        drawTopRight(dc,115,25,20,2,true);
-      	drawHours(dc,35,-4,45,0);
-    	drawMinutes(dc,121,70,45,-20);
-		drawBottomLeft(dc,93,136,16,false);
-	}
-	
-	function draw_fr245_fenix5x(dc) {	
-        drawTopFA(dc,120,5,fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-        drawTopRight(dc,125,35,20,3,false);
-      	drawHours(dc,40,10,45,0);
-    	drawMinutes(dc,145,80,45,-20);
-		drawBottomLeft(dc,108,155,17,true);
-	}
 		
-	function draw_fenix6(dc){        
-        drawTopFA(dc,130,5,fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-        drawTopRight(dc,125,40,20,4,false);
-      	drawHours(dc,45,25,45,0);
-    	drawMinutes(dc,165,98, 45,-20);
-		drawBottomLeft(dc,125,175,17,true);
-	}
-	
-	function draw_fenix6xpro(dc){        
-        drawTopFA(dc,125,10,fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-        drawTopRight(dc,140,40,20,5,false);
-      	drawHours(dc,45,15,45,0);
-    	drawMinutes(dc,185,120,45,-20);
-		drawBottomLeft(dc,145,170,17,true);
-	}
-	
 	function ifScreen(screenWidth,screenHeight,screenShape){
 		return 
 			screenWidth == System.getDeviceSettings().screenWidth &&
 			screenHeight == System.getDeviceSettings().screenHeight &&	
 			screenShape == System.getDeviceSettings().screenShape;
 	}
-	
-    // Update the view
-    function onUpdate(dc) {
-    	setColors(dc);
-
-		System.println(System.getDeviceSettings().screenWidth);
-		System.println(System.getDeviceSettings().screenHeight);
-		System.println(System.getDeviceSettings().screenShape);
-		
-		// var hrIterator = ActivityMonitor.getHeartRateHistory(null,true);
-		// System.println(hrIterator.next().heartRate);
-		
-		
-		if(ifScreen(215,180,2)){
-			draw_fr230_fr235(dc);
-			return;
-		}
-		if(ifScreen(208,208,1)){
-			draw_fr45(dc);	
-			return;
-		}
-		if(ifScreen(218,218,1)){
-			draw_fenix3(dc);	
-			return;
-		}
-		if(ifScreen(240,240,1)){
-			draw_fr245_fenix5x(dc);	
-			return;
-		}
-		if(ifScreen(260,260,1)){
-			draw_fenix6(dc);	
-			return;
-		}
-		if(ifScreen(280,280,1)){
-			draw_fenix6xpro(dc);	
-			return;
-		}
-
-		draw_fr230_fr235(dc);
-		
-    }
 
 }
