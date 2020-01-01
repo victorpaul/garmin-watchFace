@@ -1,5 +1,8 @@
 <settings>
 
+	<setting propertyKey="@Properties.ShowHR" title="@Strings.ShowHR">
+        <settingConfig type="boolean" />
+    </setting>
     <setting propertyKey="@Properties.BackgroundColor" title="@Strings.BackgroundColorTitle">
         <settingConfig type="list">
             <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
@@ -46,9 +49,7 @@
     </setting>
     <setting propertyKey="@Properties.ShowMonthYear" title="@Strings.ShowMonthYear">
         <settingConfig type="boolean" />
-    </setting>
-    
-    
+    </setting>   
     
 
 </settings>

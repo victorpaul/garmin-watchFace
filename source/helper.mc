@@ -15,6 +15,7 @@ class helper {
 	var selectedFont; 
 	
 	function initialize(){
+		
 		font = WatchUi.loadResource(Rez.Fonts.fntHuge); 
 		loadFont();
 	}
@@ -66,6 +67,10 @@ class helper {
 	
 	function showBottomLeft(){
 		return Application.getApp().getProperty("ShowBottomLeft");
+	}
+	
+	function showHR(){
+		return Application.getApp().getProperty("ShowHR");
 	}	
 	
 	function getMonthName(number){
@@ -212,7 +217,11 @@ class helper {
 	        	drawWeekDay2(dc,x,y+(stepY*day),day);
 	        }
 	        if(withHR){
-	        	dc.drawText(x,y+(stepY*daysForward), getSmallFont(),getHR(), Graphics.TEXT_JUSTIFY_LEFT);
+	        	if(showHR()){
+	        		dc.drawText(x,y+(stepY*daysForward), getSmallFont(),getHR(), Graphics.TEXT_JUSTIFY_LEFT);
+	        	}else{
+	        		drawWeekDay2(dc,x,y+(stepY*daysForward),daysForward);
+	        	}
 	        }
         }
 	}
@@ -221,7 +230,7 @@ class helper {
 		if(showBottomLeft()){
 	        dc.drawText(x,y, getSmallFont(),getSteps(),Graphics.TEXT_JUSTIFY_RIGHT);
 	        dc.drawText(x,y+stepY, getSmallFont(), getMsgs(true), Graphics.TEXT_JUSTIFY_RIGHT);
-	        if(!withHR){
+	        if(!withHR || !showHR()){
 	        	dc.drawText(x,y+stepY+stepY, getSmallFont(),getBattery(), Graphics.TEXT_JUSTIFY_RIGHT);
         	}else{
 	        	dc.drawText(x,y+stepY+stepY, getSmallFont(),getHR(), Graphics.TEXT_JUSTIFY_RIGHT);

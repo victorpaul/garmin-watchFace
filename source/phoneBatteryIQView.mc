@@ -8,6 +8,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	
     function initialize() {
         WatchFace.initialize();
+        
         uiH = new helper();
         uiH.initialize();
         

@@ -8,6 +8,7 @@
     <string id="ShowBottomLeft">Show bottom left info</string>
     <string id="ShowMonthYear">Show top centered info</string>
     <string id="UseBrushFontForInfo">Use brush font for small text</string>
+	<string id="ShowHR">Show HR</string>
 
     <string id="ColorBlack">Black</string>
     <string id="ColorDarkGray">Dark Gray</string>
