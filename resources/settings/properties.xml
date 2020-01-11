@@ -1,5 +1,4 @@
 <properties>
-
     <property id="BackgroundColor" type="number">0xFFFFFF</property>
     <property id="ForegroundColor" type="number">0x000000</property>
     <property id="Use12Hours" type="boolean">false</property>
@@ -8,5 +7,6 @@
     <property id="ShowMonthYear" type="boolean">true</property>
     <property id="Font" type="number">3</property>
     <property id="ShowHR" type="boolean">false</property>
-
+	<property id="ShowOtherDay" type="boolean">true</property>
+	<property id="ShowSteps" type="boolean">true</property>
 </properties>
