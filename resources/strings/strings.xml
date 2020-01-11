@@ -9,6 +9,8 @@
     <string id="ShowMonthYear">Show top centered info</string>
     <string id="UseBrushFontForInfo">Use brush font for small text</string>
 	<string id="ShowHR">Show HR</string>
+	<string id="ShowOtherDay">Show second day</string>
+	<string id="ShowSteps">Show steps</string>
 
     <string id="ColorBlack">Black</string>
     <string id="ColorDarkGray">Dark Gray</string>

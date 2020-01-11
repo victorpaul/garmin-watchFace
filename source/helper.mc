@@ -72,37 +72,14 @@ class helper {
 	function showHR(){
 		return Application.getApp().getProperty("ShowHR");
 	}	
+
+	function showOtherDay(){
+		return Application.getApp().getProperty("ShowOtherDay");
+	}		
 	
-	function getMonthName(number){
-		
-		switch(number){
-			case 1: return "Jan";
-			case 2: return "Feb";
-			case 3: return "Mar";
-			case 4: return "Apr";
-			case 5: return "May";
-			case 6: return "Jun";
-			case 7: return "Jul";
-			case 8: return "Aug";
-			case 9: return "Sep";
-			case 10: return "Oct";
-			case 11: return "Nov";
-			case 12: return "Dec";			
-		}
-	}
-	
-	function getWeekdayName(number){
-		
-		switch(number){
-			case 1: return "Sun";
-			case 2: return "Mon";
-			case 3: return "Tue";
-			case 4: return "Wed";
-			case 5: return "Thu";
-			case 6: return "Fri";
-			case 7: return "Sat";			
-		}
-	}
+	function showSteps(){
+		return Application.getApp().getProperty("ShowSteps");
+	}	
 	
 	function drawWeekDay2(dc,x,y,offset){
 		var time = null;
@@ -113,12 +90,12 @@ class helper {
 		}else if (offset>0){
 			time = Time.now().add(new Time.Duration(3600 *24 * offset));
 		}       	
-    	var day = Gregorian.info(time, Time.FORMAT_SHORT);    	
+    	var day = Gregorian.info(time, Time.FORMAT_MEDIUM);    	
 
     	dc.drawText(x,y, getSmallFont(), Lang.format(
 	    	"$1$ $2$",
 		    	[
-			        getWeekdayName(day.day_of_week),
+			        day.day_of_week,
 			        day.day.format("%02d")
 			        
 			    ]
@@ -141,7 +118,7 @@ class helper {
 		if(debug){
 			return "99999stps";
 		}
-		return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,"stps"]);
+		return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps," stps"]);
 	}
 	
 	function getMsgs(force){
@@ -150,7 +127,7 @@ class helper {
 		}
 		var ntfCount = System.getDeviceSettings().notificationCount;
 		if(ntfCount>0 || force){
-			return Lang.format("$1$$2$",[ntfCount, "msgs"]);
+			return Lang.format("$1$$2$",[ntfCount, " msgs"]);
 		}
 		return "";
 	}
@@ -159,15 +136,15 @@ class helper {
 		if(debug){
 			return "100%";
 		}
-		return Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", ""]);
+		return Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+" %", ""]);
 	}
 	
 	function getHR(){
 		var hr = Activity.getActivityInfo().currentHeartRate;
 		if(hr!=null){
-			return Lang.format("$1$$2$",[hr, "bps"]);
+			return Lang.format("$1$$2$",[hr, " bps"]);
 		}
-		return "--bps";
+		return "-- bps";
 	}
 	
 	function drawTop(dc,x,y){
@@ -180,13 +157,13 @@ class helper {
 	
 	function drawTopFA(dc,x,y,font,align){
 		if(showMonthYear()){
-			var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-			var label = Lang.format("$1$ $2$",[getMonthName(date.month),date.year]);
+			var date = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
+			var label = Lang.format("$1$ $2$",[date.month,date.year]);
         	dc.drawText(x,y, font, label, align);
         	
         	if(debugDate){
-        	var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        		for(var t=1;t<=12;t++){dc.drawText(x,y,font, Lang.format("$1$ $2$",[getMonthName(t),date.year]), align);}
+        	var date = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
+        		for(var t=1;t<=12;t++){dc.drawText(x,y,font, Lang.format("$1$ $2$",[date.month,date.year]), align);}
         	}
         }
 	}
@@ -219,16 +196,20 @@ class helper {
 	        if(withHR){
 	        	if(showHR()){
 	        		dc.drawText(x,y+(stepY*daysForward), getSmallFont(),getHR(), Graphics.TEXT_JUSTIFY_LEFT);
-	        	}else{
-	        		drawWeekDay2(dc,x,y+(stepY*daysForward),daysForward);
-	        	}
+	        	} else{
+	        		if(showOtherDay()){
+	        			drawWeekDay2(dc,x,y+(stepY*daysForward),daysForward);
+	        		}	
+	        	} 
 	        }
         }
 	}
 	
 	function drawBottomLeft(dc,x,y,stepY,withHR){
 		if(showBottomLeft()){
-	        dc.drawText(x,y, getSmallFont(),getSteps(),Graphics.TEXT_JUSTIFY_RIGHT);
+	        if (showSteps()){
+	        	dc.drawText(x,y, getSmallFont(),getSteps(),Graphics.TEXT_JUSTIFY_RIGHT);
+	        }
 	        dc.drawText(x,y+stepY, getSmallFont(), getMsgs(true), Graphics.TEXT_JUSTIFY_RIGHT);
 	        if(!withHR || !showHR()){
 	        	dc.drawText(x,y+stepY+stepY, getSmallFont(),getBattery(), Graphics.TEXT_JUSTIFY_RIGHT);
