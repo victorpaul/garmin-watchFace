@@ -37,6 +37,31 @@
             <listEntry value="4">@Strings.Font4</listEntry>
         </settingConfig>
     </setting>
+    
+    <setting propertyKey="@Properties.WhatToShowAtBottomLeft" title="@Strings.BottomLeftInfo">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.Steps</listEntry>
+            <listEntry value="2">@Strings.Calories</listEntry>
+            <listEntry value="3">@Strings.Messages</listEntry>
+            <listEntry value="4">@Strings.Battery</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.WhatToShowAtBottomLeft2" title="@Strings.BottomLeftInfo2">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.Steps</listEntry>
+            <listEntry value="2">@Strings.Calories</listEntry>
+            <listEntry value="3">@Strings.Messages</listEntry>
+            <listEntry value="4">@Strings.Battery</listEntry>
+        </settingConfig>
+    </setting>
+        <setting propertyKey="@Properties.WhatToShowAtBottomLeft3" title="@Strings.BottomLeftInfo3">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.Steps</listEntry>
+            <listEntry value="2">@Strings.Calories</listEntry>
+            <listEntry value="3">@Strings.Messages</listEntry>
+            <listEntry value="4">@Strings.Battery</listEntry>
+        </settingConfig>
+    </setting>
 
     <setting propertyKey="@Properties.Use12Hours" title="@Strings.Use12Hours">
         <settingConfig type="boolean" />

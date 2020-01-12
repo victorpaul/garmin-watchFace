@@ -71,7 +71,19 @@ class helper {
 	
 	function showHR(){
 		return Application.getApp().getProperty("ShowHR");
-	}	
+	}
+	
+	function whatToShowAtBottomLeft(){
+		return Application.getApp().getProperty("WhatToShowAtBottomLeft");
+	}
+	
+	function whatToShowAtBottomLeft2(){
+		return Application.getApp().getProperty("WhatToShowAtBottomLeft2");
+	}
+	
+	function whatToShowAtBottomLeft3(){
+		return Application.getApp().getProperty("WhatToShowAtBottomLeft3");
+	}
 	
 	function getMonthName(number){
 		
@@ -142,6 +154,13 @@ class helper {
 			return "99999stps";
 		}
 		return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,"stps"]);
+	}
+	
+	function getCalories(){
+		if(debug){
+			return "99999cal";
+		}
+		return Lang.format("$1$$2$",[ActivityMonitor.getInfo().calories,"cal"]);
 	}
 	
 	function getMsgs(force){
@@ -226,15 +245,32 @@ class helper {
         }
 	}
 	
+	function drawLineByOption(dc,x,y,option){
+		switch(option){
+	    	case 1: 
+	    		dc.drawText(x,y, getSmallFont(),getSteps(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		break;
+	    	case 2: 
+	    		dc.drawText(x,y, getSmallFont(),getCalories(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		break;
+			case 3: 
+	    		dc.drawText(x,y, getSmallFont(),getMsgs(true),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		break;
+			case 4: 
+	    		dc.drawText(x,y, getSmallFont(),getBattery(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		break;
+	    }
+	}
+	
 	function drawBottomLeft(dc,x,y,stepY,withHR){
 		if(showBottomLeft()){
-	        dc.drawText(x,y, getSmallFont(),getSteps(),Graphics.TEXT_JUSTIFY_RIGHT);
-	        dc.drawText(x,y+stepY, getSmallFont(), getMsgs(true), Graphics.TEXT_JUSTIFY_RIGHT);
+	        drawLineByOption(dc,x,y,whatToShowAtBottomLeft());
+	        drawLineByOption(dc,x,y+stepY,whatToShowAtBottomLeft2());
 	        if(!withHR || !showHR()){
-	        	dc.drawText(x,y+stepY+stepY, getSmallFont(),getBattery(), Graphics.TEXT_JUSTIFY_RIGHT);
+	        	drawLineByOption(dc,x,y+stepY+stepY,whatToShowAtBottomLeft3);
         	}else{
 	        	dc.drawText(x,y+stepY+stepY, getSmallFont(),getHR(), Graphics.TEXT_JUSTIFY_RIGHT);
-	        	dc.drawText(x,y+stepY+stepY+stepY, getSmallFont(),getBattery(), Graphics.TEXT_JUSTIFY_RIGHT);
+	        	drawLineByOption(dc,x,y+stepY+stepY+stepY,whatToShowAtBottomLeft3());
 	        }
         }
 	}

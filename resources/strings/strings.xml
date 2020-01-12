@@ -27,4 +27,13 @@
     <string id="Font3">font 3</string>
     <string id="Font4">font 4</string>
     
+    
+    <string id="BottomLeftInfo">Bottom left info. Line A</string>
+    <string id="BottomLeftInfo2">Bottom left info. Line B</string>
+    <string id="BottomLeftInfo3">Bottom left info. Line C</string>
+    <string id="Steps">Steps</string>
+    <string id="Calories">Calories</string>
+    <string id="Battery">Battery</string>
+    <string id="Messages">Messages count</string>
+    
 </strings>

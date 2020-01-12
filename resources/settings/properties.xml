@@ -8,5 +8,8 @@
     <property id="ShowMonthYear" type="boolean">true</property>
     <property id="Font" type="number">3</property>
     <property id="ShowHR" type="boolean">false</property>
+    <property id="WhatToShowAtBottomLeft" type="number">1</property>
+	<property id="WhatToShowAtBottomLeft2" type="number">3</property>
+	<property id="WhatToShowAtBottomLeft3" type="number">4</property>
 
 </properties>

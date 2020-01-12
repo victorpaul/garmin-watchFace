@@ -85,9 +85,9 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
     function onUpdate(dc) {
     	uiH.setColors(dc);
 
-		System.println(System.getDeviceSettings().screenWidth);
-		System.println(System.getDeviceSettings().screenHeight);
-		System.println(System.getDeviceSettings().screenShape);
+//		System.println(System.getDeviceSettings().screenWidth);
+//		System.println(System.getDeviceSettings().screenHeight);
+//		System.println(System.getDeviceSettings().screenShape);
 		
 		if(uiH.ifScreen(148,205,3)){
 			draw_vivoactiveHR(dc);
