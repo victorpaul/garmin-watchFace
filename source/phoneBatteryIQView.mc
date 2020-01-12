@@ -10,7 +10,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         WatchFace.initialize();
         
         uiH = new helper();
-        uiH.initialize();
+        //uiH.initialize();
         
         uiH.debug = false;
 		uiH.debugDate = false;

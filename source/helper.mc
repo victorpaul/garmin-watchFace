@@ -15,7 +15,6 @@ class helper {
 	var selectedFont; 
 	
 	function initialize(){
-		
 		font = WatchUi.loadResource(Rez.Fonts.fntHuge); 
 		loadFont();
 	}
@@ -267,7 +266,7 @@ class helper {
 	        drawLineByOption(dc,x,y,whatToShowAtBottomLeft());
 	        drawLineByOption(dc,x,y+stepY,whatToShowAtBottomLeft2());
 	        if(!withHR || !showHR()){
-	        	drawLineByOption(dc,x,y+stepY+stepY,whatToShowAtBottomLeft3);
+	        	drawLineByOption(dc,x,y+stepY+stepY,whatToShowAtBottomLeft3());
         	}else{
 	        	dc.drawText(x,y+stepY+stepY, getSmallFont(),getHR(), Graphics.TEXT_JUSTIFY_RIGHT);
 	        	drawLineByOption(dc,x,y+stepY+stepY+stepY,whatToShowAtBottomLeft3());
