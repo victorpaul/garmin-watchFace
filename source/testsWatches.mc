@@ -11,8 +11,10 @@ class phoneBatteryIQViewTest {
     	
     	logger.debug(dc.calls);
     	
-    	Test.assertEqualMessage("drawText(25,-32,font,hour,1)",dc.calls[0][0],"First hour letter is wrong");
-    	Test.assertEqualMessage("drawText(65,-32,font,hour,1)",dc.calls[1][0],"Second hour latter is wrong");
+    	Test.assertEqual("drawText(88,-5,text,2)",dc.calls[0][0]);
+    	Test.assertEqual("drawText(88,9,text,2)",dc.calls[1][0]);
+    	Test.assertEqual("drawText(88,23,text,2)",dc.calls[2][0]);
+    	
     	
     	return true;
 	}
