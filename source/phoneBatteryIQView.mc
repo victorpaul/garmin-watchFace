@@ -10,7 +10,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         WatchFace.initialize();
         
         uiH = new helper();
-        //uiH.initialize();
         
         uiH.debug = false;
 		uiH.debugDate = false;
@@ -80,7 +79,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		uiH.drawBottomLeft(dc,145,170,17,true);
 	}
 	
-	
     // Update the view
     function onUpdate(dc) {
     	uiH.setColors(dc);
@@ -88,6 +86,14 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 //		System.println(System.getDeviceSettings().screenWidth);
 //		System.println(System.getDeviceSettings().screenHeight);
 //		System.println(System.getDeviceSettings().screenShape);
+
+		var isInfoTop = uiH.showDays();	
+		var isDate = uiH.showMonthYear();	
+		var isInfoBottom = uiH.showBottomLeft();
+		var showHR = uiH.showHR();	
+		var option1 = uiH.whatToShowAtBottomLeft();	
+		var option2 = uiH.whatToShowAtBottomLeft2();	
+		var option3 = uiH.whatToShowAtBottomLeft3();
 		
 		if(uiH.ifScreen(148,205,3)){
 			draw_vivoactiveHR(dc);
@@ -124,7 +130,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 
 		// nope: swim2, venu
 		draw_fr230_fr235(dc);
-		
     }
 
 }
