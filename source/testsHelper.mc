@@ -7,7 +7,7 @@ class HelperTests {
 		var dc = new mockDC(logger);
 		var uiH = new helper();
 	
-    	uiH.drawTopRight(dc,88,-5,14,3,false);
+    	uiH.drawTopRight(dc,88,-5,14,3);
     	
     	logger.debug(dc.calls);
     	
@@ -24,16 +24,15 @@ class HelperTests {
 		var dc = new mockDC(logger);
 		var uiH = new helper();
 	
-    	uiH.drawTopRight(dc,88,-5,14,3,true);
+    	uiH.drawTopRight(dc,88,-5,14,3);
     	
     	logger.debug(dc.calls);
     	
     	Test.assertEqual("drawText(88,-5,text,2)",dc.calls[0][0]);
     	Test.assertEqual("drawText(88,9,text,2)",dc.calls[1][0]);
     	Test.assertEqual("drawText(88,23,text,2)",dc.calls[2][0]);
-    	Test.assertEqual("drawText(88,37,text,2)",dc.calls[3][0]);
     	
-    	Test.assertEqual(4,dc.calls.size());	
+    	Test.assertEqual(3,dc.calls.size());	
     	return true;
 	}
 

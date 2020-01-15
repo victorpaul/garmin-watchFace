@@ -50,7 +50,8 @@ class helper {
 	
 	function getHours() {
 		var hours = System.getClockTime().hour;
-		if(Application.getApp().getProperty("Use12Hours") && hours >12){
+		var clockMode = System.getDeviceSettings().is24Hour;
+		if(!clockMode && hours >12){
 			hours = hours-12;
 		}
 		return hours.format("%02d").toCharArray();
@@ -66,10 +67,6 @@ class helper {
 	
 	function showBottomLeft(){
 		return Application.getApp().getProperty("ShowBottomLeft");
-	}
-	
-	function showHR(){
-		return Application.getApp().getProperty("ShowHR");
 	}
 	
 	function whatToShowAtBottomLeft(){
@@ -144,24 +141,18 @@ class helper {
     	dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
 	}
 	
-	function isConn(){
-		return System.getDeviceSettings().phoneConnected;
-	}
-	
 	function getSteps(){
 		if(debug){
 			return "99999stps";
 		}
 		return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,"stps"]);
 	}
-	
 	function getCalories(){
 		if(debug){
 			return "99999cal";
 		}
 		return Lang.format("$1$$2$",[ActivityMonitor.getInfo().calories,"cal"]);
 	}
-	
 	function getMsgs(force){
 		if(debug){
 			return "99msgs";
@@ -229,17 +220,10 @@ class helper {
 		}
 	}
 	
-	function drawTopRight(dc,x,y,stepY,daysForward,withHR){
+	function drawTopRight(dc,x,y,stepY,daysForward){
 		if(showDays()){
       		for(var day=0;day<daysForward;day++){
 	        	drawWeekDay2(dc,x,y+(stepY*day),day);
-	        }
-	        if(withHR){
-	        	if(showHR()){
-	        		dc.drawText(x,y+(stepY*daysForward), getSmallFont(),getHR(), Graphics.TEXT_JUSTIFY_LEFT);
-	        	}else{
-	        		drawWeekDay2(dc,x,y+(stepY*daysForward),daysForward);
-	        	}
 	        }
         }
 	}
@@ -258,19 +242,19 @@ class helper {
 			case 4: 
 	    		dc.drawText(x,y, getSmallFont(),getBattery(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
+    		case 5: 
+	    		dc.drawText(x,y, getSmallFont(),getHR(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		break;
+    		case 6: 
+	    		break;
 	    }
 	}
 	
-	function drawBottomLeft(dc,x,y,stepY,withHR){
+	function drawBottomLeft(dc,x,y,stepY){
 		if(showBottomLeft()){
 	        drawLineByOption(dc,x,y,whatToShowAtBottomLeft());
 	        drawLineByOption(dc,x,y+stepY,whatToShowAtBottomLeft2());
-	        if(!withHR || !showHR()){
-	        	drawLineByOption(dc,x,y+stepY+stepY,whatToShowAtBottomLeft3());
-        	}else{
-	        	dc.drawText(x,y+stepY+stepY, getSmallFont(),getHR(), Graphics.TEXT_JUSTIFY_RIGHT);
-	        	drawLineByOption(dc,x,y+stepY+stepY+stepY,whatToShowAtBottomLeft3());
-	        }
+	        drawLineByOption(dc,x,y+stepY+stepY,whatToShowAtBottomLeft3());        	
         }
 	}
 		

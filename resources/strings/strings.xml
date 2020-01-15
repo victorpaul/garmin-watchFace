@@ -35,5 +35,7 @@
     <string id="Calories">Calories</string>
     <string id="Battery">Battery</string>
     <string id="Messages">Messages count</string>
+    <string id="Hr">Heart Rate</string>
+    <string id="None">None</string>
     
 </strings>
