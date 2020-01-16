@@ -154,6 +154,13 @@ class helper {
 		}
 		return Lang.format("$1$$2$",[ActivityMonitor.getInfo().calories,"cal"]);
 	}
+	function getConnection(){
+		var phone = System.getDeviceSettings().phoneConnected;
+		if(phone){
+			return "phone +";
+		}
+		return "phone -";
+	}
 	function getMsgs(force){
 		if(debug){
 			return "99msgs";
@@ -181,16 +188,16 @@ class helper {
 	}
 	
 	function drawTop(dc,x,y){
-		drawTopFA(dc,x,y,getSmallFont(),Graphics.TEXT_JUSTIFY_CENTER);
+		drawTopFA(whatToShowAtTop(),dc,x,y,getSmallFont(),Graphics.TEXT_JUSTIFY_CENTER);
 	}
 	
 	function drawTopLeft(dc,x,y){
-		drawTopFA(dc,x,y,getSmallFont(),Graphics.TEXT_JUSTIFY_LEFT);
+		drawTopFA(whatToShowAtTop(),dc,x,y,getSmallFont(),Graphics.TEXT_JUSTIFY_LEFT);
 	}	        
 	
-	function drawTopFA(dc,x,y,font,align){
+	function drawTopFA(whatToSHow,dc,x,y,font,align){
 		var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-		switch(whatToShowAtTop()){
+		switch(whatToSHow){
 			case 1:
 	        	dc.drawText(x,y, font, Lang.format("$1$ $2$",[getMonthName(date.month),date.year]), align);
 				break;
@@ -252,23 +259,36 @@ class helper {
 		}
 	}
 	
-	function drawTopRight(dc,x,y,stepY,daysForward){
-		switch(whatToShowAtRight()){
+	function drawTopRight(whatToSHow,dc,x,y,stepY,daysForward){
+		var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+		var font = getSmallFont();
+		var align = Graphics.TEXT_JUSTIFY_LEFT;
+		switch(whatToSHow){
 			case 1:
 				for(var day=0;day<daysForward;day++){
 		        	drawWeekDay2(dc,x,y+(stepY*day),day);
 		        }
 				break;
 			case 2:
+				dc.drawText(x,y, font,getMsgs(true),align);
+				dc.drawText(x,y+stepY, font,getConnection(),align);
+				if(daysForward>=3){
+					dc.drawText(x,y+stepY+stepY, font, Lang.format("$1$$2$,$3$",[getMonthName(date.month),date.day,date.year]), align);
+				}	
 				break;
 			case 3:
+				dc.drawText(x,y, font,getSteps(),align);
+	    		dc.drawText(x,y+stepY, font,getCalories(),align);
+	    		if(daysForward>=3){
+					dc.drawText(x,y+stepY+stepY, font, Lang.format("$1$$2$,$3$",[getMonthName(date.month),date.day,date.year]), align);
+				}
 				break;
 			case 4:
 				break;
 		}
 	}
 	
-	function drawLineByOption(dc,x,y,option){
+	function drawBottomLineByOption(dc,x,y,option){
 		switch(option){
 	    	case 1: 
 	    		dc.drawText(x,y, getSmallFont(),getSteps(),Graphics.TEXT_JUSTIFY_RIGHT);
@@ -276,7 +296,7 @@ class helper {
 	    	case 2: 
 	    		dc.drawText(x,y, getSmallFont(),getCalories(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
-			case 3: 
+			case 3:
 	    		dc.drawText(x,y, getSmallFont(),getMsgs(true),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
 			case 4: 
@@ -292,9 +312,9 @@ class helper {
 	
 	function drawBottomLeft(dc,x,y,stepY){
 		if(showBottomLeft()){
-	        drawLineByOption(dc,x,y,whatToShowAtBottomLeft());
-	        drawLineByOption(dc,x,y+stepY,whatToShowAtBottomLeft2());
-	        drawLineByOption(dc,x,y+stepY+stepY,whatToShowAtBottomLeft3());        	
+	        drawBottomLineByOption(dc,x,y,whatToShowAtBottomLeft());
+	        drawBottomLineByOption(dc,x,y+stepY,whatToShowAtBottomLeft2());
+	        drawBottomLineByOption(dc,x,y+stepY+stepY,whatToShowAtBottomLeft3());        	
         }
 	}
 		
