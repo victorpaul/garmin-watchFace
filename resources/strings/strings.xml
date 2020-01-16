@@ -28,6 +28,18 @@
     <string id="Font4">font 4</string>
     
     
+    <string id="TopCenterInfo">Top center info</string>
+    <string id="Date1">Month year</string>
+    <string id="Date2">Month day</string>
+    <string id="Date3">Month day, year</string>
+    <string id="Date4">DD/MM/YYYY</string>
+    <string id="Date5">MM/DD/YYYY</string>
+    
+    <string id="RightInfo">Right info</string>
+    <string id="Calendar">Calendar</string>
+    <string id="Phone">Phone</string>
+    <string id="Activity">Activity</string>
+    
     <string id="BottomLeftInfo">Bottom left info. Line A</string>
     <string id="BottomLeftInfo2">Bottom left info. Line B</string>
     <string id="BottomLeftInfo3">Bottom left info. Line C</string>

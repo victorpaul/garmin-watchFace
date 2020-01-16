@@ -1,5 +1,64 @@
 <settings>
-
+	
+    <setting propertyKey="@Properties.WhatToShowAtTop" title="@Strings.TopCenterInfo">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.Date1</listEntry>
+            <listEntry value="2">@Strings.Date2</listEntry>
+            <listEntry value="3">@Strings.Date3</listEntry>
+            <listEntry value="4">@Strings.Date4</listEntry>
+            <listEntry value="5">@Strings.Date5</listEntry>
+            <listEntry value="6">@Strings.Steps</listEntry>
+            <listEntry value="7">@Strings.Calories</listEntry>
+            <listEntry value="8">@Strings.Messages</listEntry>
+            <listEntry value="9">@Strings.Battery</listEntry>
+            <listEntry value="10">@Strings.Hr</listEntry>
+            <listEntry value="11">@Strings.None</listEntry>
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.WhatToShowAtRight" title="@Strings.RightInfo">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.Calendar</listEntry>
+            <listEntry value="2">@Strings.Phone</listEntry>
+            <listEntry value="3">@Strings.Activity</listEntry>
+            <listEntry value="4">@Strings.None</listEntry>
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.ShowBottomLeft" title="@Strings.ShowBottomLeft">
+        <settingConfig type="boolean" />
+    </setting>    
+    <setting propertyKey="@Properties.WhatToShowAtBottomLeft" title="@Strings.BottomLeftInfo">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.Steps</listEntry>
+            <listEntry value="2">@Strings.Calories</listEntry>
+            <listEntry value="3">@Strings.Messages</listEntry>
+            <listEntry value="4">@Strings.Battery</listEntry>
+            <listEntry value="5">@Strings.Hr</listEntry>
+            <listEntry value="6">@Strings.None</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.WhatToShowAtBottomLeft2" title="@Strings.BottomLeftInfo2">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.Steps</listEntry>
+            <listEntry value="2">@Strings.Calories</listEntry>
+            <listEntry value="3">@Strings.Messages</listEntry>
+            <listEntry value="4">@Strings.Battery</listEntry>
+            <listEntry value="5">@Strings.Hr</listEntry>
+            <listEntry value="6">@Strings.None</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.WhatToShowAtBottomLeft3" title="@Strings.BottomLeftInfo3">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.Steps</listEntry>
+            <listEntry value="2">@Strings.Calories</listEntry>
+            <listEntry value="3">@Strings.Messages</listEntry>
+            <listEntry value="4">@Strings.Battery</listEntry>
+            <listEntry value="5">@Strings.Hr</listEntry>
+            <listEntry value="6">@Strings.None</listEntry>
+        </settingConfig>
+    </setting>
+    
     <setting propertyKey="@Properties.BackgroundColor" title="@Strings.BackgroundColorTitle">
         <settingConfig type="list">
             <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
@@ -34,47 +93,5 @@
             <listEntry value="4">@Strings.Font4</listEntry>
         </settingConfig>
     </setting>
-    
-    <setting propertyKey="@Properties.WhatToShowAtBottomLeft" title="@Strings.BottomLeftInfo">
-        <settingConfig type="list">
-            <listEntry value="1">@Strings.Steps</listEntry>
-            <listEntry value="2">@Strings.Calories</listEntry>
-            <listEntry value="3">@Strings.Messages</listEntry>
-            <listEntry value="4">@Strings.Battery</listEntry>
-            <listEntry value="5">@Strings.Hr</listEntry>
-            <listEntry value="6">@Strings.None</listEntry>
-        </settingConfig>
-    </setting>
-    <setting propertyKey="@Properties.WhatToShowAtBottomLeft2" title="@Strings.BottomLeftInfo2">
-        <settingConfig type="list">
-            <listEntry value="1">@Strings.Steps</listEntry>
-            <listEntry value="2">@Strings.Calories</listEntry>
-            <listEntry value="3">@Strings.Messages</listEntry>
-            <listEntry value="4">@Strings.Battery</listEntry>
-            <listEntry value="5">@Strings.Hr</listEntry>
-            <listEntry value="6">@Strings.None</listEntry>
-        </settingConfig>
-    </setting>
-        <setting propertyKey="@Properties.WhatToShowAtBottomLeft3" title="@Strings.BottomLeftInfo3">
-        <settingConfig type="list">
-            <listEntry value="1">@Strings.Steps</listEntry>
-            <listEntry value="2">@Strings.Calories</listEntry>
-            <listEntry value="3">@Strings.Messages</listEntry>
-            <listEntry value="4">@Strings.Battery</listEntry>
-            <listEntry value="5">@Strings.Hr</listEntry>
-            <listEntry value="6">@Strings.None</listEntry>
-        </settingConfig>
-    </setting>
-
-    <setting propertyKey="@Properties.ShowDays" title="@Strings.ShowDays">
-        <settingConfig type="boolean" />
-    </setting>
-    <setting propertyKey="@Properties.ShowBottomLeft" title="@Strings.ShowBottomLeft">
-        <settingConfig type="boolean" />
-    </setting>
-    <setting propertyKey="@Properties.ShowMonthYear" title="@Strings.ShowMonthYear">
-        <settingConfig type="boolean" />
-    </setting>   
-    
 
 </settings>

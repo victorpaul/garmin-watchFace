@@ -57,16 +57,17 @@ class helper {
 		return hours.format("%02d").toCharArray();
 	}
 	
-	function showDays(){
-		return Application.getApp().getProperty("ShowDays");
-	}
-	
-	function showMonthYear(){
-		return Application.getApp().getProperty("ShowMonthYear");
-	}
 	
 	function showBottomLeft(){
 		return Application.getApp().getProperty("ShowBottomLeft");
+	}
+	
+	function whatToShowAtTop(){
+		return Application.getApp().getProperty("WhatToShowAtTop");
+	}
+	
+	function whatToShowAtRight(){
+		return Application.getApp().getProperty("WhatToShowAtRight");
 	}
 	
 	function whatToShowAtBottomLeft(){
@@ -174,9 +175,9 @@ class helper {
 	function getHR(){
 		var hr = Activity.getActivityInfo().currentHeartRate;
 		if(hr!=null){
-			return Lang.format("$1$$2$",[hr, "bps"]);
+			return Lang.format("$1$$2$",[hr, "bpm"]);
 		}
-		return "--bps";
+		return "--bpm";
 	}
 	
 	function drawTop(dc,x,y){
@@ -188,16 +189,47 @@ class helper {
 	}	        
 	
 	function drawTopFA(dc,x,y,font,align){
-		if(showMonthYear()){
-			var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-			var label = Lang.format("$1$ $2$",[getMonthName(date.month),date.year]);
-        	dc.drawText(x,y, font, label, align);
-        	
-        	if(debugDate){
-        	var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        		for(var t=1;t<=12;t++){dc.drawText(x,y,font, Lang.format("$1$ $2$",[getMonthName(t),date.year]), align);}
-        	}
-        }
+		var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+		switch(whatToShowAtTop()){
+			case 1:
+	        	dc.drawText(x,y, font, Lang.format("$1$ $2$",[getMonthName(date.month),date.year]), align);
+				break;
+			case 2:
+	        	dc.drawText(x,y, font, Lang.format("$1$ $2$",[getMonthName(date.month),date.day]), align);
+				break;
+			case 3:
+	        	dc.drawText(x,y, font, Lang.format("$1$$2$,$3$",[getMonthName(date.month),date.day,date.year]), align);
+				break;
+			case 4:
+	        	dc.drawText(x,y, font, Lang.format("$1$/$2$/$3$",[date.day,date.month,date.year]), align);
+				break;
+			case 5:
+	        	dc.drawText(x,y, font, Lang.format("$1$/$2$/$3$",[date.month,date.day,date.year]), align);
+				break;
+			case 6: 
+	    		dc.drawText(x,y, font,getSteps(),align);
+	    		break;
+	    	case 7: 
+	    		dc.drawText(x,y, font,getCalories(),align);
+	    		break;
+			case 8: 
+	    		dc.drawText(x,y, font,getMsgs(true),align);
+	    		break;
+			case 9: 
+	    		dc.drawText(x,y, font,getBattery(),align);
+	    		break;
+    		case 10: 
+	    		dc.drawText(x,y, font,getHR(),align);
+	    		break;
+			case 11:
+				break;
+		}
+			
+    	if(debugDate){
+    		var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+    		for(var t=1;t<=12;t++){dc.drawText(x,y,font, Lang.format("$1$ $2$",[getMonthName(t),date.year]), align);}
+    	}
+        
 	}
 	
 	function drawHours(dc,hourX,hourY,adjX,adjY){
@@ -221,11 +253,19 @@ class helper {
 	}
 	
 	function drawTopRight(dc,x,y,stepY,daysForward){
-		if(showDays()){
-      		for(var day=0;day<daysForward;day++){
-	        	drawWeekDay2(dc,x,y+(stepY*day),day);
-	        }
-        }
+		switch(whatToShowAtRight()){
+			case 1:
+				for(var day=0;day<daysForward;day++){
+		        	drawWeekDay2(dc,x,y+(stepY*day),day);
+		        }
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+		}
 	}
 	
 	function drawLineByOption(dc,x,y,option){
