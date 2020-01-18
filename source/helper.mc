@@ -12,7 +12,8 @@ class helper {
 
 	var debug,debugDate;
 	var fontSmall,fontMedium,font;
-	var selectedFont; 
+	var selectedFont;
+	var shortFormat=true;
 	
 	function initialize(){
 		font = WatchUi.loadResource(Rez.Fonts.fntHuge); 
@@ -44,7 +45,7 @@ class helper {
 	}
 	
     function getSmallFont(){
-    	loadFont();
+    	//loadFont();
     	return fontSmall;
 	}
 	
@@ -143,16 +144,29 @@ class helper {
 	}
 	
 	function getSteps(){
-		if(debug){
-			return "99999stps";
+		if(shortFormat){
+			if(debug){
+				return "99999stps";
+			}
+			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,"stps"]);
 		}
-		return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,"stps"]);
+	
+		if(debug){
+			return "99999 steps";
+		}
+		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().steps,"steps"]);	
 	}
 	function getCalories(){
-		if(debug){
-			return "99999cal";
+		if(shortFormat){
+			if(debug){
+				return "99999cal";
+			}
+			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().calories,"cal"]);
 		}
-		return Lang.format("$1$$2$",[ActivityMonitor.getInfo().calories,"cal"]);
+		if(debug){
+			return "99999 calories";
+		}
+		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().calories,"calories"]);
 	}
 	function getConnection(){
 		var phone = System.getDeviceSettings().phoneConnected;
@@ -161,30 +175,48 @@ class helper {
 		}
 		return "phone -";
 	}
-	function getMsgs(force){
-		if(debug){
-			return "99msgs";
-		}
-		var ntfCount = System.getDeviceSettings().notificationCount;
-		if(ntfCount>0 || force){
+	function getMsgs(){
+		if(shortFormat){
+			if(debug){
+				return "99msgs";
+			}
+			var ntfCount = System.getDeviceSettings().notificationCount;	
 			return Lang.format("$1$$2$",[ntfCount, "msgs"]);
 		}
-		return "";
+		if(debug){
+			return "99 messages";
+		}
+		var ntfCount = System.getDeviceSettings().notificationCount;	
+		return Lang.format("$1$ $2$",[ntfCount, "messages"]);
 	}
 	
 	function getBattery(){
-		if(debug){
-			return "100%";
+		if(shortFormat){
+			if(debug){
+				return "100%";
+			}
+			return Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", ""]);
 		}
-		return Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", ""]);
+		if(debug){
+			return "100% battery";
+		}
+		return Lang.format("$1$ $2$",[System.getSystemStats().battery.format("%d")+"%","battery" ]);
 	}
 	
 	function getHR(){
-		var hr = Activity.getActivityInfo().currentHeartRate;
-		if(hr!=null){
-			return Lang.format("$1$$2$",[hr, "bpm"]);
+		if(shortFormat){
+			var hr = Activity.getActivityInfo().currentHeartRate;
+			if(hr!=null){
+				return Lang.format("$1$$2$",[hr, "bpm"]);
+			}
+			return "--bpm";
 		}
-		return "--bpm";
+		var hr = Activity.getActivityInfo().currentHeartRate;
+			if(hr!=null){
+				return Lang.format("$1$ $2$",[hr, "bpm"]);
+			}
+			return "-- bpm";
+		
 	}
 	
 	function drawTop(dc,x,y){
@@ -220,7 +252,7 @@ class helper {
 	    		dc.drawText(x,y, font,getCalories(),align);
 	    		break;
 			case 8: 
-	    		dc.drawText(x,y, font,getMsgs(true),align);
+	    		dc.drawText(x,y, font,getMsgs(),align);
 	    		break;
 			case 9: 
 	    		dc.drawText(x,y, font,getBattery(),align);
@@ -259,18 +291,26 @@ class helper {
 		}
 	}
 	
-	function drawTopRight(whatToSHow,dc,x,y,stepY,daysForward){
+	function bonusDayInTop(top){
+		if(top >=2 && top<=5){
+			return 1;
+		}
+		return 0;
+	}
+	
+	function drawTopRight(whatToSHow,dc,x,y,stepY,startday,daysForward){
 		var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 		var font = getSmallFont();
 		var align = Graphics.TEXT_JUSTIFY_LEFT;
 		switch(whatToSHow){
 			case 1:
+				var addDay = bonusDayInTop(whatToShowAtTop());
 				for(var day=0;day<daysForward;day++){
-		        	drawWeekDay2(dc,x,y+(stepY*day),day);
+		        	drawWeekDay2(dc,x,y+(stepY*day),startday+day+addDay);
 		        }
 				break;
 			case 2:
-				dc.drawText(x,y, font,getMsgs(true),align);
+				dc.drawText(x,y, font,getMsgs(),align);
 				dc.drawText(x,y+stepY, font,getConnection(),align);
 				if(daysForward>=3){
 					dc.drawText(x,y+stepY+stepY, font, Lang.format("$1$$2$,$3$",[getMonthName(date.month),date.day,date.year]), align);
@@ -288,33 +328,33 @@ class helper {
 		}
 	}
 	
-	function drawBottomLineByOption(dc,x,y,option){
+	function drawBottomLineByOption(dc,x,y,option,font){
 		switch(option){
 	    	case 1: 
-	    		dc.drawText(x,y, getSmallFont(),getSteps(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		dc.drawText(x,y, font,getSteps(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
 	    	case 2: 
-	    		dc.drawText(x,y, getSmallFont(),getCalories(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		dc.drawText(x,y, font,getCalories(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
 			case 3:
-	    		dc.drawText(x,y, getSmallFont(),getMsgs(true),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		dc.drawText(x,y, font,getMsgs(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
 			case 4: 
-	    		dc.drawText(x,y, getSmallFont(),getBattery(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		dc.drawText(x,y, font,getBattery(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
     		case 5: 
-	    		dc.drawText(x,y, getSmallFont(),getHR(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		dc.drawText(x,y, font,getHR(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
     		case 6: 
 	    		break;
 	    }
 	}
 	
-	function drawBottomLeft(dc,x,y,stepY){
+	function drawBottomLeft(dc,x,y,stepY,font){
 		if(showBottomLeft()){
-	        drawBottomLineByOption(dc,x,y,whatToShowAtBottomLeft());
-	        drawBottomLineByOption(dc,x,y+stepY,whatToShowAtBottomLeft2());
-	        drawBottomLineByOption(dc,x,y+stepY+stepY,whatToShowAtBottomLeft3());        	
+	        drawBottomLineByOption(dc,x,y,whatToShowAtBottomLeft(),font);
+	        drawBottomLineByOption(dc,x,y+stepY,whatToShowAtBottomLeft2(),font);
+	        drawBottomLineByOption(dc,x,y+stepY+stepY,whatToShowAtBottomLeft3(),font);        	
         }
 	}
 		

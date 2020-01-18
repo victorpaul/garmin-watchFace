@@ -18,7 +18,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	function draw_vivoactiveHR(dc){
     	var topRight=uiH.whatToShowAtRight();
     	
-    	uiH.drawTopRight(topRight,dc,88,-5,14,6);
+    	uiH.drawTopRight(topRight,dc,88,-5,14,0,6);
   		uiH.drawHours(dc,25,-32,40,0);
 		uiH.drawMinutes(dc,70,60,50,0);
 		
@@ -30,40 +30,40 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		var topRight=uiH.whatToShowAtRight();
 		
 		uiH.drawTopLeft(dc,107,-5);
-    	uiH.drawTopRight(topRight,dc,107,13,15,1);
+    	uiH.drawTopRight(topRight,dc,107,13,15,0,1);
   		uiH.drawHours(dc,28,-32,40,0);
 		uiH.drawMinutes(dc,125,3,50,0);
-		uiH.drawBottomLeft(dc,85,100,14);
+		uiH.drawBottomLeft(dc,85,100,14,uiH.getSmallFont());
 	}
 	
 	function draw_fr230_fr235(dc){
 		var topRight=uiH.whatToShowAtRight();
 		
       	uiH.drawTopLeft(dc,105,0);
-    	uiH.drawTopRight(topRight,dc,110,19,15,2);
+    	uiH.drawTopRight(topRight,dc,110,19,15,0,2);
   		uiH.drawHours(dc,35,-20,40,0);
 		uiH.drawMinutes(dc,130,25,50,0);
-		uiH.drawBottomLeft(dc,92,120,18);
+		uiH.drawBottomLeft(dc,92,120,18,uiH.getSmallFont());
 	}
 	
 	function draw_fenix3(dc){
         var topRight=uiH.whatToShowAtRight();
         
         uiH.drawTop(dc,110,5);
-        uiH.drawTopRight(topRight,dc,118,28,20,3);
+        uiH.drawTopRight(topRight,dc,118,28,20,0,3);
       	uiH.drawHours(dc,35,-2,45,0);
     	uiH.drawMinutes(dc,130,75,45,-20);
-		uiH.drawBottomLeft(dc,98,140,19);
+		uiH.drawBottomLeft(dc,98,140,19,uiH.getSmallFont());
 	}
 	
 	function draw_fr45(dc){	       
         var topRight=uiH.whatToShowAtRight();
         
         uiH.drawTop(dc,110,5);
-        uiH.drawTopRight(topRight,dc,115,25,20,3);
+        uiH.drawTopRight(topRight,dc,115,25,20,0,3);
       	uiH.drawHours(dc,35,-4,45,0);
     	uiH.drawMinutes(dc,121,70,45,-20);
-		uiH.drawBottomLeft(dc,93,136,16);
+		uiH.drawBottomLeft(dc,93,136,16,uiH.getSmallFont());
 	}
 	
 	function draw_fr245_fenix5x(dc) {
@@ -71,10 +71,10 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		var topRight=uiH.whatToShowAtRight();
 		
         uiH.drawTopFA(topCenter,dc,120,5,uiH.fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-        uiH.drawTopRight(topRight,dc,125,35,20,3);
+        uiH.drawTopRight(topRight,dc,125,35,20,0,3);
       	uiH.drawHours(dc,40,10,45,0);
     	uiH.drawMinutes(dc,145,80,45,-20);
-		uiH.drawBottomLeft(dc,108,155,19);
+		uiH.drawBottomLeft(dc,108,155,19,uiH.getSmallFont());
 	}
 		
 	function draw_fenix6(dc){
@@ -82,21 +82,27 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		var topRight=uiH.whatToShowAtRight();
 	
         uiH.drawTopFA(topCenter,dc,130,5,uiH.fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-        uiH.drawTopRight(topRight,dc,125,40,20,4);
-      	uiH.drawHours(dc,45,25,45,0);
-    	uiH.drawMinutes(dc,165,98, 45,-20);
-		uiH.drawBottomLeft(dc,125,175,19);
+        uiH.drawTopRight(topRight,dc,115,32,19,0,4);
+        if(topRight==1){
+        	uiH.drawTopRight(topRight,dc,180,50,19,4,3);
+        }
+        
+      	uiH.drawHours(dc,35,20,45,0);
+    	uiH.drawMinutes(dc,160,100, 45,-20);
+		uiH.drawBottomLeft(dc,125,165,19,uiH.getSmallFont());
 	}
 	
 	function draw_fenix6xpro(dc){
 		var topCenter=uiH.whatToShowAtTop();
 		var topRight=uiH.whatToShowAtRight();
-		    
         uiH.drawTopFA(topCenter,dc,125,10,uiH.fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-        uiH.drawTopRight(topRight,dc,140,40,20,5);
+        uiH.drawTopRight(topRight,dc,127,43,22,0,4);
+        if(topRight==1){
+        	uiH.drawTopRight(topRight,dc,191,52,22,4,3);
+        }
       	uiH.drawHours(dc,45,15,45,0);
     	uiH.drawMinutes(dc,185,120,45,-20);
-		uiH.drawBottomLeft(dc,145,170,19);
+		uiH.drawBottomLeft(dc,145,170,20,uiH.getSmallFont());
 	}
 	
     // Update the view
@@ -106,13 +112,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 //		System.println(System.getDeviceSettings().screenWidth);
 //		System.println(System.getDeviceSettings().screenHeight);
 //		System.println(System.getDeviceSettings().screenShape);
-
-//		var isInfoTop = uiH.showDays();	
-//		var isDate = uiH.showMonthYear();	
-//		var isInfoBottom = uiH.showBottomLeft();
-//		var option1 = uiH.whatToShowAtBottomLeft();	
-//		var option2 = uiH.whatToShowAtBottomLeft2();	
-//		var option3 = uiH.whatToShowAtBottomLeft3();
 		
 		if(uiH.ifScreen(148,205,3)){
 			draw_vivoactiveHR(dc);
@@ -143,6 +142,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 			return;
 		}
 		if(uiH.ifScreen(280,280,1)){
+			uiH.shortFormat = false;
 			draw_fenix6xpro(dc);	
 			return;
 		}
