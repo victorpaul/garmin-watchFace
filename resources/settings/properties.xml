@@ -1,7 +1,7 @@
 <properties>
 
-    <property id="BackgroundColor" type="number">0xFFFFFF</property>
-    <property id="ForegroundColor" type="number">0x000000</property>
+    <property id="BackgroundColor" type="number">0x000000</property>
+    <property id="ForegroundColor" type="number">0xFFFFFF</property>
     <property id="Font" type="number">3</property>
     
     <property id="WhatToShowAtTop" type="number">1</property>

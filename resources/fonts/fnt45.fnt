@@ -1,0 +1,14 @@
+info face="Julietta Messie" size=280 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=280 base=135 scaleW=256 scaleH=256 pages=1 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="fnt45_0.png"
+chars count=10
+char id=48   x=179   y=172   width=60    height=78    xoffset=-8    yoffset=68    xadvance=55    page=0  chnl=15
+char id=49   x=55    y=0     width=35    height=98    xoffset=0     yoffset=68    xadvance=40    page=0  chnl=15
+char id=50   x=179   y=90    width=61    height=81    xoffset=-1    yoffset=68    xadvance=67    page=0  chnl=15
+char id=51   x=67    y=99    width=62    height=87    xoffset=-10   yoffset=66    xadvance=60    page=0  chnl=15
+char id=52   x=130   y=98    width=48    height=87    xoffset=-1    yoffset=68    xadvance=49    page=0  chnl=15
+char id=53   x=0     y=100   width=66    height=88    xoffset=0     yoffset=68    xadvance=62    page=0  chnl=15
+char id=54   x=194   y=0     width=54    height=88    xoffset=0     yoffset=68    xadvance=63    page=0  chnl=15
+char id=55   x=0     y=0     width=54    height=99    xoffset=0     yoffset=68    xadvance=55    page=0  chnl=15
+char id=56   x=146   y=0     width=47    height=89    xoffset=0     yoffset=68    xadvance=58    page=0  chnl=15
+char id=57   x=91    y=0     width=54    height=97    xoffset=8     yoffset=68    xadvance=60    page=0  chnl=15

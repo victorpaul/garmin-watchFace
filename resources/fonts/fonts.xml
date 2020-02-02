@@ -15,5 +15,6 @@
     <font id="mediumKeyVirtue" filename="mediumKeyVirtue.fnt" antialias="true"/>
     <font id="smallKeyVirtue" filename="smallKeyVirtue.fnt" antialias="true"/>
     
+    <font id="fntHuge45" filename="fnt45.fnt" antialias="true"/>
     
 </resources>

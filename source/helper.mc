@@ -19,6 +19,14 @@ class helper {
 		font = WatchUi.loadResource(Rez.Fonts.fntHuge); 
 		loadFont();
 	}
+
+	function fontHuge245(){
+		return font;
+	}
+		
+	function fontHuge45(){
+		return WatchUi.loadResource(Rez.Fonts.fntHuge45);
+	}
 	
 	function loadFont(){
 		if(selectedFont != Application.getApp().getProperty("Font")){
@@ -271,23 +279,23 @@ class helper {
         
 	}
 	
-	function drawHours(dc,hourX,hourY,adjX,adjY){
+	function drawHours(dc,hourX,hourY,adjX,adjY,hugefont){
 		var hours = getHours();
-        dc.drawText(hourX,hourY,font,hours[0],Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(hourX+adjX,hourY+adjY,font,hours[1],Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(hourX,hourY,hugefont,hours[0],Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(hourX+adjX,hourY+adjY,hugefont,hours[1],Graphics.TEXT_JUSTIFY_CENTER);
         if(debug){
-	        for(var t=0;t<=2;t++){dc.drawText(hourX,hourY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
-	    	for(var t=0;t<=9;t++){dc.drawText(hourX+adjX,hourY+adjY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+	        for(var t=0;t<=2;t++){dc.drawText(hourX,hourY, hugefont, t, Graphics.TEXT_JUSTIFY_CENTER);}
+	    	for(var t=0;t<=9;t++){dc.drawText(hourX+adjX,hourY+adjY, hugefont, t, Graphics.TEXT_JUSTIFY_CENTER);}
 		}
 	}
 	
-	function drawMinutes(dc,minuteX,minuteY,adjX,adjY){
+	function drawMinutes(dc,minuteX,minuteY,adjX,adjY,hugefont){
     	var minutes = System.getClockTime().min.format("%02d").toCharArray();
-    	dc.drawText(minuteX,minuteY,font,minutes[0],Graphics.TEXT_JUSTIFY_CENTER);
-    	dc.drawText(minuteX+adjX,minuteY+adjY,font,minutes[1],Graphics.TEXT_JUSTIFY_CENTER);
+    	dc.drawText(minuteX,minuteY,hugefont,minutes[0],Graphics.TEXT_JUSTIFY_CENTER);
+    	dc.drawText(minuteX+adjX,minuteY+adjY,hugefont,minutes[1],Graphics.TEXT_JUSTIFY_CENTER);
     	if(debug){
-	    	for(var t=0;t<=5;t++){dc.drawText(minuteX,minuteY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
-	    	for(var t=0;t<=9;t++){dc.drawText(minuteX+adjX,minuteY+adjY, font, t, Graphics.TEXT_JUSTIFY_CENTER);}
+	    	for(var t=0;t<=5;t++){dc.drawText(minuteX,minuteY, hugefont, t, Graphics.TEXT_JUSTIFY_CENTER);}
+	    	for(var t=0;t<=9;t++){dc.drawText(minuteX+adjX,minuteY+adjY, hugefont, t, Graphics.TEXT_JUSTIFY_CENTER);}
 		}
 	}
 	
