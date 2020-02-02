@@ -349,6 +349,19 @@ class helper {
 	    		break;
 	    }
 	}
+
+	function getWeather(){
+//		System.println("location");
+//		System.println(Position.getInfo().position.lat);
+//		System.println(Position.getInfo().position.lon);
+//		
+//		var key = "ff16abd420297723c28169e6eab2b41a";
+//		var lat = 35;
+//		var long = 139;
+//		
+//		Lang.format("$1$$2$$3$",["https://samples.openweathermap.org/data/2.5/weather?lat=",lat,"&lon=",long,"&appid=",key]);
+		return "0"; 
+	}
 	
 	function drawBottomLeft(dc,x,y,stepY,font){
 		if(showBottomLeft()){

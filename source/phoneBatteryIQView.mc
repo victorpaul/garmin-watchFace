@@ -100,7 +100,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         if(topRight==1){
         	uiH.drawTopRight(topRight,dc,191,52,22,4,3);
         }
-      	uiH.drawHours(dc,45,15,45,0);
+      	uiH.drawHours(dc,45,20,45,0);
     	uiH.drawMinutes(dc,185,120,45,-20);
 		uiH.drawBottomLeft(dc,145,170,20,uiH.getSmallFont());
 	}
