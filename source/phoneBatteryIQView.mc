@@ -87,8 +87,8 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         	uiH.drawTopRight(topRight,dc,180,50,19,4,3);
         }
         
-      	uiH.drawHours(dc,35,-30,45,-20,uiH.fontHuge245());
-    	uiH.drawMinutes(dc,160,35, 45,-20,uiH.fontHuge245());
+      	uiH.drawHours(dc,35,-20,45,-20,uiH.fontHuge245());
+    	uiH.drawMinutes(dc,160,37, 45,-20,uiH.fontHuge245());
 		uiH.drawBottomLeft(dc,125,165,19,uiH.getSmallFont());
 	}
 	
@@ -100,7 +100,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         if(topRight==1){
         	uiH.drawTopRight(topRight,dc,191,52,22,4,3);
         }
-      	uiH.drawHours(dc,45,-25,45,-20,uiH.fontHuge245());
+      	uiH.drawHours(dc,45,-20,45,-20,uiH.fontHuge245());
     	uiH.drawMinutes(dc,185,45,45,-20,uiH.fontHuge245());
 		uiH.drawBottomLeft(dc,145,170,20,uiH.getSmallFont());
 	}
