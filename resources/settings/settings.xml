@@ -7,6 +7,7 @@
             <listEntry value="3">@Strings.Date3</listEntry>
             <listEntry value="4">@Strings.Date4</listEntry>
             <listEntry value="5">@Strings.Date5</listEntry>
+            <listEntry value="12">@Strings.Date6</listEntry>
             <listEntry value="6">@Strings.Steps</listEntry>
             <listEntry value="7">@Strings.Calories</listEntry>
             <listEntry value="8">@Strings.Messages</listEntry>
@@ -90,8 +91,12 @@
             <listEntry value="1">@Strings.Font1</listEntry>
             <listEntry value="2">@Strings.Font2</listEntry>
             <listEntry value="3">@Strings.Font3</listEntry>
-            <listEntry value="4">@Strings.Font4</listEntry>
         </settingConfig>
     </setting>
+    
+    <setting propertyKey="@Properties.UseOldFont" title="@Strings.UseOldFont">
+        <settingConfig type="boolean" />
+    </setting>   
+    
 
 </settings>

@@ -25,7 +25,6 @@
     <string id="Font1">font 1</string>
     <string id="Font2">font 2</string>
     <string id="Font3">font 3</string>
-    <string id="Font4">font 4</string>
     
     
     <string id="TopCenterInfo">Top center info</string>
@@ -34,6 +33,7 @@
     <string id="Date3">Month day, year</string>
     <string id="Date4">DD/MM/YYYY</string>
     <string id="Date5">MM/DD/YYYY</string>
+    <string id="Date6">Month week day</string>
     
     <string id="RightInfo">Right info</string>
     <string id="Calendar">Calendar</string>
@@ -49,5 +49,7 @@
     <string id="Messages">Messages count</string>
     <string id="Hr">Heart Rate</string>
     <string id="None">None</string>
+    
+    <string id="UseOldFont">Use old font for clock</string>
     
 </strings>

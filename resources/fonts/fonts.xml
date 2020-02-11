@@ -1,19 +1,14 @@
 <resources>
+    <font id="fntHugeOld" filename="old/fnt1.fnt" antialias="true"/>
     <font id="fntHuge" filename="fnt1.fnt" antialias="true"/>
     <font id="fntMedium" filename="fnt2.fnt" antialias="true"/>
     <font id="fntSmall" filename="fnt3.fnt" antialias="true"/>
     
-    <font id="hugeStiffBrush" filename="hugeStiffBrush.fnt" antialias="true"/>
     <font id="mediumStiffBrush" filename="mediumStiffBrush.fnt" antialias="true"/>    
     <font id="smallStiffBrush" filename="smallStiffBrush.fnt" antialias="true"/>
     
-    <font id="hugeJannScript" filename="hugeJannScript.fnt" antialias="true"/>
     <font id="mediumJannScript" filename="mediumJannScript.fnt" antialias="true"/>
     <font id="smallJannScript" filename="smallJannScript.fnt" antialias="true"/>
-    
-    <font id="hugeKeyVirtue" filename="hugeKeyVirtue.fnt" antialias="true"/>
-    <font id="mediumKeyVirtue" filename="mediumKeyVirtue.fnt" antialias="true"/>
-    <font id="smallKeyVirtue" filename="smallKeyVirtue.fnt" antialias="true"/>
     
     <font id="fntHuge45" filename="fnt45.fnt" antialias="true"/>
     

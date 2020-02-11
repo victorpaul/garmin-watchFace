@@ -12,6 +12,7 @@ class HelperTests {
 		Test.assertEqualMessage(1,uiH.bonusDayInTop(4),"Show next day if short full date is at top");
 		Test.assertEqualMessage(1,uiH.bonusDayInTop(5),"Show next day if short full date is at top");
 		Test.assertEqualMessage(0,uiH.bonusDayInTop(6),"Do not show next day if ssteps are at top");
+		Test.assertEqualMessage(1,uiH.bonusDayInTop(12),"Show next day if week day at top");
 		return true;	
 	}
 	
@@ -36,6 +37,15 @@ class HelperTests {
 	}
 	
 	(:test)
+	function success_get_y_correction_according_to_device(logger){
+		var uiH = new helper();
+		Test.assertEqualMessage(true,uiH.getYfixForOldFont_(true)>0,"For old font, there is always correction by Y");
+		Test.assertEqualMessage(0,uiH.getYfixForOldFont_(false),"For current font should not be any correction by Y");
+	
+		return true;
+	}
+	
+	(:test)
 	function success_draw_empty_top_right_block(logger){
 		var dc = new mockDC(logger);
 		var uiH = new helper();
@@ -56,10 +66,39 @@ class HelperTests {
 	}
 	
 	(:test)
+	function success_get_fonts_and_do_not_crash(logger){
+		var uiH = new helper();
+		uiH.fontSmall();
+		uiH.fontSmall_(0);
+		uiH.fontSmall_(1);
+		uiH.fontSmall_(2);
+		uiH.fontSmall_(3);
+		uiH.fontSmall_(4);
+		uiH.fontSmall_(5);
+		
+    	uiH.fontHuge245();
+    	uiH.fontHuge245_(true);
+    	uiH.fontHuge245_(false);
+    	
+    	uiH.fontHuge45();
+    	uiH.fontHuge45_(true);
+    	uiH.fontHuge45_(false);
+    	
+    	uiH.fontMedium();
+    	uiH.fontMedium_(0);
+    	uiH.fontMedium_(1);
+    	uiH.fontMedium_(2);
+    	uiH.fontMedium_(3);
+    	uiH.fontMedium_(4);
+    	uiH.fontMedium_(5);
+    	return true;
+	}
+	
+	(:test)
 	function success_draw_bottom_line(logger){
 		var dc = new mockDC(logger);
 		var uiH = new helper();
-		var font = uiH.getSmallFont();
+		var font = uiH.fontSmall();
     	uiH.drawBottomLineByOption(dc,88,-5,1,font);
     	uiH.drawBottomLineByOption(dc,88,-5,2,font);
     	uiH.drawBottomLineByOption(dc,88,-5,3,font);

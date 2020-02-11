@@ -11,50 +11,59 @@ using Toybox.Time.Gregorian;
 class helper {
 
 	var debug,debugDate;
-	var fontSmall,fontMedium,font;
-	var selectedFont;
 	var shortFormat=true;
 	
 	function initialize(){
-		font = WatchUi.loadResource(Rez.Fonts.fntHuge); 
-		loadFont();
+		
 	}
 
 	function fontHuge245(){
-		return font;
+		return fontHuge245_(useOldFont());
 	}
-		
+	function fontHuge245_(setting){
+		if(setting){
+			return WatchUi.loadResource(Rez.Fonts.fntHugeOld);	
+		}
+		return WatchUi.loadResource(Rez.Fonts.fntHuge);
+	}
+
 	function fontHuge45(){
+		fontHuge45_(useOldFont());
+	}
+	function fontHuge45_(setting){
+		if(setting){
+			return WatchUi.loadResource(Rez.Fonts.fntHugeOld);	
+		}
 		return WatchUi.loadResource(Rez.Fonts.fntHuge45);
 	}
 	
-	function loadFont(){
-		if(selectedFont != Application.getApp().getProperty("Font")){
-			selectedFont = Application.getApp().getProperty("Font");
-			switch(selectedFont){
-				case 1:
-					fontMedium = WatchUi.loadResource(Rez.Fonts.fntMedium);
-					fontSmall = WatchUi.loadResource(Rez.Fonts.fntSmall);
-					break;
-				case 2:
-					fontMedium = WatchUi.loadResource(Rez.Fonts.mediumJannScript);  // 36px
-        			fontSmall = WatchUi.loadResource(Rez.Fonts.smallJannScript);  // 26px
-					break;
-				case 3:
-					fontMedium = WatchUi.loadResource(Rez.Fonts.mediumStiffBrush); // 35px
-        			fontSmall = WatchUi.loadResource(Rez.Fonts.smallStiffBrush); // 26px
-					break;
-				case 4:
-					fontMedium = WatchUi.loadResource(Rez.Fonts.mediumKeyVirtue); // 35px
-        			fontSmall = WatchUi.loadResource(Rez.Fonts.smallKeyVirtue); // 26px
-        			break;
-			}
-    	}
+	function fontMedium(){
+		return fontMedium_(Application.getApp().getProperty("Font"));
+	}
+	function fontMedium_(setting){
+		switch(setting){
+			case 2:
+				return WatchUi.loadResource(Rez.Fonts.mediumJannScript);  // 36px
+			case 3:
+				return WatchUi.loadResource(Rez.Fonts.mediumStiffBrush); // 35px
+			default:
+				return WatchUi.loadResource(Rez.Fonts.fntMedium);
+		}
 	}
 	
-    function getSmallFont(){
-    	//loadFont();
-    	return fontSmall;
+	function fontSmall(){
+		return fontSmall_(Application.getApp().getProperty("Font"));
+	}
+	
+	function fontSmall_(setting){
+		switch(setting){
+			case 2:
+				return WatchUi.loadResource(Rez.Fonts.smallJannScript);  // 26px
+			case 3:
+				return WatchUi.loadResource(Rez.Fonts.smallStiffBrush); // 26px
+			default:
+				return WatchUi.loadResource(Rez.Fonts.fntSmall);
+		}
 	}
 	
 	function getHours() {
@@ -66,6 +75,9 @@ class helper {
 		return hours.format("%02d").toCharArray();
 	}
 	
+	function useOldFont(){
+		return Application.getApp().getProperty("UseOldFont");
+	}
 	
 	function showBottomLeft(){
 		return Application.getApp().getProperty("ShowBottomLeft");
@@ -133,7 +145,7 @@ class helper {
 		}       	
     	var day = Gregorian.info(time, Time.FORMAT_SHORT);    	
 
-    	dc.drawText(x,y, getSmallFont(), Lang.format(
+    	dc.drawText(x,y, fontSmall(), Lang.format(
 	    	"$1$ $2$",
 		    	[
 			        getWeekdayName(day.day_of_week),
@@ -228,11 +240,11 @@ class helper {
 	}
 	
 	function drawTop(dc,x,y){
-		drawTopFA(whatToShowAtTop(),dc,x,y,getSmallFont(),Graphics.TEXT_JUSTIFY_CENTER);
+		drawTopFA(whatToShowAtTop(),dc,x,y,fontSmall(),Graphics.TEXT_JUSTIFY_CENTER);
 	}
 	
 	function drawTopLeft(dc,x,y){
-		drawTopFA(whatToShowAtTop(),dc,x,y,getSmallFont(),Graphics.TEXT_JUSTIFY_LEFT);
+		drawTopFA(whatToShowAtTop(),dc,x,y,fontSmall(),Graphics.TEXT_JUSTIFY_LEFT);
 	}	        
 	
 	function drawTopFA(whatToSHow,dc,x,y,font,align){
@@ -252,6 +264,9 @@ class helper {
 				break;
 			case 5:
 	        	dc.drawText(x,y, font, Lang.format("$1$/$2$/$3$",[date.month,date.day,date.year]), align);
+				break;
+			case 12:
+	        	dc.drawText(x,y, font, Lang.format("$1$ $2$ $3$",[getMonthName(date.month),getWeekdayName(date.day_of_week),date.day]), align);
 				break;
 			case 6: 
 	    		dc.drawText(x,y, font,getSteps(),align);
@@ -279,7 +294,29 @@ class helper {
         
 	}
 	
+	function getYfixForOldFont(){
+		return getYfixForOldFont_(useOldFont());
+	}
+	
+	function getYfixForOldFont_(setting){
+		if(setting){
+			switch(System.getDeviceSettings().screenHeight){
+				case 205: return 35;
+				case 148: return 35;
+				case 180: return 20;
+				case 208: return 35;
+				case 218: return 25;
+				case 240: return 65;
+				case 260: return 65;
+				case 280: return 65;
+			}
+		}
+		return 0;
+	}
+	
 	function drawHours(dc,hourX,hourY,adjX,adjY,hugefont){
+		hourY+=getYfixForOldFont();	
+		
 		var hours = getHours();
         dc.drawText(hourX,hourY,hugefont,hours[0],Graphics.TEXT_JUSTIFY_CENTER);
         dc.drawText(hourX+adjX,hourY+adjY,hugefont,hours[1],Graphics.TEXT_JUSTIFY_CENTER);
@@ -290,6 +327,8 @@ class helper {
 	}
 	
 	function drawMinutes(dc,minuteX,minuteY,adjX,adjY,hugefont){
+		minuteY+=getYfixForOldFont();
+		
     	var minutes = System.getClockTime().min.format("%02d").toCharArray();
     	dc.drawText(minuteX,minuteY,hugefont,minutes[0],Graphics.TEXT_JUSTIFY_CENTER);
     	dc.drawText(minuteX+adjX,minuteY+adjY,hugefont,minutes[1],Graphics.TEXT_JUSTIFY_CENTER);
@@ -300,7 +339,7 @@ class helper {
 	}
 	
 	function bonusDayInTop(top){
-		if(top >=2 && top<=5){
+		if((top >=2 && top<=5) || top==12){
 			return 1;
 		}
 		return 0;
@@ -308,7 +347,7 @@ class helper {
 	
 	function drawTopRight(whatToSHow,dc,x,y,stepY,startday,daysForward){
 		var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-		var font = getSmallFont();
+		var font = fontSmall();
 		var align = Graphics.TEXT_JUSTIFY_LEFT;
 		switch(whatToSHow){
 			case 1:

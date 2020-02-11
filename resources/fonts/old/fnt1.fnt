@@ -1,0 +1,89 @@
+info face="Mustache Brush Script" size=170 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=170 base=123 scaleW=300 scaleH=300 pages=3 packed=0 alphaChnl=0 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="fnt1_0.png"
+page id=1 file="fnt1_1.png"
+page id=2 file="fnt1_2.png"
+chars count=10
+char id=48   x=187   y=0     width=57    height=170   xoffset=-1    yoffset=0     xadvance=57    page=1  chnl=15
+char id=49   x=245   y=0     width=36    height=170   xoffset=-5    yoffset=0     xadvance=33    page=1  chnl=15
+char id=50   x=0     y=0     width=64    height=170   xoffset=-4    yoffset=0     xadvance=61    page=1  chnl=15
+char id=51   x=127   y=0     width=59    height=170   xoffset=-5    yoffset=0     xadvance=58    page=1  chnl=15
+char id=52   x=0     y=0     width=57    height=170   xoffset=-2    yoffset=0     xadvance=51    page=2  chnl=15
+char id=53   x=0     y=0     width=77    height=170   xoffset=-4    yoffset=0     xadvance=70    page=0  chnl=15
+char id=54   x=78    y=0     width=72    height=170   xoffset=-4    yoffset=0     xadvance=59    page=0  chnl=15
+char id=55   x=224   y=0     width=67    height=170   xoffset=-11   yoffset=0     xadvance=50    page=0  chnl=15
+char id=56   x=65    y=0     width=61    height=170   xoffset=-4    yoffset=0     xadvance=51    page=1  chnl=15
+char id=57   x=151   y=0     width=72    height=170   xoffset=-2    yoffset=0     xadvance=66    page=0  chnl=15
+kernings count=72
+kerning first=48  second=56  amount=-6  
+kerning first=48  second=54  amount=-3  
+kerning first=48  second=53  amount=-3  
+kerning first=48  second=52  amount=-3  
+kerning first=48  second=49  amount=1   
+kerning first=48  second=50  amount=-2  
+kerning first=48  second=57  amount=5   
+kerning first=56  second=56  amount=-2  
+kerning first=56  second=54  amount=1   
+kerning first=56  second=50  amount=-4  
+kerning first=56  second=55  amount=2   
+kerning first=56  second=51  amount=5   
+kerning first=54  second=48  amount=-5  
+kerning first=54  second=56  amount=-9  
+kerning first=54  second=54  amount=-3  
+kerning first=54  second=53  amount=-7  
+kerning first=54  second=52  amount=-5  
+kerning first=54  second=49  amount=-7  
+kerning first=54  second=50  amount=-15 
+kerning first=54  second=57  amount=-7  
+kerning first=54  second=55  amount=-3  
+kerning first=53  second=56  amount=-2  
+kerning first=53  second=50  amount=-16 
+kerning first=53  second=51  amount=1   
+kerning first=52  second=48  amount=-4  
+kerning first=52  second=56  amount=-6  
+kerning first=52  second=54  amount=-5  
+kerning first=52  second=53  amount=-9  
+kerning first=52  second=52  amount=-6  
+kerning first=52  second=49  amount=2   
+kerning first=52  second=57  amount=4   
+kerning first=49  second=48  amount=-13 
+kerning first=49  second=56  amount=-15 
+kerning first=49  second=54  amount=-13 
+kerning first=49  second=53  amount=-14 
+kerning first=49  second=52  amount=-17 
+kerning first=49  second=49  amount=-1  
+kerning first=49  second=50  amount=-12 
+kerning first=49  second=57  amount=-7  
+kerning first=49  second=55  amount=-4  
+kerning first=49  second=51  amount=-2  
+kerning first=50  second=54  amount=4   
+kerning first=50  second=53  amount=4   
+kerning first=50  second=49  amount=3   
+kerning first=50  second=50  amount=-8  
+kerning first=50  second=57  amount=-5  
+kerning first=50  second=55  amount=3   
+kerning first=57  second=48  amount=-11 
+kerning first=57  second=56  amount=-14 
+kerning first=57  second=54  amount=-17 
+kerning first=57  second=53  amount=-15 
+kerning first=57  second=52  amount=-21 
+kerning first=57  second=50  amount=-3  
+kerning first=57  second=57  amount=-5  
+kerning first=57  second=51  amount=5   
+kerning first=55  second=48  amount=-12 
+kerning first=55  second=56  amount=-22 
+kerning first=55  second=54  amount=-25 
+kerning first=55  second=53  amount=-21 
+kerning first=55  second=52  amount=-23 
+kerning first=55  second=49  amount=-4  
+kerning first=55  second=50  amount=-11 
+kerning first=55  second=57  amount=-16 
+kerning first=55  second=51  amount=3   
+kerning first=51  second=48  amount=-3  
+kerning first=51  second=56  amount=-7  
+kerning first=51  second=54  amount=-2  
+kerning first=51  second=53  amount=-5  
+kerning first=51  second=49  amount=-2  
+kerning first=51  second=50  amount=-8  
+kerning first=51  second=55  amount=-4  
+kerning first=51  second=51  amount=-3  

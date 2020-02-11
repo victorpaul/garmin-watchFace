@@ -11,6 +11,7 @@
 	<property id="WhatToShowAtBottomLeft2" type="number">3</property>
 	<property id="WhatToShowAtBottomLeft3" type="number">4</property>
 	
+	<property id="UseOldFont" type="boolean">false</property>
 	
 
 </properties>
