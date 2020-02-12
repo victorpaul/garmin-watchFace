@@ -68,6 +68,7 @@ class HelperTests {
 	(:test)
 	function success_get_fonts_and_do_not_crash(logger){
 		var uiH = new helper();
+		logger.debug("asdasdasdasd");
 		uiH.fontSmall();
 		uiH.fontSmall_(0);
 		uiH.fontSmall_(1);
@@ -130,6 +131,33 @@ class HelperTests {
 		uiH.getBattery();
 		uiH.getHR();
 		return true;	
+	}
+	
+	(:test)
+	function success_get_days_of_week(logger){
+		var uiH = new helper();
+		uiH.getWeekdayName(1);
+		
+		Test.assertEqual("Sun",uiH.getWeekdayName_(1,1));
+		Test.assertEqual("Mon",uiH.getWeekdayName_(2,1));
+		Test.assertEqual("Tue",uiH.getWeekdayName_(3,1));
+		Test.assertEqual("Wed",uiH.getWeekdayName_(4,1));
+		Test.assertEqual("Thu",uiH.getWeekdayName_(5,1));
+		Test.assertEqual("Fri",uiH.getWeekdayName_(6,1));
+		Test.assertEqual("Sat",uiH.getWeekdayName_(7,1));
+		
+		Test.assertNotEqual("sun",uiH.getWeekdayName_(1,1));
+		Test.assertNotEqual("mon",uiH.getWeekdayName_(2,1));
+		
+		Test.assertEqual("sun",uiH.getWeekdayName_(1,2));
+		Test.assertEqual("mon",uiH.getWeekdayName_(2,2));
+		Test.assertEqual("tue",uiH.getWeekdayName_(3,2));
+		Test.assertEqual("wed",uiH.getWeekdayName_(4,2));
+		Test.assertEqual("thu",uiH.getWeekdayName_(5,2));
+		Test.assertEqual("fri",uiH.getWeekdayName_(6,2));
+		Test.assertEqual("sat",uiH.getWeekdayName_(7,2));
+		
+		return true;
 	}
 	
 

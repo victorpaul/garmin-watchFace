@@ -122,15 +122,30 @@ class helper {
 	}
 	
 	function getWeekdayName(number){
+		return getWeekdayName_(number,Application.getApp().getProperty("Font"));
+	}
+	
+	function getWeekdayName_(number,setting){
+		if(setting == 1){
+			switch(number){
+				case 1: return "Sun";
+				case 2: return "Mon";
+				case 3: return "Tue";
+				case 4: return "Wed";
+				case 5: return "Thu";
+				case 6: return "Fri";
+				case 7: return "Sat";			
+			}
+		}
 		
 		switch(number){
-			case 1: return "Sun";
-			case 2: return "Mon";
-			case 3: return "Tue";
-			case 4: return "Wed";
-			case 5: return "Thu";
-			case 6: return "Fri";
-			case 7: return "Sat";			
+			case 1: return "sun";
+			case 2: return "mon";
+			case 3: return "tue";
+			case 4: return "wed";
+			case 5: return "thu";
+			case 6: return "fri";
+			case 7: return "sat";			
 		}
 	}
 	

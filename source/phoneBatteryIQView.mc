@@ -11,7 +11,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         
         uiH = new helper();
         
-        uiH.debug = false;
+        uiH.debug = true;
 		uiH.debugDate = false;
     }
 	
@@ -59,22 +59,22 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	function draw_fr45(dc){
         var topRight=uiH.whatToShowAtRight();
         
-        uiH.drawTop(dc,110,5);
-        uiH.drawTopRight(topRight,dc,115,25,20,0,3);
+        uiH.drawTop(dc,110,8);
+        uiH.drawTopRight(topRight,dc,115,25,17,0,3);
       	uiH.drawHours(dc,35,-20,45,-10,uiH.fontHuge45());
     	uiH.drawMinutes(dc,121,30,45,-10,uiH.fontHuge45());
-		uiH.drawBottomLeft(dc,93,136,16,uiH.fontSmall());
+		uiH.drawBottomLeft(dc,93,136,17,uiH.fontSmall());
 	}
 	
 	function draw_fr245_fenix5x(dc) {
 		var topCenter=uiH.whatToShowAtTop();
 		var topRight=uiH.whatToShowAtRight();
 
-        uiH.drawTopFA(topCenter,dc,120,5,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
-        uiH.drawTopRight(topRight,dc,125,35,20,0,3);
+        uiH.drawTopFA(topCenter,dc,120,5,uiH.fontSmall(),Graphics.TEXT_JUSTIFY_CENTER);
+        uiH.drawTopRight(topRight,dc,125,25,20,0,3);
       	uiH.drawHours(dc,40,-40,45,-20,uiH.fontHuge245());
     	uiH.drawMinutes(dc,145,20,45,-20,uiH.fontHuge245());
-		uiH.drawBottomLeft(dc,108,155,19,uiH.fontSmall());
+		uiH.drawBottomLeft(dc,108,152,20,uiH.fontSmall());
 	}
 		
 	function draw_fenix6(dc){
@@ -96,9 +96,9 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		var topCenter=uiH.whatToShowAtTop();
 		var topRight=uiH.whatToShowAtRight();
         uiH.drawTopFA(topCenter,dc,133,10,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
-        uiH.drawTopRight(topRight,dc,127,43,22,0,4);
+        uiH.drawTopRight(topRight,dc,127,40,20,0,4);
         if(topRight==1){
-        	uiH.drawTopRight(topRight,dc,191,52,22,4,3);
+        	uiH.drawTopRight(topRight,dc,191,52,20,4,3);
         }
       	uiH.drawHours(dc,42,-30,45,-20,uiH.fontHuge245());
     	uiH.drawMinutes(dc,182,45,45,-20,uiH.fontHuge245());
