@@ -28,7 +28,7 @@ class helper {
 	}
 
 	function fontHuge45(){
-		fontHuge45_(useOldFont());
+		return fontHuge45_(useOldFont());
 	}
 	function fontHuge45_(setting){
 		if(setting){
