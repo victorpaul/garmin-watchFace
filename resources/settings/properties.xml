@@ -13,5 +13,7 @@
 	
 	<property id="UseOldFont" type="boolean">false</property>
 	
+	<property id="BTCOnnection" type="number">0</property>
+	
 
 </properties>

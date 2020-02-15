@@ -37,7 +37,7 @@
     
     <string id="RightInfo">Right info</string>
     <string id="Calendar">Calendar</string>
-    <string id="Phone">Phone</string>
+    
     <string id="Activity">Activity</string>
     
     <string id="BottomLeftInfo">Bottom left info. Line A</string>
@@ -51,5 +51,10 @@
     <string id="None">None</string>
     
     <string id="UseOldFont">Use old font for clock</string>
+    
+    <string id="BluetoothSetting">Show Bluetooth connection as:</string>
+    <string id="BToption1">SmartPhone</string>
+    <string id="BToption2">Mobile Phone</string>
+    <string id="BToption3">Old Phone</string>
     
 </strings>

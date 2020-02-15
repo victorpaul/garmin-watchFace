@@ -20,7 +20,6 @@
     <setting propertyKey="@Properties.WhatToShowAtRight" title="@Strings.RightInfo">
         <settingConfig type="list">
             <listEntry value="1">@Strings.Calendar</listEntry>
-            <listEntry value="2">@Strings.Phone</listEntry>
             <listEntry value="3">@Strings.Activity</listEntry>
             <listEntry value="4">@Strings.None</listEntry>
         </settingConfig>
@@ -96,7 +95,16 @@
     
     <setting propertyKey="@Properties.UseOldFont" title="@Strings.UseOldFont">
         <settingConfig type="boolean" />
-    </setting>   
+    </setting>
+    
+    <setting propertyKey="@Properties.BTCOnnection" title="@Strings.BluetoothSetting">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.None</listEntry>
+            <listEntry value="1">@Strings.BToption1</listEntry>
+            <listEntry value="2">@Strings.BToption2</listEntry>
+            <listEntry value="3">@Strings.BToption3</listEntry>
+        </settingConfig>
+    </setting>
     
 
 </settings>

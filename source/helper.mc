@@ -55,6 +55,13 @@ class helper {
 		return fontSmall_(Application.getApp().getProperty("Font"));
 	}
 	
+	function fontIcons(){
+		return WatchUi.loadResource(Rez.Fonts.icons);
+	}
+	function fontSmallIcons(){
+		return WatchUi.loadResource(Rez.Fonts.smallicons);
+	}
+	
 	function fontSmall_(setting){
 		switch(setting){
 			case 2:
@@ -103,8 +110,11 @@ class helper {
 		return Application.getApp().getProperty("WhatToShowAtBottomLeft3");
 	}
 	
-	function getMonthName(number){
-		
+	function bluetoothOption(){
+		return Application.getApp().getProperty("BTCOnnection");
+	}
+	
+	function getMonthName(number){		
 		switch(number){
 			case 1: return "Jan";
 			case 2: return "Feb";
@@ -117,7 +127,8 @@ class helper {
 			case 9: return "Sep";
 			case 10: return "Oct";
 			case 11: return "Nov";
-			case 12: return "Dec";			
+			case 12: return "Dec";
+			default: return "-";		
 		}
 	}
 	
@@ -134,7 +145,8 @@ class helper {
 				case 4: return "Wed";
 				case 5: return "Thu";
 				case 6: return "Fri";
-				case 7: return "Sat";			
+				case 7: return "Sat";
+				default: return "-";	
 			}
 		}
 		
@@ -145,11 +157,35 @@ class helper {
 			case 4: return "wed";
 			case 5: return "thu";
 			case 6: return "fri";
-			case 7: return "sat";			
+			case 7: return "sat";
+			default: return "-";		
 		}
 	}
 	
-	function drawWeekDay2(dc,x,y,offset){
+	function drawBluetoothConnectionSmall(dc,x,y){
+		drawBluetoothConnection_(dc,x,y,fontSmallIcons(),bluetoothOption());
+	}
+	
+	function drawBluetoothConnection(dc,x,y){
+		drawBluetoothConnection_(dc,x,y,fontIcons(),bluetoothOption());
+	}
+	
+	function drawBluetoothConnection_(dc,x,y,font,setting){
+		if(setting>0){
+			if(System.getDeviceSettings().phoneConnected){
+				var icon = "i";
+				if(setting == 2){
+					icon = "h";
+				}
+				if(setting == 3){
+					icon = "g";
+				}
+				dc.drawText(x,y, fontIcons(), icon, Graphics.TEXT_JUSTIFY_CENTER);
+			}
+		}
+	}
+	
+	function drawWeekDay2(dc,x,y,offset,font){
 		var time = null;
 		if(offset==0){
 			time = Time.now();
@@ -160,7 +196,7 @@ class helper {
 		}       	
     	var day = Gregorian.info(time, Time.FORMAT_SHORT);    	
 
-    	dc.drawText(x,y, fontSmall(), Lang.format(
+    	dc.drawText(x,y, font, Lang.format(
 	    	"$1$ $2$",
 		    	[
 			        getWeekdayName(day.day_of_week),
@@ -203,13 +239,7 @@ class helper {
 		}
 		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().calories,"calories"]);
 	}
-	function getConnection(){
-		var phone = System.getDeviceSettings().phoneConnected;
-		if(phone){
-			return "phone +";
-		}
-		return "phone -";
-	}
+	
 	function getMsgs(){
 		if(shortFormat){
 			if(debug){
@@ -324,6 +354,8 @@ class helper {
 				case 240: return 65;
 				case 260: return 65;
 				case 280: return 65;
+				case 390: return 65;
+				default:return 0;
 			}
 		}
 		return 0;
@@ -361,23 +393,19 @@ class helper {
 	}
 	
 	function drawTopRight(whatToSHow,dc,x,y,stepY,startday,daysForward){
+		drawTopRightFont(whatToSHow,dc,x,y,stepY,startday,daysForward,fontSmall());
+	}
+	function drawTopRightFont(whatToSHow,dc,x,y,stepY,startday,daysForward,font){
 		var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-		var font = fontSmall();
 		var align = Graphics.TEXT_JUSTIFY_LEFT;
 		switch(whatToSHow){
 			case 1:
 				var addDay = bonusDayInTop(whatToShowAtTop());
 				for(var day=0;day<daysForward;day++){
-		        	drawWeekDay2(dc,x,y+(stepY*day),startday+day+addDay);
+		        	drawWeekDay2(dc,x,y+(stepY*day),startday+day+addDay,font);
 		        }
 				break;
-			case 2:
-				dc.drawText(x,y, font,getMsgs(),align);
-				dc.drawText(x,y+stepY, font,getConnection(),align);
-				if(daysForward>=3){
-					dc.drawText(x,y+stepY+stepY, font, Lang.format("$1$$2$,$3$",[getMonthName(date.month),date.day,date.year]), align);
-				}	
-				break;
+			case 2:// deprecated, old shows connection to phone
 			case 3:
 				dc.drawText(x,y, font,getSteps(),align);
 	    		dc.drawText(x,y+stepY, font,getCalories(),align);
@@ -386,6 +414,7 @@ class helper {
 				}
 				break;
 			case 4:
+			default:
 				break;
 		}
 	}
@@ -407,7 +436,8 @@ class helper {
     		case 5: 
 	    		dc.drawText(x,y, font,getHR(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
-    		case 6: 
+    		case 6:
+    		default:
 	    		break;
 	    }
 	}

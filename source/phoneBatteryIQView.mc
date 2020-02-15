@@ -23,7 +23,9 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		uiH.drawMinutes(dc,70,30,50,0,uiH.fontHuge45());
 		
 		dc.drawText(2,130, uiH.fontSmall(),uiH.getBattery(), Graphics.TEXT_JUSTIFY_LEFT);
-		dc.drawText(2,150, uiH.fontSmall(),uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);    	
+		dc.drawText(2,150, uiH.fontSmall(),uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);
+		
+		uiH.drawBluetoothConnectionSmall(dc,12,178);
 	}
 	
 	function draw_fr920xt(dc){
@@ -44,6 +46,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
   		uiH.drawHours(dc,35,-35,40,0,uiH.fontHuge45());
 		uiH.drawMinutes(dc,125,3,50,0,uiH.fontHuge45());
 		uiH.drawBottomLeft(dc,92,120,18,uiH.fontSmall());
+		uiH.drawBluetoothConnectionSmall(dc,135,152);
 	}
 	
 	function draw_fenix3(dc){
@@ -54,6 +57,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
       	uiH.drawHours(dc,35,-15,45,-10,uiH.fontHuge45());
     	uiH.drawMinutes(dc,130,35,45,-10,uiH.fontHuge45());
 		uiH.drawBottomLeft(dc,98,140,19,uiH.fontSmall());
+		uiH.drawBluetoothConnectionSmall(dc,210,110);
 	}
 	
 	function draw_fr45(dc){
@@ -64,6 +68,8 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
       	uiH.drawHours(dc,35,-20,45,-10,uiH.fontHuge45());
     	uiH.drawMinutes(dc,121,30,45,-10,uiH.fontHuge45());
 		uiH.drawBottomLeft(dc,93,136,17,uiH.fontSmall());
+		
+		uiH.drawBluetoothConnectionSmall(dc,199,108);
 	}
 	
 	function draw_fr245_fenix5x(dc) {
@@ -75,6 +81,8 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
       	uiH.drawHours(dc,40,-40,45,-20,uiH.fontHuge245());
     	uiH.drawMinutes(dc,145,20,45,-20,uiH.fontHuge245());
 		uiH.drawBottomLeft(dc,108,152,20,uiH.fontSmall());
+		
+		uiH.drawBluetoothConnection(dc,135,84);
 	}
 		
 	function draw_fenix6(dc){
@@ -90,6 +98,8 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
       	uiH.drawHours(dc,35,-20,45,-20,uiH.fontHuge245());
     	uiH.drawMinutes(dc,160,37, 45,-20,uiH.fontHuge245());
 		uiH.drawBottomLeft(dc,125,165,19,uiH.fontSmall());
+		
+		uiH.drawBluetoothConnection(dc,120,225);
 	}
 	
 	function draw_fenix6xpro(dc){
@@ -103,6 +113,23 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
       	uiH.drawHours(dc,42,-30,45,-20,uiH.fontHuge245());
     	uiH.drawMinutes(dc,182,45,45,-20,uiH.fontHuge245());
 		uiH.drawBottomLeft(dc,145,170,20,uiH.fontSmall());
+		uiH.drawBluetoothConnection(dc,140,245);
+	}
+	
+	function draw_venu(dc){
+		uiH.drawBluetoothConnection(dc,195,350);
+		
+		var topCenter=uiH.whatToShowAtTop();
+		var topRight=uiH.whatToShowAtRight();
+        uiH.drawTopFA(topCenter,dc,195,20,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+        
+        uiH.drawTopRightFont(topRight,dc,190,45,25,0,4,uiH.fontMedium());
+        if(topRight==1){
+        	uiH.drawTopRightFont(topRight,dc,280,60,25,4,3,uiH.fontMedium());
+        }
+      	uiH.drawHours(dc,80,10,60,-20,uiH.fontHuge245());
+    	uiH.drawMinutes(dc,260,90,60,-20,uiH.fontHuge245());
+		uiH.drawBottomLeft(dc,195,230,25,uiH.fontMedium());
 	}
 	
     // Update the view
@@ -144,6 +171,11 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		if(uiH.ifScreen(280,280,1)){
 			uiH.shortFormat = false;
 			draw_fenix6xpro(dc);	
+			return;
+		}
+		if(uiH.ifScreen(390,390,1)){
+			uiH.shortFormat = false;
+			draw_venu(dc);	
 			return;
 		}
 

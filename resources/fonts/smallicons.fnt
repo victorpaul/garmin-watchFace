@@ -1,0 +1,9 @@
+info face="PeaxDrawnIcons" size=30 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=30 base=23 scaleW=256 scaleH=256 pages=1 packed=0 alphaChnl=0 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="smallicons_0.png"
+chars count=5
+char id=56   x=34    y=0     width=23    height=18    xoffset=0     yoffset=2     xadvance=25    page=0  chnl=15
+char id=102  x=58    y=0     width=23    height=17    xoffset=-1    yoffset=7     xadvance=24    page=0  chnl=15
+char id=103  x=82    y=0     width=22    height=17    xoffset=1     yoffset=8     xadvance=25    page=0  chnl=15
+char id=104  x=16    y=0     width=17    height=21    xoffset=0     yoffset=4     xadvance=19    page=0  chnl=15
+char id=105  x=0     y=0     width=15    height=22    xoffset=1     yoffset=2     xadvance=18    page=0  chnl=15

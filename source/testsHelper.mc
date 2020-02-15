@@ -3,6 +3,28 @@ using Toybox.Test;
 class HelperTests {
 
 	(:test)
+	function success_get_month_name(logger){
+		var uiH = new helper();
+		
+		Test.assertEqual("-",uiH.getMonthName(0));
+		Test.assertEqual("Jan",uiH.getMonthName(1));
+		Test.assertEqual("Feb",uiH.getMonthName(2));
+		Test.assertEqual("Mar",uiH.getMonthName(3));
+		Test.assertEqual("Apr",uiH.getMonthName(4));
+		Test.assertEqual("May",uiH.getMonthName(5));
+		Test.assertEqual("Jun",uiH.getMonthName(6));
+		Test.assertEqual("Jul",uiH.getMonthName(7));
+		Test.assertEqual("Aug",uiH.getMonthName(8));
+		Test.assertEqual("Sep",uiH.getMonthName(9));
+		Test.assertEqual("Oct",uiH.getMonthName(10));
+		Test.assertEqual("Nov",uiH.getMonthName(11));
+		Test.assertEqual("Dec",uiH.getMonthName(12));
+		Test.assertEqual("-",uiH.getMonthName(13));
+		
+		return true;
+	}
+
+	(:test)
 	function success_pop_calendar_on_a_day_if_day_int_top_info(logger){
 		var uiH = new helper();
 		
@@ -50,10 +72,12 @@ class HelperTests {
 		var dc = new mockDC(logger);
 		var uiH = new helper();
 	
+		uiH.drawTopRight(0,dc,88,-5,14,0,3);
     	uiH.drawTopRight(1,dc,88,-5,14,0,3);
     	uiH.drawTopRight(2,dc,88,-5,14,0,3);
     	uiH.drawTopRight(3,dc,88,-5,14,0,3);
     	uiH.drawTopRight(4,dc,88,-5,14,0,3);
+    	uiH.drawTopRight(5,dc,88,-5,14,0,3);
     	
 //    	logger.debug(dc.calls);
 //    	
@@ -92,6 +116,9 @@ class HelperTests {
     	uiH.fontMedium_(3);
     	uiH.fontMedium_(4);
     	uiH.fontMedium_(5);
+    	
+    	uiH.fontSmallIcons();
+    	uiH.fontIcons();
     	return true;
 	}
 	
@@ -106,6 +133,9 @@ class HelperTests {
     	uiH.drawBottomLineByOption(dc,88,-5,4,font);    		
     	uiH.drawBottomLineByOption(dc,88,-5,5,font);
     	uiH.drawBottomLineByOption(dc,88,-5,6,font);
+    	uiH.drawBottomLineByOption(dc,88,-5,7,font);
+    	uiH.drawBottomLineByOption(dc,88,-5,8,font);
+    	uiH.drawBottomLineByOption(dc,88,-5,0,font);
     	return true;
 	}
 	
@@ -134,10 +164,27 @@ class HelperTests {
 	}
 	
 	(:test)
+	function success_draw_bluetooth_options(logger){
+		var uiH = new helper();
+		var dc = new mockDC(logger);
+		
+		uiH.drawBluetoothConnectionSmall(dc,0,0);
+		uiH.drawBluetoothConnection(dc,0,0);
+		
+		uiH.drawBluetoothConnection_(dc,10,10,uiH.fontIcons(),0);
+		uiH.drawBluetoothConnection_(dc,10,10,uiH.fontIcons(),1);
+		uiH.drawBluetoothConnection_(dc,10,10,uiH.fontIcons(),2);
+		uiH.drawBluetoothConnection_(dc,10,10,uiH.fontIcons(),3);
+		uiH.drawBluetoothConnection_(dc,10,10,uiH.fontIcons(),4);
+		return true;	
+	}
+	
+	(:test)
 	function success_get_days_of_week(logger){
 		var uiH = new helper();
 		uiH.getWeekdayName(1);
 		
+		Test.assertEqual("-",uiH.getWeekdayName_(0,1));
 		Test.assertEqual("Sun",uiH.getWeekdayName_(1,1));
 		Test.assertEqual("Mon",uiH.getWeekdayName_(2,1));
 		Test.assertEqual("Tue",uiH.getWeekdayName_(3,1));
@@ -145,10 +192,12 @@ class HelperTests {
 		Test.assertEqual("Thu",uiH.getWeekdayName_(5,1));
 		Test.assertEqual("Fri",uiH.getWeekdayName_(6,1));
 		Test.assertEqual("Sat",uiH.getWeekdayName_(7,1));
+		Test.assertEqual("-",uiH.getWeekdayName_(8,1));
 		
 		Test.assertNotEqual("sun",uiH.getWeekdayName_(1,1));
 		Test.assertNotEqual("mon",uiH.getWeekdayName_(2,1));
 		
+		Test.assertEqual("-",uiH.getWeekdayName_(0,2));
 		Test.assertEqual("sun",uiH.getWeekdayName_(1,2));
 		Test.assertEqual("mon",uiH.getWeekdayName_(2,2));
 		Test.assertEqual("tue",uiH.getWeekdayName_(3,2));
@@ -156,6 +205,7 @@ class HelperTests {
 		Test.assertEqual("thu",uiH.getWeekdayName_(5,2));
 		Test.assertEqual("fri",uiH.getWeekdayName_(6,2));
 		Test.assertEqual("sat",uiH.getWeekdayName_(7,2));
+		Test.assertEqual("-",uiH.getWeekdayName_(8,2));
 		
 		return true;
 	}

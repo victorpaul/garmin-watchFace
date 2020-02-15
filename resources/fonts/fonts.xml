@@ -11,5 +11,7 @@
     <font id="smallJannScript" filename="smallJannScript.fnt" antialias="true"/>
     
     <font id="fntHuge45" filename="fnt45.fnt" antialias="true"/>
+    <font id="icons" filename="icons.fnt" antialias="true" filter="fghi8"/>
+    <font id="smallicons" filename="smallicons.fnt" antialias="true" filter="fghi8"/>
     
 </resources>
