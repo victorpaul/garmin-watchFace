@@ -210,5 +210,21 @@ class HelperTests {
 		return true;
 	}
 	
+	(:test)
+	function success_get_analog_position(logger){
+		var uiH = new helper();
+		
+		for(var m=0;m<60;m++){
+			var xy = uiH.getAnalogClockPosition(60,m,100,100);
+			Test.assertEqual(true,xy[0]!=0 || xy[1]!=0);
+		}	
+		for(var h=0;h<24;h++){
+			var xy = uiH.getAnalogClockPosition(24,h,100,100);
+			Test.assertEqual(true,xy[0]!=0 || xy[1]!=0);
+		}
+		
+		return true;
+	}
+	
 
 }	

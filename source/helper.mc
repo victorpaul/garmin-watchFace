@@ -469,5 +469,31 @@ class helper {
 			screenHeight == System.getDeviceSettings().screenHeight &&	
 			screenShape == System.getDeviceSettings().screenShape;
 	}
+	
+	function canBurn(){
+		var sys = System.getDeviceSettings();
+        if(sys has :requiresBurnInProtection) {
+        	return sys.requiresBurnInProtection;        	
+        }
+        return false;
+	}
+	
+	function setColorsOled(dc,inLowPower){
+		if(inLowPower){
+			dc.setColor(Graphics.COLOR_BLACK,Graphics.COLOR_BLACK);
+   			dc.clear();
+   			dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
+		}else{
+			setColors(dc);
+		}
+	}
+	
+	function getAnalogClockPosition(step,value,radiusX,radiusY){
+		var r = (360/step) * value;
+		var radians=Math.toRadians(r);
+		var x = Math.cos(radians)*radiusX;
+		var y = Math.sin(radians)*radiusY;
+		return [x,y];
+	}
 
 }
