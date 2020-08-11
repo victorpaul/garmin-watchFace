@@ -1,5 +1,5 @@
 <settings>
-	
+
     <setting propertyKey="@Properties.WhatToShowAtTop" title="@Strings.TopCenterInfo">
         <settingConfig type="list">
             <listEntry value="1">@Strings.Date1</listEntry>
@@ -10,13 +10,14 @@
             <listEntry value="12">@Strings.Date6</listEntry>
             <listEntry value="6">@Strings.Steps</listEntry>
             <listEntry value="7">@Strings.Calories</listEntry>
+            <listEntry value="13">@Strings.ActiveCalories</listEntry>
             <listEntry value="8">@Strings.Messages</listEntry>
             <listEntry value="9">@Strings.Battery</listEntry>
             <listEntry value="10">@Strings.Hr</listEntry>
             <listEntry value="11">@Strings.None</listEntry>
         </settingConfig>
     </setting>
-    
+
     <setting propertyKey="@Properties.WhatToShowAtRight" title="@Strings.RightInfo">
         <settingConfig type="list">
             <listEntry value="1">@Strings.Calendar</listEntry>
@@ -24,14 +25,15 @@
             <listEntry value="4">@Strings.None</listEntry>
         </settingConfig>
     </setting>
-    
+
     <setting propertyKey="@Properties.ShowBottomLeft" title="@Strings.ShowBottomLeft">
         <settingConfig type="boolean" />
-    </setting>    
+    </setting>
     <setting propertyKey="@Properties.WhatToShowAtBottomLeft" title="@Strings.BottomLeftInfo">
         <settingConfig type="list">
             <listEntry value="1">@Strings.Steps</listEntry>
             <listEntry value="2">@Strings.Calories</listEntry>
+            <listEntry value="7">@Strings.ActiveCalories</listEntry>
             <listEntry value="3">@Strings.Messages</listEntry>
             <listEntry value="4">@Strings.Battery</listEntry>
             <listEntry value="5">@Strings.Hr</listEntry>
@@ -42,6 +44,7 @@
         <settingConfig type="list">
             <listEntry value="1">@Strings.Steps</listEntry>
             <listEntry value="2">@Strings.Calories</listEntry>
+            <listEntry value="7">@Strings.ActiveCalories</listEntry>
             <listEntry value="3">@Strings.Messages</listEntry>
             <listEntry value="4">@Strings.Battery</listEntry>
             <listEntry value="5">@Strings.Hr</listEntry>
@@ -52,13 +55,14 @@
         <settingConfig type="list">
             <listEntry value="1">@Strings.Steps</listEntry>
             <listEntry value="2">@Strings.Calories</listEntry>
+            <listEntry value="7">@Strings.ActiveCalories</listEntry>
             <listEntry value="3">@Strings.Messages</listEntry>
             <listEntry value="4">@Strings.Battery</listEntry>
             <listEntry value="5">@Strings.Hr</listEntry>
             <listEntry value="6">@Strings.None</listEntry>
         </settingConfig>
     </setting>
-    
+
     <setting propertyKey="@Properties.BackgroundColor" title="@Strings.BackgroundColorTitle">
         <settingConfig type="list">
             <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
@@ -84,7 +88,7 @@
             <listEntry value="0xFFF000">@Strings.ColorYellow</listEntry>
         </settingConfig>
     </setting>
-    
+
     <setting propertyKey="@Properties.Font" title="@Strings.Font">
         <settingConfig type="list">
             <listEntry value="1">@Strings.Font1</listEntry>
@@ -92,11 +96,11 @@
             <listEntry value="3">@Strings.Font3</listEntry>
         </settingConfig>
     </setting>
-    
+
     <setting propertyKey="@Properties.UseOldFont" title="@Strings.UseOldFont">
         <settingConfig type="boolean" />
     </setting>
-    
+
     <setting propertyKey="@Properties.BTCOnnection" title="@Strings.BluetoothSetting">
         <settingConfig type="list">
             <listEntry value="0">@Strings.None</listEntry>
@@ -105,6 +109,6 @@
             <listEntry value="3">@Strings.BToption3</listEntry>
         </settingConfig>
     </setting>
-    
+
 
 </settings>

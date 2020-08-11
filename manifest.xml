@@ -59,7 +59,9 @@
             <iq:product id="vivoactive_hr"/>
             <iq:product id="vivolife"/>
         </iq:products>
-        <iq:permissions/>
+        <iq:permissions>
+            <iq:uses-permission id="UserProfile"/>
+        </iq:permissions>
         <iq:languages>
             <iq:language>eng</iq:language>
         </iq:languages>

@@ -1,6 +1,6 @@
 <strings>
     <string id="AppName">Chalk Watch</string>
-    
+
     <string id="BackgroundColorTitle">Background Color</string>
     <string id="ForegroundColorTitle">Foreground Color</string>
     <string id="Use12Hours">12 hours format</string>
@@ -16,17 +16,17 @@
     <string id="ColorWhite">White</string>
     <string id="ColorBlue">Blue</string>
     <string id="ColorRed">Red</string>
-    
+
     <string id="ColorGreen">Green</string>
     <string id="ColorOrange">Orange</string>
     <string id="ColorYellow">Yellow</string>
-    
+
     <string id="Font">Small text font</string>
     <string id="Font1">font 1</string>
     <string id="Font2">font 2</string>
     <string id="Font3">font 3</string>
-    
-    
+
+
     <string id="TopCenterInfo">Top center info</string>
     <string id="Date1">Month year</string>
     <string id="Date2">Month day</string>
@@ -34,27 +34,28 @@
     <string id="Date4">DD/MM/YYYY</string>
     <string id="Date5">MM/DD/YYYY</string>
     <string id="Date6">Month week day</string>
-    
+
     <string id="RightInfo">Right info</string>
     <string id="Calendar">Calendar</string>
-    
+
     <string id="Activity">Activity</string>
-    
+
     <string id="BottomLeftInfo">Bottom left info. Line A</string>
     <string id="BottomLeftInfo2">Bottom left info. Line B</string>
     <string id="BottomLeftInfo3">Bottom left info. Line C</string>
     <string id="Steps">Steps</string>
     <string id="Calories">Calories</string>
+    <string id="ActiveCalories">Active Calories (approx)</string>
     <string id="Battery">Battery</string>
     <string id="Messages">Messages count</string>
     <string id="Hr">Heart Rate</string>
     <string id="None">None</string>
-    
+
     <string id="UseOldFont">Use old font for clock</string>
-    
+
     <string id="BluetoothSetting">Show Bluetooth connection as:</string>
     <string id="BToption1">SmartPhone</string>
     <string id="BToption2">Mobile Phone</string>
     <string id="BToption3">Old Phone</string>
-    
+
 </strings>
