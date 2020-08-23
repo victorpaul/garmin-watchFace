@@ -260,7 +260,7 @@ class helper {
 			  (6.755 * (now.year - profile.birthYear));
 			break;
 		}
-		bmr = bmr * 1.2; // Garmin adjustment
+		bmr = bmr * 1.207; // Garmin adjustment
 		var bmrSoFar = (bmr * daySoFar).toNumber();
 		var activeCalories = 0;
 		if (bmrSoFar > 0 &&
