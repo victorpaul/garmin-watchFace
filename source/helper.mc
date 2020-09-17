@@ -4,6 +4,7 @@ using Toybox.System;
 using Toybox.Lang;
 using Toybox.ActivityMonitor;
 using Toybox.Application;
+using Toybox.UserProfile;
 
 using Toybox.Time;
 using Toybox.Time.Gregorian;
@@ -12,9 +13,9 @@ class helper {
 
 	var debug,debugDate;
 	var shortFormat=true;
-	
+
 	function initialize(){
-		
+
 	}
 
 	function fontHuge245(){
@@ -22,7 +23,7 @@ class helper {
 	}
 	function fontHuge245_(setting){
 		if(setting){
-			return WatchUi.loadResource(Rez.Fonts.fntHugeOld);	
+			return WatchUi.loadResource(Rez.Fonts.fntHugeOld);
 		}
 		return WatchUi.loadResource(Rez.Fonts.fntHuge);
 	}
@@ -32,11 +33,11 @@ class helper {
 	}
 	function fontHuge45_(setting){
 		if(setting){
-			return WatchUi.loadResource(Rez.Fonts.fntHugeOld);	
+			return WatchUi.loadResource(Rez.Fonts.fntHugeOld);
 		}
 		return WatchUi.loadResource(Rez.Fonts.fntHuge45);
 	}
-	
+
 	function fontMedium(){
 		return fontMedium_(Application.getApp().getProperty("Font"));
 	}
@@ -50,18 +51,18 @@ class helper {
 				return WatchUi.loadResource(Rez.Fonts.fntMedium);
 		}
 	}
-	
+
 	function fontSmall(){
 		return fontSmall_(Application.getApp().getProperty("Font"));
 	}
-	
+
 	function fontIcons(){
 		return WatchUi.loadResource(Rez.Fonts.icons);
 	}
 	function fontSmallIcons(){
 		return WatchUi.loadResource(Rez.Fonts.smallicons);
 	}
-	
+
 	function fontSmall_(setting){
 		switch(setting){
 			case 2:
@@ -72,7 +73,7 @@ class helper {
 				return WatchUi.loadResource(Rez.Fonts.fntSmall);
 		}
 	}
-	
+
 	function getHours() {
 		var hours = System.getClockTime().hour;
 		var clockMode = System.getDeviceSettings().is24Hour;
@@ -81,40 +82,40 @@ class helper {
 		}
 		return hours.format("%02d").toCharArray();
 	}
-	
+
 	function useOldFont(){
 		return Application.getApp().getProperty("UseOldFont");
 	}
-	
+
 	function showBottomLeft(){
 		return Application.getApp().getProperty("ShowBottomLeft");
 	}
-	
+
 	function whatToShowAtTop(){
 		return Application.getApp().getProperty("WhatToShowAtTop");
 	}
-	
+
 	function whatToShowAtRight(){
 		return Application.getApp().getProperty("WhatToShowAtRight");
 	}
-	
+
 	function whatToShowAtBottomLeft(){
 		return Application.getApp().getProperty("WhatToShowAtBottomLeft");
 	}
-	
+
 	function whatToShowAtBottomLeft2(){
 		return Application.getApp().getProperty("WhatToShowAtBottomLeft2");
 	}
-	
+
 	function whatToShowAtBottomLeft3(){
 		return Application.getApp().getProperty("WhatToShowAtBottomLeft3");
 	}
-	
+
 	function bluetoothOption(){
 		return Application.getApp().getProperty("BTCOnnection");
 	}
-	
-	function getMonthName(number){		
+
+	function getMonthName(number){
 		switch(number){
 			case 1: return "Jan";
 			case 2: return "Feb";
@@ -128,14 +129,14 @@ class helper {
 			case 10: return "Oct";
 			case 11: return "Nov";
 			case 12: return "Dec";
-			default: return "-";		
+			default: return "-";
 		}
 	}
-	
+
 	function getWeekdayName(number){
 		return getWeekdayName_(number,Application.getApp().getProperty("Font"));
 	}
-	
+
 	function getWeekdayName_(number,setting){
 		if(setting == 1){
 			switch(number){
@@ -146,10 +147,10 @@ class helper {
 				case 5: return "Thu";
 				case 6: return "Fri";
 				case 7: return "Sat";
-				default: return "-";	
+				default: return "-";
 			}
 		}
-		
+
 		switch(number){
 			case 1: return "sun";
 			case 2: return "mon";
@@ -158,18 +159,18 @@ class helper {
 			case 5: return "thu";
 			case 6: return "fri";
 			case 7: return "sat";
-			default: return "-";		
+			default: return "-";
 		}
 	}
-	
+
 	function drawBluetoothConnectionSmall(dc,x,y){
 		drawBluetoothConnection_(dc,x,y,fontSmallIcons(),bluetoothOption());
 	}
-	
+
 	function drawBluetoothConnection(dc,x,y){
 		drawBluetoothConnection_(dc,x,y,fontIcons(),bluetoothOption());
 	}
-	
+
 	function drawBluetoothConnection_(dc,x,y,font,setting){
 		if(setting>0){
 			if(System.getDeviceSettings().phoneConnected){
@@ -184,7 +185,7 @@ class helper {
 			}
 		}
 	}
-	
+
 	function drawWeekDay2(dc,x,y,offset,font){
 		var time = null;
 		if(offset==0){
@@ -193,19 +194,19 @@ class helper {
 			time = Time.now().subtract(new Time.Duration(3600 *24 * (-offset)));
 		}else if (offset>0){
 			time = Time.now().add(new Time.Duration(3600 *24 * offset));
-		}       	
-    	var day = Gregorian.info(time, Time.FORMAT_SHORT);    	
+		}
+    	var day = Gregorian.info(time, Time.FORMAT_SHORT);
 
     	dc.drawText(x,y, font, Lang.format(
 	    	"$1$ $2$",
 		    	[
 			        getWeekdayName(day.day_of_week),
 			        day.day.format("%02d")
-			        
+
 			    ]
 			), Graphics.TEXT_JUSTIFY_LEFT);
 	}
-	
+
 	function setColors(dc){
 		var bgColor = Application.getApp().getProperty("BackgroundColor");
         var fgColor = Application.getApp().getProperty("ForegroundColor");
@@ -213,7 +214,7 @@ class helper {
     	dc.clear();
     	dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
 	}
-	
+
 	function getSteps(){
 		if(shortFormat){
 			if(debug){
@@ -221,11 +222,11 @@ class helper {
 			}
 			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,"stps"]);
 		}
-	
+
 		if(debug){
 			return "99999 steps";
 		}
-		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().steps,"steps"]);	
+		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().steps,"steps"]);
 	}
 	function getCalories(){
 		if(shortFormat){
@@ -239,22 +240,69 @@ class helper {
 		}
 		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().calories,"calories"]);
 	}
-	
+
+	function calculateActiveCalories(now, profile, calories) {
+		var daySoFar = (now.hour * Gregorian.SECONDS_PER_HOUR +
+						 now.min * Gregorian.SECONDS_PER_MINUTE).toFloat() /
+		  Gregorian.SECONDS_PER_DAY;
+		var bmr = 0;
+		switch (profile.gender) {
+		case UserProfile.GENDER_FEMALE:
+			bmr = 655.1 +
+			  (9.563 * profile.weight / 1000.0) +
+			  (1.85 * profile.height) -
+			  (4.676 * (now.year - profile.birthYear));
+			break;
+		case UserProfile.GENDER_MALE:
+			bmr = 66.47 +
+			  (13.75 * profile.weight / 1000.0) +
+			  (5.003 * profile.height) -
+			  (6.755 * (now.year - profile.birthYear));
+			break;
+		}
+		bmr = bmr * 1.207; // Garmin adjustment
+		var bmrSoFar = (bmr * daySoFar).toNumber();
+		var activeCalories = 0;
+		if (bmrSoFar > 0 &&
+			calories > 0 &&
+			calories > bmrSoFar) {
+			activeCalories = calories - bmrSoFar;
+		}
+		return activeCalories;
+	}
+
+	function getActiveCalories(){
+		var activeCalories = calculateActiveCalories(
+			Gregorian.info(Time.now(), Time.FORMAT_SHORT),
+			UserProfile.getProfile(),
+			ActivityMonitor.getInfo().calories);
+		if(shortFormat){
+			if(debug){
+				return "11111cal";
+			}
+			return Lang.format("$1$$2$",[activeCalories,"cal"]);
+		}
+		if(debug){
+			return "11111 calories";
+		}
+		return Lang.format("$1$ $2$",[activeCalories,"calories"]);
+	}
+
 	function getMsgs(){
 		if(shortFormat){
 			if(debug){
 				return "99msgs";
 			}
-			var ntfCount = System.getDeviceSettings().notificationCount;	
+			var ntfCount = System.getDeviceSettings().notificationCount;
 			return Lang.format("$1$$2$",[ntfCount, "msgs"]);
 		}
 		if(debug){
 			return "99 messages";
 		}
-		var ntfCount = System.getDeviceSettings().notificationCount;	
+		var ntfCount = System.getDeviceSettings().notificationCount;
 		return Lang.format("$1$ $2$",[ntfCount, "messages"]);
 	}
-	
+
 	function getBattery(){
 		if(shortFormat){
 			if(debug){
@@ -267,7 +315,7 @@ class helper {
 		}
 		return Lang.format("$1$ $2$",[System.getSystemStats().battery.format("%d")+"%","battery" ]);
 	}
-	
+
 	function getHR(){
 		if(shortFormat){
 			var hr = Activity.getActivityInfo().currentHeartRate;
@@ -281,17 +329,17 @@ class helper {
 				return Lang.format("$1$ $2$",[hr, "bpm"]);
 			}
 			return "-- bpm";
-		
+
 	}
-	
+
 	function drawTop(dc,x,y){
 		drawTopFA(whatToShowAtTop(),dc,x,y,fontSmall(),Graphics.TEXT_JUSTIFY_CENTER);
 	}
-	
+
 	function drawTopLeft(dc,x,y){
 		drawTopFA(whatToShowAtTop(),dc,x,y,fontSmall(),Graphics.TEXT_JUSTIFY_LEFT);
-	}	        
-	
+	}
+
 	function drawTopFA(whatToSHow,dc,x,y,font,align){
 		var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 		switch(whatToSHow){
@@ -313,36 +361,39 @@ class helper {
 			case 12:
 	        	dc.drawText(x,y, font, Lang.format("$1$ $2$ $3$",[getMonthName(date.month),getWeekdayName(date.day_of_week),date.day]), align);
 				break;
-			case 6: 
+			case 6:
 	    		dc.drawText(x,y, font,getSteps(),align);
 	    		break;
-	    	case 7: 
+	    	case 7:
 	    		dc.drawText(x,y, font,getCalories(),align);
 	    		break;
-			case 8: 
+	    	case 13:
+	    		dc.drawText(x,y, font,getActiveCalories(),align);
+	    		break;
+			case 8:
 	    		dc.drawText(x,y, font,getMsgs(),align);
 	    		break;
-			case 9: 
+			case 9:
 	    		dc.drawText(x,y, font,getBattery(),align);
 	    		break;
-    		case 10: 
+    		case 10:
 	    		dc.drawText(x,y, font,getHR(),align);
 	    		break;
 			case 11:
 				break;
 		}
-			
+
     	if(debugDate){
     		var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
     		for(var t=1;t<=12;t++){dc.drawText(x,y,font, Lang.format("$1$ $2$",[getMonthName(t),date.year]), align);}
     	}
-        
+
 	}
-	
+
 	function getYfixForOldFont(){
 		return getYfixForOldFont_(useOldFont());
 	}
-	
+
 	function getYfixForOldFont_(setting){
 		if(setting){
 			switch(System.getDeviceSettings().screenHeight){
@@ -360,10 +411,10 @@ class helper {
 		}
 		return 0;
 	}
-	
+
 	function drawHours(dc,hourX,hourY,adjX,adjY,hugefont){
-		hourY+=getYfixForOldFont();	
-		
+		hourY+=getYfixForOldFont();
+
 		var hours = getHours();
         dc.drawText(hourX,hourY,hugefont,hours[0],Graphics.TEXT_JUSTIFY_CENTER);
         dc.drawText(hourX+adjX,hourY+adjY,hugefont,hours[1],Graphics.TEXT_JUSTIFY_CENTER);
@@ -372,10 +423,10 @@ class helper {
 	    	for(var t=0;t<=9;t++){dc.drawText(hourX+adjX,hourY+adjY, hugefont, t, Graphics.TEXT_JUSTIFY_CENTER);}
 		}
 	}
-	
+
 	function drawMinutes(dc,minuteX,minuteY,adjX,adjY,hugefont){
 		minuteY+=getYfixForOldFont();
-		
+
     	var minutes = System.getClockTime().min.format("%02d").toCharArray();
     	dc.drawText(minuteX,minuteY,hugefont,minutes[0],Graphics.TEXT_JUSTIFY_CENTER);
     	dc.drawText(minuteX+adjX,minuteY+adjY,hugefont,minutes[1],Graphics.TEXT_JUSTIFY_CENTER);
@@ -384,14 +435,14 @@ class helper {
 	    	for(var t=0;t<=9;t++){dc.drawText(minuteX+adjX,minuteY+adjY, hugefont, t, Graphics.TEXT_JUSTIFY_CENTER);}
 		}
 	}
-	
+
 	function bonusDayInTop(top){
 		if((top >=2 && top<=5) || top==12){
 			return 1;
 		}
 		return 0;
 	}
-	
+
 	function drawTopRight(whatToSHow,dc,x,y,stepY,startday,daysForward){
 		drawTopRightFont(whatToSHow,dc,x,y,stepY,startday,daysForward,fontSmall());
 	}
@@ -418,25 +469,28 @@ class helper {
 				break;
 		}
 	}
-	
+
 	function drawBottomLineByOption(dc,x,y,option,font){
 		switch(option){
-	    	case 1: 
+	    	case 1:
 	    		dc.drawText(x,y, font,getSteps(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
-	    	case 2: 
+	    	case 2:
 	    		dc.drawText(x,y, font,getCalories(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		break;
+	    	case 7:
+	    		dc.drawText(x,y, font,getActiveCalories(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
 			case 3:
 	    		dc.drawText(x,y, font,getMsgs(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
-			case 4: 
+			case 4:
 	    		dc.drawText(x,y, font,getBattery(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
-    		case 5: 
+    		case 5:
 	    		dc.drawText(x,y, font,getHR(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
-    		case 6:
+			case 6:
     		default:
 	    		break;
 	    }
@@ -446,38 +500,38 @@ class helper {
 //		System.println("location");
 //		System.println(Position.getInfo().position.lat);
 //		System.println(Position.getInfo().position.lon);
-//		
+//
 //		var key = "ff16abd420297723c28169e6eab2b41a";
 //		var lat = 35;
 //		var long = 139;
-//		
+//
 //		Lang.format("$1$$2$$3$",["https://samples.openweathermap.org/data/2.5/weather?lat=",lat,"&lon=",long,"&appid=",key]);
-		return "0"; 
+		return "0";
 	}
-	
+
 	function drawBottomLeft(dc,x,y,stepY,font){
 		if(showBottomLeft()){
 	        drawBottomLineByOption(dc,x,y,whatToShowAtBottomLeft(),font);
 	        drawBottomLineByOption(dc,x,y+stepY,whatToShowAtBottomLeft2(),font);
-	        drawBottomLineByOption(dc,x,y+stepY+stepY,whatToShowAtBottomLeft3(),font);        	
+	        drawBottomLineByOption(dc,x,y+stepY+stepY,whatToShowAtBottomLeft3(),font);
         }
 	}
-		
+
 	function ifScreen(screenWidth,screenHeight,screenShape){
-		return 
+		return
 			screenWidth == System.getDeviceSettings().screenWidth &&
-			screenHeight == System.getDeviceSettings().screenHeight &&	
+			screenHeight == System.getDeviceSettings().screenHeight &&
 			screenShape == System.getDeviceSettings().screenShape;
 	}
-	
+
 	function canBurn(){
 		var sys = System.getDeviceSettings();
         if(sys has :requiresBurnInProtection) {
-        	return sys.requiresBurnInProtection;        	
+        	return sys.requiresBurnInProtection;
         }
         return false;
 	}
-	
+
 	function setColorsOled(dc,inLowPower){
 		if(inLowPower){
 			dc.setColor(Graphics.COLOR_BLACK,Graphics.COLOR_BLACK);
@@ -487,7 +541,7 @@ class helper {
 			setColors(dc);
 		}
 	}
-	
+
 	function getAnalogClockPosition(step,value,radiusX,radiusY){
 		var r = (360/step) * value;
 		var radians=Math.toRadians(r);
