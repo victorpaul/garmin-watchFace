@@ -12,8 +12,8 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         
         uiH = new helper();
         
-        uiH.debug = true;
-		uiH.debugDate = true;
+        uiH.debug = false;
+		uiH.debugDate = false;
     }
     
     function onExitSleep() {
