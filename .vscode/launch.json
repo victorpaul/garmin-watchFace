@@ -1,0 +1,143 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fenix7",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fenix7"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fenix7s",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fenix7s"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fenix7x",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fenix7x"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "legacyherofirstavenger",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "legacyherofirstavenger"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fr45",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fr45"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fr55",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fr55"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fr745",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fr745"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fr945",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fr945"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fr945lte",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fr945lte"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "legacysagarey",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "legacysagarey"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "venud",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "venud"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "venusq",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "venusq"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "venusqm",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "venusqm"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "legacyherocaptainmarvel",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "legacyherocaptainmarvel"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "legacysagadarthvader",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "legacysagadarthvader"
+        }
+    ]
+}

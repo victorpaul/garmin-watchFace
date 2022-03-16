@@ -12,8 +12,8 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         
         uiH = new helper();
         
-        uiH.debug = false;
-		uiH.debugDate = false;
+        uiH.debug = true;
+		uiH.debugDate = true;
     }
     
     function onExitSleep() {
@@ -56,6 +56,17 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
     	uiH.drawTopRight(topRight,dc,110,19,15,0,3);
   		uiH.drawHours(dc,35,-35,40,0,uiH.fontHuge45());
 		uiH.drawMinutes(dc,125,3,50,0,uiH.fontHuge45());
+		uiH.drawBottomLeft(dc,92,120,18,uiH.fontSmall());
+		uiH.drawBluetoothConnectionSmall(dc,135,152);
+	}
+
+	function draw_venusq(dc){
+		var topRight=uiH.whatToShowAtRight();
+		
+      	uiH.drawTopLeft(dc,90,0);
+    	uiH.drawTopRight(topRight,dc,110,19,15,0,3);
+  		uiH.drawHours(dc,35,-35,40,0,uiH.fontHuge45());
+		uiH.drawMinutes(dc,150,3,50,0,uiH.fontHuge45());
 		uiH.drawBottomLeft(dc,92,120,18,uiH.fontSmall());
 		uiH.drawBluetoothConnectionSmall(dc,135,152);
 	}
@@ -133,8 +144,8 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 			var step = 4;
 			var radX = 114;
 			var radY = 64;
-			var x = 160;
-			var y = -18;
+			var x = 170;
+			var y = 20;
 			var xm = x+8;
 			var ym = y+130;
 			
@@ -165,21 +176,68 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		}
 		
 	}
+
+// 	function draw_venu2(dc){
+// //		uiH.debug = true;
+// 		if(uiH.debug || inLowPower && uiH.canBurn()){
+// 			var step = 4;
+// 			var radX = 114;
+// 			var radY = 64;
+// 			var x = 190;
+// 			var y = -18;
+// 			var xm = x+8;
+// 			var ym = y+130;
+			
+// 			var xy = uiH.getAnalogClockPosition(step,System.getClockTime().min,radX,radY);
+// 			uiH.drawHours(dc,x+xy[0],y+xy[1],45,0,uiH.fontHuge45());
+// 			uiH.drawMinutes(dc,xm+xy[0],ym+xy[1],40,0,uiH.fontHuge45());
+// 			if(uiH.debug){
+// 				for(var m=0; m<60;m++){
+// 					xy = uiH.getAnalogClockPosition(step,m,radX,radY);
+// 					uiH.drawHours(dc,x+xy[0],y+xy[1],45,0,uiH.fontHuge45());
+// 					uiH.drawMinutes(dc,xm+xy[0],ym+xy[1],40,0,uiH.fontHuge45());
+// 				}
+// 			}
+// 		}else{
+// 			uiH.drawBluetoothConnection(dc,195,350);
+		
+// 			var topCenter=uiH.whatToShowAtTop();
+// 			var topRight=uiH.whatToShowAtRight();
+// 	        uiH.drawTopFA(topCenter,dc,195,20,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+	        
+// 	        uiH.drawTopRightFont(topRight,dc,190,45,25,0,4,uiH.fontMedium());
+// 	        if(topRight==1){
+// 	        	uiH.drawTopRightFont(topRight,dc,280,60,25,4,3,uiH.fontMedium());
+// 	        }
+// 	      	uiH.drawHours(dc,80,10,60,-20,uiH.fontHuge245());
+// 	    	uiH.drawMinutes(dc,260,90,60,-20,uiH.fontHuge245());
+// 			uiH.drawBottomLeft(dc,195,230,25,uiH.fontMedium());
+// 		}
+		
+// 	}
 	
     // Update the view
     function onUpdate(dc) {
     	
+		if(uiH.debug){
+			System.println(System.getDeviceSettings().screenWidth);
+			System.println(System.getDeviceSettings().screenHeight);
+			System.println(System.getDeviceSettings().screenShape);
+		}
 
-//		System.println(System.getDeviceSettings().screenWidth);
-//		System.println(System.getDeviceSettings().screenHeight);
-//		System.println(System.getDeviceSettings().screenShape);
-		
-		if(uiH.ifScreen(390,390,1)){
+		if(uiH.ifScreen(390,390,1) || uiH.ifScreen(360,360,1)){
 			uiH.setColorsOled(dc,inLowPower);
 			uiH.shortFormat = false;
 			draw_venu(dc);	
 			return;
 		}
+
+		// if(uiH.ifScreen(416,416,1)){
+		// 	uiH.setColorsOled(dc,inLowPower);
+		// 	uiH.shortFormat = false;
+		// 	draw_venu2(dc);	
+		// 	return;
+		// }
 		
 		uiH.setColors(dc);
 		if(uiH.ifScreen(148,205,3)){
@@ -213,6 +271,11 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		if(uiH.ifScreen(280,280,1)){
 			uiH.shortFormat = false;
 			draw_fenix6xpro(dc);	
+			return;
+		}
+
+		if(uiH.ifScreen(240,240,3)){
+			draw_venusq(dc);
 			return;
 		}
 

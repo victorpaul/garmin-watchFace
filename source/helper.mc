@@ -333,7 +333,6 @@ class helper {
 		}
 			
     	if(debugDate){
-    		var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
     		for(var t=1;t<=12;t++){dc.drawText(x,y,font, Lang.format("$1$ $2$",[getMonthName(t),date.year]), align);}
     	}
         
