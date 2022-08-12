@@ -219,7 +219,7 @@ class helper {
 			if(debug){
 				return "99999stps";
 			}
-			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,"stps"]);
+			return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().steps,"stps"]);
 		}
 	
 		if(debug){
@@ -232,7 +232,7 @@ class helper {
 			if(debug){
 				return "99999cal";
 			}
-			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().calories,"cal"]);
+			return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().calories,"cal"]);
 		}
 		if(debug){
 			return "99999 calories";
@@ -246,7 +246,7 @@ class helper {
 				return "99msgs";
 			}
 			var ntfCount = System.getDeviceSettings().notificationCount;	
-			return Lang.format("$1$$2$",[ntfCount, "msgs"]);
+			return Lang.format("$1$ $2$",[ntfCount, "msgs"]);
 		}
 		if(debug){
 			return "99 messages";
@@ -272,7 +272,7 @@ class helper {
 		if(shortFormat){
 			var hr = Activity.getActivityInfo().currentHeartRate;
 			if(hr!=null){
-				return Lang.format("$1$$2$",[hr, "bpm"]);
+				return Lang.format("$1$ $2$",[hr, "bpm"]);
 			}
 			return "--bpm";
 		}
