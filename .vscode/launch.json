@@ -210,6 +210,132 @@
       "name": "fr965",
       "stopAtLaunch": false,
       "device": "fr965"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "d2air",
+      "stopAtLaunch": false,
+      "device": "d2air"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "d2airx10",
+      "stopAtLaunch": false,
+      "device": "d2airx10"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "d2mach1",
+      "stopAtLaunch": false,
+      "device": "d2mach1"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "descentmk2",
+      "stopAtLaunch": false,
+      "device": "descentmk2"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "descentmk2s",
+      "stopAtLaunch": false,
+      "device": "descentmk2s"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "descentmk1",
+      "stopAtLaunch": false,
+      "device": "descentmk1"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "enduro",
+      "stopAtLaunch": false,
+      "device": "enduro"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "epix2",
+      "stopAtLaunch": false,
+      "device": "epix2"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "epix2pro42mm",
+      "stopAtLaunch": false,
+      "device": "epix2pro42mm"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "epix2pro47mm",
+      "stopAtLaunch": false,
+      "device": "epix2pro47mm"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "epix2pro51mm",
+      "stopAtLaunch": false,
+      "device": "epix2pro51mm"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "instinct2",
+      "stopAtLaunch": false,
+      "device": "instinct2"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "instinct2s",
+      "stopAtLaunch": false,
+      "device": "instinct2s"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "instinct2x",
+      "stopAtLaunch": false,
+      "device": "instinct2x"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "instinctcrossover",
+      "stopAtLaunch": false,
+      "device": "instinctcrossover"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "marq2",
+      "stopAtLaunch": false,
+      "device": "marq2"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "marq2aviator",
+      "stopAtLaunch": false,
+      "device": "marq2aviator"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "marqgolfer",
+      "stopAtLaunch": false,
+      "device": "marqgolfer"
     }
   ]
 }
