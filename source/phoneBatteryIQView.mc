@@ -12,7 +12,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         
         uiH = new helper();
         
-        uiH.debug = false;
+        uiH.debug = true;
 		uiH.debugDate = false;
     }
     
@@ -220,9 +220,10 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
     function onUpdate(dc) {
     	
 		if(uiH.debug){
-			System.println(System.getDeviceSettings().screenWidth);
-			System.println(System.getDeviceSettings().screenHeight);
-			System.println(System.getDeviceSettings().screenShape);
+			// System.println(System.getDeviceSettings().screenWidth);
+			System.println(
+				Lang.format("$1$ x $2$",[System.getDeviceSettings().screenWidth, System.getDeviceSettings().screenHeight ])
+			);
 		}
 
 		if(uiH.ifScreen(390,390,1) || uiH.ifScreen(360,360,1)){

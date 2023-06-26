@@ -5,14 +5,13 @@
         <iq:products>
             <iq:product id="approachs60"/>
             <iq:product id="approachs62"/>
-            <iq:product id="legacyherocaptainmarvel"/>
+            <iq:product id="approachs7042mm"/>
             <iq:product id="d2bravo"/>
             <iq:product id="d2bravo_titanium"/>
             <iq:product id="d2charlie"/>
             <iq:product id="d2delta"/>
             <iq:product id="d2deltapx"/>
             <iq:product id="d2deltas"/>
-            <iq:product id="legacysagadarthvader"/>
             <iq:product id="descentmk1"/>
             <iq:product id="fenix3"/>
             <iq:product id="fenix3_hr"/>
@@ -31,13 +30,12 @@
             <iq:product id="fenix7s"/>
             <iq:product id="fenix7x"/>
             <iq:product id="fenixchronos"/>
-            <iq:product id="legacyherofirstavenger"/>
-            <iq:product id="fr45"/>
-            <iq:product id="fr55"/>
             <iq:product id="fr230"/>
             <iq:product id="fr235"/>
             <iq:product id="fr245"/>
             <iq:product id="fr245m"/>
+            <iq:product id="fr45"/>
+            <iq:product id="fr55"/>
             <iq:product id="fr630"/>
             <iq:product id="fr645"/>
             <iq:product id="fr645m"/>
@@ -48,6 +46,10 @@
             <iq:product id="fr945"/>
             <iq:product id="fr945lte"/>
             <iq:product id="garminswim2"/>
+            <iq:product id="legacyherocaptainmarvel"/>
+            <iq:product id="legacyherofirstavenger"/>
+            <iq:product id="legacysagadarthvader"/>
+            <iq:product id="legacysagarey"/>
             <iq:product id="marqadventurer"/>
             <iq:product id="marqathlete"/>
             <iq:product id="marqaviator"/>
@@ -55,7 +57,6 @@
             <iq:product id="marqcommander"/>
             <iq:product id="marqdriver"/>
             <iq:product id="marqexpedition"/>
-            <iq:product id="legacysagarey"/>
             <iq:product id="venu"/>
             <iq:product id="venud"/>
             <iq:product id="vivoactive"/>

@@ -1,7 +1,4 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
@@ -138,6 +135,15 @@
             "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
             "stopAtLaunch": false,
             "device": "legacysagadarthvader"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "approachs7042mm",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "approachs7042mm"
         }
     ]
 }
