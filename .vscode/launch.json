@@ -1,275 +1,215 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fenix7",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fenix7"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fenix7s",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fenix7s"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fenix7x",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fenix7x"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "legacyherofirstavenger",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "legacyherofirstavenger"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fr45",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fr45"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fr55",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fr55"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fr745",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fr745"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fr945",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fr945"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fr945lte",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fr945lte"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "legacysagarey",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "legacysagarey"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "venud",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "venud"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "venusq",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "venusq"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "venusqm",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "venusqm"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "legacyherocaptainmarvel",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "legacyherocaptainmarvel"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "legacysagadarthvader",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "legacysagadarthvader"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "approachs7042mm",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "approachs7042mm"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "approachs7047mm",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "approachs7047mm"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fenix7pro",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fenix7pro"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fenix7spro",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fenix7spro"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fenix7system6preview",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fenix7system6preview"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fenix7xpro",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fenix7xpro"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fenix6prosystem5preview",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fenix6prosystem5preview"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fr255",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fr255"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fr255m",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fr255m"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fr255s",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fr255s"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fr255sm",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fr255sm"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fr265",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fr265"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fr265s",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fr265s"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fr955",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fr955"
-        },
-        {
-            "type": "monkeyc",
-            "request": "launch",
-            "name": "fr965",
-            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
-            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
-            "stopAtLaunch": false,
-            "device": "fr965"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix7",
+      "stopAtLaunch": false,
+      "device": "fenix7"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix7s",
+      "stopAtLaunch": false,
+      "device": "fenix7s"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix7x",
+      "stopAtLaunch": false,
+      "device": "fenix7x"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "legacyherofirstavenger",
+      "stopAtLaunch": false,
+      "device": "legacyherofirstavenger"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr45",
+      "stopAtLaunch": false,
+      "device": "fr45"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr55",
+      "stopAtLaunch": false,
+      "device": "fr55"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr745",
+      "stopAtLaunch": false,
+      "device": "fr745"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr945",
+      "stopAtLaunch": false,
+      "device": "fr945"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr945lte",
+      "stopAtLaunch": false,
+      "device": "fr945lte"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "legacysagarey",
+      "stopAtLaunch": false,
+      "device": "legacysagarey"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "venud",
+      "stopAtLaunch": false,
+      "device": "venud"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "venusq",
+      "stopAtLaunch": false,
+      "device": "venusq"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "venusqm",
+      "stopAtLaunch": false,
+      "device": "venusqm"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "legacyherocaptainmarvel",
+      "stopAtLaunch": false,
+      "device": "legacyherocaptainmarvel"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "legacysagadarthvader",
+      "stopAtLaunch": false,
+      "device": "legacysagadarthvader"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "approachs7042mm",
+      "stopAtLaunch": false,
+      "device": "approachs7042mm"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "approachs7047mm",
+      "stopAtLaunch": false,
+      "device": "approachs7047mm"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix7pro",
+      "stopAtLaunch": false,
+      "device": "fenix7pro"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix7spro",
+      "stopAtLaunch": false,
+      "device": "fenix7spro"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix7system6preview",
+      "stopAtLaunch": false,
+      "device": "fenix7system6preview"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix7xpro",
+      "stopAtLaunch": false,
+      "device": "fenix7xpro"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix6prosystem5preview",
+      "stopAtLaunch": false,
+      "device": "fenix6prosystem5preview"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr255",
+      "stopAtLaunch": false,
+      "device": "fr255"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr255m",
+      "stopAtLaunch": false,
+      "device": "fr255m"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr255s",
+      "stopAtLaunch": false,
+      "device": "fr255s"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr255sm",
+      "stopAtLaunch": false,
+      "device": "fr255sm"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr265",
+      "stopAtLaunch": false,
+      "device": "fr265"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr265s",
+      "stopAtLaunch": false,
+      "device": "fr265s"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr955",
+      "stopAtLaunch": false,
+      "device": "fr955"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr965",
+      "stopAtLaunch": false,
+      "device": "fr965"
+    }
+  ]
 }
