@@ -462,6 +462,10 @@ class helper {
         }
 	}
 		
+	// screenShape 1 = SCREEN_SHAPE_ROUND
+	// screenShape 2 = SCREEN_SHAPE_SEMI_ROUND
+	// screenShape 3 = SCREEN_SHAPE_RECTANGLE
+	// screenShape 4 = SCREEN_SHAPE_SEMI_OCTAGON
 	function ifScreen(screenWidth,screenHeight,screenShape){
 		return 
 			screenWidth == System.getDeviceSettings().screenWidth &&
