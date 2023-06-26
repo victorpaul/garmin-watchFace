@@ -1,6 +1,7 @@
 using Toybox.WatchUi;
 using Toybox.Graphics;
 using Toybox.System;
+using Toybox.Lang;
 
 class phoneBatteryIQView extends WatchUi.WatchFace {
 
@@ -12,7 +13,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         
         uiH = new helper();
         
-        uiH.debug = true;
+        uiH.debug = false;
 		uiH.debugDate = false;
     }
     
@@ -139,13 +140,13 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	}
 	
 	function draw_venu(dc){
-//		uiH.debug = true;
+		// uiH.debug = false;
 		if(uiH.debug || inLowPower && uiH.canBurn()){
 			var step = 4;
-			var radX = 114;
-			var radY = 64;
-			var x = 170;
-			var y = 20;
+			var radX = 104;
+			var radY = 54;
+			var x = 160;
+			var y = 10;
 			var xm = x+8;
 			var ym = y+130;
 			
@@ -166,13 +167,95 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 			var topRight=uiH.whatToShowAtRight();
 	        uiH.drawTopFA(topCenter,dc,195,20,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
 	        
-	        uiH.drawTopRightFont(topRight,dc,190,45,25,0,4,uiH.fontMedium());
+	        uiH.drawTopRightFont(topRight,dc,170,45,25,0,4,uiH.fontMedium());
 	        if(topRight==1){
-	        	uiH.drawTopRightFont(topRight,dc,280,60,25,4,3,uiH.fontMedium());
+	        	uiH.drawTopRightFont(topRight,dc,260,60,25,4,3,uiH.fontMedium());
 	        }
-	      	uiH.drawHours(dc,80,10,60,-20,uiH.fontHuge245());
-	    	uiH.drawMinutes(dc,260,90,60,-20,uiH.fontHuge245());
+	      	uiH.drawHours(dc,60,10,60,-20,uiH.fontHuge245());
+	    	uiH.drawMinutes(dc,250,90,60,-20,uiH.fontHuge245());
 			uiH.drawBottomLeft(dc,195,230,25,uiH.fontMedium());
+		}
+		
+	}
+
+	function draw_454_454_1(dc){
+		if(uiH.debug || inLowPower && uiH.canBurn()){
+			var step = 4;
+			var radX = 130;
+			var radY = 90;
+			var x = 200;
+			var y = 40;
+			var xm = x+8;
+			var ym = y+130;
+			
+			var xy = uiH.getAnalogClockPosition(step,System.getClockTime().min,radX,radY);
+			uiH.drawHours(dc,x+xy[0],y+xy[1],45,0,uiH.fontHuge45());
+			uiH.drawMinutes(dc,xm+xy[0],ym+xy[1],40,0,uiH.fontHuge45());
+			if(uiH.debug){
+				for(var m=0; m<60;m++){
+					xy = uiH.getAnalogClockPosition(step,m,radX,radY);
+					uiH.drawHours(dc,x+xy[0],y+xy[1],45,0,uiH.fontHuge45());
+					uiH.drawMinutes(dc,xm+xy[0],ym+xy[1],40,0,uiH.fontHuge45());
+				}
+			}
+		}else{
+			var xOffset = 30;
+			var yOffset = 40;
+
+			uiH.drawBluetoothConnection(dc,195+xOffset,350+yOffset);
+		
+			var topCenter=uiH.whatToShowAtTop();
+			var topRight=uiH.whatToShowAtRight();
+	        uiH.drawTopFA(topCenter,dc,195+xOffset,20,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+	        
+	        uiH.drawTopRightFont(topRight,dc,190+xOffset,45+yOffset,25,0,4,uiH.fontMedium());
+	        if(topRight==1){
+	        	uiH.drawTopRightFont(topRight,dc,280+xOffset,60+yOffset,25,4,3,uiH.fontMedium());
+	        }
+	      	uiH.drawHours(dc,80+xOffset,10+yOffset,60,-20,uiH.fontHuge245());
+	    	uiH.drawMinutes(dc,260+xOffset,90+yOffset,60,-20,uiH.fontHuge245());
+			uiH.drawBottomLeft(dc,195+xOffset,230+yOffset,25,uiH.fontMedium());
+		}
+		
+	}
+
+	function draw_416_416_1(dc){
+		if(uiH.debug || inLowPower && uiH.canBurn()){
+			var step = 4;
+			var radX = 110;
+			var radY = 80;
+			var x = 185;
+			var y = 30;
+			var xm = x+8;
+			var ym = y+130;
+			
+			var xy = uiH.getAnalogClockPosition(step,System.getClockTime().min,radX,radY);
+			uiH.drawHours(dc,x+xy[0],y+xy[1],45,0,uiH.fontHuge45());
+			uiH.drawMinutes(dc,xm+xy[0],ym+xy[1],40,0,uiH.fontHuge45());
+			if(uiH.debug){
+				for(var m=0; m<60;m++){
+					xy = uiH.getAnalogClockPosition(step,m,radX,radY);
+					uiH.drawHours(dc,x+xy[0],y+xy[1],45,0,uiH.fontHuge45());
+					uiH.drawMinutes(dc,xm+xy[0],ym+xy[1],40,0,uiH.fontHuge45());
+				}
+			}
+		}else{
+			var xOffset = 15;
+			var yOffset = 30;
+
+			uiH.drawBluetoothConnection(dc,195+xOffset,350+yOffset);
+		
+			var topCenter=uiH.whatToShowAtTop();
+			var topRight=uiH.whatToShowAtRight();
+	        uiH.drawTopFA(topCenter,dc,195+xOffset,20,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+	        
+	        uiH.drawTopRightFont(topRight,dc,190+xOffset,45+yOffset,25,0,4,uiH.fontMedium());
+	        if(topRight==1){
+	        	uiH.drawTopRightFont(topRight,dc,280+xOffset,60+yOffset,25,4,3,uiH.fontMedium());
+	        }
+	      	uiH.drawHours(dc,80+xOffset,10+yOffset,60,-20,uiH.fontHuge245());
+	    	uiH.drawMinutes(dc,260+xOffset,90+yOffset,60,-20,uiH.fontHuge245());
+			uiH.drawBottomLeft(dc,195+xOffset,230+yOffset,25,uiH.fontMedium());
 		}
 		
 	}
@@ -219,10 +302,12 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
     // Update the view
     function onUpdate(dc) {
     	
-		if(uiH.debug){
-			// System.println(System.getDeviceSettings().screenWidth);
+		if(uiH.debug) {
 			System.println(
-				Lang.format("$1$ x $2$",[System.getDeviceSettings().screenWidth, System.getDeviceSettings().screenHeight ])
+				Lang.format("$1$ x $2$ on $3$",[
+					System.getDeviceSettings().screenWidth, 
+					System.getDeviceSettings().screenHeight,
+					System.getDeviceSettings().screenShape ])
 			);
 		}
 
@@ -233,12 +318,20 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 			return;
 		}
 
-		// if(uiH.ifScreen(416,416,1)){
-		// 	uiH.setColorsOled(dc,inLowPower);
-		// 	uiH.shortFormat = false;
-		// 	draw_venu2(dc);	
-		// 	return;
-		// }
+		
+		if(uiH.ifScreen(454,454,1)){
+			uiH.setColorsOled(dc,inLowPower);
+			uiH.shortFormat = false;
+			draw_454_454_1(dc);	
+			return;
+		}
+
+		if(uiH.ifScreen(416,416,1)){
+			uiH.setColorsOled(dc,inLowPower);
+			uiH.shortFormat = false;
+			draw_416_416_1(dc);	
+			return;
+		}
 		
 		uiH.setColors(dc);
 		if(uiH.ifScreen(148,205,3)){

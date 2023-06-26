@@ -144,6 +144,132 @@
             "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
             "stopAtLaunch": false,
             "device": "approachs7042mm"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "approachs7047mm",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "approachs7047mm"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fenix7pro",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fenix7pro"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fenix7spro",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fenix7spro"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fenix7system6preview",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fenix7system6preview"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fenix7xpro",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fenix7xpro"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fenix6prosystem5preview",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fenix6prosystem5preview"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fr255",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fr255"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fr255m",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fr255m"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fr255s",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fr255s"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fr255sm",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fr255sm"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fr265",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fr265"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fr265s",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fr265s"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fr955",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fr955"
+        },
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "fr965",
+            "prg": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg",
+            "prgDebugXml": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${workspaceFolderBasename}.prg.debug.xml",
+            "stopAtLaunch": false,
+            "device": "fr965"
         }
     ]
 }
