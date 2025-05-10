@@ -1,6 +1,172 @@
 {
   "version": "0.2.0",
   "configurations": [
+
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "venu2",
+      "stopAtLaunch": false,
+      "device": "venu2"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "vivoactive5",
+      "stopAtLaunch": false,
+      "device": "vivoactive5"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "vivoactive6",
+      "stopAtLaunch": false,
+      "device": "vivoactive6"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "instincte45mm",
+      "stopAtLaunch": false,
+      "device": "instincte45mm"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "instincte40mm",
+      "stopAtLaunch": false,
+      "device": "instincte40mm"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "instinctcrossover",
+      "stopAtLaunch": false,
+      "device": "instinctcrossover"
+    },
+
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix7xpronowifi",
+      "stopAtLaunch": false,
+      "device": "fenix7xpronowifi"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix7pronowifi",
+      "stopAtLaunch": false,
+      "device": "fenix7pronowifi"
+    },
+    
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix843mm",
+      "stopAtLaunch": false,
+      "device": "fenix843mm"
+    },
+    
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix847mm",
+      "stopAtLaunch": false,
+      "device": "fenix847mm"
+    },
+  
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix8solar47mm",
+      "stopAtLaunch": false,
+      "device": "fenix8solar47mm"
+    },
+    
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix8solar51mm",
+      "stopAtLaunch": false,
+      "device": "fenix8solar51mm"
+    },
+    
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenixe",
+      "stopAtLaunch": false,
+      "device": "fenixe"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr165",
+      "stopAtLaunch": false,
+      "device": "fr165"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr165m",
+      "stopAtLaunch": false,
+      "device": "fr165m"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "instinct2",
+      "stopAtLaunch": false,
+      "device": "instinct2",
+      "cleanBuild": true
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "instinct2s",
+      "stopAtLaunch": false,
+      "device": "instinct2s",
+      "cleanBuild": true
+    },
+
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "instinct2x",
+      "stopAtLaunch": false,
+      "device": "instinct2x"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "",
+      "stopAtLaunch": false,
+      "device": ""
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix7xpronowifi",
+      "stopAtLaunch": false,
+      "device": "fenix7xpronowifi"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "approachs50",
+      "stopAtLaunch": false,
+      "device": "approachs50"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "approachs60",
+      "stopAtLaunch": false,
+      "device": "approachs60"
+    },
+
+
     {
       "type": "monkeyc",
       "request": "launch",

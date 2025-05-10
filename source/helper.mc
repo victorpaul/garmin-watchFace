@@ -10,7 +10,7 @@ using Toybox.Time.Gregorian;
 
 class helper {
 
-	var debug,debugDate;
+	var debug, debugDate;
 	var shortFormat=true;
 	
 	function initialize(){
@@ -171,7 +171,7 @@ class helper {
 	}
 	
 	function drawBluetoothConnection_(dc,x,y,font,setting){
-		if(setting>0){
+		if(setting>0 || debug){
 			if(System.getDeviceSettings().phoneConnected){
 				var icon = "i";
 				if(setting == 2){

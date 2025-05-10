@@ -39,6 +39,46 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		
 		uiH.drawBluetoothConnectionSmall(dc,12,178);
 	}
+
+	function draw_176x176x4(dc) {
+		var topRight=uiH.whatToShowAtRight();
+    	
+    	uiH.drawTopRight(topRight,dc,116,11,14,0,2);
+  		uiH.drawHours(dc,30,-65,40,0,uiH.fontHuge45());
+		uiH.drawMinutes(dc,95,10,50,0,uiH.fontHuge45());
+		
+		
+		dc.drawText(10,95, uiH.fontSmall(),uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(10,115, uiH.fontSmall(),uiH.getBattery(), Graphics.TEXT_JUSTIFY_LEFT);
+		uiH.drawBluetoothConnectionSmall(dc,50,137);
+	}
+
+	function draw_163x156x4(dc) {
+		var topRight=uiH.whatToShowAtRight();
+    	
+    	uiH.drawTopRight(topRight,dc,109,4,14,0,2);
+  		uiH.drawHours(dc,25,-69,40,0,uiH.fontHuge45());
+		uiH.drawMinutes(dc,80,-5,50,0,uiH.fontHuge45());
+		
+		
+		dc.drawText(5,80, uiH.fontSmall(),uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(5,100, uiH.fontSmall(),uiH.getBattery(), Graphics.TEXT_JUSTIFY_LEFT);
+		uiH.drawBluetoothConnectionSmall(dc,40,120);
+	}
+
+	
+	function draw_166x166x4(dc) {
+		var topRight=uiH.whatToShowAtRight();
+    	
+    	uiH.drawTopRight(topRight,dc,112,4,14,0,2);
+  		uiH.drawHours(dc,25,-65,40,0,uiH.fontHuge45());
+		uiH.drawMinutes(dc,87,-5,50,0,uiH.fontHuge45());
+		
+		
+		dc.drawText(5,95, uiH.fontSmall(),uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(5,115, uiH.fontSmall(),uiH.getBattery(), Graphics.TEXT_JUSTIFY_LEFT);
+		uiH.drawBluetoothConnectionSmall(dc,40,135);
+	}
 	
 	function draw_fr920xt(dc){
 		var topRight=uiH.whatToShowAtRight();
@@ -301,7 +341,8 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	
     // Update the view
     function onUpdate(dc) {
-    	
+
+
 		if(uiH.debug) {
 			System.println(
 				Lang.format("$1$ x $2$ on $3$",[
@@ -371,6 +412,25 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		if(uiH.ifScreen(240,240,3)){
 			draw_venusq(dc);
 			return;
+		}
+
+		if(uiH.ifScreen(176,176,4)){
+			draw_176x176x4(dc);
+			return;
+		}
+
+		if(uiH.ifScreen(163,156,4)){
+			draw_163x156x4(dc);
+			return;
+		}
+		if(uiH.ifScreen(166,166,4)){
+			draw_166x166x4(dc);
+			return;
+		}
+		
+
+		if(uiH.debug) {
+			System.println("Not found");
 		}
 
 		// nope: swim2, venu
