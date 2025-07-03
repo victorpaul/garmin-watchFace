@@ -12,106 +12,73 @@ class helper {
 
 	var debug, debugDate;
 	var shortFormat=true;
+    var view;
 	
-	function initialize(){
-		
+	function initialize(viewReference){
+		self.view = viewReference;
 	}
 
 	function fontHuge245(){
-		return fontHuge245_(useOldFont());
-	}
-	function fontHuge245_(setting){
-		if(setting){
-			return WatchUi.loadResource(Rez.Fonts.fntHugeOld);	
-		}
-		return WatchUi.loadResource(Rez.Fonts.fntHuge);
+		return view.mFontHuge245;
 	}
 
 	function fontHuge45(){
-		return fontHuge45_(useOldFont());
-	}
-	function fontHuge45_(setting){
-		if(setting){
-			return WatchUi.loadResource(Rez.Fonts.fntHugeOld);	
-		}
-		return WatchUi.loadResource(Rez.Fonts.fntHuge45);
+		return view.mFontHuge45;
 	}
 	
 	function fontMedium(){
-		return fontMedium_(Application.getApp().getProperty("Font"));
-	}
-	function fontMedium_(setting){
-		switch(setting){
-			case 2:
-				return WatchUi.loadResource(Rez.Fonts.mediumJannScript);  // 36px
-			case 3:
-				return WatchUi.loadResource(Rez.Fonts.mediumStiffBrush); // 35px
-			default:
-				return WatchUi.loadResource(Rez.Fonts.fntMedium);
-		}
+		return view.mFontMedium;
 	}
 	
 	function fontSmall(){
-		return fontSmall_(Application.getApp().getProperty("Font"));
+		return view.mFontSmall;
 	}
 	
 	function fontIcons(){
-		return WatchUi.loadResource(Rez.Fonts.icons);
+		return view.mFontIcons;
 	}
 	function fontSmallIcons(){
-		return WatchUi.loadResource(Rez.Fonts.smallicons);
-	}
-	
-	function fontSmall_(setting){
-		switch(setting){
-			case 2:
-				return WatchUi.loadResource(Rez.Fonts.smallJannScript);  // 26px
-			case 3:
-				return WatchUi.loadResource(Rez.Fonts.smallStiffBrush); // 26px
-			default:
-				return WatchUi.loadResource(Rez.Fonts.fntSmall);
-		}
+		return view.mFontSmallIcons;
 	}
 	
 	function getHours() {
 		var hours = System.getClockTime().hour;
-		var clockMode = System.getDeviceSettings().is24Hour;
-		if(!clockMode && hours >12){
-			hours = hours-12;
+		if(!System.getDeviceSettings().is24Hour && hours > 12){
+			hours = hours - 12;
 		}
 		return hours.format("%02d").toCharArray();
 	}
 	
 	function useOldFont(){
-		return Application.getApp().getProperty("UseOldFont");
+		return view.mUseOldFont;
 	}
 	
 	function showBottomLeft(){
-		return Application.getApp().getProperty("ShowBottomLeft");
+		return view.mShowBottomLeft;
 	}
 	
 	function whatToShowAtTop(){
-		return Application.getApp().getProperty("WhatToShowAtTop");
+		return view.mWhatToShowAtTop;
 	}
 	
 	function whatToShowAtRight(){
-		return Application.getApp().getProperty("WhatToShowAtRight");
+		return view.mWhatToShowAtRight;
 	}
 	
 	function whatToShowAtBottomLeft(){
-		return Application.getApp().getProperty("WhatToShowAtBottomLeft");
+		return view.mWhatToShowAtBottomLeft;
 	}
 	
 	function whatToShowAtBottomLeft2(){
-		return Application.getApp().getProperty("WhatToShowAtBottomLeft2");
+		return view.mWhatToShowAtBottomLeft2;
 	}
 	
 	function whatToShowAtBottomLeft3(){
-		return Application.getApp().getProperty("WhatToShowAtBottomLeft3");
+		return view.mWhatToShowAtBottomLeft3;
 	}
 	
 	function bluetoothOption(){
-		return Application.getApp().getProperty("BTCOnnection");
+		return view.mBTConnection;
 	}
 	
 	function getMonthName(number){		
@@ -133,7 +100,7 @@ class helper {
 	}
 	
 	function getWeekdayName(number){
-		return getWeekdayName_(number,Application.getApp().getProperty("Font"));
+		return getWeekdayName_(number, view.mFont);
 	}
 	
 	function getWeekdayName_(number,setting){
@@ -207,81 +174,65 @@ class helper {
 	}
 	
 	function setColors(dc){
-		var bgColor = Application.getApp().getProperty("BackgroundColor");
-        var fgColor = Application.getApp().getProperty("ForegroundColor");
-        dc.setColor(Graphics.COLOR_TRANSPARENT, bgColor);
+        dc.setColor(Graphics.COLOR_TRANSPARENT, view.mBgColor);
     	dc.clear();
-    	dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
+    	dc.setColor(view.mFgColor, Graphics.COLOR_TRANSPARENT);
 	}
 	
 	function getSteps(){
+        var steps = ActivityMonitor.getInfo().steps;
+        if (steps == null) { steps = 0; }
 		if(shortFormat){
-			if(debug){
-				return "99999stps";
-			}
-			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,"stps"]);
+			if(debug){ return "99999stps"; }
+			return steps + "stps";
 		}
 	
-		if(debug){
-			return "99999 steps";
-		}
-		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().steps,"steps"]);	
+		if(debug){ return "99999 steps"; }
+		return steps + " steps";
 	}
 	function getCalories(){
+        var calories = ActivityMonitor.getInfo().calories;
+        if (calories == null) { calories = 0; }
 		if(shortFormat){
-			if(debug){
-				return "99999cal";
-			}
-			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().calories,"cal"]);
+			if(debug){ return "99999cal"; }
+			return calories + "cal";
 		}
-		if(debug){
-			return "99999 calories";
-		}
-		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().calories,"calories"]);
+		if(debug){ return "99999 calories"; }
+		return calories + " calories";
 	}
 	
 	function getMsgs(){
+        var ntfCount = System.getDeviceSettings().notificationCount;
+        if (ntfCount == null) { ntfCount = 0; }
 		if(shortFormat){
-			if(debug){
-				return "99msgs";
-			}
-			var ntfCount = System.getDeviceSettings().notificationCount;	
-			return Lang.format("$1$$2$",[ntfCount, "msgs"]);
+			if(debug){ return "99msgs"; }
+			return ntfCount + "msgs";
 		}
-		if(debug){
-			return "99 messages";
-		}
-		var ntfCount = System.getDeviceSettings().notificationCount;	
-		return Lang.format("$1$ $2$",[ntfCount, "messages"]);
+		if(debug){ return "99 messages"; }
+		return ntfCount + " messages";
 	}
 	
 	function getBattery(){
+        var batteryStats = System.getSystemStats().battery;
+        var battery = 0;
+        if (batteryStats != null) {
+	        battery = batteryStats.format("%d");
+        }
+
 		if(shortFormat){
-			if(debug){
-				return "100%";
-			}
-			return Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", ""]);
+			if(debug){ return "100%"; }
+			return battery + "%";
 		}
-		if(debug){
-			return "100% battery";
-		}
-		return Lang.format("$1$ $2$",[System.getSystemStats().battery.format("%d")+"%","battery" ]);
+		if(debug){ return "100% battery"; }
+		return battery + "% battery";
 	}
 	
 	function getHR(){
-		if(shortFormat){
-			var hr = Activity.getActivityInfo().currentHeartRate;
-			if(hr!=null){
-				return Lang.format("$1$$2$",[hr, "bpm"]);
-			}
-			return "--bpm";
-		}
 		var hr = Activity.getActivityInfo().currentHeartRate;
-			if(hr!=null){
-				return Lang.format("$1$ $2$",[hr, "bpm"]);
-			}
-			return "-- bpm";
-		
+		if(hr == null){
+            return shortFormat ? "--bpm" : "-- bpm";
+        }
+        return shortFormat ? hr + "bpm" : hr + " bpm";
 	}
 	
 	function drawTop(dc,x,y){
@@ -442,15 +393,6 @@ class helper {
 	}
 
 	function getWeather(){
-//		System.println("location");
-//		System.println(Position.getInfo().position.lat);
-//		System.println(Position.getInfo().position.lon);
-//		
-//		var key = "ff16abd420297723c28169e6eab2b41a";
-//		var lat = 35;
-//		var long = 139;
-//		
-//		Lang.format("$1$$2$$3$",["https://samples.openweathermap.org/data/2.5/weather?lat=",lat,"&lon=",long,"&appid=",key]);
 		return "0"; 
 	}
 	
@@ -462,10 +404,6 @@ class helper {
         }
 	}
 		
-	// screenShape 1 = SCREEN_SHAPE_ROUND
-	// screenShape 2 = SCREEN_SHAPE_SEMI_ROUND
-	// screenShape 3 = SCREEN_SHAPE_RECTANGLE
-	// screenShape 4 = SCREEN_SHAPE_SEMI_OCTAGON
 	function ifScreen(screenWidth,screenHeight,screenShape){
 		return 
 			screenWidth == System.getDeviceSettings().screenWidth &&
