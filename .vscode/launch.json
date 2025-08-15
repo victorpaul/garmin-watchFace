@@ -165,14 +165,26 @@
       "stopAtLaunch": false,
       "device": "approachs60"
     },
-
-
     {
       "type": "monkeyc",
       "request": "launch",
       "name": "fenix7",
       "stopAtLaunch": false,
       "device": "fenix7"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix5",
+      "stopAtLaunch": false,
+      "device": "fenix5"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix6",
+      "stopAtLaunch": false,
+      "device": "fenix6"
     },
     {
       "type": "monkeyc",
