@@ -115,20 +115,24 @@ class helper {
 		return Application.getApp().getProperty("BTCOnnection");
 	}
 	
-	function getMonthName(number){		
+	function getMonthName(number){
+		// Debug: Print loaded string to verify language
+		if(debug){
+			System.println("MonthJan: " + WatchUi.loadResource(Rez.Strings.MonthJan));
+		}
 		switch(number){
-			case 1: return "Jan";
-			case 2: return "Feb";
-			case 3: return "Mar";
-			case 4: return "Apr";
-			case 5: return "May";
-			case 6: return "Jun";
-			case 7: return "Jul";
-			case 8: return "Aug";
-			case 9: return "Sep";
-			case 10: return "Oct";
-			case 11: return "Nov";
-			case 12: return "Dec";
+			case 1: return WatchUi.loadResource(Rez.Strings.MonthJan);
+			case 2: return WatchUi.loadResource(Rez.Strings.MonthFeb);
+			case 3: return WatchUi.loadResource(Rez.Strings.MonthMar);
+			case 4: return WatchUi.loadResource(Rez.Strings.MonthApr);
+			case 5: return WatchUi.loadResource(Rez.Strings.MonthMay);
+			case 6: return WatchUi.loadResource(Rez.Strings.MonthJun);
+			case 7: return WatchUi.loadResource(Rez.Strings.MonthJul);
+			case 8: return WatchUi.loadResource(Rez.Strings.MonthAug);
+			case 9: return WatchUi.loadResource(Rez.Strings.MonthSep);
+			case 10: return WatchUi.loadResource(Rez.Strings.MonthOct);
+			case 11: return WatchUi.loadResource(Rez.Strings.MonthNov);
+			case 12: return WatchUi.loadResource(Rez.Strings.MonthDec);
 			default: return "-";		
 		}
 	}
@@ -140,25 +144,25 @@ class helper {
 	function getWeekdayName_(number,setting){
 		if(setting == 1){
 			switch(number){
-				case 1: return "Sun";
-				case 2: return "Mon";
-				case 3: return "Tue";
-				case 4: return "Wed";
-				case 5: return "Thu";
-				case 6: return "Fri";
-				case 7: return "Sat";
+				case 1: return WatchUi.loadResource(Rez.Strings.WeekdayShortSun);
+				case 2: return WatchUi.loadResource(Rez.Strings.WeekdayShortMon);
+				case 3: return WatchUi.loadResource(Rez.Strings.WeekdayShortTue);
+				case 4: return WatchUi.loadResource(Rez.Strings.WeekdayShortWed);
+				case 5: return WatchUi.loadResource(Rez.Strings.WeekdayShortThu);
+				case 6: return WatchUi.loadResource(Rez.Strings.WeekdayShortFri);
+				case 7: return WatchUi.loadResource(Rez.Strings.WeekdayShortSat);
 				default: return "-";	
 			}
 		}
 		
 		switch(number){
-			case 1: return "sun";
-			case 2: return "mon";
-			case 3: return "tue";
-			case 4: return "wed";
-			case 5: return "thu";
-			case 6: return "fri";
-			case 7: return "sat";
+			case 1: return WatchUi.loadResource(Rez.Strings.WeekdayLongSun);
+			case 2: return WatchUi.loadResource(Rez.Strings.WeekdayLongMon);
+			case 3: return WatchUi.loadResource(Rez.Strings.WeekdayLongTue);
+			case 4: return WatchUi.loadResource(Rez.Strings.WeekdayLongWed);
+			case 5: return WatchUi.loadResource(Rez.Strings.WeekdayLongThu);
+			case 6: return WatchUi.loadResource(Rez.Strings.WeekdayLongFri);
+			case 7: return WatchUi.loadResource(Rez.Strings.WeekdayLongSat);
 			default: return "-";		
 		}
 	}
@@ -220,13 +224,13 @@ class helper {
 			if(debug){
 				return "99999stps";
 			}
-			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,"stps"]);
+			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,WatchUi.loadResource(Rez.Strings.StepsShort)]);
 		}
 	
 		if(debug){
 			return "99999 steps";
 		}
-		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().steps,"steps"]);	
+		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().steps,WatchUi.loadResource(Rez.Strings.StepsLong)]);	
 	}
 	
 	function getFloors(){
@@ -234,25 +238,25 @@ class helper {
 			if(debug){
 				return "99flrs";
 			}
-			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().floorsClimbed,"flrs"]);
+			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().floorsClimbed,WatchUi.loadResource(Rez.Strings.FloorsShort)]);
 		}
 	
 		if(debug){
 			return "99 floors";
 		}
-		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().floorsClimbed,"floors"]);	
+		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().floorsClimbed,WatchUi.loadResource(Rez.Strings.FloorsLong)]);	
 	}
 	function getCalories(){
 		if(shortFormat){
 			if(debug){
 				return "99999cal";
 			}
-			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().calories,"cal"]);
+			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().calories,WatchUi.loadResource(Rez.Strings.CaloriesShort)]);
 		}
 		if(debug){
 			return "99999 calories";
 		}
-		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().calories,"calories"]);
+		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().calories,WatchUi.loadResource(Rez.Strings.CaloriesLong)]);
 	}
 	
 	function getMsgs(){
@@ -261,13 +265,13 @@ class helper {
 				return "99msgs";
 			}
 			var ntfCount = System.getDeviceSettings().notificationCount;	
-			return Lang.format("$1$$2$",[ntfCount, "msgs"]);
+			return Lang.format("$1$$2$",[ntfCount, WatchUi.loadResource(Rez.Strings.MessagesShort)]);
 		}
 		if(debug){
 			return "99 messages";
 		}
 		var ntfCount = System.getDeviceSettings().notificationCount;	
-		return Lang.format("$1$ $2$",[ntfCount, "messages"]);
+		return Lang.format("$1$ $2$",[ntfCount, WatchUi.loadResource(Rez.Strings.MessagesLong)]);
 	}
 	
 	function getBattery(){
@@ -280,7 +284,7 @@ class helper {
 		if(debug){
 			return "100% battery";
 		}
-		return Lang.format("$1$ $2$",[System.getSystemStats().battery.format("%d")+"%","battery" ]);
+		return Lang.format("$1$ $2$",[System.getSystemStats().battery.format("%d")+"%",WatchUi.loadResource(Rez.Strings.BatteryLong) ]);
 	}
 	
 	function getHR(){
@@ -293,15 +297,15 @@ class helper {
 		
 		if(shortFormat){
 			if(hr != null && hr > 0){
-				return Lang.format("$1$$2$",[hr, "bpm"]);
+				return Lang.format("$1$$2$",[hr, WatchUi.loadResource(Rez.Strings.BpmShort)]);
 			}
-			return "--bpm";
+			return WatchUi.loadResource(Rez.Strings.NoHeartRateShort);
 		}
 		
 		if(hr != null && hr > 0){
-			return Lang.format("$1$ $2$",[hr, "bpm"]);
+			return Lang.format("$1$ $2$",[hr, WatchUi.loadResource(Rez.Strings.BpmLong)]);
 		}
-		return "-- bpm";
+		return WatchUi.loadResource(Rez.Strings.NoHeartRateLong);
 	}
 	
 	function drawTop(dc,x,y){

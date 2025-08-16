@@ -1,0 +1,114 @@
+<strings>
+    <string id="AppName">Chalk Watch</string>
+    
+    <string id="BackgroundColorTitle">Fono Spalva</string>
+    <string id="ForegroundColorTitle">Teksto Spalva</string>
+    <string id="Use12Hours">12 valandų formatas</string>
+    <string id="ShowDays">Rodyti viršutinės dešinės informaciją</string>
+    <string id="ShowBottomLeft">Rodyti apatinės kairės informaciją</string>
+    <string id="ShowMonthYear">Rodyti viršutinės centro informaciją</string>
+    <string id="UseBrushFontForInfo">Naudoti šepetėlio šriftą mažam tekstui</string>
+	<string id="ShowHR">Rodyti ŠD</string>
+
+    <string id="ColorBlack">Juoda</string>
+    <string id="ColorDarkGray">Tamsiai Pilka</string>
+    <string id="ColorLightGray">Šviesiai Pilka</string>
+    <string id="ColorWhite">Balta</string>
+    <string id="ColorBlue">Mėlyna</string>
+    <string id="ColorRed">Raudona</string>
+    
+    <string id="ColorGreen">Žalia</string>
+    <string id="ColorOrange">Oranžinė</string>
+    <string id="ColorYellow">Geltona</string>
+    
+    <string id="Font">Mažo teksto šriftas</string>
+    <string id="Font1">šriftas 1</string>
+    <string id="Font2">šriftas 2</string>
+    <string id="Font3">šriftas 3</string>
+    
+    
+    <string id="TopCenterInfo">Viršutinės centro informacija</string>
+    <string id="Date1">Mėnuo metai</string>
+    <string id="Date2">Mėnuo diena</string>
+    <string id="Date3">Mėnuo diena, metai</string>
+    <string id="Date4">DD/MM/MMMM</string>
+    <string id="Date5">MM/DD/MMMM</string>
+    <string id="Date6">Mėnuo savaitės diena</string>
+    
+    <string id="RightInfo">Dešinės informacija</string>
+    <string id="Calendar">Kalendorius</string>
+    
+    <string id="Activity">Veikla</string>
+    
+    <string id="BottomLeftInfo">Apatinės kairės informacija. Eilutė A</string>
+    <string id="BottomLeftInfo2">Apatinės kairės informacija. Eilutė B</string>
+    <string id="BottomLeftInfo3">Apatinės kairės informacija. Eilutė C</string>
+    <string id="Steps">Žingsniai</string>
+    <string id="Calories">Kalorijos</string>
+    <string id="Battery">Baterija</string>
+    <string id="Messages">Pranešimų skaičius</string>
+    <string id="Hr">Širdies Dažnis</string>
+    <string id="Floors">Aukštai Įveikti</string>
+    <string id="None">Nieko</string>
+    
+    <string id="UseOldFont">Naudoti senąjį laikrodžio šriftą</string>
+    
+    <string id="BluetoothSetting">Rodyti Bluetooth ryšį kaip:</string>
+    <string id="BToption1">Išmanųjį Telefoną</string>
+    <string id="BToption2">Mobilųjį Telefoną</string>
+    <string id="BToption3">Senąjį Telefoną</string>
+
+    <string id="BeepOnPhoneDisconnect">Pyptelėjimas atsijungus telefonui</string>
+    
+    <!-- Month names -->
+    <string id="MonthJan">Sau</string>
+    <string id="MonthFeb">Vas</string>
+    <string id="MonthMar">Kov</string>
+    <string id="MonthApr">Bal</string>
+    <string id="MonthMay">Geg</string>
+    <string id="MonthJun">Bir</string>
+    <string id="MonthJul">Lie</string>
+    <string id="MonthAug">Rgp</string>
+    <string id="MonthSep">Rgs</string>
+    <string id="MonthOct">Spl</string>
+    <string id="MonthNov">Lap</string>
+    <string id="MonthDec">Grd</string>
+    
+    <!-- Weekday names - short format -->
+    <string id="WeekdayShortSun">Sk</string>
+    <string id="WeekdayShortMon">Pr</string>
+    <string id="WeekdayShortTue">An</string>
+    <string id="WeekdayShortWed">Tr</string>
+    <string id="WeekdayShortThu">Kt</string>
+    <string id="WeekdayShortFri">Pn</string>
+    <string id="WeekdayShortSat">Št</string>
+    
+    <!-- Weekday names - long format -->
+    <string id="WeekdayLongSun">sk</string>
+    <string id="WeekdayLongMon">pr</string>
+    <string id="WeekdayLongTue">an</string>
+    <string id="WeekdayLongWed">tr</string>
+    <string id="WeekdayLongThu">kt</string>
+    <string id="WeekdayLongFri">pn</string>
+    <string id="WeekdayLongSat">št</string>
+    
+    <!-- Activity/Fitness labels - Short format (used on smaller screens or compact layouts) -->
+    <string id="StepsShort">žing</string>           <!-- Abbreviation for steps count -->
+    <string id="FloorsShort">aukš</string>          <!-- Abbreviation for floors climbed -->
+    <string id="CaloriesShort">kal</string>         <!-- Abbreviation for calories burned -->
+    <string id="MessagesShort">žin</string>         <!-- Abbreviation for message count -->
+    <string id="BpmShort">d/min</string>            <!-- Abbreviation for beats per minute (heart rate) -->
+    
+    <!-- Activity/Fitness labels - Long format (used on larger screens or full layouts) -->
+    <string id="StepsLong">žingsniai</string>       <!-- Full word for steps count -->
+    <string id="FloorsLong">aukštai</string>        <!-- Full word for floors climbed -->
+    <string id="CaloriesLong">kalorijos</string>    <!-- Full word for calories burned -->
+    <string id="MessagesLong">pranešimai</string>   <!-- Full word for message count -->
+    <string id="BatteryLong">baterija</string>      <!-- Full word for battery level -->
+    <string id="BpmLong">d/min</string>             <!-- Beats per minute (dūžiai per minutę) -->
+    
+    <!-- Heart rate placeholders (when no heart rate is available) -->
+    <string id="NoHeartRateShort">--d/min</string>  <!-- No heart rate placeholder for compact layout -->
+    <string id="NoHeartRateLong">-- d/min</string>  <!-- No heart rate placeholder for full layout -->
+    
+</strings>

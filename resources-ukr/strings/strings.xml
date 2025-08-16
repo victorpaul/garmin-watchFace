@@ -1,0 +1,114 @@
+<strings>
+    <string id="AppName">Chalk Watch</string>
+    
+    <string id="BackgroundColorTitle">Колір Фону</string>
+    <string id="ForegroundColorTitle">Колір Тексту</string>
+    <string id="Use12Hours">12-годинний формат</string>
+    <string id="ShowDays">Показати інформацію праворуч вгорі</string>
+    <string id="ShowBottomLeft">Показати інформацію ліворуч внизу</string>
+    <string id="ShowMonthYear">Показати інформацію по центру вгорі</string>
+    <string id="UseBrushFontForInfo">Використовувати пензлевий шрифт для дрібного тексту</string>
+	<string id="ShowHR">Показати ЧСС</string>
+
+    <string id="ColorBlack">Чорний</string>
+    <string id="ColorDarkGray">Темно-сірий</string>
+    <string id="ColorLightGray">Світло-сірий</string>
+    <string id="ColorWhite">Білий</string>
+    <string id="ColorBlue">Синій</string>
+    <string id="ColorRed">Червоний</string>
+    
+    <string id="ColorGreen">Зелений</string>
+    <string id="ColorOrange">Помаранчевий</string>
+    <string id="ColorYellow">Жовтий</string>
+    
+    <string id="Font">Шрифт дрібного тексту</string>
+    <string id="Font1">шрифт 1</string>
+    <string id="Font2">шрифт 2</string>
+    <string id="Font3">шрифт 3</string>
+    
+    
+    <string id="TopCenterInfo">Інформація по центру вгорі</string>
+    <string id="Date1">Місяць рік</string>
+    <string id="Date2">Місяць день</string>
+    <string id="Date3">Місяць день, рік</string>
+    <string id="Date4">ДД/ММ/РРРР</string>
+    <string id="Date5">ММ/ДД/РРРР</string>
+    <string id="Date6">Місяць день тижня</string>
+    
+    <string id="RightInfo">Інформація праворуч</string>
+    <string id="Calendar">Календар</string>
+    
+    <string id="Activity">Активність</string>
+    
+    <string id="BottomLeftInfo">Інформація ліворуч внизу. Рядок А</string>
+    <string id="BottomLeftInfo2">Інформація ліворуч внизу. Рядок Б</string>
+    <string id="BottomLeftInfo3">Інформація ліворуч внизу. Рядок В</string>
+    <string id="Steps">Кроки</string>
+    <string id="Calories">Калорії</string>
+    <string id="Battery">Батарея</string>
+    <string id="Messages">Кількість повідомлень</string>
+    <string id="Hr">Частота Серцевих Скорочень</string>
+    <string id="Floors">Поверхи Піднято</string>
+    <string id="None">Жодного</string>
+    
+    <string id="UseOldFont">Використовувати старий шрифт для годинника</string>
+    
+    <string id="BluetoothSetting">Показувати Bluetooth з'єднання як:</string>
+    <string id="BToption1">Смартфон</string>
+    <string id="BToption2">Мобільний Телефон</string>
+    <string id="BToption3">Старий Телефон</string>
+
+    <string id="BeepOnPhoneDisconnect">Сигнал при відключенні телефону</string>
+    
+    <!-- Month names -->
+    <string id="MonthJan">Січ</string>
+    <string id="MonthFeb">Лют</string>
+    <string id="MonthMar">Бер</string>
+    <string id="MonthApr">Квт</string>
+    <string id="MonthMay">Тра</string>
+    <string id="MonthJun">Чер</string>
+    <string id="MonthJul">Лип</string>
+    <string id="MonthAug">Сер</string>
+    <string id="MonthSep">Вер</string>
+    <string id="MonthOct">Жов</string>
+    <string id="MonthNov">Лис</string>
+    <string id="MonthDec">Гру</string>
+    
+    <!-- Weekday names - short format -->
+    <string id="WeekdayShortSun">Нд</string>
+    <string id="WeekdayShortMon">Пн</string>
+    <string id="WeekdayShortTue">Вт</string>
+    <string id="WeekdayShortWed">Ср</string>
+    <string id="WeekdayShortThu">Чт</string>
+    <string id="WeekdayShortFri">Пт</string>
+    <string id="WeekdayShortSat">Сб</string>
+    
+    <!-- Weekday names - long format -->
+    <string id="WeekdayLongSun">нд</string>
+    <string id="WeekdayLongMon">пн</string>
+    <string id="WeekdayLongTue">вт</string>
+    <string id="WeekdayLongWed">ср</string>
+    <string id="WeekdayLongThu">чт</string>
+    <string id="WeekdayLongFri">пт</string>
+    <string id="WeekdayLongSat">сб</string>
+    
+    <!-- Activity/Fitness labels - Short format (used on smaller screens or compact layouts) -->
+    <string id="StepsShort">кроки</string>          <!-- Abbreviation for steps count -->
+    <string id="FloorsShort">пов</string>           <!-- Abbreviation for floors climbed -->
+    <string id="CaloriesShort">кал</string>         <!-- Abbreviation for calories burned -->
+    <string id="MessagesShort">повід</string>       <!-- Abbreviation for message count -->
+    <string id="BpmShort">уд/хв</string>            <!-- Abbreviation for beats per minute (heart rate) -->
+    
+    <!-- Activity/Fitness labels - Long format (used on larger screens or full layouts) -->
+    <string id="StepsLong">кроки</string>           <!-- Full word for steps count -->
+    <string id="FloorsLong">поверхи</string>        <!-- Full word for floors climbed -->
+    <string id="CaloriesLong">калорії</string>      <!-- Full word for calories burned -->
+    <string id="MessagesLong">повідомлення</string> <!-- Full word for message count -->
+    <string id="BatteryLong">батарея</string>       <!-- Full word for battery level -->
+    <string id="BpmLong">уд/хв</string>             <!-- Beats per minute (удари в хвилину) -->
+    
+    <!-- Heart rate placeholders (when no heart rate is available) -->
+    <string id="NoHeartRateShort">--уд/хв</string>  <!-- No heart rate placeholder for compact layout -->
+    <string id="NoHeartRateLong">-- уд/хв</string>  <!-- No heart rate placeholder for full layout -->
+    
+</strings>

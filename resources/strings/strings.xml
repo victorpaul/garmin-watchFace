@@ -60,4 +60,55 @@
     
     <string id="BeepOnPhoneDisconnect">Alert on phone disconnect</string>
     
+    <!-- Month names -->
+    <string id="MonthJan">Jan</string>
+    <string id="MonthFeb">Feb</string>
+    <string id="MonthMar">Mar</string>
+    <string id="MonthApr">Apr</string>
+    <string id="MonthMay">May</string>
+    <string id="MonthJun">Jun</string>
+    <string id="MonthJul">Jul</string>
+    <string id="MonthAug">Aug</string>
+    <string id="MonthSep">Sep</string>
+    <string id="MonthOct">Oct</string>
+    <string id="MonthNov">Nov</string>
+    <string id="MonthDec">Dec</string>
+    
+    <!-- Weekday names - short format -->
+    <string id="WeekdayShortSun">Sun</string>
+    <string id="WeekdayShortMon">Mon</string>
+    <string id="WeekdayShortTue">Tue</string>
+    <string id="WeekdayShortWed">Wed</string>
+    <string id="WeekdayShortThu">Thu</string>
+    <string id="WeekdayShortFri">Fri</string>
+    <string id="WeekdayShortSat">Sat</string>
+    
+    <!-- Weekday names - long format -->
+    <string id="WeekdayLongSun">sun</string>
+    <string id="WeekdayLongMon">mon</string>
+    <string id="WeekdayLongTue">tue</string>
+    <string id="WeekdayLongWed">wed</string>
+    <string id="WeekdayLongThu">thu</string>
+    <string id="WeekdayLongFri">fri</string>
+    <string id="WeekdayLongSat">sat</string>
+    
+    <!-- Activity/Fitness labels - Short format (used on smaller screens or compact layouts) -->
+    <string id="StepsShort">stps</string>          <!-- Abbreviation for steps count -->
+    <string id="FloorsShort">flrs</string>         <!-- Abbreviation for floors climbed -->
+    <string id="CaloriesShort">cal</string>        <!-- Abbreviation for calories burned -->
+    <string id="MessagesShort">msgs</string>       <!-- Abbreviation for message count -->
+    <string id="BpmShort">bpm</string>             <!-- Abbreviation for beats per minute (heart rate) -->
+    
+    <!-- Activity/Fitness labels - Long format (used on larger screens or full layouts) -->
+    <string id="StepsLong">steps</string>          <!-- Full word for steps count -->
+    <string id="FloorsLong">floors</string>        <!-- Full word for floors climbed -->
+    <string id="CaloriesLong">calories</string>    <!-- Full word for calories burned -->
+    <string id="MessagesLong">messages</string>    <!-- Full word for message count -->
+    <string id="BatteryLong">battery</string>      <!-- Full word for battery level -->
+    <string id="BpmLong">bpm</string>              <!-- Beats per minute (same as short) -->
+    
+    <!-- Heart rate placeholders (when no heart rate is available) -->
+    <string id="NoHeartRateShort">--bpm</string>   <!-- No heart rate placeholder for compact layout -->
+    <string id="NoHeartRateLong">-- bpm</string>   <!-- No heart rate placeholder for full layout -->
+    
 </strings>
