@@ -4,6 +4,7 @@ using Toybox.System;
 using Toybox.Lang;
 using Toybox.ActivityMonitor;
 using Toybox.Application;
+using Toybox.Activity;
 
 using Toybox.Time;
 using Toybox.Time.Gregorian;
@@ -227,6 +228,20 @@ class helper {
 		}
 		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().steps,"steps"]);	
 	}
+	
+	function getFloors(){
+		if(shortFormat){
+			if(debug){
+				return "99flrs";
+			}
+			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().floorsClimbed,"flrs"]);
+		}
+	
+		if(debug){
+			return "99 floors";
+		}
+		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().floorsClimbed,"floors"]);	
+	}
 	function getCalories(){
 		if(shortFormat){
 			if(debug){
@@ -269,19 +284,24 @@ class helper {
 	}
 	
 	function getHR(){
+		var activityInfo = Activity.getActivityInfo();
+		var hr = null;
+		
+		if (activityInfo != null) {
+			hr = activityInfo.currentHeartRate;
+		}
+		
 		if(shortFormat){
-			var hr = Activity.getActivityInfo().currentHeartRate;
-			if(hr!=null){
+			if(hr != null && hr > 0){
 				return Lang.format("$1$$2$",[hr, "bpm"]);
 			}
 			return "--bpm";
 		}
-		var hr = Activity.getActivityInfo().currentHeartRate;
-			if(hr!=null){
-				return Lang.format("$1$ $2$",[hr, "bpm"]);
-			}
-			return "-- bpm";
 		
+		if(hr != null && hr > 0){
+			return Lang.format("$1$ $2$",[hr, "bpm"]);
+		}
+		return "-- bpm";
 	}
 	
 	function drawTop(dc,x,y){
@@ -327,6 +347,9 @@ class helper {
 	    		break;
     		case 10: 
 	    		dc.drawText(x,y, font,getHR(),align);
+	    		break;
+    		case 13: 
+	    		dc.drawText(x,y, font,getFloors(),align);
 	    		break;
 			case 11:
 				break;
@@ -407,9 +430,9 @@ class helper {
 			case 2:// deprecated, old shows connection to phone
 			case 3:
 				dc.drawText(x,y, font,getSteps(),align);
-	    		dc.drawText(x,y+stepY, font,getCalories(),align);
+	    		dc.drawText(x,y+stepY, font, getFloors(),align);
 	    		if(daysForward>=3){
-					dc.drawText(x,y+stepY+stepY, font, Lang.format("$1$$2$,$3$",[getMonthName(date.month),date.day,date.year]), align);
+					dc.drawText(x,y+stepY+stepY, font, getCalories(), align);
 				}
 				break;
 			case 4:
@@ -435,7 +458,10 @@ class helper {
     		case 5: 
 	    		dc.drawText(x,y, font,getHR(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
-    		case 6:
+    		case 6: 
+	    		dc.drawText(x,y, font,getFloors(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		break;
+    		case 7:
     		default:
 	    		break;
 	    }

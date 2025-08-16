@@ -2,11 +2,14 @@ using Toybox.WatchUi;
 using Toybox.Graphics;
 using Toybox.System;
 using Toybox.Lang;
+using Toybox.Application;
+using Toybox.Attention;
 
 class phoneBatteryIQView extends WatchUi.WatchFace {
 
 	var uiH;
 	var inLowPower=false;
+	var lastPhoneConnectionState = null;
 	
     function initialize() {
         WatchFace.initialize();
@@ -25,6 +28,38 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
     function onEnterSleep() {
     	inLowPower=true;
     	WatchUi.requestUpdate(); 
+    }
+    
+    function checkPhoneConnectionAndBeep() {
+        var beepEnabled = Application.Properties.getValue("BeepOnPhoneDisconnect");
+        if (beepEnabled == null) {
+            beepEnabled = false;
+        }
+        
+        if (beepEnabled) {
+            var currentConnectionState = System.getDeviceSettings().phoneConnected;
+            
+            if (lastPhoneConnectionState != null && lastPhoneConnectionState == true && currentConnectionState == false) {
+                if (Attention has :ToneProfile) {
+                    var toneProfile = [
+                        new Attention.ToneProfile(2500, 200),
+                        new Attention.ToneProfile(0, 100),
+                        new Attention.ToneProfile(2500, 200)
+                    ];
+                    Attention.playTone({:toneProfile=>toneProfile});
+                }
+                if (Attention has :VibeProfile && Attention has :vibrate) {
+                    var vibeData = [
+                        new Attention.VibeProfile(50, 200),
+                        new Attention.VibeProfile(0, 100),
+                        new Attention.VibeProfile(50, 200)
+                    ];
+                    Attention.vibrate(vibeData);
+                }
+            }
+            
+            lastPhoneConnectionState = currentConnectionState;
+        }
     }
 	
 	function draw_vivoactiveHR(dc){
@@ -341,7 +376,8 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	
     // Update the view
     function onUpdate(dc) {
-
+        
+        checkPhoneConnectionAndBeep();
 
 		if(uiH.debug) {
 			System.println(

@@ -13,7 +13,9 @@
 	
 	<property id="UseOldFont" type="boolean">false</property>
 	
-	<property id="BTCOnnection" type="number">0</property>
+	<property id="BTCOnnection" type="number">3</property>
+	
+	<property id="BeepOnPhoneDisconnect" type="boolean">false</property>
 	
 
 </properties>
