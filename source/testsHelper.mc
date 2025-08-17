@@ -58,14 +58,6 @@ class HelperTests {
     	return true;
 	}
 	
-	(:test)
-	function success_get_y_correction_according_to_device(logger){
-		var uiH = new helper();
-		Test.assertEqualMessage(true,uiH.getYfixForOldFont_(true)>0,"For old font, there is always correction by Y");
-		Test.assertEqualMessage(0,uiH.getYfixForOldFont_(false),"For current font should not be any correction by Y");
-	
-		return true;
-	}
 	
 	(:test)
 	function success_draw_empty_top_right_block(logger){
@@ -102,12 +94,8 @@ class HelperTests {
 		uiH.fontSmall_(5);
 		
     	uiH.fontHuge245();
-    	uiH.fontHuge245_(true);
-    	uiH.fontHuge245_(false);
     	
     	uiH.fontHuge45();
-    	uiH.fontHuge45_(true);
-    	uiH.fontHuge45_(false);
     	
     	uiH.fontMedium();
     	uiH.fontMedium_(0);

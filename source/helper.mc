@@ -19,22 +19,10 @@ class helper {
 	}
 
 	function fontHuge245(){
-		return fontHuge245_(useOldFont());
-	}
-	function fontHuge245_(setting){
-		if(setting){
-			return WatchUi.loadResource(Rez.Fonts.fntHugeOld);	
-		}
 		return WatchUi.loadResource(Rez.Fonts.fntHuge);
 	}
 
 	function fontHuge45(){
-		return fontHuge45_(useOldFont());
-	}
-	function fontHuge45_(setting){
-		if(setting){
-			return WatchUi.loadResource(Rez.Fonts.fntHugeOld);	
-		}
 		return WatchUi.loadResource(Rez.Fonts.fntHuge45);
 	}
 	
@@ -53,7 +41,7 @@ class helper {
 	}
 	
 	function fontSmall(){
-		return fontSmall_(Application.getApp().getProperty("Font"));
+		return 	(Application.getApp().getProperty("Font"));
 	}
 	
 	function fontIcons(){
@@ -83,9 +71,6 @@ class helper {
 		return hours.format("%02d").toCharArray();
 	}
 	
-	function useOldFont(){
-		return Application.getApp().getProperty("UseOldFont");
-	}
 	
 	function showBottomLeft(){
 		return Application.getApp().getProperty("ShowBottomLeft");
@@ -276,7 +261,7 @@ class helper {
 	
 	function getBattery(){
 		if(shortFormat){
-			if(debug){
+			if(debug){	
 				return "100%";
 			}
 			return Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", ""]);
@@ -365,30 +350,8 @@ class helper {
         
 	}
 	
-	function getYfixForOldFont(){
-		return getYfixForOldFont_(useOldFont());
-	}
-	
-	function getYfixForOldFont_(setting){
-		if(setting){
-			switch(System.getDeviceSettings().screenHeight){
-				case 205: return 35;
-				case 148: return 35;
-				case 180: return 20;
-				case 208: return 35;
-				case 218: return 25;
-				case 240: return 65;
-				case 260: return 65;
-				case 280: return 65;
-				case 390: return 65;
-				default:return 0;
-			}
-		}
-		return 0;
-	}
 	
 	function drawHours(dc,hourX,hourY,adjX,adjY,hugefont){
-		hourY+=getYfixForOldFont();	
 		
 		var hours = getHours();
         dc.drawText(hourX,hourY,hugefont,hours[0],Graphics.TEXT_JUSTIFY_CENTER);
@@ -400,7 +363,6 @@ class helper {
 	}
 	
 	function drawMinutes(dc,minuteX,minuteY,adjX,adjY,hugefont){
-		minuteY+=getYfixForOldFont();
 		
     	var minutes = System.getClockTime().min.format("%02d").toCharArray();
     	dc.drawText(minuteX,minuteY,hugefont,minutes[0],Graphics.TEXT_JUSTIFY_CENTER);
@@ -422,7 +384,6 @@ class helper {
 		drawTopRightFont(whatToSHow,dc,x,y,stepY,startday,daysForward,fontSmall());
 	}
 	function drawTopRightFont(whatToSHow,dc,x,y,stepY,startday,daysForward,font){
-		var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 		var align = Graphics.TEXT_JUSTIFY_LEFT;
 		switch(whatToSHow){
 			case 1:

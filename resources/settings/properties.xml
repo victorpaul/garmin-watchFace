@@ -11,8 +11,6 @@
 	<property id="WhatToShowAtBottomLeft2" type="number">3</property>
 	<property id="WhatToShowAtBottomLeft3" type="number">4</property>
 	
-	<property id="UseOldFont" type="boolean">false</property>
-	
 	<property id="BTCOnnection" type="number">3</property>
 	
 	<property id="BeepOnPhoneDisconnect" type="boolean">false</property>

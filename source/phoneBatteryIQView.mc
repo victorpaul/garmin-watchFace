@@ -4,20 +4,33 @@ using Toybox.System;
 using Toybox.Lang;
 using Toybox.Application;
 using Toybox.Attention;
+using Toybox.Time;
+using Toybox.Time.Gregorian;
 
 class phoneBatteryIQView extends WatchUi.WatchFace {
 
 	var uiH;
 	var inLowPower=false;
 	var lastPhoneConnectionState = null;
+	var deviceType = null;
+	var isOledDisplay = false;
+	var fontsMode = false;
 	
     function initialize() {
         WatchFace.initialize();
         
         uiH = new helper();
-        
         uiH.debug = false;
 		uiH.debugDate = false;
+		fontsMode = true;
+		
+		initializeDevice();
+    }
+    
+    function initializeDevice() {
+        var deviceInfo = DeviceService.getDeviceInfo(uiH.debug);
+        deviceType = deviceInfo[:deviceType];
+        isOledDisplay = deviceInfo[:isOled];
     }
     
     function onExitSleep() {
@@ -335,142 +348,133 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		
 	}
 
-// 	function draw_venu2(dc){
-// //		uiH.debug = true;
-// 		if(uiH.debug || inLowPower && uiH.canBurn()){
-// 			var step = 4;
-// 			var radX = 114;
-// 			var radY = 64;
-// 			var x = 190;
-// 			var y = -18;
-// 			var xm = x+8;
-// 			var ym = y+130;
-			
-// 			var xy = uiH.getAnalogClockPosition(step,System.getClockTime().min,radX,radY);
-// 			uiH.drawHours(dc,x+xy[0],y+xy[1],45,0,uiH.fontHuge45());
-// 			uiH.drawMinutes(dc,xm+xy[0],ym+xy[1],40,0,uiH.fontHuge45());
-// 			if(uiH.debug){
-// 				for(var m=0; m<60;m++){
-// 					xy = uiH.getAnalogClockPosition(step,m,radX,radY);
-// 					uiH.drawHours(dc,x+xy[0],y+xy[1],45,0,uiH.fontHuge45());
-// 					uiH.drawMinutes(dc,xm+xy[0],ym+xy[1],40,0,uiH.fontHuge45());
-// 				}
-// 			}
-// 		}else{
-// 			uiH.drawBluetoothConnection(dc,195,350);
+	function drawFonts(dc){
+		var x = 0;
+		var y = 50;
+
+		// show all months
+		for (var index = 1; index <= 12; index++) {
+			y = index * 18 + 15;
+			x = 50;
+			dc.drawText(x,y, uiH.fontSmall_(100), uiH.getMonthName(index), Graphics.TEXT_JUSTIFY_LEFT);
+			dc.drawText(x+40,y, uiH.fontSmall_(2), uiH.getMonthName(index), Graphics.TEXT_JUSTIFY_LEFT);
+			dc.drawText(x+70,y, uiH.fontSmall_(3), uiH.getMonthName(index), Graphics.TEXT_JUSTIFY_LEFT);	
+		}
 		
-// 			var topCenter=uiH.whatToShowAtTop();
-// 			var topRight=uiH.whatToShowAtRight();
-// 	        uiH.drawTopFA(topCenter,dc,195,20,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
-	        
-// 	        uiH.drawTopRightFont(topRight,dc,190,45,25,0,4,uiH.fontMedium());
-// 	        if(topRight==1){
-// 	        	uiH.drawTopRightFont(topRight,dc,280,60,25,4,3,uiH.fontMedium());
-// 	        }
-// 	      	uiH.drawHours(dc,80,10,60,-20,uiH.fontHuge245());
-// 	    	uiH.drawMinutes(dc,260,90,60,-20,uiH.fontHuge245());
-// 			uiH.drawBottomLeft(dc,195,230,25,uiH.fontMedium());
-// 		}
+		for (var index = 1; index <= 7; index++) {
+			y = index * 18 + 15;
+			x = 155;
+			dc.drawText(x,y, uiH.fontSmall_(100), uiH.getWeekdayName(index), Graphics.TEXT_JUSTIFY_LEFT);
+			dc.drawText(x+30,y, uiH.fontSmall_(2), uiH.getWeekdayName(index), Graphics.TEXT_JUSTIFY_LEFT);
+			dc.drawText(x+60,y, uiH.fontSmall_(3), uiH.getWeekdayName(index), Graphics.TEXT_JUSTIFY_LEFT);	
+		}
+
+		x = 80;
+		y = -10;
+		dc.drawText(x,y, uiH.fontSmall_(100), uiH.getMsgs(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(x,y+15, uiH.fontSmall_(2), uiH.getMsgs(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(x,y+30, uiH.fontSmall_(3), uiH.getMsgs(), Graphics.TEXT_JUSTIFY_LEFT);
 		
-// 	}
-	
-    // Update the view
+		x=155; y= 155;	
+		dc.drawText(x,y, uiH.fontSmall_(100), uiH.getCalories(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(x,y+15, uiH.fontSmall_(2), uiH.getCalories(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(x,y+30, uiH.fontSmall_(3), uiH.getCalories(), Graphics.TEXT_JUSTIFY_LEFT);
+
+		y = 200;
+		x = 145;	
+		dc.drawText(x,y, uiH.fontSmall_(3), uiH.getBattery(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(x,y+15, uiH.fontSmall_(2), uiH.getBattery(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(x,y+30, uiH.fontSmall_(100), uiH.getBattery(), Graphics.TEXT_JUSTIFY_LEFT);
+		
+		x=-15;y=65;
+		dc.drawText(x,y, uiH.fontSmall_(100), uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(x,y+15, uiH.fontSmall_(2), uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(x,y+30, uiH.fontSmall_(3), uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);
+
+		x=-15;y=105;
+		dc.drawText(x,y, uiH.fontSmall_(100), uiH.getSteps(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(x,y+15, uiH.fontSmall_(2), uiH.getSteps(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(x,y+30, uiH.fontSmall_(3), uiH.getSteps(), Graphics.TEXT_JUSTIFY_LEFT);
+
+		x=-15;y=150;
+		dc.drawText(x,y, uiH.fontSmall_(3), uiH.getFloors(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(x,y+15, uiH.fontSmall_(2), uiH.getFloors(), Graphics.TEXT_JUSTIFY_LEFT);
+		dc.drawText(x+10,y+30, uiH.fontSmall_(100), uiH.getFloors(), Graphics.TEXT_JUSTIFY_LEFT);
+
+	}
+
     function onUpdate(dc) {
         
         checkPhoneConnectionAndBeep();
 
-		if(uiH.debug) {
-			System.println(
-				Lang.format("$1$ x $2$ on $3$",[
-					System.getDeviceSettings().screenWidth, 
-					System.getDeviceSettings().screenHeight,
-					System.getDeviceSettings().screenShape ])
-			);
-		}
+        // Set colors based on cached display type
+        if (isOledDisplay) {
+            uiH.setColorsOled(dc, inLowPower);
+            uiH.shortFormat = false;
+        } else {
+            uiH.setColors(dc);
+        }
 
-		if(uiH.ifScreen(390,390,1) || uiH.ifScreen(360,360,1)){
-			uiH.setColorsOled(dc,inLowPower);
+		if(fontsMode){
 			uiH.shortFormat = false;
-			draw_venu(dc);	
+			drawFonts(dc);
 			return;
 		}
-
-		
-		if(uiH.ifScreen(454,454,1)){
-			uiH.setColorsOled(dc,inLowPower);
-			uiH.shortFormat = false;
-			draw_454_454_1(dc);	
-			return;
-		}
-
-		if(uiH.ifScreen(416,416,1)){
-			uiH.setColorsOled(dc,inLowPower);
-			uiH.shortFormat = false;
-			draw_416_416_1(dc);	
-			return;
-		}
-		
-		uiH.setColors(dc);
-		if(uiH.ifScreen(148,205,3)){
-			draw_vivoactiveHR(dc);
-			return;
-		}
-		if(uiH.ifScreen(205,148,3)){
-			draw_fr920xt(dc);
-			return;
-		}		
-		if(uiH.ifScreen(215,180,2)){
-			draw_fr230_fr235(dc);
-			return;
-		}
-		if(uiH.ifScreen(208,208,1)){
-			draw_fr45(dc);	
-			return;
-		}
-		if(uiH.ifScreen(218,218,1)){
-			draw_fenix3(dc);	
-			return;
-		}
-		if(uiH.ifScreen(240,240,1)){
-			draw_fr245_fenix5x(dc);	 // most popular size
-			return;
-		}
-		if(uiH.ifScreen(260,260,1)){
-			draw_fenix6(dc);	
-			return;
-		}
-		if(uiH.ifScreen(280,280,1)){
-			uiH.shortFormat = false;
-			draw_fenix6xpro(dc);	
-			return;
-		}
-
-		if(uiH.ifScreen(240,240,3)){
-			draw_venusq(dc);
-			return;
-		}
-
-		if(uiH.ifScreen(176,176,4)){
-			draw_176x176x4(dc);
-			return;
-		}
-
-		if(uiH.ifScreen(163,156,4)){
-			draw_163x156x4(dc);
-			return;
-		}
-		if(uiH.ifScreen(166,166,4)){
-			draw_166x166x4(dc);
-			return;
-		}
-		
-
-		if(uiH.debug) {
-			System.println("Not found");
-		}
-
-		// nope: swim2, venu
-		draw_fr230_fr235(dc);
+        
+        // Simple switch based on cached device type
+        switch(deviceType) {
+            case DeviceType.VENU:
+                draw_venu(dc);
+                break;
+            case DeviceType.VENU_454:
+                draw_454_454_1(dc);
+                break;
+            case DeviceType.VENU_416:
+                draw_416_416_1(dc);
+                break;
+            case DeviceType.VIVOACTIVE_HR:
+                draw_vivoactiveHR(dc);
+                break;
+            case DeviceType.FR920XT:
+                draw_fr920xt(dc);
+                break;
+            case DeviceType.FR230_FR235:
+                draw_fr230_fr235(dc);
+                break;
+            case DeviceType.FR45:
+                draw_fr45(dc);
+                break;
+            case DeviceType.FENIX3:
+                draw_fenix3(dc);
+                break;
+            case DeviceType.FR245_FENIX5X:
+                draw_fr245_fenix5x(dc);
+                break;
+            case DeviceType.FENIX6:
+                draw_fenix6(dc);
+                break;
+            case DeviceType.FENIX6XPRO:
+                uiH.shortFormat = false;
+                draw_fenix6xpro(dc);
+                break;
+            case DeviceType.VENUSQ:
+                draw_venusq(dc);
+                break;
+            case DeviceType.DEVICE_176:
+                draw_176x176x4(dc);
+                break;
+            case DeviceType.DEVICE_163:
+                draw_163x156x4(dc);
+                break;
+            case DeviceType.DEVICE_166:
+                draw_166x166x4(dc);
+                break;
+            default:
+                if(uiH.debug) {
+                    System.println("Using fallback for unknown device type: " + deviceType);
+                }
+                draw_fr230_fr235(dc);
+        }
     }
 
 }

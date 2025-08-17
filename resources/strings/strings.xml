@@ -3,7 +3,7 @@
     
     <string id="BackgroundColorTitle">Background Color</string>
     <string id="ForegroundColorTitle">Foreground Color</string>
-    <string id="Use12Hours">12 hours format</string>
+    <string id="Use12Hours">12-hour format</string>
     <string id="ShowDays">Show top right info</string>
     <string id="ShowBottomLeft">Show bottom left info</string>
     <string id="ShowMonthYear">Show top centered info</string>
@@ -22,9 +22,9 @@
     <string id="ColorYellow">Yellow</string>
     
     <string id="Font">Small text font</string>
-    <string id="Font1">font 1</string>
-    <string id="Font2">font 2</string>
-    <string id="Font3">font 3</string>
+    <string id="Font1">Font 1</string>
+    <string id="Font2">Font 2</string>
+    <string id="Font3">Font 3</string>
     
     
     <string id="TopCenterInfo">Top center info</string>
@@ -33,7 +33,7 @@
     <string id="Date3">Month day, year</string>
     <string id="Date4">DD/MM/YYYY</string>
     <string id="Date5">MM/DD/YYYY</string>
-    <string id="Date6">Month week day</string>
+    <string id="Date6">Month weekday</string>
     
     <string id="RightInfo">Right info</string>
     <string id="Calendar">Calendar</string>
@@ -46,15 +46,14 @@
     <string id="Steps">Steps</string>
     <string id="Calories">Calories</string>
     <string id="Battery">Battery</string>
-    <string id="Messages">Messages count</string>
+    <string id="Messages">Message count</string>
     <string id="Hr">Heart Rate</string>
     <string id="Floors">Floors Climbed</string>
     <string id="None">None</string>
     
-    <string id="UseOldFont">Use old font for clock</string>
     
     <string id="BluetoothSetting">Show Bluetooth connection as:</string>
-    <string id="BToption1">SmartPhone</string>
+    <string id="BToption1">Smartphone</string>
     <string id="BToption2">Mobile Phone</string>
     <string id="BToption3">Old Phone</string>
     
