@@ -49,6 +49,7 @@
     <string id="Messages">Nachrichtenanzahl</string>
     <string id="Hr">Herzfrequenz</string>
     <string id="Floors">Etagen gestiegen</string>
+    <string id="Weather">Wetter</string>
     <string id="None">Keine</string>
     
     
@@ -109,5 +110,8 @@
     <!-- Heart rate placeholders (when no heart rate is available) -->
     <string id="NoHeartRateShort">--spm</string>
     <string id="NoHeartRateLong">-- spm</string>
+    
+    <!-- Weather placeholders (when no weather is available) -->
+    <string id="NoWeatherShort">--°</string>       <!-- No weather placeholder for compact layout -->
     
 </strings>

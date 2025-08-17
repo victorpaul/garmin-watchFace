@@ -49,6 +49,7 @@
     <string id="Messages">Antal meddelanden</string>
     <string id="Hr">Hjärtfrekvens</string>
     <string id="Floors">Våningar Klättrade</string>
+    <string id="Weather">Väder</string>
     <string id="None">Ingen</string>
     
     
@@ -109,5 +110,8 @@
     <!-- Heart rate placeholders (when no heart rate is available) -->
     <string id="NoHeartRateShort">--slag/min</string>     <!-- No heart rate placeholder for compact layout -->
     <string id="NoHeartRateLong">-- slag/min</string>     <!-- No heart rate placeholder for full layout -->
+    
+    <!-- Weather placeholders (when no weather is available) -->
+    <string id="NoWeatherShort">--°</string>       <!-- No weather placeholder for compact layout -->
     
 </strings>

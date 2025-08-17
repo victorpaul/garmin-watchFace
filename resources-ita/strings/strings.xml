@@ -49,6 +49,7 @@
     <string id="Messages">Conteggio messaggi</string>
     <string id="Hr">Frequenza cardiaca</string>
     <string id="Floors">Piani saliti</string>
+    <string id="Weather">Meteo</string>
     <string id="None">Nessuno</string>
     
     
@@ -109,5 +110,8 @@
     <!-- Heart rate placeholders (when no heart rate is available) -->
     <string id="NoHeartRateShort">--bpm</string>
     <string id="NoHeartRateLong">-- bpm</string>
+    
+    <!-- Weather placeholders (when no weather is available) -->
+    <string id="NoWeatherShort">--°</string>       <!-- No weather placeholder for compact layout -->
     
 </strings>

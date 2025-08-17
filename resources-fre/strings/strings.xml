@@ -49,6 +49,7 @@
     <string id="Messages">Nombre de messages</string>
     <string id="Hr">Fréquence cardiaque</string>
     <string id="Floors">Étages montés</string>
+    <string id="Weather">Météo</string>
     <string id="None">Aucun</string>
     
     
@@ -109,5 +110,8 @@
     <!-- Heart rate placeholders (when no heart rate is available) -->
     <string id="NoHeartRateShort">--bpm</string>
     <string id="NoHeartRateLong">-- bpm</string>
+    
+    <!-- Weather placeholders (when no weather is available) -->
+    <string id="NoWeatherShort">--°</string>       <!-- No weather placeholder for compact layout -->
     
 </strings>

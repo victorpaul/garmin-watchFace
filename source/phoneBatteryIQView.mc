@@ -22,7 +22,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         uiH = new helper();
         uiH.debug = false;
 		uiH.debugDate = false;
-		fontsMode = true;
 		
 		initializeDevice();
     }
@@ -52,7 +51,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         if (beepEnabled) {
             var currentConnectionState = System.getDeviceSettings().phoneConnected;
             
-            if (lastPhoneConnectionState != null && lastPhoneConnectionState == true && currentConnectionState == false) {
+            if (lastPhoneConnectionState == true && currentConnectionState == false) {
                 if (Attention has :ToneProfile) {
                     var toneProfile = [
                         new Attention.ToneProfile(2500, 200),

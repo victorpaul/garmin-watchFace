@@ -5,6 +5,7 @@ using Toybox.Lang;
 using Toybox.ActivityMonitor;
 using Toybox.Application;
 using Toybox.Activity;
+using Toybox.Weather;
 
 using Toybox.Time;
 using Toybox.Time.Gregorian;
@@ -41,7 +42,7 @@ class helper {
 	}
 	
 	function fontSmall(){
-		return 	(Application.getApp().getProperty("Font"));
+		return fontSmall_(Application.getApp().getProperty("Font"));
 	}
 	
 	function fontIcons(){
@@ -340,6 +341,9 @@ class helper {
     		case 13: 
 	    		dc.drawText(x,y, font,getFloors(),align);
 	    		break;
+    		case 14: 
+	    		dc.drawText(x,y, font,getWeather(),align);
+	    		break;
 			case 11:
 				break;
 		}
@@ -426,23 +430,82 @@ class helper {
     		case 6: 
 	    		dc.drawText(x,y, font,getFloors(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
-    		case 7:
+    		case 7: 
+	    		dc.drawText(x,y, font,getWeather(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		break;
+    		case 8:
     		default:
 	    		break;
 	    }
 	}
 
 	function getWeather(){
-//		System.println("location");
-//		System.println(Position.getInfo().position.lat);
-//		System.println(Position.getInfo().position.lon);
-//		
-//		var key = "ff16abd420297723c28169e6eab2b41a";
-//		var lat = 35;
-//		var long = 139;
-//		
-//		Lang.format("$1$$2$$3$",["https://samples.openweathermap.org/data/2.5/weather?lat=",lat,"&lon=",long,"&appid=",key]);
-		return "0"; 
+		if(debug){
+			return "22°C ☀";
+		}
+		
+		// Try to get weather data if available
+		try {
+			if (Weather has :getCurrentConditions) {
+				var conditions = Weather.getCurrentConditions();
+				if (conditions != null && conditions.temperature != null) {
+					var temp = conditions.temperature.toNumber();
+					var tempStr;
+					
+					if (System.getDeviceSettings().temperatureUnits == System.UNIT_METRIC) {
+						tempStr = temp.format("%d") + "°C";
+					} else {
+						tempStr = temp.format("%d") + "°F";
+					}
+					
+					//var icon = getWeatherIcon(conditions.condition);
+					
+					return tempStr;
+				}
+			}
+		} catch(ex) {
+			// Weather API not available or permission denied
+		}
+		
+		return shortFormat ? "--°" : WatchUi.loadResource(Rez.Strings.NoWeatherShort);
+	}
+	
+	function getWeatherIcon(condition) {
+		if (condition == null) {
+			return "?";
+		}
+		
+		switch(condition) {
+			case Weather.CONDITION_CLEAR:
+				return "☀";
+			case Weather.CONDITION_PARTLY_CLOUDY:
+			case Weather.CONDITION_PARTLY_CLEAR:
+				return "⛅";
+			case Weather.CONDITION_CLOUDY:
+			case Weather.CONDITION_MOSTLY_CLOUDY:
+				return "☁";
+			case Weather.CONDITION_RAIN:
+			case Weather.CONDITION_LIGHT_RAIN:
+			case Weather.CONDITION_HEAVY_RAIN:
+			case Weather.CONDITION_SHOWERS:
+				return "🌧";
+			case Weather.CONDITION_SNOW:
+			case Weather.CONDITION_LIGHT_SNOW:
+			case Weather.CONDITION_HEAVY_SNOW:
+			case Weather.CONDITION_CHANCE_OF_SNOW:
+				return "❄";
+			case Weather.CONDITION_THUNDERSTORMS:
+			case Weather.CONDITION_CHANCE_OF_THUNDERSTORMS:
+				return "⛈";
+			case Weather.CONDITION_FOG:
+			case Weather.CONDITION_HAZE:
+			case Weather.CONDITION_MIST:
+				return "🌫";
+			case Weather.CONDITION_WINDY:
+				return "💨";
+			default:
+				return "?";
+		}
 	}
 	
 	function drawBottomLeft(dc,x,y,stepY,font){

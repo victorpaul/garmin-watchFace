@@ -14,6 +14,7 @@
             <listEntry value="9">@Strings.Battery</listEntry>
             <listEntry value="10">@Strings.Hr</listEntry>
             <listEntry value="13">@Strings.Floors</listEntry>
+            <listEntry value="14">@Strings.Weather</listEntry>
             <listEntry value="11">@Strings.None</listEntry>
         </settingConfig>
     </setting>
@@ -37,7 +38,8 @@
             <listEntry value="4">@Strings.Battery</listEntry>
             <listEntry value="5">@Strings.Hr</listEntry>
             <listEntry value="6">@Strings.Floors</listEntry>
-            <listEntry value="7">@Strings.None</listEntry>
+            <listEntry value="7">@Strings.Weather</listEntry>
+            <listEntry value="8">@Strings.None</listEntry>
         </settingConfig>
     </setting>
     <setting propertyKey="@Properties.WhatToShowAtBottomLeft2" title="@Strings.BottomLeftInfo2">
@@ -48,7 +50,8 @@
             <listEntry value="4">@Strings.Battery</listEntry>
             <listEntry value="5">@Strings.Hr</listEntry>
             <listEntry value="6">@Strings.Floors</listEntry>
-            <listEntry value="7">@Strings.None</listEntry>
+            <listEntry value="7">@Strings.Weather</listEntry>
+            <listEntry value="8">@Strings.None</listEntry>
         </settingConfig>
     </setting>
     <setting propertyKey="@Properties.WhatToShowAtBottomLeft3" title="@Strings.BottomLeftInfo3">
@@ -59,7 +62,8 @@
             <listEntry value="4">@Strings.Battery</listEntry>
             <listEntry value="5">@Strings.Hr</listEntry>
             <listEntry value="6">@Strings.Floors</listEntry>
-            <listEntry value="7">@Strings.None</listEntry>
+            <listEntry value="7">@Strings.Weather</listEntry>
+            <listEntry value="8">@Strings.None</listEntry>
         </settingConfig>
     </setting>
     
