@@ -1,0 +1,113 @@
+<strings>
+    <string id="AppName">Chalk Watch</string>
+    
+    <string id="BackgroundColorTitle">Bakgrundsfärg</string>
+    <string id="ForegroundColorTitle">Förgrundsfärg</string>
+    <string id="Use12Hours">12-timmarsformat</string>
+    <string id="ShowDays">Visa info överst till höger</string>
+    <string id="ShowBottomLeft">Visa info nederst till vänster</string>
+    <string id="ShowMonthYear">Visa info överst i mitten</string>
+    <string id="UseBrushFontForInfo">Använd penseltypsnitt för liten text</string>
+	<string id="ShowHR">Visa hjärtfrekvens</string>
+
+    <string id="ColorBlack">Svart</string>
+    <string id="ColorDarkGray">Mörkgrå</string>
+    <string id="ColorLightGray">Ljusgrå</string>
+    <string id="ColorWhite">Vit</string>
+    <string id="ColorBlue">Blå</string>
+    <string id="ColorRed">Röd</string>
+    
+    <string id="ColorGreen">Grön</string>
+    <string id="ColorOrange">Orange</string>
+    <string id="ColorYellow">Gul</string>
+    
+    <string id="Font">Litet text typsnitt</string>
+    <string id="Font1">Typsnitt 1</string>
+    <string id="Font2">Typsnitt 2</string>
+    <string id="Font3">Typsnitt 3</string>
+    
+    
+    <string id="TopCenterInfo">Info överst i mitten</string>
+    <string id="Date1">Månad, år</string>
+    <string id="Date2">Månad, dag</string>
+    <string id="Date3">Månad dag, år</string>
+    <string id="Date4">DD/MM/ÅÅÅÅ</string>
+    <string id="Date5">MM/DD/ÅÅÅÅ</string>
+    <string id="Date6">Månad, veckodag</string>
+    
+    <string id="RightInfo">Höger info</string>
+    <string id="Calendar">Kalender</string>
+    
+    <string id="Activity">Aktivitet</string>
+    
+    <string id="BottomLeftInfo">Info nederst till vänster (Rad A)</string>
+    <string id="BottomLeftInfo2">Info nederst till vänster (Rad B)</string>
+    <string id="BottomLeftInfo3">Info nederst till vänster (Rad C)</string>
+    <string id="Steps">Steg</string>
+    <string id="Calories">Kalorier</string>
+    <string id="Battery">Batteri</string>
+    <string id="Messages">Antal meddelanden</string>
+    <string id="Hr">Hjärtfrekvens</string>
+    <string id="Floors">Våningar Klättrade</string>
+    <string id="None">Ingen</string>
+    
+    
+    <string id="BluetoothSetting">Visa Bluetooth-anslutning som:</string>
+    <string id="BToption1">Smartphone</string>
+    <string id="BToption2">Mobiltelefon</string>
+    <string id="BToption3">Gammal Telefon</string>
+
+    <string id="BeepOnPhoneDisconnect">Varning vid telefonfrånkoppling</string>
+    
+    <!-- Month names -->
+    <string id="MonthJan">Jan</string>
+    <string id="MonthFeb">Feb</string>
+    <string id="MonthMar">Mar</string>
+    <string id="MonthApr">Apr</string>
+    <string id="MonthMay">Maj</string>
+    <string id="MonthJun">Jun</string>
+    <string id="MonthJul">Jul</string>
+    <string id="MonthAug">Aug</string>
+    <string id="MonthSep">Sep</string>
+    <string id="MonthOct">Okt</string>
+    <string id="MonthNov">Nov</string>
+    <string id="MonthDec">Dec</string>
+    
+    <!-- Weekday names - short format -->
+    <string id="WeekdayShortSun">Sön</string>
+    <string id="WeekdayShortMon">Mån</string>
+    <string id="WeekdayShortTue">Tis</string>
+    <string id="WeekdayShortWed">Ons</string>
+    <string id="WeekdayShortThu">Tor</string>
+    <string id="WeekdayShortFri">Fre</string>
+    <string id="WeekdayShortSat">Lör</string>
+    
+    <!-- Weekday names - long format -->
+    <string id="WeekdayLongSun">sön</string>
+    <string id="WeekdayLongMon">mån</string>
+    <string id="WeekdayLongTue">tis</string>
+    <string id="WeekdayLongWed">ons</string>
+    <string id="WeekdayLongThu">tor</string>
+    <string id="WeekdayLongFri">fre</string>
+    <string id="WeekdayLongSat">lör</string>
+    
+    <!-- Activity/Fitness labels - Short format (used on smaller screens or compact layouts) -->
+    <string id="StepsShort">steg</string>            <!-- Abbreviation for steps count -->
+    <string id="FloorsShort">vån</string>            <!-- Abbreviation for floors climbed -->
+    <string id="CaloriesShort">kal</string>          <!-- Abbreviation for calories burned -->
+    <string id="MessagesShort">medd</string>         <!-- Abbreviation for message count -->
+    <string id="BpmShort">slag/min</string>          <!-- Abbreviation for beats per minute (heart rate) -->
+    
+    <!-- Activity/Fitness labels - Long format (used on larger screens or full layouts) -->
+    <string id="StepsLong">steg</string>             <!-- Full word for steps count -->
+    <string id="FloorsLong">våningar</string>        <!-- Full word for floors climbed -->
+    <string id="CaloriesLong">kalorier</string>      <!-- Full word for calories burned -->
+    <string id="MessagesLong">meddelanden</string>   <!-- Full word for message count -->
+    <string id="BatteryLong">batteri</string>        <!-- Full word for battery level -->
+    <string id="BpmLong">slag/min</string>           <!-- Beats per minute (slag per minut) -->
+    
+    <!-- Heart rate placeholders (when no heart rate is available) -->
+    <string id="NoHeartRateShort">--slag/min</string>     <!-- No heart rate placeholder for compact layout -->
+    <string id="NoHeartRateLong">-- slag/min</string>     <!-- No heart rate placeholder for full layout -->
+    
+</strings>

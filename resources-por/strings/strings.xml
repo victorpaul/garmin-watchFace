@@ -1,0 +1,113 @@
+<strings>
+    <string id="AppName">Chalk Watch</string>
+    
+    <string id="BackgroundColorTitle">Cor de Fundo</string>
+    <string id="ForegroundColorTitle">Cor de Primeiro Plano</string>
+    <string id="Use12Hours">Formato de 12 horas</string>
+    <string id="ShowDays">Mostrar informações superiores direitas</string>
+    <string id="ShowBottomLeft">Mostrar informações inferiores esquerdas</string>
+    <string id="ShowMonthYear">Mostrar informações superiores centrais</string>
+    <string id="UseBrushFontForInfo">Usar fonte pincel para texto pequeno</string>
+	<string id="ShowHR">Mostrar frequência cardíaca</string>
+
+    <string id="ColorBlack">Preto</string>
+    <string id="ColorDarkGray">Cinza Escuro</string>
+    <string id="ColorLightGray">Cinza Claro</string>
+    <string id="ColorWhite">Branco</string>
+    <string id="ColorBlue">Azul</string>
+    <string id="ColorRed">Vermelho</string>
+    
+    <string id="ColorGreen">Verde</string>
+    <string id="ColorOrange">Laranja</string>
+    <string id="ColorYellow">Amarelo</string>
+    
+    <string id="Font">Fonte de texto pequeno</string>
+    <string id="Font1">Fonte 1</string>
+    <string id="Font2">Fonte 2</string>
+    <string id="Font3">Fonte 3</string>
+    
+    
+    <string id="TopCenterInfo">Informações superiores centrais</string>
+    <string id="Date1">Mês, ano</string>
+    <string id="Date2">Mês, dia</string>
+    <string id="Date3">Mês dia, ano</string>
+    <string id="Date4">DD/MM/AAAA</string>
+    <string id="Date5">MM/DD/AAAA</string>
+    <string id="Date6">Mês, dia da semana</string>
+    
+    <string id="RightInfo">Informações à direita</string>
+    <string id="Calendar">Calendário</string>
+    
+    <string id="Activity">Atividade</string>
+    
+    <string id="BottomLeftInfo">Informações inferiores esquerdas (Linha A)</string>
+    <string id="BottomLeftInfo2">Informações inferiores esquerdas (Linha B)</string>
+    <string id="BottomLeftInfo3">Informações inferiores esquerdas (Linha C)</string>
+    <string id="Steps">Passos</string>
+    <string id="Calories">Calorias</string>
+    <string id="Battery">Bateria</string>
+    <string id="Messages">Contagem de mensagens</string>
+    <string id="Hr">Frequência Cardíaca</string>
+    <string id="Floors">Andares Subidos</string>
+    <string id="None">Nenhum</string>
+    
+    
+    <string id="BluetoothSetting">Mostrar conexão Bluetooth como:</string>
+    <string id="BToption1">Smartphone</string>
+    <string id="BToption2">Telefone Móvel</string>
+    <string id="BToption3">Telefone Antigo</string>
+
+    <string id="BeepOnPhoneDisconnect">Alerta ao desconectar telefone</string>
+    
+    <!-- Month names -->
+    <string id="MonthJan">Jan</string>
+    <string id="MonthFeb">Fev</string>
+    <string id="MonthMar">Mar</string>
+    <string id="MonthApr">Abr</string>
+    <string id="MonthMay">Mai</string>
+    <string id="MonthJun">Jun</string>
+    <string id="MonthJul">Jul</string>
+    <string id="MonthAug">Ago</string>
+    <string id="MonthSep">Set</string>
+    <string id="MonthOct">Out</string>
+    <string id="MonthNov">Nov</string>
+    <string id="MonthDec">Dez</string>
+    
+    <!-- Weekday names - short format -->
+    <string id="WeekdayShortSun">Dom</string>
+    <string id="WeekdayShortMon">Seg</string>
+    <string id="WeekdayShortTue">Ter</string>
+    <string id="WeekdayShortWed">Qua</string>
+    <string id="WeekdayShortThu">Qui</string>
+    <string id="WeekdayShortFri">Sex</string>
+    <string id="WeekdayShortSat">Sáb</string>
+    
+    <!-- Weekday names - long format -->
+    <string id="WeekdayLongSun">dom</string>
+    <string id="WeekdayLongMon">seg</string>
+    <string id="WeekdayLongTue">ter</string>
+    <string id="WeekdayLongWed">qua</string>
+    <string id="WeekdayLongThu">qui</string>
+    <string id="WeekdayLongFri">sex</string>
+    <string id="WeekdayLongSat">sáb</string>
+    
+    <!-- Activity/Fitness labels - Short format (used on smaller screens or compact layouts) -->
+    <string id="StepsShort">passos</string>          <!-- Abbreviation for steps count -->
+    <string id="FloorsShort">and</string>            <!-- Abbreviation for floors climbed -->
+    <string id="CaloriesShort">cal</string>          <!-- Abbreviation for calories burned -->
+    <string id="MessagesShort">msgs</string>         <!-- Abbreviation for message count -->
+    <string id="BpmShort">bpm</string>               <!-- Abbreviation for beats per minute (heart rate) -->
+    
+    <!-- Activity/Fitness labels - Long format (used on larger screens or full layouts) -->
+    <string id="StepsLong">passos</string>           <!-- Full word for steps count -->
+    <string id="FloorsLong">andares</string>         <!-- Full word for floors climbed -->
+    <string id="CaloriesLong">calorias</string>      <!-- Full word for calories burned -->
+    <string id="MessagesLong">mensagens</string>     <!-- Full word for message count -->
+    <string id="BatteryLong">bateria</string>        <!-- Full word for battery level -->
+    <string id="BpmLong">bpm</string>                <!-- Beats per minute (batimentos por minuto) -->
+    
+    <!-- Heart rate placeholders (when no heart rate is available) -->
+    <string id="NoHeartRateShort">--bpm</string>     <!-- No heart rate placeholder for compact layout -->
+    <string id="NoHeartRateLong">-- bpm</string>     <!-- No heart rate placeholder for full layout -->
+    
+</strings>

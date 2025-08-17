@@ -4,11 +4,11 @@
     <string id="BackgroundColorTitle">Background Color</string>
     <string id="ForegroundColorTitle">Foreground Color</string>
     <string id="Use12Hours">12-hour format</string>
-    <string id="ShowDays">Show top right info</string>
-    <string id="ShowBottomLeft">Show bottom left info</string>
-    <string id="ShowMonthYear">Show top centered info</string>
+    <string id="ShowDays">Show top-right info</string>
+    <string id="ShowBottomLeft">Show bottom-left info</string>
+    <string id="ShowMonthYear">Show top-center info</string>
     <string id="UseBrushFontForInfo">Use brush font for small text</string>
-	<string id="ShowHR">Show HR</string>
+	<string id="ShowHR">Show heart rate</string>
 
     <string id="ColorBlack">Black</string>
     <string id="ColorDarkGray">Dark Gray</string>
@@ -27,22 +27,22 @@
     <string id="Font3">Font 3</string>
     
     
-    <string id="TopCenterInfo">Top center info</string>
-    <string id="Date1">Month year</string>
-    <string id="Date2">Month day</string>
+    <string id="TopCenterInfo">Top-center info</string>
+    <string id="Date1">Month, year</string>
+    <string id="Date2">Month, day</string>
     <string id="Date3">Month day, year</string>
     <string id="Date4">DD/MM/YYYY</string>
     <string id="Date5">MM/DD/YYYY</string>
-    <string id="Date6">Month weekday</string>
+    <string id="Date6">Month, weekday</string>
     
     <string id="RightInfo">Right info</string>
     <string id="Calendar">Calendar</string>
     
     <string id="Activity">Activity</string>
     
-    <string id="BottomLeftInfo">Bottom left info. Line A</string>
-    <string id="BottomLeftInfo2">Bottom left info. Line B</string>
-    <string id="BottomLeftInfo3">Bottom left info. Line C</string>
+    <string id="BottomLeftInfo">Bottom-left info (Line A)</string>
+    <string id="BottomLeftInfo2">Bottom-left info (Line B)</string>
+    <string id="BottomLeftInfo3">Bottom-left info (Line C)</string>
     <string id="Steps">Steps</string>
     <string id="Calories">Calories</string>
     <string id="Battery">Battery</string>

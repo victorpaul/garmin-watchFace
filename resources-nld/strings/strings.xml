@@ -1,0 +1,113 @@
+<strings>
+    <string id="AppName">Chalk Watch</string>
+    
+    <string id="BackgroundColorTitle">Achtergrondkleur</string>
+    <string id="ForegroundColorTitle">Voorgrondkleur</string>
+    <string id="Use12Hours">12-uurs formaat</string>
+    <string id="ShowDays">Rechtsboven info tonen</string>
+    <string id="ShowBottomLeft">Linksonder info tonen</string>
+    <string id="ShowMonthYear">Middenboven info tonen</string>
+    <string id="UseBrushFontForInfo">Penseellettertype gebruiken voor kleine tekst</string>
+	<string id="ShowHR">Hartslag tonen</string>
+
+    <string id="ColorBlack">Zwart</string>
+    <string id="ColorDarkGray">Donkergrijs</string>
+    <string id="ColorLightGray">Lichtgrijs</string>
+    <string id="ColorWhite">Wit</string>
+    <string id="ColorBlue">Blauw</string>
+    <string id="ColorRed">Rood</string>
+    
+    <string id="ColorGreen">Groen</string>
+    <string id="ColorOrange">Oranje</string>
+    <string id="ColorYellow">Geel</string>
+    
+    <string id="Font">Klein tekst lettertype</string>
+    <string id="Font1">Lettertype 1</string>
+    <string id="Font2">Lettertype 2</string>
+    <string id="Font3">Lettertype 3</string>
+    
+    
+    <string id="TopCenterInfo">Middenboven info</string>
+    <string id="Date1">Maand, jaar</string>
+    <string id="Date2">Maand, dag</string>
+    <string id="Date3">Maand dag, jaar</string>
+    <string id="Date4">DD/MM/JJJJ</string>
+    <string id="Date5">MM/DD/JJJJ</string>
+    <string id="Date6">Maand, weekdag</string>
+    
+    <string id="RightInfo">Rechter info</string>
+    <string id="Calendar">Kalender</string>
+    
+    <string id="Activity">Activiteit</string>
+    
+    <string id="BottomLeftInfo">Linksonder info (Regel A)</string>
+    <string id="BottomLeftInfo2">Linksonder info (Regel B)</string>
+    <string id="BottomLeftInfo3">Linksonder info (Regel C)</string>
+    <string id="Steps">Stappen</string>
+    <string id="Calories">Calorieën</string>
+    <string id="Battery">Batterij</string>
+    <string id="Messages">Aantal berichten</string>
+    <string id="Hr">Hartslag</string>
+    <string id="Floors">Verdiepingen Geklommen</string>
+    <string id="None">Geen</string>
+    
+    
+    <string id="BluetoothSetting">Bluetooth-verbinding tonen als:</string>
+    <string id="BToption1">Smartphone</string>
+    <string id="BToption2">Mobiele Telefoon</string>
+    <string id="BToption3">Oude Telefoon</string>
+
+    <string id="BeepOnPhoneDisconnect">Waarschuwing bij telefoon-ontkoppeling</string>
+    
+    <!-- Month names -->
+    <string id="MonthJan">Jan</string>
+    <string id="MonthFeb">Feb</string>
+    <string id="MonthMar">Mrt</string>
+    <string id="MonthApr">Apr</string>
+    <string id="MonthMay">Mei</string>
+    <string id="MonthJun">Jun</string>
+    <string id="MonthJul">Jul</string>
+    <string id="MonthAug">Aug</string>
+    <string id="MonthSep">Sep</string>
+    <string id="MonthOct">Okt</string>
+    <string id="MonthNov">Nov</string>
+    <string id="MonthDec">Dec</string>
+    
+    <!-- Weekday names - short format -->
+    <string id="WeekdayShortSun">Zo</string>
+    <string id="WeekdayShortMon">Ma</string>
+    <string id="WeekdayShortTue">Di</string>
+    <string id="WeekdayShortWed">Wo</string>
+    <string id="WeekdayShortThu">Do</string>
+    <string id="WeekdayShortFri">Vr</string>
+    <string id="WeekdayShortSat">Za</string>
+    
+    <!-- Weekday names - long format -->
+    <string id="WeekdayLongSun">zo</string>
+    <string id="WeekdayLongMon">ma</string>
+    <string id="WeekdayLongTue">di</string>
+    <string id="WeekdayLongWed">wo</string>
+    <string id="WeekdayLongThu">do</string>
+    <string id="WeekdayLongFri">vr</string>
+    <string id="WeekdayLongSat">za</string>
+    
+    <!-- Activity/Fitness labels - Short format (used on smaller screens or compact layouts) -->
+    <string id="StepsShort">stp</string>             <!-- Abbreviation for steps count -->
+    <string id="FloorsShort">vrd</string>            <!-- Abbreviation for floors climbed -->
+    <string id="CaloriesShort">cal</string>          <!-- Abbreviation for calories burned -->
+    <string id="MessagesShort">ber</string>          <!-- Abbreviation for message count -->
+    <string id="BpmShort">spm</string>               <!-- Abbreviation for beats per minute (heart rate) -->
+    
+    <!-- Activity/Fitness labels - Long format (used on larger screens or full layouts) -->
+    <string id="StepsLong">stappen</string>          <!-- Full word for steps count -->
+    <string id="FloorsLong">verdiepingen</string>    <!-- Full word for floors climbed -->
+    <string id="CaloriesLong">calorieën</string>     <!-- Full word for calories burned -->
+    <string id="MessagesLong">berichten</string>     <!-- Full word for message count -->
+    <string id="BatteryLong">batterij</string>       <!-- Full word for battery level -->
+    <string id="BpmLong">spm</string>                <!-- Beats per minute (slagen per minuut) -->
+    
+    <!-- Heart rate placeholders (when no heart rate is available) -->
+    <string id="NoHeartRateShort">--spm</string>     <!-- No heart rate placeholder for compact layout -->
+    <string id="NoHeartRateLong">-- spm</string>     <!-- No heart rate placeholder for full layout -->
+    
+</strings>

@@ -1,0 +1,113 @@
+<strings>
+    <string id="AppName">Chalk Watch</string>
+    
+    <string id="BackgroundColorTitle">Taustaväri</string>
+    <string id="ForegroundColorTitle">Etukulman väri</string>
+    <string id="Use12Hours">12 tunnin muoto</string>
+    <string id="ShowDays">Näytä yläoikean tiedot</string>
+    <string id="ShowBottomLeft">Näytä alavasemman tiedot</string>
+    <string id="ShowMonthYear">Näytä yläkeskon tiedot</string>
+    <string id="UseBrushFontForInfo">Käytä sivellinkirjasinta pienelle tekstille</string>
+	<string id="ShowHR">Näytä syke</string>
+
+    <string id="ColorBlack">Musta</string>
+    <string id="ColorDarkGray">Tumma harmaa</string>
+    <string id="ColorLightGray">Vaalean harmaa</string>
+    <string id="ColorWhite">Valkoinen</string>
+    <string id="ColorBlue">Sininen</string>
+    <string id="ColorRed">Punainen</string>
+    
+    <string id="ColorGreen">Vihreä</string>
+    <string id="ColorOrange">Oranssi</string>
+    <string id="ColorYellow">Keltainen</string>
+    
+    <string id="Font">Pieni teksti kirjasin</string>
+    <string id="Font1">Kirjasin 1</string>
+    <string id="Font2">Kirjasin 2</string>
+    <string id="Font3">Kirjasin 3</string>
+    
+    
+    <string id="TopCenterInfo">Yläkeskon tiedot</string>
+    <string id="Date1">Kuukausi, vuosi</string>
+    <string id="Date2">Kuukausi, päivä</string>
+    <string id="Date3">Kuukausi päivä, vuosi</string>
+    <string id="Date4">PP/KK/VVVV</string>
+    <string id="Date5">KK/PP/VVVV</string>
+    <string id="Date6">Kuukausi, viikonpäivä</string>
+    
+    <string id="RightInfo">Oikean tiedot</string>
+    <string id="Calendar">Kalenteri</string>
+    
+    <string id="Activity">Toiminta</string>
+    
+    <string id="BottomLeftInfo">Alavasemman tiedot (Rivi A)</string>
+    <string id="BottomLeftInfo2">Alavasemman tiedot (Rivi B)</string>
+    <string id="BottomLeftInfo3">Alavasemman tiedot (Rivi C)</string>
+    <string id="Steps">Askeleet</string>
+    <string id="Calories">Kalorit</string>
+    <string id="Battery">Akku</string>
+    <string id="Messages">Viestien määrä</string>
+    <string id="Hr">Syke</string>
+    <string id="Floors">Kerrokset Kiivenneet</string>
+    <string id="None">Ei mitään</string>
+    
+    
+    <string id="BluetoothSetting">Näytä Bluetooth-yhteys:</string>
+    <string id="BToption1">Älypuhelin</string>
+    <string id="BToption2">Matkapuhelin</string>
+    <string id="BToption3">Vanha Puhelin</string>
+
+    <string id="BeepOnPhoneDisconnect">Hälytys puhelimen katketessa</string>
+    
+    <!-- Month names -->
+    <string id="MonthJan">Tam</string>
+    <string id="MonthFeb">Hel</string>
+    <string id="MonthMar">Maa</string>
+    <string id="MonthApr">Huh</string>
+    <string id="MonthMay">Tou</string>
+    <string id="MonthJun">Kes</string>
+    <string id="MonthJul">Hei</string>
+    <string id="MonthAug">Elo</string>
+    <string id="MonthSep">Syy</string>
+    <string id="MonthOct">Lok</string>
+    <string id="MonthNov">Mar</string>
+    <string id="MonthDec">Jou</string>
+    
+    <!-- Weekday names - short format -->
+    <string id="WeekdayShortSun">Su</string>
+    <string id="WeekdayShortMon">Ma</string>
+    <string id="WeekdayShortTue">Ti</string>
+    <string id="WeekdayShortWed">Ke</string>
+    <string id="WeekdayShortThu">To</string>
+    <string id="WeekdayShortFri">Pe</string>
+    <string id="WeekdayShortSat">La</string>
+    
+    <!-- Weekday names - long format -->
+    <string id="WeekdayLongSun">su</string>
+    <string id="WeekdayLongMon">ma</string>
+    <string id="WeekdayLongTue">ti</string>
+    <string id="WeekdayLongWed">ke</string>
+    <string id="WeekdayLongThu">to</string>
+    <string id="WeekdayLongFri">pe</string>
+    <string id="WeekdayLongSat">la</string>
+    
+    <!-- Activity/Fitness labels - Short format (used on smaller screens or compact layouts) -->
+    <string id="StepsShort">ask</string>             <!-- Abbreviation for steps count -->
+    <string id="FloorsShort">ker</string>            <!-- Abbreviation for floors climbed -->
+    <string id="CaloriesShort">kal</string>          <!-- Abbreviation for calories burned -->
+    <string id="MessagesShort">viestit</string>      <!-- Abbreviation for message count -->
+    <string id="BpmShort">lyön/min</string>          <!-- Abbreviation for beats per minute (heart rate) -->
+    
+    <!-- Activity/Fitness labels - Long format (used on larger screens or full layouts) -->
+    <string id="StepsLong">askeleet</string>         <!-- Full word for steps count -->
+    <string id="FloorsLong">kerrokset</string>       <!-- Full word for floors climbed -->
+    <string id="CaloriesLong">kalorit</string>       <!-- Full word for calories burned -->
+    <string id="MessagesLong">viestit</string>       <!-- Full word for message count -->
+    <string id="BatteryLong">akku</string>           <!-- Full word for battery level -->
+    <string id="BpmLong">lyön/min</string>           <!-- Beats per minute (lyöntiä per minuutti) -->
+    
+    <!-- Heart rate placeholders (when no heart rate is available) -->
+    <string id="NoHeartRateShort">--lyön/min</string>     <!-- No heart rate placeholder for compact layout -->
+    <string id="NoHeartRateLong">-- lyön/min</string>     <!-- No heart rate placeholder for full layout -->
+    
+</strings>
