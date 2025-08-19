@@ -11,7 +11,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 
 	var uiH;
 	var inLowPower=false;
-	var lastPhoneConnectionState = null;
 	var deviceType = null;
 	var isOledDisplay = false;
 	var fontsMode = false;
@@ -42,37 +41,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
     	WatchUi.requestUpdate(); 
     }
     
-    function checkPhoneConnectionAndBeep() {
-        var beepEnabled = Application.Properties.getValue("BeepOnPhoneDisconnect");
-        if (beepEnabled == null) {
-            beepEnabled = false;
-        }
-        
-        if (beepEnabled) {
-            var currentConnectionState = System.getDeviceSettings().phoneConnected;
-            
-            if (lastPhoneConnectionState == true && currentConnectionState == false) {
-                if (Attention has :ToneProfile) {
-                    var toneProfile = [
-                        new Attention.ToneProfile(2500, 200),
-                        new Attention.ToneProfile(0, 100),
-                        new Attention.ToneProfile(2500, 200)
-                    ];
-                    Attention.playTone({:toneProfile=>toneProfile});
-                }
-                if (Attention has :VibeProfile && Attention has :vibrate) {
-                    var vibeData = [
-                        new Attention.VibeProfile(50, 200),
-                        new Attention.VibeProfile(0, 100),
-                        new Attention.VibeProfile(50, 200)
-                    ];
-                    Attention.vibrate(vibeData);
-                }
-            }
-            
-            lastPhoneConnectionState = currentConnectionState;
-        }
-    }
 	
 	function draw_vivoactiveHR(dc){
     	var topRight=uiH.whatToShowAtRight();
@@ -404,7 +372,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 
     function onUpdate(dc) {
         
-        checkPhoneConnectionAndBeep();
 
         // Set colors based on cached display type
         if (isOledDisplay) {

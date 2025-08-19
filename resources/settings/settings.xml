@@ -110,9 +110,6 @@
         </settingConfig>
     </setting>
     
-    <setting propertyKey="@Properties.BeepOnPhoneDisconnect" title="@Strings.BeepOnPhoneDisconnect">
-        <settingConfig type="boolean" />
-    </setting>
     
 
 </settings>

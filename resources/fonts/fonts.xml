@@ -13,4 +13,7 @@
     <font id="icons" filename="icons.fnt" antialias="true" filter="fghi8"/>
     <font id="smallicons" filename="smallicons.fnt" antialias="true" filter="fghi8"/>
     
+    <font id="euaSmall" filename="eua/eua20.fnt"/>
+    <font id="euaMedium" filename="eua/eua30.fnt"/>
+    
 </resources>

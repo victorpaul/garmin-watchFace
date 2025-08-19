@@ -58,7 +58,6 @@
     <string id="BToption2">Mobiltelefon</string>
     <string id="BToption3">Gammal Telefon</string>
 
-    <string id="BeepOnPhoneDisconnect">Varning vid telefonfrånkoppling</string>
     
     <!-- Month names -->
     <string id="MonthJan">Jan</string>

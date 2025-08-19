@@ -58,7 +58,6 @@
     <string id="BToption2">Teléfono Móvil</string>
     <string id="BToption3">Teléfono Antiguo</string>
 
-    <string id="BeepOnPhoneDisconnect">Alerta al desconectar teléfono</string>
     
     <!-- Month names -->
     <string id="MonthJan">Ene</string>

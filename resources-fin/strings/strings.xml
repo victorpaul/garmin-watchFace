@@ -58,7 +58,6 @@
     <string id="BToption2">Matkapuhelin</string>
     <string id="BToption3">Vanha Puhelin</string>
 
-    <string id="BeepOnPhoneDisconnect">Hälytys puhelimen katketessa</string>
     
     <!-- Month names -->
     <string id="MonthJan">Tam</string>

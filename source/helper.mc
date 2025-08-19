@@ -14,9 +14,11 @@ class helper {
 
 	var debug, debugDate;
 	var shortFormat=true;
+	var useUaFont = false;
 	
 	function initialize(){
-		
+		var l = System.getDeviceSettings().systemLanguage;
+		useUaFont = l == System.LANGUAGE_UKR || l == System.LANGUAGE_POL || l == System.LANGUAGE_LIT;
 	}
 
 	function fontHuge245(){
@@ -30,7 +32,15 @@ class helper {
 	function fontMedium(){
 		return fontMedium_(Application.getApp().getProperty("Font"));
 	}
+
+	function fontSmall(){
+		return fontSmall_(Application.getApp().getProperty("Font"));
+	}
+
 	function fontMedium_(setting){
+		if(useUaFont){
+			return WatchUi.loadResource(Rez.Fonts.euaMedium);
+		}
 		switch(setting){
 			case 2:
 				return WatchUi.loadResource(Rez.Fonts.mediumJannScript);  // 36px
@@ -41,10 +51,6 @@ class helper {
 		}
 	}
 	
-	function fontSmall(){
-		return fontSmall_(Application.getApp().getProperty("Font"));
-	}
-	
 	function fontIcons(){
 		return WatchUi.loadResource(Rez.Fonts.icons);
 	}
@@ -53,6 +59,9 @@ class helper {
 	}
 	
 	function fontSmall_(setting){
+		if(useUaFont){
+			return WatchUi.loadResource(Rez.Fonts.euaSmall);
+		}
 		switch(setting){
 			case 2:
 				return WatchUi.loadResource(Rez.Fonts.smallJannScript);  // 26px
