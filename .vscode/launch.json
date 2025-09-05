@@ -5,6 +5,13 @@
     {
       "type": "monkeyc",
       "request": "launch",
+      "name": "instinct3solar45mm",
+      "stopAtLaunch": false,
+      "device": "instinct3solar45mm"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
       "name": "venu2",
       "stopAtLaunch": false,
       "device": "venu2"

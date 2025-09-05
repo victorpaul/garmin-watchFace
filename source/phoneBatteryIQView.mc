@@ -56,16 +56,26 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	}
 
 	function draw_176x176x4(dc) {
+		uiH.debug = false;
+
 		var topRight=uiH.whatToShowAtRight();
+		var jm = WatchUi.loadResource(Rez.Fonts.fntMed);
     	
-    	uiH.drawTopRight(topRight,dc,116,11,14,0,2);
-  		uiH.drawHours(dc,30,-65,40,0,uiH.fontHuge45());
-		uiH.drawMinutes(dc,95,10,50,0,uiH.fontHuge45());
-		
-		
-		dc.drawText(10,95, uiH.fontSmall(),uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);
-		dc.drawText(10,115, uiH.fontSmall(),uiH.getBattery(), Graphics.TEXT_JUSTIFY_LEFT);
-		uiH.drawBluetoothConnectionSmall(dc,50,137);
+
+		uiH.drawHeadString(uiH.whatToShowAtTop(),dc,88,88,uiH.fontSmall(),Graphics.TEXT_JUSTIFY_LEFT);
+
+		// Draw the same string vertically
+		var verticalText = uiH.drawHeadString(uiH.whatToShowAtTop());
+		for (var i = 0; i < verticalText.length(); i++) {
+			dc.drawText(10, 30 + (i * 20), uiH.fontSmall(), verticalText.substring(i, i + 1), Graphics.TEXT_JUSTIFY_LEFT);
+		}
+
+    
+    	// uiH.drawTopRight(topRight,dc,116,11,14,0,2);
+		// uiH.drawHours(dc,35,-70,40,0,uiH.fontHuge45());
+		// uiH.drawMinutes(dc,95,10,53,0,uiH.fontHuge45());
+		// uiH.drawBottomLeft(dc,70,90,20,uiH.fontSmall());
+		// uiH.drawBluetoothConnectionSmall(dc,50,140);
 	}
 
 	function draw_163x156x4(dc) {

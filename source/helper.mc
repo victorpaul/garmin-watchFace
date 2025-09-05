@@ -313,54 +313,45 @@ class helper {
 	
 	function drawTopFA(whatToSHow,dc,x,y,font,align){
 		var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-		switch(whatToSHow){
-			case 1:
-	        	dc.drawText(x,y, font, Lang.format("$1$ $2$",[getMonthName(date.month),date.year]), align);
-				break;
-			case 2:
-	        	dc.drawText(x,y, font, Lang.format("$1$ $2$",[getMonthName(date.month),date.day]), align);
-				break;
-			case 3:
-	        	dc.drawText(x,y, font, Lang.format("$1$$2$,$3$",[getMonthName(date.month),date.day,date.year]), align);
-				break;
-			case 4:
-	        	dc.drawText(x,y, font, Lang.format("$1$/$2$/$3$",[date.day,date.month,date.year]), align);
-				break;
-			case 5:
-	        	dc.drawText(x,y, font, Lang.format("$1$/$2$/$3$",[date.month,date.day,date.year]), align);
-				break;
-			case 12:
-	        	dc.drawText(x,y, font, Lang.format("$1$ $2$ $3$",[getMonthName(date.month),getWeekdayName(date.day_of_week),date.day]), align);
-				break;
-			case 6: 
-	    		dc.drawText(x,y, font,getSteps(),align);
-	    		break;
-	    	case 7: 
-	    		dc.drawText(x,y, font,getCalories(),align);
-	    		break;
-			case 8: 
-	    		dc.drawText(x,y, font,getMsgs(),align);
-	    		break;
-			case 9: 
-	    		dc.drawText(x,y, font,getBattery(),align);
-	    		break;
-    		case 10: 
-	    		dc.drawText(x,y, font,getHR(),align);
-	    		break;
-    		case 13: 
-	    		dc.drawText(x,y, font,getFloors(),align);
-	    		break;
-    		case 14: 
-	    		dc.drawText(x,y, font,getWeather(),align);
-	    		break;
-			case 11:
-				break;
-		}
-			
+		dc.drawText(x,y, font, drawHeadString(whatToSHow), align);		
     	if(debugDate){
     		for(var t=1;t<=12;t++){dc.drawText(x,y,font, Lang.format("$1$ $2$",[getMonthName(t),date.year]), align);}
-    	}
+    	}	
         
+	}
+
+	function drawHeadString(whatToSHow){
+		var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+		switch(whatToSHow){
+			case 1:
+	        	return Lang.format("$1$ $2$",[getMonthName(date.month),date.year]);
+			case 2:
+	        	return Lang.format("$1$ $2$",[getMonthName(date.month),date.day]);
+			case 3:
+	        	return Lang.format("$1$$2$,$3$",[getMonthName(date.month),date.day,date.year]);
+			case 4:
+	        	return Lang.format("$1$/$2$/$3$",[date.day,date.month,date.year]);
+			case 5:
+	        	return Lang.format("$1$/$2$/$3$",[date.month,date.day,date.year]);
+			case 12:
+	        	return Lang.format("$1$ $2$ $3$",[getMonthName(date.month),getWeekdayName(date.day_of_week),date.day]);
+			case 6: 
+	    		return getSteps();
+	    	case 7: 
+	    		return getCalories();
+			case 8: 
+	    		return getMsgs();
+			case 9: 
+	    		return getBattery();
+    		case 10: 
+	    		return getHR();
+    		case 13: 
+	    		return getFloors();
+    		case 14: 
+	    		return getWeather();
+			default:
+				return "-";
+		}
 	}
 	
 	
