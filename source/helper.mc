@@ -326,15 +326,15 @@ class helper {
 			case 1:
 	        	return Lang.format("$1$ $2$",[getMonthName(date.month),date.year]);
 			case 2:
-	        	return Lang.format("$1$ $2$",[getMonthName(date.month),date.day]);
+	        	return Lang.format("$1$ $2$",[getMonthName(date.month),date.day.format("%02d")]);
 			case 3:
-	        	return Lang.format("$1$$2$,$3$",[getMonthName(date.month),date.day,date.year]);
+	        	return Lang.format("$1$ $2$,$3$",[getMonthName(date.month),date.day.format("%02d"),date.year]);
 			case 4:
-	        	return Lang.format("$1$/$2$/$3$",[date.day,date.month,date.year]);
+	        	return Lang.format("$1$/$2$/$3$",[date.day.format("%02d"),date.month.format("%02d"),date.year]);
 			case 5:
-	        	return Lang.format("$1$/$2$/$3$",[date.month,date.day,date.year]);
+	        	return Lang.format("$1$/$2$/$3$",[date.month.format("%02d"),date.day.format("%02d"),date.year]);
 			case 12:
-	        	return Lang.format("$1$ $2$ $3$",[getMonthName(date.month),getWeekdayName(date.day_of_week),date.day]);
+	        	return Lang.format("$1$ $2$ $3$",[getMonthName(date.month),getWeekdayName(date.day_of_week),date.day.format("%02d")]);
 			case 6: 
 	    		return getSteps();
 	    	case 7: 
