@@ -1,6 +1,13 @@
 {
   "version": "0.2.0",
   "configurations": [
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fenix3",
+      "stopAtLaunch": false,
+      "device": "fenix3"
+    },
 
     {
       "type": "monkeyc",

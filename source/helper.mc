@@ -17,7 +17,11 @@ class helper {
 	var useUaFont = false;
 	
 	function initialize(){
-		var l = System.getDeviceSettings().systemLanguage;
+		var deviceSettings = System.getDeviceSettings();
+		var l = null;
+		if (deviceSettings has :systemLanguage) {
+			l = deviceSettings.systemLanguage;
+		}
 		useUaFont = l == System.LANGUAGE_UKR || l == System.LANGUAGE_POL || l == System.LANGUAGE_LIT;
 	}
 

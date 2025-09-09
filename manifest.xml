@@ -8,7 +8,7 @@
         minSdkVersion="1.4.0" 
         name="@Strings.AppName" 
         type="watchface" 
-        version="0.5.2">
+        version="0.5.3">
         <iq:products>
             <iq:product id="approachs50"/>
             <iq:product id="approachs60"/>
