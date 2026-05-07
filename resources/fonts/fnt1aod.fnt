@@ -1,15 +1,15 @@
-info face="Julietta Messie" size=532 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
-common lineHeight=531 base=255 scaleW=358 scaleH=358 pages=2 packed=0 alphaChnl=0 redChnl=0 greenChnl=0 blueChnl=0
+info face="Julietta Messie" size=456 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=455 base=218 scaleW=307 scaleH=307 pages=2 packed=0 alphaChnl=0 redChnl=0 greenChnl=0 blueChnl=0
 page id=0 file="fnt1aod_0.png"
 page id=1 file="fnt1aod_1.png"
 chars count=10
-char id=48   x=202   y=0     width=108    height=147   xoffset=-10    yoffset=127    xadvance=104    page=1  chnl=15
-char id=49   x=203   y=0     width=64    height=175   xoffset=1     yoffset=129    xadvance=77    page=0  chnl=15
-char id=50   x=90    y=0     width=111    height=154   xoffset=1     yoffset=127    xadvance=127    page=1  chnl=15
-char id=51   x=223   y=176   width=115    height=162   xoffset=-15   yoffset=126    xadvance=113    page=0  chnl=15
-char id=52   x=0     y=0     width=88    height=161   xoffset=0     yoffset=129    xadvance=94    page=1  chnl=15
-char id=53   x=0     y=189   width=120    height=165   xoffset=0     yoffset=129    xadvance=118    page=0  chnl=15
-char id=54   x=122    y=183   width=99    height=165   xoffset=3     yoffset=129    xadvance=120    page=0  chnl=15
-char id=55   x=0     y=0     width=101    height=188   xoffset=1     yoffset=127    xadvance=105    page=0  chnl=15
-char id=56   x=269   y=0     width=87    height=167   xoffset=1     yoffset=129    xadvance=111    page=0  chnl=15
-char id=57   x=102    y=0     width=99    height=182   xoffset=17    yoffset=129    xadvance=115    page=0  chnl=15
+char id=48   x=173   y=0     width=92    height=126   xoffset=-8    yoffset=109    xadvance=89    page=1  chnl=15
+char id=49   x=174   y=0     width=55    height=150   xoffset=1     yoffset=110    xadvance=66    page=0  chnl=15
+char id=50   x=77    y=0     width=95    height=132   xoffset=1     yoffset=109    xadvance=109    page=1  chnl=15
+char id=51   x=191   y=151   width=98    height=139   xoffset=-13   yoffset=108    xadvance=97    page=0  chnl=15
+char id=52   x=0     y=0     width=76    height=138   xoffset=0     yoffset=110    xadvance=80    page=1  chnl=15
+char id=53   x=0     y=162   width=103    height=142   xoffset=0     yoffset=110    xadvance=101    page=0  chnl=15
+char id=54   x=104    y=157   width=85    height=142   xoffset=2     yoffset=110    xadvance=103    page=0  chnl=15
+char id=55   x=0     y=0     width=86    height=161   xoffset=1     yoffset=109    xadvance=90    page=0  chnl=15
+char id=56   x=230   y=0     width=74    height=143   xoffset=1     yoffset=110    xadvance=95    page=0  chnl=15
+char id=57   x=88    y=0     width=85    height=156   xoffset=14    yoffset=110    xadvance=98    page=0  chnl=15

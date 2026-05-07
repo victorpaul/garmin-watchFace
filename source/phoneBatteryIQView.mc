@@ -211,8 +211,8 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 			uiH.drawBottomLeft(dc,145,170,20,uiH.fontSmall());
 			uiH.drawBluetoothConnection(dc,140,245);
 		} else {
-			uiH.drawHours(dc,52,-90,45,-20,uiH.fontHugeAod());
-			uiH.drawMinutes(dc,172,-15,45,-20,uiH.fontHugeAod());
+			uiH.drawHours(dc,52,-60,55,-20,uiH.fontHugeAod());
+			uiH.drawMinutes(dc,172,15,55,-20,uiH.fontHugeAod());
 		}
 	}
 
