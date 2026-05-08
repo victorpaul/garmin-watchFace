@@ -201,6 +201,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		if (!_aodMode) {
 			uiH.drawHours(dc,42,-30,45,-20,uiH.fontHuge245());
 			uiH.drawMinutes(dc,182,45,45,-20,uiH.fontHuge245());
+			dc.setColor(_theme.accent, Graphics.COLOR_TRANSPARENT);
 			var topCenter=uiH.whatToShowAtTop();
 			var topRight=uiH.whatToShowAtRight();
 	        uiH.drawTopFA(topCenter,dc,133,10,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
