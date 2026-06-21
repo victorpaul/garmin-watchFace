@@ -29,6 +29,10 @@ class helper {
 		return WatchUi.loadResource(Rez.Fonts.fntHuge);
 	}
 
+        function fontHugeAod() {
+            return WatchUi.loadResource(Rez.Fonts.fntHugeAlone);
+        }
+
 	function fontHuge45(){
 		return WatchUi.loadResource(Rez.Fonts.fntHuge45);
 	}

@@ -1,5 +1,6 @@
 <resources>
     <font id="fntHuge" filename="fnt1.fnt" antialias="true"/>
+    <font id="fntHugeAlone" filename="fnt1aod.fnt" antialias="true"/>
     <font id="fntMedium" filename="fnt2.fnt" antialias="true"/>
     <font id="fntSmall" filename="fnt3.fnt" antialias="true"/>
     

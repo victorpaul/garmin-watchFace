@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">Chalk Watch</string>
+    <string id="AppName">Chalk Watch AOD</string>
     
     <string id="BackgroundColorTitle">Background Color</string>
     <string id="ForegroundColorTitle">Foreground Color</string>
@@ -16,7 +16,8 @@
     <string id="ColorWhite">White</string>
     <string id="ColorBlue">Blue</string>
     <string id="ColorRed">Red</string>
-    
+    <string id="ColorDarkRed">Dark Red</string>
+
     <string id="ColorGreen">Green</string>
     <string id="ColorOrange">Orange</string>
     <string id="ColorYellow">Yellow</string>
@@ -113,4 +114,23 @@
     <!-- Weather placeholders (when no weather is available) -->
     <string id="NoWeatherShort">--°</string>       <!-- No weather placeholder for compact layout -->
     
-</strings>
+    <string id="AodEnabled">AOD Mode</string>
+    <string id="AodColorTime">AOD Clock Color</string>
+    <string id="ColorDimmer">Very Dim</string>
+    <string id="ColorDim">Dim</string>
+    <string id="ColorGray">Gray</string>
+
+    <!-- Day / Night boundary -->
+    <string id="DayStartHour">Day Starts At</string>
+    <string id="DayEndHour">Day Ends At</string>
+
+    <!-- Day colours -->
+    <string id="DayColorFg">Day Text Color</string>
+    <string id="DayColorBg">Day Background</string>
+    <string id="DayColorAccent">Day Accent Color</string>
+
+    <!-- Night colours -->
+    <string id="NightColorFg">Night Text Color</string>
+    <string id="NightColorBg">Night Background</string>
+    <string id="NightColorAccent">Night Accent Color</string>
+    </strings>

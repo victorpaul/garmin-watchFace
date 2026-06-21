@@ -18,4 +18,37 @@
 	<property id="BTCOnnection" type="number">3</property>
 	
 
+    <!-- AOD emulation on/off toggle -->
+    <property id="AodEnabled" type="boolean">true</property>
+
+    <!-- Hour when day palette starts and ends (0-23 integer) -->
+    <property id="DayStartHour" type="number">7</property>
+    <property id="DayEndHour"   type="number">22</property>
+
+    <!--
+        Day colours (0xRRGGBB as decimal):
+          0xFFFFFF = 16777215  white
+          0x000000 = 0         black
+          0x00AAFF = 43775     blue
+    -->
+    <property id="DayColorFg"     type="number">16777215</property>
+    <property id="DayColorBg"     type="number">0</property>
+    <property id="DayColorAccent" type="number">43775</property>
+
+    <!--
+        Night colours:
+          0xAAAAAA = 11184810  dim grey
+          0x000000 = 0         black
+          0xFF6600 = 16737792  amber
+    -->
+    <property id="NightColorFg"     type="number">11184810</property>
+    <property id="NightColorBg"     type="number">0</property>
+    <property id="NightColorAccent" type="number">16737792</property>
+
+    <!--
+        AOD clock colour:
+          0x444444 = 4473924   very dim grey
+    -->
+    <property id="AodColorTime" type="number">4473924</property>
+
 </properties>
