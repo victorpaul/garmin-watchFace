@@ -1,7 +1,13 @@
 {
   "version": "0.2.0",
   "configurations": [
-
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "instinct3solar45mm",
+      "stopAtLaunch": false,
+      "device": "instinct3solar45mm"
+    },
     {
       "type": "monkeyc",
       "request": "launch",
@@ -44,7 +50,6 @@
       "stopAtLaunch": false,
       "device": "instinctcrossover"
     },
-
     {
       "type": "monkeyc",
       "request": "launch",
@@ -59,7 +64,6 @@
       "stopAtLaunch": false,
       "device": "fenix7pronowifi"
     },
-    
     {
       "type": "monkeyc",
       "request": "launch",
@@ -67,7 +71,6 @@
       "stopAtLaunch": false,
       "device": "fenix843mm"
     },
-    
     {
       "type": "monkeyc",
       "request": "launch",
@@ -75,7 +78,6 @@
       "stopAtLaunch": false,
       "device": "fenix847mm"
     },
-  
     {
       "type": "monkeyc",
       "request": "launch",
@@ -83,7 +85,6 @@
       "stopAtLaunch": false,
       "device": "fenix8solar47mm"
     },
-    
     {
       "type": "monkeyc",
       "request": "launch",
@@ -91,7 +92,6 @@
       "stopAtLaunch": false,
       "device": "fenix8solar51mm"
     },
-    
     {
       "type": "monkeyc",
       "request": "launch",
@@ -129,27 +129,12 @@
       "device": "instinct2s",
       "cleanBuild": true
     },
-
     {
       "type": "monkeyc",
       "request": "launch",
       "name": "instinct2x",
       "stopAtLaunch": false,
       "device": "instinct2x"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "",
-      "stopAtLaunch": false,
-      "device": ""
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix7xpronowifi",
-      "stopAtLaunch": false,
-      "device": "fenix7xpronowifi"
     },
     {
       "type": "monkeyc",
@@ -255,20 +240,6 @@
       "name": "venud",
       "stopAtLaunch": false,
       "device": "venud"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "venusq",
-      "stopAtLaunch": false,
-      "device": "venusq"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "venusqm",
-      "stopAtLaunch": false,
-      "device": "venusqm"
     },
     {
       "type": "monkeyc",
@@ -469,34 +440,6 @@
     {
       "type": "monkeyc",
       "request": "launch",
-      "name": "instinct2",
-      "stopAtLaunch": false,
-      "device": "instinct2"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "instinct2s",
-      "stopAtLaunch": false,
-      "device": "instinct2s"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "instinct2x",
-      "stopAtLaunch": false,
-      "device": "instinct2x"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "instinctcrossover",
-      "stopAtLaunch": false,
-      "device": "instinctcrossover"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
       "name": "marq2",
       "stopAtLaunch": false,
       "device": "marq2"
@@ -514,6 +457,27 @@
       "name": "marqgolfer",
       "stopAtLaunch": false,
       "device": "marqgolfer"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr235",
+      "stopAtLaunch": false,
+      "device": "fr235"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "fr920xt",
+      "stopAtLaunch": false,
+      "device": "fr920xt"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "vivoactive_hr",
+      "stopAtLaunch": false,
+      "device": "vivoactive_hr"
     }
   ]
 }

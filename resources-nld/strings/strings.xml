@@ -54,9 +54,6 @@
     
     
     <string id="BluetoothSetting">Bluetooth-verbinding tonen als:</string>
-    <string id="BToption1">Smartphone</string>
-    <string id="BToption2">Mobiele Telefoon</string>
-    <string id="BToption3">Oude Telefoon</string>
 
     <string id="BeepOnPhoneDisconnect">Waarschuwing bij telefoon-ontkoppeling</string>
     

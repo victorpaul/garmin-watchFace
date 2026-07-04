@@ -10,6 +10,7 @@ using Toybox.Time.Gregorian;
 class phoneBatteryIQView extends WatchUi.WatchFace {
 
 	var uiH;
+	var weatherUtils;
 	var inLowPower=false;
 	var lastPhoneConnectionState = null;
 	var deviceType = null;
@@ -20,6 +21,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         WatchFace.initialize();
         
         uiH = new helper();
+        weatherUtils = new weather();
         uiH.debug = false;
 		uiH.debugDate = false;
 		
@@ -88,16 +90,17 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	}
 
 	function draw_176x176x4(dc) {
+		// uiH.debug = true;
+
 		var topRight=uiH.whatToShowAtRight();
     	
     	uiH.drawTopRight(topRight,dc,116,11,14,0,2);
   		uiH.drawHours(dc,30,-65,40,0,uiH.fontHuge45());
 		uiH.drawMinutes(dc,95,10,50,0,uiH.fontHuge45());
 		
+		uiH.drawBottomLeft(dc,75,97,20,uiH.fontSmall());
 		
-		dc.drawText(10,95, uiH.fontSmall(),uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);
-		dc.drawText(10,115, uiH.fontSmall(),uiH.getBattery(), Graphics.TEXT_JUSTIFY_LEFT);
-		uiH.drawBluetoothConnectionSmall(dc,50,137);
+		uiH.drawBluetoothConnectionSmall(dc,102,65);
 	}
 
 	function draw_163x156x4(dc) {
@@ -115,16 +118,17 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 
 	
 	function draw_166x166x4(dc) {
-		var topRight=uiH.whatToShowAtRight();
+		// var topRight=uiH.whatToShowAtRight();
     	
-    	uiH.drawTopRight(topRight,dc,112,4,14,0,2);
-  		uiH.drawHours(dc,25,-65,40,0,uiH.fontHuge45());
-		uiH.drawMinutes(dc,87,-5,50,0,uiH.fontHuge45());
+    	// uiH.drawTopRight(topRight,dc,112,4,14,0,2);
+  		// uiH.drawHours(dc,25,-65,40,0,uiH.fontHuge45());
+		// uiH.drawMinutes(dc,87,-5,50,0,uiH.fontHuge45());
 		
+		// weatherUtils.drawWeather(dc, 10, 83);
 		
-		dc.drawText(5,95, uiH.fontSmall(),uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);
-		dc.drawText(5,115, uiH.fontSmall(),uiH.getBattery(), Graphics.TEXT_JUSTIFY_LEFT);
-		uiH.drawBluetoothConnectionSmall(dc,40,135);
+		// dc.drawText(5,95, uiH.fontSmall(),uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);
+		// dc.drawText(5,115, uiH.fontSmall(),uiH.getBattery(), Graphics.TEXT_JUSTIFY_LEFT);
+		// uiH.drawBluetoothConnectionSmall(dc,40,135);
 	}
 	
 	function draw_fr920xt(dc){

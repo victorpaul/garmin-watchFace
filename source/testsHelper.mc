@@ -104,9 +104,7 @@ class HelperTests {
     	uiH.fontMedium_(3);
     	uiH.fontMedium_(4);
     	uiH.fontMedium_(5);
-    	
-    	uiH.fontSmallIcons();
-    	uiH.fontIcons();
+
     	return true;
 	}
 	
@@ -158,13 +156,7 @@ class HelperTests {
 		
 		uiH.drawBluetoothConnectionSmall(dc,0,0);
 		uiH.drawBluetoothConnection(dc,0,0);
-		
-		uiH.drawBluetoothConnection_(dc,10,10,uiH.fontIcons(),0);
-		uiH.drawBluetoothConnection_(dc,10,10,uiH.fontIcons(),1);
-		uiH.drawBluetoothConnection_(dc,10,10,uiH.fontIcons(),2);
-		uiH.drawBluetoothConnection_(dc,10,10,uiH.fontIcons(),3);
-		uiH.drawBluetoothConnection_(dc,10,10,uiH.fontIcons(),4);
-		return true;	
+		return true;
 	}
 	
 	(:test)

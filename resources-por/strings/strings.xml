@@ -54,9 +54,6 @@
     
     
     <string id="BluetoothSetting">Mostrar conexão Bluetooth como:</string>
-    <string id="BToption1">Smartphone</string>
-    <string id="BToption2">Telefone Móvel</string>
-    <string id="BToption3">Telefone Antigo</string>
 
     <string id="BeepOnPhoneDisconnect">Alerta ao desconectar telefone</string>
     

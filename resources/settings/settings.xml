@@ -15,6 +15,7 @@
             <listEntry value="10">@Strings.Hr</listEntry>
             <listEntry value="13">@Strings.Floors</listEntry>
             <listEntry value="14">@Strings.Weather</listEntry>
+            <listEntry value="15">@Strings.BatteryIcon</listEntry>
             <listEntry value="11">@Strings.None</listEntry>
         </settingConfig>
     </setting>
@@ -39,6 +40,7 @@
             <listEntry value="5">@Strings.Hr</listEntry>
             <listEntry value="6">@Strings.Floors</listEntry>
             <listEntry value="7">@Strings.Weather</listEntry>
+            <listEntry value="9">@Strings.BatteryIcon</listEntry>
             <listEntry value="8">@Strings.None</listEntry>
         </settingConfig>
     </setting>
@@ -51,6 +53,7 @@
             <listEntry value="5">@Strings.Hr</listEntry>
             <listEntry value="6">@Strings.Floors</listEntry>
             <listEntry value="7">@Strings.Weather</listEntry>
+            <listEntry value="9">@Strings.BatteryIcon</listEntry>
             <listEntry value="8">@Strings.None</listEntry>
         </settingConfig>
     </setting>
@@ -63,6 +66,7 @@
             <listEntry value="5">@Strings.Hr</listEntry>
             <listEntry value="6">@Strings.Floors</listEntry>
             <listEntry value="7">@Strings.Weather</listEntry>
+            <listEntry value="9">@Strings.BatteryIcon</listEntry>
             <listEntry value="8">@Strings.None</listEntry>
         </settingConfig>
     </setting>
@@ -102,12 +106,7 @@
     </setting>
     
     <setting propertyKey="@Properties.BTCOnnection" title="@Strings.BluetoothSetting">
-        <settingConfig type="list">
-            <listEntry value="0">@Strings.None</listEntry>
-            <listEntry value="1">@Strings.BToption1</listEntry>
-            <listEntry value="2">@Strings.BToption2</listEntry>
-            <listEntry value="3">@Strings.BToption3</listEntry>
-        </settingConfig>
+        <settingConfig type="boolean" />
     </setting>
     
     <setting propertyKey="@Properties.BeepOnPhoneDisconnect" title="@Strings.BeepOnPhoneDisconnect">

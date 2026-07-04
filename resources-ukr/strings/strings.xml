@@ -54,9 +54,6 @@
     
     
     <string id="BluetoothSetting">Показувати Bluetooth з'єднання як:</string>
-    <string id="BToption1">Смартфон</string>
-    <string id="BToption2">Мобільний Телефон</string>
-    <string id="BToption3">Старий Телефон</string>
 
     <string id="BeepOnPhoneDisconnect">Сигнал при відключенні телефону</string>
     

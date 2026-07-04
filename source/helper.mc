@@ -4,8 +4,6 @@ using Toybox.System;
 using Toybox.Lang;
 using Toybox.ActivityMonitor;
 using Toybox.Application;
-using Toybox.Activity;
-using Toybox.Weather;
 
 using Toybox.Time;
 using Toybox.Time.Gregorian;
@@ -14,9 +12,22 @@ class helper {
 
 	var debug, debugDate;
 	var shortFormat=true;
-	
+	var weatherService;
+	var batteryService;
+	var stepsService;
+	var floorsService;
+	var messagesService;
+	var hrService;
+	var bluetoothService;
+
 	function initialize(){
-		
+		weatherService = new weather();
+		batteryService = new battery();
+		stepsService = new steps();
+		floorsService = new floors();
+		messagesService = new messages();
+		hrService = new hr();
+		bluetoothService = new bluetooth();
 	}
 
 	function fontHuge245(){
@@ -43,13 +54,6 @@ class helper {
 	
 	function fontSmall(){
 		return fontSmall_(Application.getApp().getProperty("Font"));
-	}
-	
-	function fontIcons(){
-		return WatchUi.loadResource(Rez.Fonts.icons);
-	}
-	function fontSmallIcons(){
-		return WatchUi.loadResource(Rez.Fonts.smallicons);
 	}
 	
 	function fontSmall_(setting){
@@ -95,10 +99,6 @@ class helper {
 	
 	function whatToShowAtBottomLeft3(){
 		return Application.getApp().getProperty("WhatToShowAtBottomLeft3");
-	}
-	
-	function bluetoothOption(){
-		return Application.getApp().getProperty("BTCOnnection");
 	}
 	
 	function getMonthName(number){
@@ -154,28 +154,13 @@ class helper {
 	}
 	
 	function drawBluetoothConnectionSmall(dc,x,y){
-		drawBluetoothConnection_(dc,x,y,fontSmallIcons(),bluetoothOption());
+		bluetoothService.drawBluetoothIcon(dc,x,y,debug);
 	}
-	
+
 	function drawBluetoothConnection(dc,x,y){
-		drawBluetoothConnection_(dc,x,y,fontIcons(),bluetoothOption());
+		bluetoothService.drawBluetoothIcon(dc,x,y,debug);
 	}
-	
-	function drawBluetoothConnection_(dc,x,y,font,setting){
-		if(setting>0 || debug){
-			if(System.getDeviceSettings().phoneConnected){
-				var icon = "i";
-				if(setting == 2){
-					icon = "h";
-				}
-				if(setting == 3){
-					icon = "g";
-				}
-				dc.drawText(x,y, fontIcons(), icon, Graphics.TEXT_JUSTIFY_CENTER);
-			}
-		}
-	}
-	
+
 	function drawWeekDay2(dc,x,y,offset,font){
 		var time = null;
 		if(offset==0){
@@ -206,31 +191,11 @@ class helper {
 	}
 	
 	function getSteps(){
-		if(shortFormat){
-			if(debug){
-				return "99999stps";
-			}
-			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,WatchUi.loadResource(Rez.Strings.StepsShort)]);
-		}
-	
-		if(debug){
-			return "99999 steps";
-		}
-		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().steps,WatchUi.loadResource(Rez.Strings.StepsLong)]);	
+		return stepsService.getStepsNumber(debug);
 	}
-	
+
 	function getFloors(){
-		if(shortFormat){
-			if(debug){
-				return "99flrs";
-			}
-			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().floorsClimbed,WatchUi.loadResource(Rez.Strings.FloorsShort)]);
-		}
-	
-		if(debug){
-			return "99 floors";
-		}
-		return Lang.format("$1$ $2$",[ActivityMonitor.getInfo().floorsClimbed,WatchUi.loadResource(Rez.Strings.FloorsLong)]);	
+		return floorsService.getFloorsNumber(debug);
 	}
 	function getCalories(){
 		if(shortFormat){
@@ -246,52 +211,15 @@ class helper {
 	}
 	
 	function getMsgs(){
-		if(shortFormat){
-			if(debug){
-				return "99msgs";
-			}
-			var ntfCount = System.getDeviceSettings().notificationCount;	
-			return Lang.format("$1$$2$",[ntfCount, WatchUi.loadResource(Rez.Strings.MessagesShort)]);
-		}
-		if(debug){
-			return "99 messages";
-		}
-		var ntfCount = System.getDeviceSettings().notificationCount;	
-		return Lang.format("$1$ $2$",[ntfCount, WatchUi.loadResource(Rez.Strings.MessagesLong)]);
+		return messagesService.getMessagesNumber(debug);
 	}
 	
 	function getBattery(){
-		if(shortFormat){
-			if(debug){	
-				return "100%";
-			}
-			return Lang.format("$1$$2$",[System.getSystemStats().battery.format("%d")+"%", ""]);
-		}
-		if(debug){
-			return "100% battery";
-		}
-		return Lang.format("$1$ $2$",[System.getSystemStats().battery.format("%d")+"%",WatchUi.loadResource(Rez.Strings.BatteryLong) ]);
+		return batteryService.getBatteryText(shortFormat, debug);
 	}
 	
 	function getHR(){
-		var activityInfo = Activity.getActivityInfo();
-		var hr = null;
-		
-		if (activityInfo != null) {
-			hr = activityInfo.currentHeartRate;
-		}
-		
-		if(shortFormat){
-			if(hr != null && hr > 0){
-				return Lang.format("$1$$2$",[hr, WatchUi.loadResource(Rez.Strings.BpmShort)]);
-			}
-			return WatchUi.loadResource(Rez.Strings.NoHeartRateShort);
-		}
-		
-		if(hr != null && hr > 0){
-			return Lang.format("$1$ $2$",[hr, WatchUi.loadResource(Rez.Strings.BpmLong)]);
-		}
-		return WatchUi.loadResource(Rez.Strings.NoHeartRateLong);
+		return hrService.getHRNumber(debug);
 	}
 	
 	function drawTop(dc,x,y){
@@ -323,27 +251,30 @@ class helper {
 			case 12:
 	        	dc.drawText(x,y, font, Lang.format("$1$ $2$ $3$",[getMonthName(date.month),getWeekdayName(date.day_of_week),date.day]), align);
 				break;
-			case 6: 
-	    		dc.drawText(x,y, font,getSteps(),align);
+			case 6:
+	    		stepsService.drawStepsIcon(dc, x, y, font, align, debug);
 	    		break;
-	    	case 7: 
+	    	case 7:
 	    		dc.drawText(x,y, font,getCalories(),align);
 	    		break;
-			case 8: 
-	    		dc.drawText(x,y, font,getMsgs(),align);
+			case 8:
+	    		messagesService.drawMessagesIcon(dc, x, y, font, align, debug);
 	    		break;
-			case 9: 
+			case 9:
 	    		dc.drawText(x,y, font,getBattery(),align);
 	    		break;
-    		case 10: 
-	    		dc.drawText(x,y, font,getHR(),align);
+    		case 10:
+	    		hrService.drawHRIcon(dc, x, y, font, align, debug);
 	    		break;
-    		case 13: 
-	    		dc.drawText(x,y, font,getFloors(),align);
+    		case 13:
+	    		floorsService.drawFloorsIcon(dc, x, y, font, align, debug);
 	    		break;
-    		case 14: 
-	    		dc.drawText(x,y, font,getWeather(),align);
+    		case 14:
+	    		weatherService.drawWeather(dc, x, y, font, align);
 	    		break;
+			case 15:
+				batteryService.drawBatteryIcon(dc, x, y, align);
+				break;
 			case 11:
 				break;
 		}
@@ -412,26 +343,29 @@ class helper {
 	
 	function drawBottomLineByOption(dc,x,y,option,font){
 		switch(option){
-	    	case 1: 
-	    		dc.drawText(x,y, font,getSteps(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    	case 1:
+	    		stepsService.drawStepsIcon(dc, x, y, font, Graphics.TEXT_JUSTIFY_RIGHT, debug);
 	    		break;
-	    	case 2: 
+	    	case 2:
 	    		dc.drawText(x,y, font,getCalories(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
 			case 3:
-	    		dc.drawText(x,y, font,getMsgs(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		messagesService.drawMessagesIcon(dc, x, y, font, Graphics.TEXT_JUSTIFY_RIGHT, debug);
 	    		break;
-			case 4: 
+			case 4:
 	    		dc.drawText(x,y, font,getBattery(),Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
-    		case 5: 
-	    		dc.drawText(x,y, font,getHR(),Graphics.TEXT_JUSTIFY_RIGHT);
+    		case 5:
+	    		hrService.drawHRIcon(dc, x, y, font, Graphics.TEXT_JUSTIFY_RIGHT, debug);
 	    		break;
-    		case 6: 
-	    		dc.drawText(x,y, font,getFloors(),Graphics.TEXT_JUSTIFY_RIGHT);
+    		case 6:
+	    		floorsService.drawFloorsIcon(dc, x, y, font, Graphics.TEXT_JUSTIFY_RIGHT, debug);
 	    		break;
-    		case 7: 
-	    		dc.drawText(x,y, font,getWeather(),Graphics.TEXT_JUSTIFY_RIGHT);
+    		case 7:
+	    		weatherService.drawWeather(dc, x, y, font, Graphics.TEXT_JUSTIFY_RIGHT);
+	    		break;
+    		case 9:
+	    		batteryService.drawBatteryIcon(dc, x, y, Graphics.TEXT_JUSTIFY_RIGHT);
 	    		break;
     		case 8:
     		default:
@@ -439,75 +373,6 @@ class helper {
 	    }
 	}
 
-	function getWeather(){
-		if(debug){
-			return "22°C ☀";
-		}
-		
-		// Try to get weather data if available
-		try {
-			if (Weather has :getCurrentConditions) {
-				var conditions = Weather.getCurrentConditions();
-				if (conditions != null && conditions.temperature != null) {
-					var temp = conditions.temperature.toNumber();
-					var tempStr;
-					
-					if (System.getDeviceSettings().temperatureUnits == System.UNIT_METRIC) {
-						tempStr = temp.format("%d") + "°C";
-					} else {
-						tempStr = temp.format("%d") + "°F";
-					}
-					
-					//var icon = getWeatherIcon(conditions.condition);
-					
-					return tempStr;
-				}
-			}
-		} catch(ex) {
-			// Weather API not available or permission denied
-		}
-		
-		return shortFormat ? "--°" : WatchUi.loadResource(Rez.Strings.NoWeatherShort);
-	}
-	
-	function getWeatherIcon(condition) {
-		if (condition == null) {
-			return "?";
-		}
-		
-		switch(condition) {
-			case Weather.CONDITION_CLEAR:
-				return "☀";
-			case Weather.CONDITION_PARTLY_CLOUDY:
-			case Weather.CONDITION_PARTLY_CLEAR:
-				return "⛅";
-			case Weather.CONDITION_CLOUDY:
-			case Weather.CONDITION_MOSTLY_CLOUDY:
-				return "☁";
-			case Weather.CONDITION_RAIN:
-			case Weather.CONDITION_LIGHT_RAIN:
-			case Weather.CONDITION_HEAVY_RAIN:
-			case Weather.CONDITION_SHOWERS:
-				return "🌧";
-			case Weather.CONDITION_SNOW:
-			case Weather.CONDITION_LIGHT_SNOW:
-			case Weather.CONDITION_HEAVY_SNOW:
-			case Weather.CONDITION_CHANCE_OF_SNOW:
-				return "❄";
-			case Weather.CONDITION_THUNDERSTORMS:
-			case Weather.CONDITION_CHANCE_OF_THUNDERSTORMS:
-				return "⛈";
-			case Weather.CONDITION_FOG:
-			case Weather.CONDITION_HAZE:
-			case Weather.CONDITION_MIST:
-				return "🌫";
-			case Weather.CONDITION_WINDY:
-				return "💨";
-			default:
-				return "?";
-		}
-	}
-	
 	function drawBottomLeft(dc,x,y,stepY,font){
 		if(showBottomLeft()){
 	        drawBottomLineByOption(dc,x,y,whatToShowAtBottomLeft(),font);

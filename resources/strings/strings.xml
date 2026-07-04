@@ -45,7 +45,8 @@
     <string id="BottomLeftInfo3">Bottom-left info (Line C)</string>
     <string id="Steps">Steps</string>
     <string id="Calories">Calories</string>
-    <string id="Battery">Battery</string>
+    <string id="Battery">Battery text</string>
+    <string id="BatteryIcon">Battery icon</string>
     <string id="Messages">Message count</string>
     <string id="Hr">Heart Rate</string>
     <string id="Floors">Floors Climbed</string>
@@ -53,10 +54,7 @@
     <string id="None">None</string>
     
     
-    <string id="BluetoothSetting">Show Bluetooth connection as:</string>
-    <string id="BToption1">Smartphone</string>
-    <string id="BToption2">Mobile Phone</string>
-    <string id="BToption3">Old Phone</string>
+    <string id="BluetoothSetting">Show phone connection icon</string>
     
     <string id="BeepOnPhoneDisconnect">Alert on phone disconnect</string>
     

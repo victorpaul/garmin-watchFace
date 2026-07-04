@@ -54,9 +54,6 @@
     
     
     <string id="BluetoothSetting">Rodyti Bluetooth ryšį kaip:</string>
-    <string id="BToption1">Išmanųjį Telefoną</string>
-    <string id="BToption2">Mobilųjį Telefoną</string>
-    <string id="BToption3">Senąjį Telefoną</string>
 
     <string id="BeepOnPhoneDisconnect">Pyptelėjimas atsijungus telefonui</string>
     

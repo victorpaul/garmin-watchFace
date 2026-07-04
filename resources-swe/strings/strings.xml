@@ -54,9 +54,6 @@
     
     
     <string id="BluetoothSetting">Visa Bluetooth-anslutning som:</string>
-    <string id="BToption1">Smartphone</string>
-    <string id="BToption2">Mobiltelefon</string>
-    <string id="BToption3">Gammal Telefon</string>
 
     <string id="BeepOnPhoneDisconnect">Varning vid telefonfrånkoppling</string>
     

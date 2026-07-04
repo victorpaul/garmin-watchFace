@@ -11,7 +11,7 @@
 	<property id="WhatToShowAtBottomLeft2" type="number">3</property>
 	<property id="WhatToShowAtBottomLeft3" type="number">4</property>
 	
-	<property id="BTCOnnection" type="number">3</property>
+	<property id="BTCOnnection" type="boolean">true</property>
 	
 	<property id="BeepOnPhoneDisconnect" type="boolean">false</property>
 	

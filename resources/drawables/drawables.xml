@@ -1,4 +1,47 @@
 <drawables>
     <bitmap id="LauncherIcon" filename="launcher_icon.png" />
     <bitmap id="LetterIcon" filename="email-envelope-button.png" />
+    <bitmap id="battery_0_dark" filename="battery/battery_android_0_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="battery_0_light" filename="battery/battery_android_0_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="battery_1_dark" filename="battery/battery_android_2_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="battery_1_light" filename="battery/battery_android_2_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="battery_2_dark" filename="battery/battery_android_3_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="battery_2_light" filename="battery/battery_android_3_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="battery_3_dark" filename="battery/battery_android_4_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="battery_3_light" filename="battery/battery_android_4_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="battery_4_dark" filename="battery/battery_android_5_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="battery_4_light" filename="battery/battery_android_5_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="battery_5_dark" filename="battery/battery_android_6_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="battery_5_light" filename="battery/battery_android_6_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="battery_6_dark" filename="battery/battery_android_7_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="battery_6_light" filename="battery/battery_android_7_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="heart_dark" filename="rest/ecg_heart_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="heart_light" filename="rest/ecg_heart_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="floor_dark" filename="rest/floor_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="floor_light" filename="rest/floor_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="footprint_dark" filename="rest/footprint_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="footprint_light" filename="rest/footprint_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="fire_dark" filename="rest/local_fire_department_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="fire_light" filename="rest/local_fire_department_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="mail_dark" filename="rest/mail_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="mail_light" filename="rest/mail_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="bluetooth_dark" filename="rest/bluetooth_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+    <bitmap id="bluetooth_light" filename="rest/bluetooth_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" />
+
+    <bitmap id="weather_air_dark" filename="weather/air_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" scaleX="16" scaleY="16" />
+    <bitmap id="weather_air_light" filename="weather/air_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" scaleX="16" scaleY="16" />
+    <bitmap id="weather_clear_dark" filename="weather/clear_day_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" scaleX="16" scaleY="16" />
+    <bitmap id="weather_clear_light" filename="weather/clear_day_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" scaleX="16" scaleY="16" />
+    <bitmap id="weather_cloudy_dark" filename="weather/cloud_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" scaleX="23" scaleY="23" />
+    <bitmap id="weather_cloudy_light" filename="weather/cloud_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" scaleX="23" scaleY="23" />
+    <bitmap id="weather_foggy_dark" filename="weather/foggy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" scaleX="16" scaleY="16" />
+    <bitmap id="weather_foggy_light" filename="weather/foggy_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" scaleX="16" scaleY="16" />
+    <bitmap id="weather_partly_cloudy_dark" filename="weather/partly_cloudy_day_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" scaleX="16" scaleY="16" />
+    <bitmap id="weather_partly_cloudy_light" filename="weather/partly_cloudy_day_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" scaleX="16" scaleY="16" />
+    <bitmap id="weather_rainy_dark" filename="weather/rainy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" scaleX="16" scaleY="16" />
+    <bitmap id="weather_rainy_light" filename="weather/rainy_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" scaleX="16" scaleY="16" />
+    <bitmap id="weather_thunderstorm_dark" filename="weather/thunderstorm_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" scaleX="16" scaleY="16" />
+    <bitmap id="weather_thunderstorm_light" filename="weather/thunderstorm_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" scaleX="16" scaleY="16" />
+    <bitmap id="weather_snowy_dark" filename="weather/weather_snowy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" scaleX="16" scaleY="16" />
+    <bitmap id="weather_snowy_light" filename="weather/weather_snowy_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" scaleX="16" scaleY="16" />
 </drawables>
