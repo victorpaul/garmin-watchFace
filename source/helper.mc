@@ -19,6 +19,7 @@ class helper {
 	var messagesService;
 	var hrService;
 	var bluetoothService;
+	var useUaFont = false;
 
 	function initialize(){
 		weatherService = new weather();
@@ -28,6 +29,13 @@ class helper {
 		messagesService = new messages();
 		hrService = new hr();
 		bluetoothService = new bluetooth();
+
+		var deviceSettings = System.getDeviceSettings();
+		var l = null;
+		if (deviceSettings has :systemLanguage) {
+			l = deviceSettings.systemLanguage;
+		}
+		useUaFont = l == System.LANGUAGE_UKR || l == System.LANGUAGE_POL || l == System.LANGUAGE_LIT;
 	}
 
 	function fontHuge245(){
@@ -41,7 +49,15 @@ class helper {
 	function fontMedium(){
 		return fontMedium_(Application.getApp().getProperty("Font"));
 	}
+
+	function fontSmall(){
+		return fontSmall_(Application.getApp().getProperty("Font"));
+	}
+
 	function fontMedium_(setting){
+		if(useUaFont){
+			return WatchUi.loadResource(Rez.Fonts.euaMedium);
+		}
 		switch(setting){
 			case 2:
 				return WatchUi.loadResource(Rez.Fonts.mediumJannScript);  // 36px
@@ -51,12 +67,11 @@ class helper {
 				return WatchUi.loadResource(Rez.Fonts.fntMedium);
 		}
 	}
-	
-	function fontSmall(){
-		return fontSmall_(Application.getApp().getProperty("Font"));
-	}
-	
+
 	function fontSmall_(setting){
+		if(useUaFont){
+			return WatchUi.loadResource(Rez.Fonts.euaSmall);
+		}
 		switch(setting){
 			case 2:
 				return WatchUi.loadResource(Rez.Fonts.smallJannScript);  // 26px
@@ -278,11 +293,45 @@ class helper {
 			case 11:
 				break;
 		}
-			
+
     	if(debugDate){
     		for(var t=1;t<=12;t++){dc.drawText(x,y,font, Lang.format("$1$ $2$",[getMonthName(t),date.year]), align);}
-    	}
+    	}	
         
+	}
+
+	function drawHeadString(whatToSHow){
+		var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+		switch(whatToSHow){
+			case 1:
+	        	return Lang.format("$1$ $2$",[getMonthName(date.month),date.year]);
+			case 2:
+	        	return Lang.format("$1$ $2$",[getMonthName(date.month),date.day.format("%02d")]);
+			case 3:
+	        	return Lang.format("$1$ $2$,$3$",[getMonthName(date.month),date.day.format("%02d"),date.year]);
+			case 4:
+	        	return Lang.format("$1$/$2$/$3$",[date.day.format("%02d"),date.month.format("%02d"),date.year]);
+			case 5:
+	        	return Lang.format("$1$/$2$/$3$",[date.month.format("%02d"),date.day.format("%02d"),date.year]);
+			case 12:
+	        	return Lang.format("$1$ $2$ $3$",[getMonthName(date.month),getWeekdayName(date.day_of_week),date.day.format("%02d")]);
+			case 6: 
+	    		return getSteps();
+	    	case 7: 
+	    		return getCalories();
+			case 8: 
+	    		return getMsgs();
+			case 9: 
+	    		return getBattery();
+    		case 10: 
+	    		return getHR();
+    		case 13: 
+	    		return getFloors();
+    		case 14:
+	    		return weatherService.getTemperature();
+			default:
+				return "-";
+		}
 	}
 	
 	
@@ -341,31 +390,34 @@ class helper {
 		}
 	}
 	
-	function drawBottomLineByOption(dc,x,y,option,font){
+	function drawBottomLineByOption(dc,x,y,option,font,align){
+		if(align == null){
+			align = Graphics.TEXT_JUSTIFY_RIGHT;
+		}
 		switch(option){
 	    	case 1:
-	    		stepsService.drawStepsIcon(dc, x, y, font, Graphics.TEXT_JUSTIFY_RIGHT, debug);
+	    		stepsService.drawStepsIcon(dc, x, y, font, align, debug);
 	    		break;
 	    	case 2:
-	    		dc.drawText(x,y, font,getCalories(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		dc.drawText(x,y, font,getCalories(),align);
 	    		break;
 			case 3:
-	    		messagesService.drawMessagesIcon(dc, x, y, font, Graphics.TEXT_JUSTIFY_RIGHT, debug);
+	    		messagesService.drawMessagesIcon(dc, x, y, font, align, debug);
 	    		break;
 			case 4:
-	    		dc.drawText(x,y, font,getBattery(),Graphics.TEXT_JUSTIFY_RIGHT);
+	    		dc.drawText(x,y, font,getBattery(),align);
 	    		break;
     		case 5:
-	    		hrService.drawHRIcon(dc, x, y, font, Graphics.TEXT_JUSTIFY_RIGHT, debug);
+	    		hrService.drawHRIcon(dc, x, y, font, align, debug);
 	    		break;
     		case 6:
-	    		floorsService.drawFloorsIcon(dc, x, y, font, Graphics.TEXT_JUSTIFY_RIGHT, debug);
+	    		floorsService.drawFloorsIcon(dc, x, y, font, align, debug);
 	    		break;
     		case 7:
-	    		weatherService.drawWeather(dc, x, y, font, Graphics.TEXT_JUSTIFY_RIGHT);
+	    		weatherService.drawWeather(dc, x, y, font, align);
 	    		break;
     		case 9:
-	    		batteryService.drawBatteryIcon(dc, x, y, Graphics.TEXT_JUSTIFY_RIGHT);
+	    		batteryService.drawBatteryIcon(dc, x, y, align);
 	    		break;
     		case 8:
     		default:
@@ -375,12 +427,23 @@ class helper {
 
 	function drawBottomLeft(dc,x,y,stepY,font){
 		if(showBottomLeft()){
-	        drawBottomLineByOption(dc,x,y,whatToShowAtBottomLeft(),font);
-	        drawBottomLineByOption(dc,x,y+stepY,whatToShowAtBottomLeft2(),font);
-	        drawBottomLineByOption(dc,x,y+stepY+stepY,whatToShowAtBottomLeft3(),font);        	
+	        drawBottomLineByOption(dc,x,y,whatToShowAtBottomLeft(),font,Graphics.TEXT_JUSTIFY_RIGHT);
+	        drawBottomLineByOption(dc,x,y+stepY,whatToShowAtBottomLeft2(),font,Graphics.TEXT_JUSTIFY_RIGHT);
+	        drawBottomLineByOption(dc,x,y+stepY+stepY,whatToShowAtBottomLeft3(),font,Graphics.TEXT_JUSTIFY_RIGHT);
         }
 	}
-		
+
+	// Same as drawBottomLeft, but grows left-to-right (TEXT_JUSTIFY_LEFT)
+	// instead of right-to-left - needed for narrow screens like
+	// draw_148x205x3 where right-justified text can run off the left edge.
+	function drawBottomLeftLeft(dc,x,y,stepY,font){
+		if(showBottomLeft()){
+	        drawBottomLineByOption(dc,x,y,whatToShowAtBottomLeft(),font,Graphics.TEXT_JUSTIFY_LEFT);
+	        drawBottomLineByOption(dc,x,y+stepY,whatToShowAtBottomLeft2(),font,Graphics.TEXT_JUSTIFY_LEFT);
+	        drawBottomLineByOption(dc,x,y+stepY+stepY,whatToShowAtBottomLeft3(),font,Graphics.TEXT_JUSTIFY_LEFT);
+        }
+	}
+
 	// screenShape 1 = SCREEN_SHAPE_ROUND
 	// screenShape 2 = SCREEN_SHAPE_SEMI_ROUND
 	// screenShape 3 = SCREEN_SHAPE_RECTANGLE

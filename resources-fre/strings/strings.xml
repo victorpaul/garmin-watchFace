@@ -55,7 +55,6 @@
     
     <string id="BluetoothSetting">Afficher la connexion Bluetooth comme :</string>
 
-    <string id="BeepOnPhoneDisconnect">Alerte en cas de déconnexion du téléphone</string>
     
     <!-- Month names -->
     <string id="MonthJan">Janv</string>

@@ -4,480 +4,100 @@
     {
       "type": "monkeyc",
       "request": "launch",
-      "name": "instinct3solar45mm",
+      "name": "draw_148x205x3 (vivoactive_hr)",
       "stopAtLaunch": false,
-      "device": "instinct3solar45mm"
+      "device": "vivoactive_hr"
     },
     {
       "type": "monkeyc",
       "request": "launch",
-      "name": "venu2",
+      "name": "draw_176x176x4 (instinct2)",
       "stopAtLaunch": false,
-      "device": "venu2"
+      "device": "instinct2"
     },
     {
       "type": "monkeyc",
       "request": "launch",
-      "name": "vivoactive5",
+      "name": "draw_163x156x4 (instinct2s)",
       "stopAtLaunch": false,
-      "device": "vivoactive5"
+      "device": "instinct2s"
     },
     {
       "type": "monkeyc",
       "request": "launch",
-      "name": "vivoactive6",
-      "stopAtLaunch": false,
-      "device": "vivoactive6"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "instincte45mm",
-      "stopAtLaunch": false,
-      "device": "instincte45mm"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "instincte40mm",
+      "name": "draw_166x166x4 (instincte40mm)",
       "stopAtLaunch": false,
       "device": "instincte40mm"
     },
     {
       "type": "monkeyc",
       "request": "launch",
-      "name": "instinctcrossover",
-      "stopAtLaunch": false,
-      "device": "instinctcrossover"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix7xpronowifi",
-      "stopAtLaunch": false,
-      "device": "fenix7xpronowifi"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix7pronowifi",
-      "stopAtLaunch": false,
-      "device": "fenix7pronowifi"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix843mm",
-      "stopAtLaunch": false,
-      "device": "fenix843mm"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix847mm",
-      "stopAtLaunch": false,
-      "device": "fenix847mm"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix8solar47mm",
-      "stopAtLaunch": false,
-      "device": "fenix8solar47mm"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix8solar51mm",
-      "stopAtLaunch": false,
-      "device": "fenix8solar51mm"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenixe",
-      "stopAtLaunch": false,
-      "device": "fenixe"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr165",
-      "stopAtLaunch": false,
-      "device": "fr165"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr165m",
-      "stopAtLaunch": false,
-      "device": "fr165m"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "instinct2",
-      "stopAtLaunch": false,
-      "device": "instinct2",
-      "cleanBuild": true
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "instinct2s",
-      "stopAtLaunch": false,
-      "device": "instinct2s",
-      "cleanBuild": true
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "instinct2x",
-      "stopAtLaunch": false,
-      "device": "instinct2x"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "approachs50",
-      "stopAtLaunch": false,
-      "device": "approachs50"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "approachs60",
-      "stopAtLaunch": false,
-      "device": "approachs60"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix7",
-      "stopAtLaunch": false,
-      "device": "fenix7"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix5",
-      "stopAtLaunch": false,
-      "device": "fenix5"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix6",
-      "stopAtLaunch": false,
-      "device": "fenix6"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix7s",
-      "stopAtLaunch": false,
-      "device": "fenix7s"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix7x",
-      "stopAtLaunch": false,
-      "device": "fenix7x"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "legacyherofirstavenger",
-      "stopAtLaunch": false,
-      "device": "legacyherofirstavenger"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr45",
-      "stopAtLaunch": false,
-      "device": "fr45"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr55",
-      "stopAtLaunch": false,
-      "device": "fr55"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr745",
-      "stopAtLaunch": false,
-      "device": "fr745"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr945",
-      "stopAtLaunch": false,
-      "device": "fr945"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr945lte",
-      "stopAtLaunch": false,
-      "device": "fr945lte"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "legacysagarey",
-      "stopAtLaunch": false,
-      "device": "legacysagarey"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "venud",
-      "stopAtLaunch": false,
-      "device": "venud"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "legacyherocaptainmarvel",
-      "stopAtLaunch": false,
-      "device": "legacyherocaptainmarvel"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "legacysagadarthvader",
-      "stopAtLaunch": false,
-      "device": "legacysagadarthvader"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "approachs7042mm",
-      "stopAtLaunch": false,
-      "device": "approachs7042mm"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "approachs7047mm",
-      "stopAtLaunch": false,
-      "device": "approachs7047mm"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix7pro",
-      "stopAtLaunch": false,
-      "device": "fenix7pro"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix7spro",
-      "stopAtLaunch": false,
-      "device": "fenix7spro"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix7system6preview",
-      "stopAtLaunch": false,
-      "device": "fenix7system6preview"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix7xpro",
-      "stopAtLaunch": false,
-      "device": "fenix7xpro"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fenix6prosystem5preview",
-      "stopAtLaunch": false,
-      "device": "fenix6prosystem5preview"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr255",
-      "stopAtLaunch": false,
-      "device": "fr255"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr255m",
-      "stopAtLaunch": false,
-      "device": "fr255m"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr255s",
-      "stopAtLaunch": false,
-      "device": "fr255s"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr255sm",
-      "stopAtLaunch": false,
-      "device": "fr255sm"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr265",
-      "stopAtLaunch": false,
-      "device": "fr265"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr265s",
-      "stopAtLaunch": false,
-      "device": "fr265s"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr955",
-      "stopAtLaunch": false,
-      "device": "fr955"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr965",
-      "stopAtLaunch": false,
-      "device": "fr965"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "d2air",
-      "stopAtLaunch": false,
-      "device": "d2air"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "d2airx10",
-      "stopAtLaunch": false,
-      "device": "d2airx10"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "d2mach1",
-      "stopAtLaunch": false,
-      "device": "d2mach1"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "descentmk2",
-      "stopAtLaunch": false,
-      "device": "descentmk2"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "descentmk2s",
-      "stopAtLaunch": false,
-      "device": "descentmk2s"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "descentmk1",
-      "stopAtLaunch": false,
-      "device": "descentmk1"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "enduro",
-      "stopAtLaunch": false,
-      "device": "enduro"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "epix2",
-      "stopAtLaunch": false,
-      "device": "epix2"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "epix2pro42mm",
-      "stopAtLaunch": false,
-      "device": "epix2pro42mm"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "epix2pro47mm",
-      "stopAtLaunch": false,
-      "device": "epix2pro47mm"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "epix2pro51mm",
-      "stopAtLaunch": false,
-      "device": "epix2pro51mm"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "marq2",
-      "stopAtLaunch": false,
-      "device": "marq2"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "marq2aviator",
-      "stopAtLaunch": false,
-      "device": "marq2aviator"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "marqgolfer",
-      "stopAtLaunch": false,
-      "device": "marqgolfer"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr235",
-      "stopAtLaunch": false,
-      "device": "fr235"
-    },
-    {
-      "type": "monkeyc",
-      "request": "launch",
-      "name": "fr920xt",
+      "name": "draw_205x148x3 (fr920xt)",
       "stopAtLaunch": false,
       "device": "fr920xt"
     },
     {
       "type": "monkeyc",
       "request": "launch",
-      "name": "vivoactive_hr",
+      "name": "draw_215x180x2 (fr230)",
       "stopAtLaunch": false,
-      "device": "vivoactive_hr"
+      "device": "fr230"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "draw_218x218x1 (fenix3)",
+      "stopAtLaunch": false,
+      "device": "fenix3"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "draw_208x208x1 (fr45)",
+      "stopAtLaunch": false,
+      "device": "fr45"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "draw_240x240x1 (fr245)",
+      "stopAtLaunch": false,
+      "device": "fr245"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "draw_260x260x1 (fenix6)",
+      "stopAtLaunch": false,
+      "device": "fenix6"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "draw_280x280x1 (fenix6xpro)",
+      "stopAtLaunch": false,
+      "device": "fenix6xpro"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "draw_390x390x1 (venu)",
+      "stopAtLaunch": false,
+      "device": "venu"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "draw_454x454x1 (fr965)",
+      "stopAtLaunch": false,
+      "device": "fr965"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "draw_416x416x1 (venu2)",
+      "stopAtLaunch": false,
+      "device": "venu2"
     }
   ]
 }

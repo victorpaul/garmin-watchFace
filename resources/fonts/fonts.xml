@@ -11,4 +11,7 @@
     
     <font id="fntHuge45" filename="fnt45.fnt" antialias="true"/>
 
+    <font id="euaSmall" filename="eua/eua20.fnt"/>
+    <font id="euaMedium" filename="eua/eua30.fnt"/>
+
 </resources>

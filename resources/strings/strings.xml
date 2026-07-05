@@ -55,9 +55,8 @@
     
     
     <string id="BluetoothSetting">Show phone connection icon</string>
-    
     <string id="BeepOnPhoneDisconnect">Alert on phone disconnect</string>
-    
+
     <!-- Month names -->
     <string id="MonthJan">Jan</string>
     <string id="MonthFeb">Feb</string>

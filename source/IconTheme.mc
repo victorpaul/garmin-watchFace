@@ -2,28 +2,41 @@ using Toybox.WatchUi;
 using Toybox.Application;
 using Toybox.Graphics;
 
-// Our icon SVGs have a fill color baked in at compile time, so contrast
-// against the user's chosen background can't be done with runtime tinting -
-// every icon ships as a dark-fill and a light-fill drawable, and callers
-// pick between them through getIcon().
+// Our icon SVGs have a fill color baked in at compile time, so they can't be
+// runtime-tinted like text can - every icon ships as a dark-fill and a
+// light-fill drawable, and callers pick between them through getIcon().
+// The icon should match the same color as the text it's drawn next to, so
+// selection follows ForegroundColor (not BackgroundColor): a dark foreground
+// gets the dark-fill icon, a light foreground gets the light-fill icon.
 module IconTheme {
 
-    function isBackgroundLight() {
-        var bgColor = Application.getApp().getProperty("BackgroundColor");
-        if (bgColor == null) {
-            bgColor = 0x000000;
+    // Some old devices (confirmed: fr920xt/vivoactive_hr, 205x148x3 and
+    // 148x205x3) render the icon bitmap's transparent area as an opaque
+    // black box instead of staying see-through. A dark-fill icon disappears
+    // into that box; the light-fill (white) icon stays visible against it.
+    // Screens on that hardware generation set this true to always get the
+    // light variant, regardless of ForegroundColor.
+    var forceLightIcon = false;
+
+    function isForegroundLight() {
+        var fgColor = Application.getApp().getProperty("ForegroundColor");
+        if (fgColor == null) {
+            fgColor = 0xFFFFFF;
         }
 
-        var r = (bgColor >> 16) & 0xFF;
-        var g = (bgColor >> 8) & 0xFF;
-        var b = bgColor & 0xFF;
+        var r = (fgColor >> 16) & 0xFF;
+        var g = (fgColor >> 8) & 0xFF;
+        var b = fgColor & 0xFF;
         var luminance = (r * 0.299) + (g * 0.587) + (b * 0.114);
 
         return luminance > 127;
     }
 
     function getIcon(darkIconId, lightIconId) {
-        return WatchUi.loadResource(isBackgroundLight() ? darkIconId : lightIconId);
+        if (forceLightIcon) {
+            return WatchUi.loadResource(lightIconId);
+        }
+        return WatchUi.loadResource(isForegroundLight() ? lightIconId : darkIconId);
     }
 
     // Text + icon combo (number first, icon after), positioned so the whole

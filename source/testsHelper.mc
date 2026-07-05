@@ -113,15 +113,15 @@ class HelperTests {
 		var dc = new mockDC(logger);
 		var uiH = new helper();
 		var font = uiH.fontSmall();
-    	uiH.drawBottomLineByOption(dc,88,-5,1,font);
-    	uiH.drawBottomLineByOption(dc,88,-5,2,font);
-    	uiH.drawBottomLineByOption(dc,88,-5,3,font);
-    	uiH.drawBottomLineByOption(dc,88,-5,4,font);    		
-    	uiH.drawBottomLineByOption(dc,88,-5,5,font);
-    	uiH.drawBottomLineByOption(dc,88,-5,6,font);
-    	uiH.drawBottomLineByOption(dc,88,-5,7,font);
-    	uiH.drawBottomLineByOption(dc,88,-5,8,font);
-    	uiH.drawBottomLineByOption(dc,88,-5,0,font);
+    	uiH.drawBottomLineByOption(dc,88,-5,1,font,Graphics.TEXT_JUSTIFY_RIGHT);
+    	uiH.drawBottomLineByOption(dc,88,-5,2,font,Graphics.TEXT_JUSTIFY_RIGHT);
+    	uiH.drawBottomLineByOption(dc,88,-5,3,font,Graphics.TEXT_JUSTIFY_RIGHT);
+    	uiH.drawBottomLineByOption(dc,88,-5,4,font,Graphics.TEXT_JUSTIFY_RIGHT);
+    	uiH.drawBottomLineByOption(dc,88,-5,5,font,Graphics.TEXT_JUSTIFY_RIGHT);
+    	uiH.drawBottomLineByOption(dc,88,-5,6,font,Graphics.TEXT_JUSTIFY_RIGHT);
+    	uiH.drawBottomLineByOption(dc,88,-5,7,font,Graphics.TEXT_JUSTIFY_RIGHT);
+    	uiH.drawBottomLineByOption(dc,88,-5,8,font,Graphics.TEXT_JUSTIFY_RIGHT);
+    	uiH.drawBottomLineByOption(dc,88,-5,0,font,Graphics.TEXT_JUSTIFY_RIGHT);
     	return true;
 	}
 	

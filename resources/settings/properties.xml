@@ -7,13 +7,16 @@
     <property id="WhatToShowAtTop" type="number">1</property>
 	<property id="WhatToShowAtRight" type="number">1</property>
     <property id="ShowBottomLeft" type="boolean">true</property>
+    <!-- default 1 -->
     <property id="WhatToShowAtBottomLeft" type="number">1</property>
-	<property id="WhatToShowAtBottomLeft2" type="number">3</property>
-	<property id="WhatToShowAtBottomLeft3" type="number">4</property>
+	<!-- default 3 -->
+    <property id="WhatToShowAtBottomLeft2" type="number">3</property>
+	<!-- default 4 -->
+    <property id="WhatToShowAtBottomLeft3" type="number">4</property>
 	
 	<property id="BTCOnnection" type="boolean">true</property>
-	
+
 	<property id="BeepOnPhoneDisconnect" type="boolean">false</property>
-	
+
 
 </properties>

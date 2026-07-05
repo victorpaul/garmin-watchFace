@@ -16,43 +16,43 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	var deviceType = null;
 	var isOledDisplay = false;
 	var fontsMode = false;
-	
+
     function initialize() {
         WatchFace.initialize();
-        
+
         uiH = new helper();
         weatherUtils = new weather();
         uiH.debug = false;
 		uiH.debugDate = false;
-		
+
 		initializeDevice();
     }
-    
+
     function initializeDevice() {
         var deviceInfo = DeviceService.getDeviceInfo(uiH.debug);
         deviceType = deviceInfo[:deviceType];
         isOledDisplay = deviceInfo[:isOled];
     }
-    
+
     function onExitSleep() {
         inLowPower=false;
-    	WatchUi.requestUpdate(); 
+    	WatchUi.requestUpdate();
     }
 
     function onEnterSleep() {
     	inLowPower=true;
-    	WatchUi.requestUpdate(); 
+    	WatchUi.requestUpdate();
     }
-    
+
     function checkPhoneConnectionAndBeep() {
-        var beepEnabled = Application.Properties.getValue("BeepOnPhoneDisconnect");
+        var beepEnabled = Application.getApp().getProperty("BeepOnPhoneDisconnect");
         if (beepEnabled == null) {
             beepEnabled = false;
         }
-        
+
         if (beepEnabled) {
             var currentConnectionState = System.getDeviceSettings().phoneConnected;
-            
+
             if (lastPhoneConnectionState == true && currentConnectionState == false) {
                 if (Attention has :ToneProfile) {
                     var toneProfile = [
@@ -71,67 +71,83 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
                     Attention.vibrate(vibeData);
                 }
             }
-            
+
             lastPhoneConnectionState = currentConnectionState;
         }
     }
-	
-	function draw_vivoactiveHR(dc){
+
+	// Devices: vivoactive_hr (148x205x3)
+	function draw_148x205x3(dc){
+		// Same old-hardware generation as fr920xt (205x148x3): icon bitmaps
+		// get an opaque black box behind them, so force the light-fill icon
+		// to stay visible against it.
+		IconTheme.forceLightIcon = true;
+
     	var topRight=uiH.whatToShowAtRight();
     	
     	uiH.drawTopRight(topRight,dc,88,-5,14,0,6);
   		uiH.drawHours(dc,25,-62,40,0,uiH.fontHuge45());
-		uiH.drawMinutes(dc,70,30,50,0,uiH.fontHuge45());
+		uiH.drawMinutes(dc,75,30,50,0,uiH.fontHuge45());
 		
-		dc.drawText(2,130, uiH.fontSmall(),uiH.getBattery(), Graphics.TEXT_JUSTIFY_LEFT);
-		dc.drawText(2,150, uiH.fontSmall(),uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);
+		uiH.drawBluetoothConnectionSmall(dc,10,120);
+
+		uiH.drawBottomLeftLeft(dc,2,140,20,uiH.fontSmall());
 		
-		uiH.drawBluetoothConnectionSmall(dc,12,178);
+		
 	}
 
+	// Devices: instinct2, instinct2x, instinct3solar45mm, instinctcrossover,
+	// instincte45mm (176x176x4)
 	function draw_176x176x4(dc) {
-		// uiH.debug = true;
+		uiH.debug = true;
 
 		var topRight=uiH.whatToShowAtRight();
-    	
+
     	uiH.drawTopRight(topRight,dc,116,11,14,0,2);
   		uiH.drawHours(dc,30,-65,40,0,uiH.fontHuge45());
 		uiH.drawMinutes(dc,95,10,50,0,uiH.fontHuge45());
-		
-		uiH.drawBottomLeft(dc,75,97,20,uiH.fontSmall());
-		
+
+		uiH.drawBottomLeft(dc,75,85,20,uiH.fontSmall());
+
 		uiH.drawBluetoothConnectionSmall(dc,102,65);
 	}
 
+	// Devices: instinct2s (163x156x4)
 	function draw_163x156x4(dc) {
+		// uiH.debug = true;
 		var topRight=uiH.whatToShowAtRight();
     	
     	uiH.drawTopRight(topRight,dc,109,4,14,0,2);
-  		uiH.drawHours(dc,25,-69,40,0,uiH.fontHuge45());
+  		uiH.drawHours(dc,25,-69,40,0,uiH.fontHuge45()); //todo, decrease main font
 		uiH.drawMinutes(dc,80,-5,50,0,uiH.fontHuge45());
 		
-		
-		dc.drawText(5,80, uiH.fontSmall(),uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);
-		dc.drawText(5,100, uiH.fontSmall(),uiH.getBattery(), Graphics.TEXT_JUSTIFY_LEFT);
-		uiH.drawBluetoothConnectionSmall(dc,40,120);
+		uiH.drawBluetoothConnectionSmall(dc,100,55);
+
+		uiH.drawBottomLeft(dc,70,80,20,uiH.fontSmall());
 	}
 
 	
+	// Devices: instincte40mm (166x166x4)
 	function draw_166x166x4(dc) {
-		// var topRight=uiH.whatToShowAtRight();
+		// uiH.debug = true;
+		var topRight=uiH.whatToShowAtRight();
     	
-    	// uiH.drawTopRight(topRight,dc,112,4,14,0,2);
-  		// uiH.drawHours(dc,25,-65,40,0,uiH.fontHuge45());
-		// uiH.drawMinutes(dc,87,-5,50,0,uiH.fontHuge45());
+    	uiH.drawTopRight(topRight,dc,109,4,14,0,2);
+  		uiH.drawHours(dc,25,-69,40,0,uiH.fontHuge45()); //todo, decrease main font
+		uiH.drawMinutes(dc,80,5,60,0,uiH.fontHuge45());
 		
-		// weatherUtils.drawWeather(dc, 10, 83);
-		
-		// dc.drawText(5,95, uiH.fontSmall(),uiH.getHR(), Graphics.TEXT_JUSTIFY_LEFT);
-		// dc.drawText(5,115, uiH.fontSmall(),uiH.getBattery(), Graphics.TEXT_JUSTIFY_LEFT);
-		// uiH.drawBluetoothConnectionSmall(dc,40,135);
+		uiH.drawBluetoothConnectionSmall(dc,100,55);
+
+		uiH.drawBottomLeft(dc,70,80,20,uiH.fontSmall());
 	}
 	
-	function draw_fr920xt(dc){
+	// Devices: fr920xt, vivoactive (205x148x3)
+	function draw_205x148x3(dc){
+		// This old hardware generation renders icon bitmaps with an opaque
+		// black box behind them (confirmed on fr920xt), so force the
+		// light-fill icon to stay visible against it.
+		IconTheme.forceLightIcon = true;
+		// uiH.debug = true;
 		var topRight=uiH.whatToShowAtRight();
 		
 		uiH.drawTopLeft(dc,107,-5);
@@ -141,18 +157,24 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		uiH.drawBottomLeft(dc,85,100,14,uiH.fontSmall());
 	}
 	
-	function draw_fr230_fr235(dc){
+	// Devices: fr230, fr235, fr630, fr735xt (215x180x2).
+	// Also the default fallback for any unrecognized device/resolution.
+	function draw_215x180x2(dc){
+		uiH.debug = true;
 		var topRight=uiH.whatToShowAtRight();
 		
       	uiH.drawTopLeft(dc,90,0);
     	uiH.drawTopRight(topRight,dc,110,19,15,0,3);
-  		uiH.drawHours(dc,35,-35,40,0,uiH.fontHuge45());
+  		uiH.drawHours(dc,35,-45,40,0,uiH.fontHuge45());
 		uiH.drawMinutes(dc,125,3,50,0,uiH.fontHuge45());
-		uiH.drawBottomLeft(dc,92,120,18,uiH.fontSmall());
-		uiH.drawBluetoothConnectionSmall(dc,135,152);
+		uiH.drawBottomLeft(dc,92,110,21,uiH.fontSmall());
+		uiH.drawBluetoothConnectionSmall(dc,115,170);
 	}
 
-	function draw_venusq(dc){
+	// Devices: none currently — venusq/venusqm are the only 240x240x3 devices
+	// in the Connect IQ SDK, but neither is declared in manifest.xml, so this
+	// layout cannot be built or launched for any supported device right now.
+	function draw_240x240x3(dc){
 		var topRight=uiH.whatToShowAtRight();
 		
       	uiH.drawTopLeft(dc,90,0);
@@ -163,7 +185,10 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		uiH.drawBluetoothConnectionSmall(dc,135,152);
 	}
 	
-	function draw_fenix3(dc){
+	// Devices: d2bravo, d2bravo_titanium, fenix3, fenix3_hr, fenix5s,
+	// fenixchronos, fr255s, fr255sm, legacyherocaptainmarvel, legacysagarey,
+	// vivoactive4s (218x218x1)
+	function draw_218x218x1(dc){
         var topRight=uiH.whatToShowAtRight();
         
         uiH.drawTop(dc,110,5);
@@ -174,7 +199,8 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		uiH.drawBluetoothConnectionSmall(dc,210,110);
 	}
 	
-	function draw_fr45(dc){
+	// Devices: fr45, fr55, garminswim2 (208x208x1)
+	function draw_208x208x1(dc){
         var topRight=uiH.whatToShowAtRight();
         
         uiH.drawTop(dc,110,8);
@@ -186,7 +212,14 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		uiH.drawBluetoothConnectionSmall(dc,199,108);
 	}
 	
-	function draw_fr245_fenix5x(dc) {
+	// Devices (240x240x1, largest group - 36 devices): approachs60, d2charlie,
+	// d2delta, d2deltapx, d2deltas, descentmk1, descentmk2s, fenix5, fenix5plus,
+	// fenix5splus, fenix5x, fenix5xplus, fenix6s, fenix6spro, fenix7s,
+	// fenix7spro, fr245, fr245m, fr645, fr645m, fr745, fr935, fr945, fr945lte,
+	// marqadventurer, marqathlete, marqaviator, marqcaptain, marqcommander,
+	// marqdriver, marqexpedition, marqgolfer, vivoactive3, vivoactive3d,
+	// vivoactive3m, vivoactive3mlte
+	function draw_240x240x1(dc) {
 		var topCenter=uiH.whatToShowAtTop();
 		var topRight=uiH.whatToShowAtRight();
 
@@ -199,7 +232,10 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		uiH.drawBluetoothConnection(dc,135,84);
 	}
 		
-	function draw_fenix6(dc){
+	// Devices: approachs62, fenix6, fenix6pro, fenix7, fenix7pro,
+	// fenix7pronowifi, fenix8solar47mm, fr255, fr255m, fr955,
+	// legacyherofirstavenger, legacysagadarthvader, vivoactive4 (260x260x1)
+	function draw_260x260x1(dc){
 		var topCenter=uiH.whatToShowAtTop();
 		var topRight=uiH.whatToShowAtRight();
 	
@@ -216,7 +252,9 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		uiH.drawBluetoothConnection(dc,120,225);
 	}
 	
-	function draw_fenix6xpro(dc){
+	// Devices: descentmk2, enduro, fenix6xpro, fenix7x, fenix7xpro,
+	// fenix7xpronowifi, fenix8solar51mm (280x280x1)
+	function draw_280x280x1(dc){
 		var topCenter=uiH.whatToShowAtTop();
 		var topRight=uiH.whatToShowAtRight();
         uiH.drawTopFA(topCenter,dc,133,10,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
@@ -230,7 +268,10 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		uiH.drawBluetoothConnection(dc,140,245);
 	}
 	
-	function draw_venu(dc){
+	// Devices: approachs50, approachs7042mm, d2air, epix2pro42mm, fr165,
+	// fr165m, fr265s, marq2, marq2aviator, venu, venud, vivoactive5,
+	// vivoactive6 (390x390x1, plus fr265s at 360x360x1)
+	function draw_390x390x1(dc){
 		// uiH.debug = false;
 		if(uiH.debug || inLowPower && uiH.canBurn()){
 			var step = 4;
@@ -269,7 +310,8 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		
 	}
 
-	function draw_454_454_1(dc){
+	// Devices: approachs7047mm, epix2pro51mm, fenix847mm, fr965 (454x454x1)
+	function draw_454x454x1(dc){
 		if(uiH.debug || inLowPower && uiH.canBurn()){
 			var step = 4;
 			var radX = 130;
@@ -310,7 +352,9 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		
 	}
 
-	function draw_416_416_1(dc){
+	// Devices: d2airx10, d2mach1, epix2, epix2pro47mm, fenix843mm, fenixe,
+	// fr265, venu2 (416x416x1)
+	function draw_416x416x1(dc){
 		if(uiH.debug || inLowPower && uiH.canBurn()){
 			var step = 4;
 			var radX = 110;
@@ -407,7 +451,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	}
 
     function onUpdate(dc) {
-        
+
         checkPhoneConnectionAndBeep();
 
         // Set colors based on cached display type
@@ -427,41 +471,41 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         // Simple switch based on cached device type
         switch(deviceType) {
             case DeviceType.VENU:
-                draw_venu(dc);
+                draw_390x390x1(dc);
                 break;
             case DeviceType.VENU_454:
-                draw_454_454_1(dc);
+                draw_454x454x1(dc);
                 break;
             case DeviceType.VENU_416:
-                draw_416_416_1(dc);
+                draw_416x416x1(dc);
                 break;
             case DeviceType.VIVOACTIVE_HR:
-                draw_vivoactiveHR(dc);
+                draw_148x205x3(dc);
                 break;
             case DeviceType.FR920XT:
-                draw_fr920xt(dc);
+                draw_205x148x3(dc);
                 break;
             case DeviceType.FR230_FR235:
-                draw_fr230_fr235(dc);
+                draw_215x180x2(dc);
                 break;
             case DeviceType.FR45:
-                draw_fr45(dc);
+                draw_208x208x1(dc);
                 break;
             case DeviceType.FENIX3:
-                draw_fenix3(dc);
+                draw_218x218x1(dc);
                 break;
             case DeviceType.FR245_FENIX5X:
-                draw_fr245_fenix5x(dc);
+                draw_240x240x1(dc);
                 break;
             case DeviceType.FENIX6:
-                draw_fenix6(dc);
+                draw_260x260x1(dc);
                 break;
             case DeviceType.FENIX6XPRO:
                 uiH.shortFormat = false;
-                draw_fenix6xpro(dc);
+                draw_280x280x1(dc);
                 break;
             case DeviceType.VENUSQ:
-                draw_venusq(dc);
+                draw_240x240x3(dc);
                 break;
             case DeviceType.DEVICE_176:
                 draw_176x176x4(dc);
@@ -476,7 +520,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
                 if(uiH.debug) {
                     System.println("Using fallback for unknown device type: " + deviceType);
                 }
-                draw_fr230_fr235(dc);
+                draw_215x180x2(dc);
         }
     }
 

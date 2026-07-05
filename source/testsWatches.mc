@@ -9,14 +9,14 @@ class WatchfacesTests {
 		
 		app.onUpdate(dc);
 		
-		app.draw_vivoactiveHR(dc);
-		app.draw_fr920xt(dc);
-		app.draw_fr230_fr235(dc);
-		app.draw_fenix3(dc);
-		app.draw_fr45(dc);
-		app.draw_fr245_fenix5x(dc);
-		app.draw_fenix6(dc);
-		app.draw_fenix6xpro(dc);
+		app.draw_148x205x3(dc);
+		app.draw_205x148x3(dc);
+		app.draw_215x180x2(dc);
+		app.draw_218x218x1(dc);
+		app.draw_208x208x1(dc);
+		app.draw_240x240x1(dc);
+		app.draw_260x260x1(dc);
+		app.draw_280x280x1(dc);
 		
 		return true;
 	}

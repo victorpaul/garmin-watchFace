@@ -108,10 +108,9 @@
     <setting propertyKey="@Properties.BTCOnnection" title="@Strings.BluetoothSetting">
         <settingConfig type="boolean" />
     </setting>
-    
+
     <setting propertyKey="@Properties.BeepOnPhoneDisconnect" title="@Strings.BeepOnPhoneDisconnect">
         <settingConfig type="boolean" />
     </setting>
-    
 
 </settings>
