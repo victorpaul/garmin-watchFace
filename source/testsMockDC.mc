@@ -25,5 +25,15 @@ class mockDC{
 //		logger.debug(Lang.format("$1$: $2$",[calls.size(),str]));
 		calls.add([str]);
 	}
-	
+
+	function drawBitmap(x,y,bitmap){
+		var str = Lang.format("drawBitmap($1$,$2$)",[x,y]);
+//		logger.debug(Lang.format("$1$: $2$",[calls.size(),str]));
+		calls.add([str]);
+	}
+
+	function getTextDimensions(text,font){
+		return [20,20];
+	}
+
 }

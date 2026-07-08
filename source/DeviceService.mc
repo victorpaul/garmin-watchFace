@@ -16,7 +16,8 @@ module DeviceType {
     const DEVICE_176 = 12;
     const DEVICE_163 = 13;
     const DEVICE_166 = 14;
-    const UNKNOWN = 15;
+    const VENU_X1 = 15;
+    const UNKNOWN = 16;
 }
 
 class DeviceService {
@@ -60,15 +61,18 @@ class DeviceService {
                 return DeviceType.DEVICE_163;
             case "166x166x4":
                 return DeviceType.DEVICE_166;
+            case "448x486x3":
+                return DeviceType.VENU_X1;
             default:
                 return DeviceType.UNKNOWN;
         }
     }
     
     static function isOledDisplay(deviceType) {
-        return (deviceType == DeviceType.VENU || 
-                deviceType == DeviceType.VENU_454 || 
-                deviceType == DeviceType.VENU_416);
+        return (deviceType == DeviceType.VENU ||
+                deviceType == DeviceType.VENU_454 ||
+                deviceType == DeviceType.VENU_416 ||
+                deviceType == DeviceType.VENU_X1);
     }
     
     static function getDeviceInfo(debug) {

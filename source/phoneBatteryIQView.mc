@@ -22,7 +22,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 
         uiH = new helper();
         weatherUtils = new weather();
-        uiH.debug = false;
+        uiH.debug = true;
 		uiH.debugDate = false;
 
 		initializeDevice();
@@ -99,7 +99,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	// Devices: instinct2, instinct2x, instinct3solar45mm, instinctcrossover,
 	// instincte45mm (176x176x4)
 	function draw_176x176x4(dc) {
-		uiH.debug = true;
+		// uiH.debug = true;
 
 		var topRight=uiH.whatToShowAtRight();
 
@@ -154,13 +154,14 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
     	uiH.drawTopRight(topRight,dc,107,13,15,0,1);
   		uiH.drawHours(dc,28,-60,40,0,uiH.fontHuge45());
 		uiH.drawMinutes(dc,125,-30,50,0,uiH.fontHuge45());
-		uiH.drawBottomLeft(dc,85,100,14,uiH.fontSmall());
+		uiH.drawBottomLeft(dc,85,92,19,uiH.fontSmall());
 	}
 	
 	// Devices: fr230, fr235, fr630, fr735xt (215x180x2).
 	// Also the default fallback for any unrecognized device/resolution.
 	function draw_215x180x2(dc){
-		uiH.debug = true;
+		IconTheme.forceLightIcon = true;
+		// uiH.debug = true;
 		var topRight=uiH.whatToShowAtRight();
 		
       	uiH.drawTopLeft(dc,90,0);
@@ -175,20 +176,24 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	// in the Connect IQ SDK, but neither is declared in manifest.xml, so this
 	// layout cannot be built or launched for any supported device right now.
 	function draw_240x240x3(dc){
+		// uiH.debug = true;
 		var topRight=uiH.whatToShowAtRight();
 		
       	uiH.drawTopLeft(dc,90,0);
-    	uiH.drawTopRight(topRight,dc,110,19,15,0,3);
-  		uiH.drawHours(dc,35,-35,40,0,uiH.fontHuge45());
-		uiH.drawMinutes(dc,150,3,50,0,uiH.fontHuge45());
-		uiH.drawBottomLeft(dc,92,120,18,uiH.fontSmall());
-		uiH.drawBluetoothConnectionSmall(dc,135,152);
+    	uiH.drawTopRight(topRight,dc,140,19,15,0,3);
+  		
+		uiH.drawHours(dc,45,-65,50,0,uiH.fontHuge245());
+		uiH.drawMinutes(dc,150,10,50,0,uiH.fontHuge245());
+		
+		uiH.drawBottomLeft(dc,110,145,21,uiH.fontSmall());
+		uiH.drawBluetoothConnectionSmall(dc,90,220);
 	}
 	
 	// Devices: d2bravo, d2bravo_titanium, fenix3, fenix3_hr, fenix5s,
 	// fenixchronos, fr255s, fr255sm, legacyherocaptainmarvel, legacysagarey,
 	// vivoactive4s (218x218x1)
 	function draw_218x218x1(dc){
+		//fenix 3 has svg issue
         var topRight=uiH.whatToShowAtRight();
         
         uiH.drawTop(dc,110,5);
@@ -310,7 +315,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		
 	}
 
-	// Devices: approachs7047mm, epix2pro51mm, fenix847mm, fr965 (454x454x1)
+	// Devices: approachs7047mm, epix2pro51mm, fenix847mm, fr965, d2mach2, d2mach2pro (454x454x1)
 	function draw_454x454x1(dc){
 		if(uiH.debug || inLowPower && uiH.canBurn()){
 			var step = 4;
@@ -393,6 +398,47 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 			uiH.drawBottomLeft(dc,195+xOffset,230+yOffset,25,uiH.fontMedium());
 		}
 		
+	}
+
+	// Devices: venux1 (448x486x3, rectangular AMOLED)
+	function draw_448x486x3(dc){
+		if(uiH.debug || inLowPower && uiH.canBurn()){
+			var step = 4;
+			var radX = 130;
+			var radY = 100;
+			var x = 205;
+			var y = 55;
+			var xm = x+8;
+			var ym = y+150;
+
+			var xy = uiH.getAnalogClockPosition(step,System.getClockTime().min,radX,radY);
+			uiH.drawHours(dc,x+xy[0],y+xy[1],45,0,uiH.fontHuge45());
+			uiH.drawMinutes(dc,xm+xy[0],ym+xy[1],40,0,uiH.fontHuge45());
+			if(uiH.debug){
+				for(var m=0; m<60;m++){
+					xy = uiH.getAnalogClockPosition(step,m,radX,radY);
+					uiH.drawHours(dc,x+xy[0],y+xy[1],45,0,uiH.fontHuge45());
+					uiH.drawMinutes(dc,xm+xy[0],ym+xy[1],40,0,uiH.fontHuge45());
+				}
+			}
+		}else{
+			var xOffset = 30;
+			var yOffset = 75;
+
+			uiH.drawBluetoothConnection(dc,195+xOffset,350+yOffset);
+
+			var topCenter=uiH.whatToShowAtTop();
+			var topRight=uiH.whatToShowAtRight();
+	        uiH.drawTopFA(topCenter,dc,195+xOffset,20,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+
+	        uiH.drawTopRightFont(topRight,dc,190+xOffset,45+yOffset,25,0,4,uiH.fontMedium());
+	        if(topRight==1){
+	        	uiH.drawTopRightFont(topRight,dc,280+xOffset,60+yOffset,25,4,3,uiH.fontMedium());
+	        }
+	      	uiH.drawHours(dc,80+xOffset,10+yOffset,60,-20,uiH.fontHuge245());
+	    	uiH.drawMinutes(dc,260+xOffset,90+yOffset,60,-20,uiH.fontHuge245());
+			uiH.drawBottomLeft(dc,195+xOffset,230+yOffset,25,uiH.fontMedium());
+		}
 	}
 
 	function drawFonts(dc){

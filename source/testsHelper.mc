@@ -43,17 +43,17 @@ class HelperTests {
 		var dc = new mockDC(logger);
 		var uiH = new helper();
 	
-    	uiH.drawTopFA(1,dc,120,5,uiH.fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-    	uiH.drawTopFA(2,dc,120,5,uiH.fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-    	uiH.drawTopFA(3,dc,120,5,uiH.fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-    	uiH.drawTopFA(4,dc,120,5,uiH.fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-    	uiH.drawTopFA(5,dc,120,5,uiH.fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-    	uiH.drawTopFA(6,dc,120,5,uiH.fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-    	uiH.drawTopFA(7,dc,120,5,uiH.fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-    	uiH.drawTopFA(8,dc,120,5,uiH.fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-    	uiH.drawTopFA(9,dc,120,5,uiH.fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-    	uiH.drawTopFA(10,dc,120,5,uiH.fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
-    	uiH.drawTopFA(11,dc,120,5,uiH.fontMedium,Graphics.TEXT_JUSTIFY_CENTER);
+    	uiH.drawTopFA(1,dc,120,5,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+    	uiH.drawTopFA(2,dc,120,5,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+    	uiH.drawTopFA(3,dc,120,5,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+    	uiH.drawTopFA(4,dc,120,5,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+    	uiH.drawTopFA(5,dc,120,5,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+    	uiH.drawTopFA(6,dc,120,5,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+    	uiH.drawTopFA(7,dc,120,5,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+    	uiH.drawTopFA(8,dc,120,5,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+    	uiH.drawTopFA(9,dc,120,5,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+    	uiH.drawTopFA(10,dc,120,5,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
+    	uiH.drawTopFA(11,dc,120,5,uiH.fontMedium(),Graphics.TEXT_JUSTIFY_CENTER);
     	
     	return true;
 	}

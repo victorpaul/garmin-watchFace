@@ -1,6 +1,14 @@
 {
   "version": "0.2.0",
   "configurations": [
+
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "draw_448x486x3 (venux1)",
+      "stopAtLaunch": false,
+      "device": "venux1"
+    },
     {
       "type": "monkeyc",
       "request": "launch",
@@ -46,9 +54,23 @@
     {
       "type": "monkeyc",
       "request": "launch",
+      "name": "draw_215x180x2 (fr735xt)",
+      "stopAtLaunch": false,
+      "device": "fr735xt"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
       "name": "draw_218x218x1 (fenix3)",
       "stopAtLaunch": false,
       "device": "fenix3"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
+      "name": "draw_218x218x1 (fenix5s)",
+      "stopAtLaunch": false,
+      "device": "fenix5s"
     },
     {
       "type": "monkeyc",
