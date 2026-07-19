@@ -16,7 +16,4 @@
 	
 	<property id="BTCOnnection" type="boolean">true</property>
 
-	<property id="BeepOnPhoneDisconnect" type="boolean">false</property>
-
-
 </properties>

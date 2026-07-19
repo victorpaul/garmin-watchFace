@@ -19,7 +19,6 @@ class helper {
 	var messagesService;
 	var hrService;
 	var bluetoothService;
-	var beepService;
 	var useUaFont = false;
 
 	function initialize(){
@@ -30,7 +29,6 @@ class helper {
 		messagesService = new messages();
 		hrService = new hr();
 		bluetoothService = new bluetooth();
-		beepService = new beep();
 
 		var deviceSettings = System.getDeviceSettings();
 		var l = null;

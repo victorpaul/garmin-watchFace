@@ -20,7 +20,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 
         uiH = new helper();
         weatherUtils = new weather();
-        uiH.debug = true;
+        uiH.debug = false;
 		uiH.debugDate = false;
 
 		initializeDevice();
@@ -73,7 +73,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
   		uiH.drawHours(dc,30,-65,40,0,uiH.fontHuge45());
 		uiH.drawMinutes(dc,95,10,50,0,uiH.fontHuge45());
 
-		uiH.drawBottomLeft(dc,75,85,20,uiH.fontSmall());
+		uiH.drawBottomLeft(dc,74,90,20,uiH.fontSmall());
 
 		uiH.drawBluetoothConnectionSmall(dc,102,65);
 	}
@@ -463,8 +463,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	}
 
     function onUpdate(dc) {
-
-        uiH.beepService.checkPhoneConnectionAndBeep();
 
         // Set colors based on cached display type
         if (isOledDisplay) {

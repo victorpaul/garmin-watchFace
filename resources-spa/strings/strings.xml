@@ -54,7 +54,6 @@
     
     
     <string id="BluetoothSetting">Mostrar icono de conexión del teléfono</string>
-    <string id="BeepOnPhoneDisconnect">Alerta al desconectar el teléfono</string>
     <string id="BatteryIcon">Icono de batería</string>
 
     
