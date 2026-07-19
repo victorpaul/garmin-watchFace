@@ -21,7 +21,7 @@
     <string id="ColorOrange">Arancione</string>
     <string id="ColorYellow">Giallo</string>
     
-    <string id="Font">Carattere testo piccolo</string>
+    <string id="Font">Carattere per il testo piccolo</string>
     <string id="Font1">Carattere 1</string>
     <string id="Font2">Carattere 2</string>
     <string id="Font3">Carattere 3</string>
@@ -53,7 +53,9 @@
     <string id="None">Nessuno</string>
     
     
-    <string id="BluetoothSetting">Mostra connessione Bluetooth come:</string>
+    <string id="BluetoothSetting">Mostra icona di connessione al telefono</string>
+    <string id="BeepOnPhoneDisconnect">Avviso alla disconnessione del telefono</string>
+    <string id="BatteryIcon">Icona batteria</string>
 
     
     <!-- Month names -->

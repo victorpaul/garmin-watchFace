@@ -1,18 +1,18 @@
 <strings>
     <string id="AppName">Chalk Watch</string>
     
-    <string id="BackgroundColorTitle">Color de Fondo</string>
-    <string id="ForegroundColorTitle">Color de Texto</string>
+    <string id="BackgroundColorTitle">Color de fondo</string>
+    <string id="ForegroundColorTitle">Color de texto</string>
     <string id="Use12Hours">Formato de 12 horas</string>
     <string id="ShowDays">Mostrar información superior derecha</string>
     <string id="ShowBottomLeft">Mostrar información inferior izquierda</string>
     <string id="ShowMonthYear">Mostrar información superior centrada</string>
-    <string id="UseBrushFontForInfo">Usar fuente brush para texto pequeño</string>
-	<string id="ShowHR">Mostrar FC</string>
+    <string id="UseBrushFontForInfo">Usar fuente pincel para texto pequeño</string>
+	<string id="ShowHR">Mostrar frecuencia cardíaca</string>
 
     <string id="ColorBlack">Negro</string>
-    <string id="ColorDarkGray">Gris Oscuro</string>
-    <string id="ColorLightGray">Gris Claro</string>
+    <string id="ColorDarkGray">Gris oscuro</string>
+    <string id="ColorLightGray">Gris claro</string>
     <string id="ColorWhite">Blanco</string>
     <string id="ColorBlue">Azul</string>
     <string id="ColorRed">Rojo</string>
@@ -22,38 +22,40 @@
     <string id="ColorYellow">Amarillo</string>
     
     <string id="Font">Fuente de texto pequeño</string>
-    <string id="Font1">fuente 1</string>
-    <string id="Font2">fuente 2</string>
-    <string id="Font3">fuente 3</string>
+    <string id="Font1">Fuente 1</string>
+    <string id="Font2">Fuente 2</string>
+    <string id="Font3">Fuente 3</string>
     
     
     <string id="TopCenterInfo">Información superior central</string>
-    <string id="Date1">Mes año</string>
-    <string id="Date2">Mes día</string>
+    <string id="Date1">Mes, año</string>
+    <string id="Date2">Mes, día</string>
     <string id="Date3">Mes día, año</string>
     <string id="Date4">DD/MM/AAAA</string>
     <string id="Date5">MM/DD/AAAA</string>
-    <string id="Date6">Mes día semana</string>
+    <string id="Date6">Mes, día de la semana</string>
     
     <string id="RightInfo">Información derecha</string>
     <string id="Calendar">Calendario</string>
     
     <string id="Activity">Actividad</string>
     
-    <string id="BottomLeftInfo">Información inferior izquierda. Línea A</string>
-    <string id="BottomLeftInfo2">Información inferior izquierda. Línea B</string>
-    <string id="BottomLeftInfo3">Información inferior izquierda. Línea C</string>
+    <string id="BottomLeftInfo">Información inferior izquierda (línea A)</string>
+    <string id="BottomLeftInfo2">Información inferior izquierda (línea B)</string>
+    <string id="BottomLeftInfo3">Información inferior izquierda (línea C)</string>
     <string id="Steps">Pasos</string>
     <string id="Calories">Calorías</string>
     <string id="Battery">Batería</string>
     <string id="Messages">Conteo de mensajes</string>
-    <string id="Hr">Frecuencia Cardíaca</string>
-    <string id="Floors">Pisos Subidos</string>
+    <string id="Hr">Frecuencia cardíaca</string>
+    <string id="Floors">Pisos subidos</string>
     <string id="Weather">Clima</string>
     <string id="None">Ninguno</string>
     
     
-    <string id="BluetoothSetting">Mostrar conexión Bluetooth como:</string>
+    <string id="BluetoothSetting">Mostrar icono de conexión del teléfono</string>
+    <string id="BeepOnPhoneDisconnect">Alerta al desconectar el teléfono</string>
+    <string id="BatteryIcon">Icono de batería</string>
 
     
     <!-- Month names -->

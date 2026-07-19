@@ -5,7 +5,10 @@ using Toybox.Weather;
 
 class weather {
 
+    var hasWeather;
+
     function initialize() {
+        hasWeather = (Toybox has :Weather) && (Weather has :getCurrentConditions);
     }
 
     // Text + icon combo, same convention as steps/floors/messages/hr:
@@ -16,17 +19,18 @@ class weather {
     }
 
     function getTemperature() {
+        if (!hasWeather) {
+            return "--°";
+        }
         try {
-            if (Weather has :getCurrentConditions) {
-                var conditions = Weather.getCurrentConditions();
-                if (conditions != null && conditions.temperature != null) {
-                    var temp = conditions.temperature.toNumber();
+            var conditions = Weather.getCurrentConditions();
+            if (conditions != null && conditions.temperature != null) {
+                var temp = conditions.temperature.toNumber();
 
-                    if (System.getDeviceSettings().temperatureUnits == System.UNIT_METRIC) {
-                        return temp.format("%d") + "°C";
-                    } else {
-                        return temp.format("%d") + "°F";
-                    }
+                if (System.getDeviceSettings().temperatureUnits == System.UNIT_METRIC) {
+                    return temp.format("%d") + "°C";
+                } else {
+                    return temp.format("%d") + "°F";
                 }
             }
         } catch(ex) {
@@ -36,12 +40,13 @@ class weather {
     }
 
     function getWeatherIconIds() {
+        if (!hasWeather) {
+            return null;
+        }
         try {
-            if (Weather has :getCurrentConditions) {
-                var conditions = Weather.getCurrentConditions();
-                if (conditions != null && conditions.condition != null) {
-                    return mapConditionToIconIds(conditions.condition);
-                }
+            var conditions = Weather.getCurrentConditions();
+            if (conditions != null && conditions.condition != null) {
+                return mapConditionToIconIds(conditions.condition);
             }
         } catch(ex) {
         }

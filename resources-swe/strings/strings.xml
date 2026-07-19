@@ -21,7 +21,7 @@
     <string id="ColorOrange">Orange</string>
     <string id="ColorYellow">Gul</string>
     
-    <string id="Font">Litet text typsnitt</string>
+    <string id="Font">Typsnitt för liten text</string>
     <string id="Font1">Typsnitt 1</string>
     <string id="Font2">Typsnitt 2</string>
     <string id="Font3">Typsnitt 3</string>
@@ -48,12 +48,14 @@
     <string id="Battery">Batteri</string>
     <string id="Messages">Antal meddelanden</string>
     <string id="Hr">Hjärtfrekvens</string>
-    <string id="Floors">Våningar Klättrade</string>
+    <string id="Floors">Våningar klättrade</string>
     <string id="Weather">Väder</string>
     <string id="None">Ingen</string>
     
     
-    <string id="BluetoothSetting">Visa Bluetooth-anslutning som:</string>
+    <string id="BluetoothSetting">Visa telefonanslutningsikon</string>
+    <string id="BeepOnPhoneDisconnect">Varning vid frånkopplad telefon</string>
+    <string id="BatteryIcon">Batteriikon</string>
 
     
     <!-- Month names -->

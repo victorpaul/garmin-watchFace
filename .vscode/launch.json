@@ -75,6 +75,13 @@
     {
       "type": "monkeyc",
       "request": "launch",
+      "name": "draw_208x208x1 (garminswim2)",
+      "stopAtLaunch": false,
+      "device": "garminswim2"
+    },
+    {
+      "type": "monkeyc",
+      "request": "launch",
       "name": "draw_208x208x1 (fr45)",
       "stopAtLaunch": false,
       "device": "fr45"

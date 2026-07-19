@@ -1,8 +1,8 @@
 <strings>
     <string id="AppName">Chalk Watch</string>
     
-    <string id="BackgroundColorTitle">Колір Фону</string>
-    <string id="ForegroundColorTitle">Колір Тексту</string>
+    <string id="BackgroundColorTitle">Колір фону</string>
+    <string id="ForegroundColorTitle">Колір тексту</string>
     <string id="Use12Hours">12-годинний формат</string>
     <string id="ShowDays">Показати інформацію праворуч вгорі</string>
     <string id="ShowBottomLeft">Показати інформацію ліворуч внизу</string>
@@ -22,18 +22,18 @@
     <string id="ColorYellow">Жовтий</string>
     
     <string id="Font">Шрифт дрібного тексту</string>
-    <string id="Font1">шрифт 1</string>
-    <string id="Font2">шрифт 2</string>
-    <string id="Font3">шрифт 3</string>
+    <string id="Font1">Шрифт 1</string>
+    <string id="Font2">Шрифт 2</string>
+    <string id="Font3">Шрифт 3</string>
     
     
     <string id="TopCenterInfo">Інформація по центру вгорі</string>
-    <string id="Date1">Місяць рік</string>
-    <string id="Date2">Місяць день</string>
+    <string id="Date1">Місяць, рік</string>
+    <string id="Date2">Місяць, день</string>
     <string id="Date3">Місяць день, рік</string>
     <string id="Date4">ДД/ММ/РРРР</string>
     <string id="Date5">ММ/ДД/РРРР</string>
-    <string id="Date6">Місяць день тижня</string>
+    <string id="Date6">Місяць, день тижня</string>
     
     <string id="RightInfo">Інформація праворуч</string>
     <string id="Calendar">Календар</string>
@@ -47,20 +47,22 @@
     <string id="Calories">Калорії</string>
     <string id="Battery">Батарея</string>
     <string id="Messages">Кількість повідомлень</string>
-    <string id="Hr">Частота Серцевих Скорочень</string>
-    <string id="Floors">Поверхи Піднято</string>
+    <string id="Hr">Частота серцевих скорочень</string>
+    <string id="Floors">Пройдені поверхи</string>
     <string id="Weather">Погода</string>
     <string id="None">Жодного</string>
     
     
-    <string id="BluetoothSetting">Показувати Bluetooth з'єднання як:</string>
+    <string id="BluetoothSetting">Показувати значок з'єднання з телефоном</string>
+    <string id="BeepOnPhoneDisconnect">Сповіщення про від'єднання телефону</string>
+    <string id="BatteryIcon">Значок батареї</string>
 
     
     <!-- Month names -->
     <string id="MonthJan">Січ</string>
     <string id="MonthFeb">Лют</string>
     <string id="MonthMar">Бер</string>
-    <string id="MonthApr">Квт</string>
+    <string id="MonthApr">Кві</string>
     <string id="MonthMay">Тра</string>
     <string id="MonthJun">Чер</string>
     <string id="MonthJul">Лип</string>

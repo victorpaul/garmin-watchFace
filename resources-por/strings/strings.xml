@@ -1,8 +1,8 @@
 <strings>
     <string id="AppName">Chalk Watch</string>
     
-    <string id="BackgroundColorTitle">Cor de Fundo</string>
-    <string id="ForegroundColorTitle">Cor de Primeiro Plano</string>
+    <string id="BackgroundColorTitle">Cor de fundo</string>
+    <string id="ForegroundColorTitle">Cor de primeiro plano</string>
     <string id="Use12Hours">Formato de 12 horas</string>
     <string id="ShowDays">Mostrar informações superiores direitas</string>
     <string id="ShowBottomLeft">Mostrar informações inferiores esquerdas</string>
@@ -11,8 +11,8 @@
 	<string id="ShowHR">Mostrar frequência cardíaca</string>
 
     <string id="ColorBlack">Preto</string>
-    <string id="ColorDarkGray">Cinza Escuro</string>
-    <string id="ColorLightGray">Cinza Claro</string>
+    <string id="ColorDarkGray">Cinza escuro</string>
+    <string id="ColorLightGray">Cinza claro</string>
     <string id="ColorWhite">Branco</string>
     <string id="ColorBlue">Azul</string>
     <string id="ColorRed">Vermelho</string>
@@ -47,13 +47,15 @@
     <string id="Calories">Calorias</string>
     <string id="Battery">Bateria</string>
     <string id="Messages">Contagem de mensagens</string>
-    <string id="Hr">Frequência Cardíaca</string>
-    <string id="Floors">Andares Subidos</string>
+    <string id="Hr">Frequência cardíaca</string>
+    <string id="Floors">Andares subidos</string>
     <string id="Weather">Clima</string>
     <string id="None">Nenhum</string>
     
     
-    <string id="BluetoothSetting">Mostrar conexão Bluetooth como:</string>
+    <string id="BluetoothSetting">Mostrar ícone de conexão do telefone</string>
+    <string id="BeepOnPhoneDisconnect">Alerta ao desconectar o telefone</string>
+    <string id="BatteryIcon">Ícone de bateria</string>
 
     
     <!-- Month names -->

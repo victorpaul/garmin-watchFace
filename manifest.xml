@@ -137,7 +137,6 @@
             <iq:product id="vivoactive5"/>
             <iq:product id="vivoactive6"/>
             <iq:product id="vivoactive_hr"/>
-            <iq:product id="vivolife"/>
         </iq:products>
         <iq:permissions/>
         <iq:languages>

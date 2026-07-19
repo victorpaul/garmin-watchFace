@@ -2,17 +2,17 @@
     <string id="AppName">Chalk Watch</string>
     
     <string id="BackgroundColorTitle">Taustaväri</string>
-    <string id="ForegroundColorTitle">Etukulman väri</string>
+    <string id="ForegroundColorTitle">Etualan väri</string>
     <string id="Use12Hours">12 tunnin muoto</string>
-    <string id="ShowDays">Näytä yläoikean tiedot</string>
-    <string id="ShowBottomLeft">Näytä alavasemman tiedot</string>
-    <string id="ShowMonthYear">Näytä yläkeskon tiedot</string>
+    <string id="ShowDays">Näytä oikean yläkulman tiedot</string>
+    <string id="ShowBottomLeft">Näytä vasemman alakulman tiedot</string>
+    <string id="ShowMonthYear">Näytä ylhäällä keskellä olevat tiedot</string>
     <string id="UseBrushFontForInfo">Käytä sivellinkirjasinta pienelle tekstille</string>
 	<string id="ShowHR">Näytä syke</string>
 
     <string id="ColorBlack">Musta</string>
-    <string id="ColorDarkGray">Tumma harmaa</string>
-    <string id="ColorLightGray">Vaalean harmaa</string>
+    <string id="ColorDarkGray">Tummanharmaa</string>
+    <string id="ColorLightGray">Vaaleanharmaa</string>
     <string id="ColorWhite">Valkoinen</string>
     <string id="ColorBlue">Sininen</string>
     <string id="ColorRed">Punainen</string>
@@ -21,13 +21,13 @@
     <string id="ColorOrange">Oranssi</string>
     <string id="ColorYellow">Keltainen</string>
     
-    <string id="Font">Pieni teksti kirjasin</string>
+    <string id="Font">Pienen tekstin kirjasin</string>
     <string id="Font1">Kirjasin 1</string>
     <string id="Font2">Kirjasin 2</string>
     <string id="Font3">Kirjasin 3</string>
     
     
-    <string id="TopCenterInfo">Yläkeskon tiedot</string>
+    <string id="TopCenterInfo">Ylhäällä keskellä olevat tiedot</string>
     <string id="Date1">Kuukausi, vuosi</string>
     <string id="Date2">Kuukausi, päivä</string>
     <string id="Date3">Kuukausi päivä, vuosi</string>
@@ -35,25 +35,27 @@
     <string id="Date5">KK/PP/VVVV</string>
     <string id="Date6">Kuukausi, viikonpäivä</string>
     
-    <string id="RightInfo">Oikean tiedot</string>
+    <string id="RightInfo">Oikean puolen tiedot</string>
     <string id="Calendar">Kalenteri</string>
-    
-    <string id="Activity">Toiminta</string>
-    
-    <string id="BottomLeftInfo">Alavasemman tiedot (Rivi A)</string>
-    <string id="BottomLeftInfo2">Alavasemman tiedot (Rivi B)</string>
-    <string id="BottomLeftInfo3">Alavasemman tiedot (Rivi C)</string>
+
+    <string id="Activity">Aktiivisuus</string>
+
+    <string id="BottomLeftInfo">Vasemman alakulman tiedot (Rivi A)</string>
+    <string id="BottomLeftInfo2">Vasemman alakulman tiedot (Rivi B)</string>
+    <string id="BottomLeftInfo3">Vasemman alakulman tiedot (Rivi C)</string>
     <string id="Steps">Askeleet</string>
     <string id="Calories">Kalorit</string>
     <string id="Battery">Akku</string>
     <string id="Messages">Viestien määrä</string>
     <string id="Hr">Syke</string>
-    <string id="Floors">Kerrokset Kiivenneet</string>
+    <string id="Floors">Kiivetyt kerrokset</string>
     <string id="Weather">Sää</string>
     <string id="None">Ei mitään</string>
     
     
-    <string id="BluetoothSetting">Näytä Bluetooth-yhteys:</string>
+    <string id="BluetoothSetting">Näytä puhelimen yhteyskuvake</string>
+    <string id="BeepOnPhoneDisconnect">Hälytys puhelimen yhteyden katketessa</string>
+    <string id="BatteryIcon">Akkukuvake</string>
 
     
     <!-- Month names -->
@@ -93,7 +95,7 @@
     <string id="FloorsShort">ker</string>            <!-- Abbreviation for floors climbed -->
     <string id="CaloriesShort">kal</string>          <!-- Abbreviation for calories burned -->
     <string id="MessagesShort">viestit</string>      <!-- Abbreviation for message count -->
-    <string id="BpmShort">lyön/min</string>          <!-- Abbreviation for beats per minute (heart rate) -->
+    <string id="BpmShort">lyönt/min</string>         <!-- Abbreviation for beats per minute (heart rate) -->
     
     <!-- Activity/Fitness labels - Long format (used on larger screens or full layouts) -->
     <string id="StepsLong">askeleet</string>         <!-- Full word for steps count -->
@@ -101,11 +103,11 @@
     <string id="CaloriesLong">kalorit</string>       <!-- Full word for calories burned -->
     <string id="MessagesLong">viestit</string>       <!-- Full word for message count -->
     <string id="BatteryLong">akku</string>           <!-- Full word for battery level -->
-    <string id="BpmLong">lyön/min</string>           <!-- Beats per minute (lyöntiä per minuutti) -->
-    
+    <string id="BpmLong">lyönt/min</string>          <!-- Beats per minute (lyöntiä per minuutti) -->
+
     <!-- Heart rate placeholders (when no heart rate is available) -->
-    <string id="NoHeartRateShort">--lyön/min</string>     <!-- No heart rate placeholder for compact layout -->
-    <string id="NoHeartRateLong">-- lyön/min</string>     <!-- No heart rate placeholder for full layout -->
+    <string id="NoHeartRateShort">--lyönt/min</string>    <!-- No heart rate placeholder for compact layout -->
+    <string id="NoHeartRateLong">-- lyönt/min</string>    <!-- No heart rate placeholder for full layout -->
     
     <!-- Weather placeholders (when no weather is available) -->
     <string id="NoWeatherShort">--°</string>       <!-- No weather placeholder for compact layout -->

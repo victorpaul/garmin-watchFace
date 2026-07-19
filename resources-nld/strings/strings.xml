@@ -21,7 +21,7 @@
     <string id="ColorOrange">Oranje</string>
     <string id="ColorYellow">Geel</string>
     
-    <string id="Font">Klein tekst lettertype</string>
+    <string id="Font">Lettertype voor kleine tekst</string>
     <string id="Font1">Lettertype 1</string>
     <string id="Font2">Lettertype 2</string>
     <string id="Font3">Lettertype 3</string>
@@ -48,12 +48,14 @@
     <string id="Battery">Batterij</string>
     <string id="Messages">Aantal berichten</string>
     <string id="Hr">Hartslag</string>
-    <string id="Floors">Verdiepingen Geklommen</string>
+    <string id="Floors">Verdiepingen geklommen</string>
     <string id="Weather">Weer</string>
     <string id="None">Geen</string>
     
     
-    <string id="BluetoothSetting">Bluetooth-verbinding tonen als:</string>
+    <string id="BluetoothSetting">Telefoonverbindingspictogram tonen</string>
+    <string id="BeepOnPhoneDisconnect">Waarschuwing bij verbroken telefoonverbinding</string>
+    <string id="BatteryIcon">Batterijpictogram</string>
 
     
     <!-- Month names -->

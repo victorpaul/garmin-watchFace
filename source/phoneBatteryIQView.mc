@@ -3,7 +3,6 @@ using Toybox.Graphics;
 using Toybox.System;
 using Toybox.Lang;
 using Toybox.Application;
-using Toybox.Attention;
 using Toybox.Time;
 using Toybox.Time.Gregorian;
 
@@ -12,7 +11,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 	var uiH;
 	var weatherUtils;
 	var inLowPower=false;
-	var lastPhoneConnectionState = null;
 	var deviceType = null;
 	var isOledDisplay = false;
 	var fontsMode = false;
@@ -42,38 +40,6 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
     function onEnterSleep() {
     	inLowPower=true;
     	WatchUi.requestUpdate();
-    }
-
-    function checkPhoneConnectionAndBeep() {
-        var beepEnabled = Application.getApp().getProperty("BeepOnPhoneDisconnect");
-        if (beepEnabled == null) {
-            beepEnabled = false;
-        }
-
-        if (beepEnabled) {
-            var currentConnectionState = System.getDeviceSettings().phoneConnected;
-
-            if (lastPhoneConnectionState == true && currentConnectionState == false) {
-                if (Attention has :ToneProfile) {
-                    var toneProfile = [
-                        new Attention.ToneProfile(2500, 200),
-                        new Attention.ToneProfile(0, 100),
-                        new Attention.ToneProfile(2500, 200)
-                    ];
-                    Attention.playTone({:toneProfile=>toneProfile});
-                }
-                if (Attention has :VibeProfile && Attention has :vibrate) {
-                    var vibeData = [
-                        new Attention.VibeProfile(50, 200),
-                        new Attention.VibeProfile(0, 100),
-                        new Attention.VibeProfile(50, 200)
-                    ];
-                    Attention.vibrate(vibeData);
-                }
-            }
-
-            lastPhoneConnectionState = currentConnectionState;
-        }
     }
 
 	// Devices: vivoactive_hr (148x205x3)
@@ -498,7 +464,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 
     function onUpdate(dc) {
 
-        checkPhoneConnectionAndBeep();
+        uiH.beepService.checkPhoneConnectionAndBeep();
 
         // Set colors based on cached display type
         if (isOledDisplay) {
@@ -561,6 +527,9 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
                 break;
             case DeviceType.DEVICE_166:
                 draw_166x166x4(dc);
+                break;
+            case DeviceType.VENU_X1:
+                draw_448x486x3(dc);
                 break;
             default:
                 if(uiH.debug) {
