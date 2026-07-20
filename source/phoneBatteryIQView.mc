@@ -73,7 +73,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
   		uiH.drawHours(dc,30,-65,40,0,uiH.fontHuge45());
 		uiH.drawMinutes(dc,95,10,50,0,uiH.fontHuge45());
 
-		uiH.drawBottomLeft(dc,74,90,20,uiH.fontSmall());
+		uiH.drawBottomLeft(dc,73,91,22,uiH.fontSmall());
 
 		uiH.drawBluetoothConnectionSmall(dc,102,65);
 	}
@@ -120,7 +120,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
     	uiH.drawTopRight(topRight,dc,107,13,15,0,1);
   		uiH.drawHours(dc,28,-60,40,0,uiH.fontHuge45());
 		uiH.drawMinutes(dc,125,-30,50,0,uiH.fontHuge45());
-		uiH.drawBottomLeft(dc,85,92,19,uiH.fontSmall());
+		uiH.drawBottomLeft(dc,85,91,18,uiH.fontSmall());
 	}
 	
 	// Devices: fr230, fr235, fr630, fr735xt (215x180x2).
